@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>QCM avec réponses dans le HTML</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+  /* --------- Base --------- */
+body {
+    font-family: "Latin Modern Roman", "Computer Modern", Georgia, serif;
+    background: #fdfdfd;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------- Zone centrale (livre) --------- */
+main {
+    max-width: 680px;            /* largeur proche 17 cm */
+    margin: 60px auto 80px;
+    padding: 0 40px;             /* grandes marges internes */
+}
+
+/* --------- Titres --------- */
+h1 {
+    font-variant: small-caps;
+    font-size: 2.1rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.section-title {
+    font-variant: small-caps;
+    font-size: 1.35rem;
+    margin: 3.5rem auto 2rem;
+    padding: 0.6rem 0;
+    width: 92%;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+
+/* --------- Question box --------- */
+.question {
+    background: rgb(232, 232, 232);
+    padding: 18px 20px;
+    margin: 1.8rem 0 0.8rem;
+}
+
+/* Numéro de question */
+.question > p {
+    margin: 0 0 0.8rem;
+    font-weight: bold;
+}
+
+/* --------- Réponses --------- */
+.question label {
+    display: block;
+    padding: 7px 10px;
+    margin-left: 2.8rem;
+    cursor: pointer;
+    line-height: 1.55;
+}
+
+/* Case à cocher */
+.question input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.15);
+}
+
+/* --------- Correction --------- */
+.correct {
+    color: #0a7a0a;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #b00000;
+    font-weight: bold;
+}
+
+/* --------- Boutons --------- */
+.buttons {
+    margin: 4rem auto 3rem;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1.05rem;
+    padding: 10px 26px;
+    border: 1px solid #000;
+    background: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f1f1f1;
+}
+
+/* --------- Résultat --------- */
+#resultat {
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --------- Masquage --------- */
+.hidden {
+    display: none;
+}
+
+/* --------- Question box flottante --------- */
+.question {
+    background: rgb(232, 232, 232);
+    padding: 18px 22px;
+    margin: 2rem auto 1rem;
+    width: 92%;                  /* décollé des bords */
+}
+
+/* --------- Réponses en grille --------- */
+.question {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Conteneur des réponses */
+.question .answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes par défaut */
+    column-gap: 2.5rem;
+    row-gap: 0.4rem;
+    margin-left: 2rem;
+}
+
+/* Réponse individuelle */
+.question .answers label {
+    margin: 0;
+    padding: 6px 8px;
+}
+
+.question input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.15);
+}
+
+mjx-container {
+    font-size: 105%;
+}
+
+.footer-buttons {
+    position: fixed;       /* fixe en bas */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f9f9f9;   /* couleur de fond du bandeau */
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 12px 0;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+    z-index: 1000;          /* toujours au-dessus */
+}
+
+.footer-buttons button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border: 1px solid #000;
+    background: white;
+    cursor: pointer;
+}
+
+.footer-buttons button:hover {
+    background: #f1f1f1;
+}
+
+main, form#qcmForm {
+    padding-bottom: 80px; /* espace pour le bandeau */
+}
+
+.footer-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f9f9f9;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;  /* moins large, évite que le score sorte */
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+    z-index: 1000;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.footer-buttons .buttons-left {
+    display: flex;
+    gap: 1.5rem;        /* espace entre les boutons */
+}
+
+.footer-buttons .buttons-left button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border: 1px solid #000;
+    background: white;
+    cursor: pointer;
+}
+
+.footer-buttons .buttons-left button:hover {
+    background: #f1f1f1;
+}
+
+.footer-buttons .score-right {
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;       /* empêche le score de passer à la ligne */
+    text-align: right;
+    max-width: 35%;            /* limite sa largeur pour rester visible */
+    overflow: hidden;
+    text-overflow: ellipsis;   /* si c’est trop long, ajoute "..." */
+}
+    </style>
+</head>
+<body>
+
+<h1>Probabilités finies</h1>
+
+<div class="section-title">Échauffement</div>
+
+
+<form id="qcmForm">
+
+    <!-- Question 1 -->
+    <div class="question">
+        <p>Q1.1</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox">
+            \(S_1 \cap S_2\)
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+            \(S_1 \cup S_2\)
+        </label>
+        <label>
+            <input type="checkbox">
+            \(\overline{S_1} \cup S_2\)
+        </label>
+        <label>
+            <input type="checkbox">
+            \(S_1 \cap \overline{S_2}\)
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <p>Q1.2</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox">
+            \(16\)
+        </label>
+        <label>
+            <input type="checkbox"  data-correct="true">
+        \(\dfrac{4}{13}\)
+        </label>
+        <label>
+            <input type="checkbox">
+        \(\dfrac{17}{52}\)
+        </label>
+        <label>
+            <input type="checkbox">
+        \(\dfrac{1}{52}\)
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <p>Q1.3</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox">
+            \(A\cap B\) est l'événement impossible
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+        \(A\) et \(B\) sont équiprobables
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+        \(P(A\cup B) = \dfrac{9}{10}\)
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+        \(P(A\cap B) = \dfrac{1}{2}\)
+        </label>
+        </div>
+    </div>
+
+
+<div class="section-title">Variables aléatoires</div>
+
+    <!-- Question 4 -->
+    <div class="question">
+        <p>Q1.4</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox" data-correct="true">
+            
+        </label>
+        <label>
+            <input type="checkbox">
+        
+        </label>
+        <label>
+            <input type="checkbox">
+        
+        </label>
+        <label>
+            <input type="checkbox">
+        
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <p>Q1.5</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox" data-correct="true">
+            
+        </label>
+        <label>
+            <input type="checkbox">
+        
+        </label>
+        <label>
+            <input type="checkbox">
+       
+        </label>
+        <label>
+            <input type="checkbox">
+        
+        </label>
+        </div>
+    </div>
+
+   <div class="section-title">Un exercice extrait de l’ENAC 2025</div> 
+
+    <!-- Question 6 -->
+    <div class="question">
+        <p>Q1.6</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox">
+            la probabilité d'obtenir autant de “pile” que de “face” est \(\displaystyle \binom{2n}{n} \dfrac{1}{2^n}\)
+        </label>
+        <label>
+            <input type="checkbox">
+        la probabilité d'avoir une alternance de “pile” et de “face” commençant par “pile” est \(\dfrac{1}{2^n}\)
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+        la probabilité d'obtenir au plus une fois “pile” est \(\dfrac{n+1}{2^n}\)
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+        en moyenne, le nombre de “pile” obtenu est \(n\)
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <p>Q1.7</p>
+    <div class="answers">
+        <label>
+            <input type="checkbox">
+            \(S\) et \(D\) sont binomiales
+        </label>
+        <label>
+            <input type="checkbox">
+        \(S\) et \(D\) suivent une loi uniforme pour une certaine valeur de \(p\)
+        </label>
+        <label>
+            <input type="checkbox" data-correct="true">
+        \(S\) et \(D\) sont décoréllées
+        </label>
+        <label>
+            <input type="checkbox">
+        \(S\) et \(D\) sont indépendantes
+        </label>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <p>Q1.8</p>
+        <label>
+            <input type="checkbox" data-correct="true">
+            \(\forall n\in\mathbb{N},~ X_{n+1}-X_n (\Omega) \subset \{-1,1\}\)
+        </label><br>
+        <label>
+            <input type="checkbox">
+        \(\forall n\in\mathbb{N},~ P(X_{n+1}-X_n = 1) = 1 - \dfrac{2}{b} E(X_n)\)
+        </label><br>
+        <label>
+            <input type="checkbox">
+        \(\forall n\in\mathbb{N},~ E(X_{n+1}) = \left( 1 - \dfrac{1}{b} \right) E(X_n) + 1\)
+        </label><br>
+        <label>
+            <input type="checkbox" data-correct="true">
+        \(\lim\limits_{n\to +\infty} E(X_n) = \dfrac{b}{2}\)
+        </label>
+    </div>
+
+   <div class="footer-buttons">
+    <div class="buttons-left">
+        <button type="button" onclick="verifier()">Vérifier</button>
+        <button type="button" onclick="recommencer()">Recommencer le QCM</button>
+    </div>
+    <div class="score-right" id="resultat">&nbsp;</div>
+</div>
+</form>
+
+<div id="resultat"></div>
+
+<script>
+function verifier() {
+    let score = 0;
+    let total = 0;
+
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(question => {
+        const labels = question.querySelectorAll("label");
+        const inputs = question.querySelectorAll("input[type='checkbox']");
+
+        // Nettoyage des couleurs
+        labels.forEach(label => {
+            label.classList.remove("correct", "incorrect");
+        });
+
+        // La question est-elle traitée ?
+        const traitee = Array.from(inputs).some(input => input.checked);
+
+        if (!traitee) {
+            // ❗ On cache les questions non traitées
+            question.classList.add("hidden");
+            return;
+        }
+
+        total++;
+        let bonne = true;
+
+        inputs.forEach((input, index) => {
+            const estCorrect = input.dataset.correct === "true";
+            const label = labels[index];
+
+            if (input.checked && estCorrect) {
+                label.classList.add("correct");
+            }
+
+            if (input.checked && !estCorrect) {
+                label.classList.add("incorrect");
+                bonne = false;
+            }
+
+            if (!input.checked && estCorrect) {
+                label.classList.add("correct");
+                bonne = false;
+            }
+        });
+
+        if (bonne) score++;
+    });
+
+    document.getElementById("resultat").textContent =
+    total === 0
+        ? "Aucune question traitée."
+        : `Votre score : ${score} / ${total}`;
+
+    if (window.MathJax) {
+        MathJax.typeset();
+    }
+}
+function recommencer() {
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(question => {
+        // Réafficher la question
+        question.classList.remove("hidden");
+
+        // Réinitialiser les cases
+        const inputs = question.querySelectorAll("input[type='checkbox']");
+        inputs.forEach(input => {
+            input.checked = false;
+        });
+
+        // Supprimer les couleurs
+        const labels = question.querySelectorAll("label");
+        labels.forEach(label => {
+            label.classList.remove("correct", "incorrect");
+        });
+    });
+
+    // Effacer le score
+    document.getElementById("resultat").textContent = "";
+
+    // Re-rendu MathJax (par sécurité)
+    if (window.MathJax) {
+        MathJax.typeset();
+    }
+}
+</script>
+
+</body>
+</html>

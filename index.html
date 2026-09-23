@@ -45,7 +45,7 @@ h1{font-variant:small-caps;font-size:2rem;text-align:center;margin:1.6rem 0 .4re
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 1px 3px rgba(0,0,0,.2);
 }
-.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));column-gap:1.8rem;row-gap:.15rem;margin:.2rem 0 .1rem;}
+.answers{display:grid;grid-template-columns:1fr;column-gap:1.8rem;row-gap:.15rem;margin:.2rem 0 .1rem;}
 label.ans{display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:5px;cursor:pointer}
 label.ans:hover{background:rgba(0,0,0,.04)}
 label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
@@ -86,18 +86,19 @@ label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
 .signbox.bad{background:#fbdada;border-color:#c0392b}
 .signbox.miss{outline:2px dashed #2e9c46;outline-offset:1px}
 
-/* --- cercle trigonométrique --- */
-.circlewrap{position:relative;margin:6px auto}
-.circlewrap svg{position:absolute;left:0;top:0}
-.cdot{position:absolute;transform:translate(-50%,-50%);cursor:pointer}
-.cdot input{position:absolute;opacity:0;width:0;height:0}
-.dotmark{display:block;width:15px;height:15px;border-radius:50%;border:2px solid #666;background:#fff}
-.cdot:hover .dotmark{border-color:var(--accent)}
-.cdot input:checked + .dotmark{background:var(--accent);border-color:var(--accent)}
-.cdot.ok .dotmark{background:#2e9c46 !important;border-color:#2e9c46 !important}
-.cdot.bad .dotmark{background:#c0392b !important;border-color:#c0392b !important}
-.cdot.miss .dotmark{background:#fff;border-color:#2e9c46;box-shadow:0 0 0 3px rgba(46,156,70,.35)}
-.clabel{position:absolute;transform:translate(-50%,-50%);font-size:.8rem;color:#333;pointer-events:none;white-space:nowrap}
+/* --- cercle trigonométrique (SVG fluide) --- */
+.circlewrap{margin:8px auto;max-width:100%}
+.trigsvg{display:block;width:100%;max-width:300px;height:auto;margin:0 auto;touch-action:manipulation}
+.trigsvg .axis{stroke:#666;stroke-width:1}
+.trigsvg .ring{fill:none;stroke:#444;stroke-width:1.3}
+.cpt{cursor:pointer}
+.cpt .dot{fill:#fff;stroke:#666;stroke-width:2;transition:fill .1s}
+.cpt:hover .dot{stroke:var(--accent)}
+.cpt.sel .dot{fill:var(--accent);stroke:var(--accent)}
+.cpt.ok .dot{fill:#2e9c46;stroke:#2e9c46}
+.cpt.bad .dot{fill:#c0392b;stroke:#c0392b}
+.cpt.miss .dot{fill:#fff;stroke:#2e9c46;stroke-width:3}
+.clab{font-size:12.5px;fill:#333;font-family:inherit;pointer-events:none}
 
 /* --- barre de boutons fixe --- */
 .footer-buttons{
@@ -139,5 +140,26 @@ label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
 .sol .sb p{margin:.3rem 0}
 
 .foot-note{color:#888;font-size:.82rem;text-align:center;margin-top:1.5rem}
-@media(max-width:520px){ main{padding:18px 16px 120px} h1{font-size:1.6rem} .topnav{padding:10px 16px} }
-</style></head><body style="--accent:#4f46e5"><div class="topnav"><span class="brand">QCM de mathématiques</span><a href="corriges.html">Corrigés</a></div><main><h1>QCM de mathématiques</h1><p class="subtitle">Choisis une section. Chaque QCM se corrige tout seul et affiche ton score.</p><div class="menu-grid"><a class="menu-card" style="--c:#4f46e5" href="fractions.html"><span class="idx">1</span><span class="mc-body"><span class="mc-title">Fractions & Puissances</span><span class="mc-sub">34 questions</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#0891b2" href="calcul.html"><span class="idx">2</span><span class="mc-body"><span class="mc-title">Calcul littéral</span><span class="mc-sub">31 questions</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#7c3aed" href="seconddegre.html"><span class="idx">3</span><span class="mc-body"><span class="mc-title">Équations du second degré</span><span class="mc-sub">26 questions</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#b45309" href="trigo.html"><span class="idx">4</span><span class="mc-body"><span class="mc-title">Trigonométrie</span><span class="mc-sub">39 questions</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#be123c" href="explog.html"><span class="idx">5</span><span class="mc-body"><span class="mc-title">Exponentielle & Logarithme</span><span class="mc-sub">27 questions</span></span><span class="arrow">→</span></a></div><a class="corr-link" href="corriges.html">📘 Voir tous les corrigés</a><p class="foot-note">Les énoncés se trouvent sur le polycopié ; ces pages servent à saisir et vérifier les réponses.</p></main></body></html>
+@media(max-width:560px){
+  main{padding:20px 14px 140px}
+  h1{font-size:1.55rem}
+  .topnav{padding:10px 14px;gap:12px}
+  .topnav .brand{font-size:.95rem;flex-basis:100%;margin-right:0}
+  .question{padding:14px 12px}
+  .qnum{left:-4px;top:-12px}
+  .answers{column-gap:1rem}
+  label.ans{padding:8px 6px}
+  .trigsvg{max-width:270px}
+  .cell{width:24px;height:24px;font-size:.85rem}
+  .grid{gap:7px 8px}
+  .footer-buttons{padding:9px 12px;gap:8px}
+  .footer-buttons button{padding:9px 14px;font-size:.92rem}
+  .footer-buttons .left{gap:.6rem}
+  .score-right{font-size:.95rem}
+  .menu-card{padding:14px 14px;gap:10px}
+  .menu-card .idx{font-size:1.25rem;min-width:24px}
+}
+@media(max-width:360px){
+  .footer-buttons .verif,.footer-buttons .reset{padding:8px 12px}
+}
+</style></head><body style="--accent:#4f46e5"><div class="topnav"><span class="brand">QCM de mathématiques</span><a href="corriges.pdf" target="_blank" rel="noopener">Corrigés (PDF)</a></div><main><h1>QCM de mathématiques</h1><p class="subtitle">Choisis une section. Chaque QCM se corrige tout seul et affiche ton score.</p><div class="menu-grid"><a class="menu-card" style="--c:#4f46e5" href="fractions.html"><span class="idx">1</span><span class="mc-body"><span class="mc-title">Fractions & Puissances</span><span class="mc-sub">Questions 1 à 34 · 34 au total</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#0891b2" href="calcul.html"><span class="idx">2</span><span class="mc-body"><span class="mc-title">Calcul littéral</span><span class="mc-sub">Questions 35 à 65 · 31 au total</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#7c3aed" href="seconddegre.html"><span class="idx">3</span><span class="mc-body"><span class="mc-title">Équations du second degré</span><span class="mc-sub">Questions 66 à 91 · 26 au total</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#b45309" href="trigo.html"><span class="idx">4</span><span class="mc-body"><span class="mc-title">Trigonométrie</span><span class="mc-sub">Questions 92 à 130 · 39 au total</span></span><span class="arrow">→</span></a><a class="menu-card" style="--c:#be123c" href="explog.html"><span class="idx">5</span><span class="mc-body"><span class="mc-title">Exponentielle & Logarithme</span><span class="mc-sub">Questions 131 à 157 · 27 au total</span></span><span class="arrow">→</span></a></div><a class="corr-link" href="corriges.pdf" target="_blank" rel="noopener">📘 Voir les corrigés (PDF)</a><p class="foot-note">Les énoncés se trouvent sur le polycopié ; ces pages servent à saisir et vérifier les réponses.</p></main></body></html>

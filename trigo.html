@@ -45,7 +45,7 @@ h1{font-variant:small-caps;font-size:2rem;text-align:center;margin:1.6rem 0 .4re
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 1px 3px rgba(0,0,0,.2);
 }
-.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));column-gap:1.8rem;row-gap:.15rem;margin:.2rem 0 .1rem;}
+.answers{display:grid;grid-template-columns:1fr;column-gap:1.8rem;row-gap:.15rem;margin:.2rem 0 .1rem;}
 label.ans{display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:5px;cursor:pointer}
 label.ans:hover{background:rgba(0,0,0,.04)}
 label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
@@ -86,18 +86,19 @@ label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
 .signbox.bad{background:#fbdada;border-color:#c0392b}
 .signbox.miss{outline:2px dashed #2e9c46;outline-offset:1px}
 
-/* --- cercle trigonométrique --- */
-.circlewrap{position:relative;margin:6px auto}
-.circlewrap svg{position:absolute;left:0;top:0}
-.cdot{position:absolute;transform:translate(-50%,-50%);cursor:pointer}
-.cdot input{position:absolute;opacity:0;width:0;height:0}
-.dotmark{display:block;width:15px;height:15px;border-radius:50%;border:2px solid #666;background:#fff}
-.cdot:hover .dotmark{border-color:var(--accent)}
-.cdot input:checked + .dotmark{background:var(--accent);border-color:var(--accent)}
-.cdot.ok .dotmark{background:#2e9c46 !important;border-color:#2e9c46 !important}
-.cdot.bad .dotmark{background:#c0392b !important;border-color:#c0392b !important}
-.cdot.miss .dotmark{background:#fff;border-color:#2e9c46;box-shadow:0 0 0 3px rgba(46,156,70,.35)}
-.clabel{position:absolute;transform:translate(-50%,-50%);font-size:.8rem;color:#333;pointer-events:none;white-space:nowrap}
+/* --- cercle trigonométrique (SVG fluide) --- */
+.circlewrap{margin:8px auto;max-width:100%}
+.trigsvg{display:block;width:100%;max-width:300px;height:auto;margin:0 auto;touch-action:manipulation}
+.trigsvg .axis{stroke:#666;stroke-width:1}
+.trigsvg .ring{fill:none;stroke:#444;stroke-width:1.3}
+.cpt{cursor:pointer}
+.cpt .dot{fill:#fff;stroke:#666;stroke-width:2;transition:fill .1s}
+.cpt:hover .dot{stroke:var(--accent)}
+.cpt.sel .dot{fill:var(--accent);stroke:var(--accent)}
+.cpt.ok .dot{fill:#2e9c46;stroke:#2e9c46}
+.cpt.bad .dot{fill:#c0392b;stroke:#c0392b}
+.cpt.miss .dot{fill:#fff;stroke:#2e9c46;stroke-width:3}
+.clab{font-size:12.5px;fill:#333;font-family:inherit;pointer-events:none}
 
 /* --- barre de boutons fixe --- */
 .footer-buttons{
@@ -139,9 +140,31 @@ label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
 .sol .sb p{margin:.3rem 0}
 
 .foot-note{color:#888;font-size:.82rem;text-align:center;margin-top:1.5rem}
-@media(max-width:520px){ main{padding:18px 16px 120px} h1{font-size:1.6rem} .topnav{padding:10px 16px} }
-</style></head><body style="--accent:#b45309"><div class="topnav" style="--accent:#b45309"><span class="brand">Trigonométrie</span><a href="index.html">Menu</a><a href="corriges.html">Corrigés</a></div><main><h1>Trigonométrie</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié ; ici, seules les réponses. Ton score porte sur les questions traitées.</p><div id="quiz"></div><p class="foot-note">39 questions · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#b45309"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>
+@media(max-width:560px){
+  main{padding:20px 14px 140px}
+  h1{font-size:1.55rem}
+  .topnav{padding:10px 14px;gap:12px}
+  .topnav .brand{font-size:.95rem;flex-basis:100%;margin-right:0}
+  .question{padding:14px 12px}
+  .qnum{left:-4px;top:-12px}
+  .answers{column-gap:1rem}
+  label.ans{padding:8px 6px}
+  .trigsvg{max-width:270px}
+  .cell{width:24px;height:24px;font-size:.85rem}
+  .grid{gap:7px 8px}
+  .footer-buttons{padding:9px 12px;gap:8px}
+  .footer-buttons button{padding:9px 14px;font-size:.92rem}
+  .footer-buttons .left{gap:.6rem}
+  .score-right{font-size:.95rem}
+  .menu-card{padding:14px 14px;gap:10px}
+  .menu-card .idx{font-size:1.25rem;min-width:24px}
+}
+@media(max-width:360px){
+  .footer-buttons .verif,.footer-buttons .reset{padding:8px 12px}
+}
+</style></head><body style="--accent:#b45309"><div class="topnav" style="--accent:#b45309"><span class="brand">Trigonométrie</span><a href="index.html">Menu</a><a href="corriges.pdf" target="_blank" rel="noopener">Corrigés (PDF)</a></div><main><h1>Trigonométrie</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié ; ici, seules les réponses. Ton score porte sur les questions traitées.</p><div id="quiz"></div><p class="foot-note">Questions 92 à 130 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#b45309"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>
 const DATA = [{"t":"mcq","c":[["1",1],["0",0],["-1",0],["\\tfrac{1}{2}",0]]},{"t":"mcq","c":[["0",1],["1",0],["-1",0],["\\tfrac{1}{2}",0]]},{"t":"mcq","c":[["1",0],["0",0],["-1",1],["\\tfrac{1}{2}",0]]},{"t":"mcq","c":[["0",1],["1",0],["-1",0],["\\tfrac{1}{2}",0]]},{"t":"mcq","c":[["0",1],["1",0],["-1",0],["\\tfrac{1}{2}",0]]},{"t":"mcq","c":[["1",1],["0",0],["-1",0],["\\tfrac{1}{2}",0]]},{"t":"mcq","c":[["\\tfrac{1}{2}",0],["\\tfrac{\\sqrt{3}}{2}",1],["\\tfrac{\\sqrt{2}}{2}",0],["1",0]]},{"t":"mcq","c":[["\\tfrac{1}{2}",1],["\\tfrac{\\sqrt{3}}{2}",0],["\\tfrac{\\sqrt{2}}{2}",0],["0",0]]},{"t":"mcq","c":[["\\tfrac{1}{2}",1],["\\tfrac{\\sqrt{3}}{2}",0],["\\tfrac{\\sqrt{2}}{2}",0],["1",0]]},{"t":"mcq","c":[["\\tfrac{1}{2}",0],["\\tfrac{\\sqrt{3}}{2}",1],["\\tfrac{\\sqrt{2}}{2}",0],["\\tfrac{\\sqrt{3}}{3}",0]]},{"t":"mcq","c":[["\\tfrac{1}{2}",0],["\\tfrac{\\sqrt{3}}{2}",0],["\\tfrac{\\sqrt{2}}{2}",1],["1",0]]},{"t":"mcq","c":[["\\tfrac{\\sqrt{3}}{3}",0],["\\sqrt{3}",0],["\\tfrac{\\sqrt{2}}{2}",0],["1",1]]},{"t":"mcq","c":[["\\tfrac{1}{2}",0],["\\tfrac{\\sqrt{3}}{2}",0],["\\tfrac{\\sqrt{2}}{2}",0],["1",1]]},{"t":"mcq","c":[["\\sqrt{3}",0],["\\tfrac{1}{2}",0],["\\tfrac{\\sqrt{3}}{3}",1],["\\tfrac{\\sqrt{2}}{2}",0]]},{"t":"mcq","c":[["\\tfrac{\\sqrt{3}}{3}",0],["\\sqrt{3}",1],["\\tfrac{1}{2}",0],["1",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",1],["-\\sin x",0],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",0],["-\\sin x",1],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",0],["-\\sin x",0],["-\\cos x",1]]},{"t":"mcq","c":[["\\sin x",1],["\\cos x",0],["-\\sin x",0],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",1],["\\cos x",0],["-\\sin x",0],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",1],["-\\sin x",0],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",0],["-\\sin x",1],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",0],["-\\sin x",1],["-\\cos x",0]]},{"t":"mcq","c":[["\\sin x",0],["\\cos x",1],["-\\sin x",0],["-\\cos x",0]]},{"t":"mcq","c":[["1",1],["0",0],["2",0],["\\cos(2x)",0]]},{"t":"mcq","c":[["\\cos x \\neq 0",1],["\\sin x \\neq 0",0],["\\tan x \\neq 0",0],["\\text{Pour tout } x",0]]},{"t":"circle","pts":[{"x":1,"y":0,"l":"0","ok":0},{"x":0,"y":1,"l":"\\tfrac{\\pi}{2}","ok":0},{"x":-1,"y":0,"l":"\\pi","ok":0},{"x":0,"y":-1,"l":"-\\tfrac{\\pi}{2}","ok":0},{"x":0.5,"y":0.8660254038,"l":"\\tfrac{\\pi}{3}","ok":0},{"x":0.5,"y":-0.8660254038,"l":"-\\tfrac{\\pi}{3}","ok":0},{"x":-0.5,"y":0.8660254038,"l":"\\tfrac{2\\pi}{3}","ok":0},{"x":-0.5,"y":-0.8660254038,"l":"-\\tfrac{2\\pi}{3}","ok":0},{"x":0.8660254038,"y":0.5,"l":"\\tfrac{\\pi}{6}","ok":1},{"x":-0.8660254038,"y":0.5,"l":"\\tfrac{5\\pi}{6}","ok":0},{"x":0.8660254038,"y":-0.5,"l":"-\\tfrac{\\pi}{6}","ok":0},{"x":-0.8660254038,"y":-0.5,"l":"-\\tfrac{5\\pi}{6}","ok":0}]},{"t":"circle","pts":[{"x":1,"y":0,"l":"0","ok":0},{"x":0,"y":1,"l":"\\tfrac{\\pi}{2}","ok":0},{"x":-1,"y":0,"l":"\\pi","ok":0},{"x":0,"y":-1,"l":"\\tfrac{3\\pi}{2}","ok":0},{"x":0.5,"y":0.8660254038,"l":"\\tfrac{\\pi}{3}","ok":0},{"x":0.5,"y":-0.8660254038,"l":"\\tfrac{5\\pi}{3}","ok":1},{"x":-0.5,"y":0.8660254038,"l":"\\tfrac{2\\pi}{3}","ok":0},{"x":-0.5,"y":-0.8660254038,"l":"\\tfrac{4\\pi}{3}","ok":0},{"x":0.8660254038,"y":0.5,"l":"\\tfrac{\\pi}{6}","ok":0},{"x":-0.8660254038,"y":0.5,"l":"\\tfrac{5\\pi}{6}","ok":0},{"x":0.8660254038,"y":-0.5,"l":"\\tfrac{11\\pi}{6}","ok":0},{"x":-0.8660254038,"y":-0.5,"l":"\\tfrac{7\\pi}{6}","ok":0}]},{"t":"circle","pts":[{"x":1,"y":0,"l":"0","ok":0},{"x":0,"y":1,"l":"\\tfrac{\\pi}{2}","ok":0},{"x":-1,"y":0,"l":"\\pi","ok":0},{"x":0,"y":-1,"l":"\\tfrac{3\\pi}{2}","ok":0},{"x":0.7071067812,"y":0.7071067812,"l":"\\tfrac{\\pi}{4}","ok":1},{"x":0.7071067812,"y":-0.7071067812,"l":"\\tfrac{7\\pi}{4}","ok":0},{"x":-0.7071067812,"y":0.7071067812,"l":"\\tfrac{3\\pi}{4}","ok":0},{"x":-0.7071067812,"y":-0.7071067812,"l":"\\tfrac{5\\pi}{4}","ok":0}]},{"t":"circle","pts":[{"x":1,"y":0,"l":"0","ok":0},{"x":0,"y":1,"l":"\\tfrac{\\pi}{2}","ok":0},{"x":-1,"y":0,"l":"\\pi","ok":0},{"x":0,"y":-1,"l":"-\\tfrac{\\pi}{2}","ok":0},{"x":0.7071067812,"y":0.7071067812,"l":"\\tfrac{\\pi}{4}","ok":0},{"x":0.7071067812,"y":-0.7071067812,"l":"-\\tfrac{\\pi}{4}","ok":0},{"x":-0.7071067812,"y":0.7071067812,"l":"\\tfrac{3\\pi}{4}","ok":0},{"x":-0.7071067812,"y":-0.7071067812,"l":"-\\tfrac{3\\pi}{4}","ok":1}]},{"t":"mcq","c":[["\\tfrac{5\\pi}{4}",0],["\\tfrac{9\\pi}{4}",1],["-\\tfrac{9\\pi}{4}",0],["-\\tfrac{\\pi}{4}",0],["\\tfrac{7\\pi}{4}",0],["-\\tfrac{7\\pi}{4}",1]]},{"t":"mcq","c":[["k=1",1],["k=2",0],["k=-1",0],["k=0",0]]},{"t":"mcq","c":[["\\tfrac{7\\pi}{6}",1],["-\\tfrac{5\\pi}{6}",0],["\\tfrac{5\\pi}{6}",0],["\\tfrac{19\\pi}{6}",0]]},{"t":"mcq","c":[["\\tfrac{\\sqrt3}{2}",1],["-\\tfrac{\\sqrt3}{2}",0],["\\tfrac12",0],["-\\tfrac12",0]]},{"t":"mcq","c":[["-\\tfrac{\\sqrt2}{2}",1],["\\tfrac{\\sqrt2}{2}",0],["-\\tfrac12",0],["\\tfrac{\\sqrt3}{2}",0]]},{"t":"mcq","c":[["\\tfrac12",1],["-\\tfrac12",0],["\\tfrac{\\sqrt3}{2}",0],["-\\tfrac{\\sqrt3}{2}",0]]},{"t":"grid","parts":[{"sign":true},{"lit":"\\Bigl("},{"sqrt":true},{"digit":{"ok":"3","ds":[1,2,3,4,5,6,7,8,9]}},{"lit":"\\;\\Bigr)\\big/\\Bigl("},{"digit":{"ok":"2","ds":[1,2,3,4,5,6,7,8,9]}},{"lit":"\\Bigr)"}]},{"t":"grid","parts":[{"sign":true},{"lit":"\\Bigl("},{"sqrt":true},{"digit":{"ok":"2","ds":[1,2,3,4,5,6,7,8,9]}},{"lit":"\\;\\Bigr)\\big/\\Bigl("},{"digit":{"ok":"2","ds":[1,2,3,4,5,6,7,8,9]}},{"lit":"\\Bigr)"}]},{"t":"grid","parts":[{"sign":true},{"lit":"\\Bigl("},{"sqrt":true},{"digit":{"ok":"3","ds":[1,2,3,4,5,6,7,8,9]}},{"lit":"\\;\\Bigr)\\big/\\Bigl("},{"digit":{"ok":"1","ds":[1,2,3,4,5,6,7,8,9]}},{"lit":"\\Bigr)"}]}];
+const START = 92;
 const quiz = document.getElementById('quiz');
 let reg = [];
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
@@ -169,25 +192,31 @@ function renderGrid(q,n){
   });
   return h+'</div>';
 }
+function lbl(t){ // LaTeX court -> unicode lisible
+  return t.replace(/\\tfrac\{([^{}]*)\}\{([^{}]*)\}/g,'$1/$2')
+          .replace(/\\pi/g,'π').replace(/\\,/g,'').replace(/[{}]/g,'')
+          .replace(/-/g,'−').trim();
+}
 function renderCircle(q,n){
-  const R=112, C=150, S=300, off=24;
-  let svg='<svg width="'+S+'" height="'+S+'">'
-    +'<circle cx="'+C+'" cy="'+C+'" r="'+R+'" fill="none" stroke="#444" stroke-width="1.3"/>'
-    +'<line x1="'+(C-R-14)+'" y1="'+C+'" x2="'+(C+R+14)+'" y2="'+C+'" stroke="#666"/>'
-    +'<line x1="'+C+'" y1="'+(C-R-14)+'" x2="'+C+'" y2="'+(C+R+14)+'" stroke="#666"/></svg>';
-  let dots='';
+  const R=112, C=150, off=22;
+  let inner='<circle class="ring" cx="150" cy="150" r="112"/>'
+    +'<line class="axis" x1="'+(C-R-16)+'" y1="150" x2="'+(C+R+16)+'" y2="150"/>'
+    +'<line class="axis" x1="150" y1="'+(C-R-16)+'" x2="150" y2="'+(C+R+16)+'"/>';
   q.pts.forEach((p,idx)=>{
-    const px=C+R*p.x, py=C-R*p.y, lx=C+(R+off)*p.x, ly=C-(R+off)*p.y;
-    dots+='<label class="cdot" style="left:'+px+'px;top:'+py+'px"><input type="radio" name="q'+n+'" data-ok="'+(p.ok?1:0)+'"><span class="dotmark"></span></label>';
-    dots+='<span class="clabel" style="left:'+lx+'px;top:'+ly+'px">'+M(p.l)+'</span>';
+    const px=(C+R*p.x).toFixed(1), py=(C-R*p.y).toFixed(1);
+    const lx=(C+(R+off)*p.x).toFixed(1), ly=(C-(R+off)*p.y+4).toFixed(1);
+    inner+='<g class="cpt" data-ok="'+(p.ok?1:0)+'">'
+      +'<circle class="hit" cx="'+px+'" cy="'+py+'" r="17" fill="transparent"/>'
+      +'<circle class="dot" cx="'+px+'" cy="'+py+'" r="8"/>'
+      +'<text class="clab" x="'+lx+'" y="'+ly+'" text-anchor="middle">'+lbl(p.l)+'</text></g>';
   });
-  return '<div class="circlewrap" style="width:'+S+'px;height:'+S+'px">'+svg+dots+'</div>';
+  return '<div class="circlewrap"><svg class="trigsvg" viewBox="0 0 300 300" role="group" aria-label="cercle trigonométrique">'+inner+'</svg></div>';
 }
 
 function build(){
   quiz.innerHTML=''; reg=[];
   DATA.forEach((q,i)=>{
-    const n=i+1;
+    const n=START+i;
     const box=document.createElement('div');
     box.className='question';
     let body='';
@@ -206,20 +235,57 @@ function build(){
       grp.forEach(x=>{ const cell=x.closest('.cell'); if(cell) cell.classList.toggle('sel', x.checked); });
     }
   });
+  // sélection d'un point sur le cercle trigo
+  quiz.addEventListener('click', e=>{
+    const g=e.target.closest('.cpt'); if(!g) return;
+    const box=g.closest('.question'); if(box.classList.contains('locked')) return;
+    g.parentNode.querySelectorAll('.cpt').forEach(x=>x.classList.remove('sel'));
+    g.classList.add('sel');
+  });
   typeset();
 }
+
+// dispose les réponses en colonnes adaptées à leur largeur (évite le 3+1)
+function layoutAnswers(){
+  const GAP=29, MAXCOLS=3;
+  reg.forEach(e=>{
+    if(e.t!=='mcq') return;
+    const ans=e.box.querySelector('.answers'); if(!ans) return;
+    const labels=[].slice.call(ans.children); const n=labels.length;
+    const cw=ans.clientWidth||700;
+    // mesurer la largeur naturelle de chaque proposition
+    const prevD=ans.style.display; ans.style.display='block';
+    labels.forEach(l=>l.style.display='inline-block');
+    let maxW=0; labels.forEach(l=>{ if(l.offsetWidth>maxW) maxW=l.offsetWidth; });
+    labels.forEach(l=>l.style.display=''); ans.style.display=prevD;
+    let fit=Math.max(1, Math.floor((cw+GAP)/(maxW+GAP)));
+    fit=Math.min(fit, n, MAXCOLS);
+    while(fit>1 && n%fit===1) fit--;              // pas de dernière proposition esseulée
+    ans.style.gridTemplateColumns='repeat('+fit+',minmax(0,1fr))';
+  });
+}
+let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(layoutAnswers,150); });
 
 function verifier(){
   let score=0, total=0;
   reg.forEach(e=>{
     const box=e.box; const verdict=box.querySelector('.verdict');
+    box.querySelectorAll('.ans,.cell,.signbox,.cpt').forEach(el=>el.classList.remove('ok','bad','miss'));
+    // une question est traitée si au moins une saisie est active
+    let attempted=false;
+    box.querySelectorAll('input').forEach(i=>{ if(i.checked) attempted=true; });
+    if(!attempted && box.querySelector('.cpt.sel')) attempted=true;
+    if(!attempted){
+      // ne rien révéler ; laisser modifiable pour compléter plus tard
+      box.classList.add('done','unanswered');
+      verdict.className='verdict skip'; verdict.textContent='Non répondue — ne compte pas dans le score.';
+      return;
+    }
     box.classList.add('done'); box.classList.remove('unanswered');
-    box.querySelectorAll('.ans,.cell,.signbox,.cdot').forEach(el=>el.classList.remove('ok','bad','miss'));
-    let attempted=false, correct=true;
+    let correct=true;
     if(e.t==='mcq'){
       box.querySelectorAll('.ans').forEach(l=>{
         const inp=l.querySelector('input'); const isC=inp.dataset.correct==='1';
-        if(inp.checked)attempted=true;
         if(inp.checked&&isC)l.classList.add('ok');
         if(inp.checked&&!isC){l.classList.add('bad');correct=false;}
         if(!inp.checked&&isC){l.classList.add('miss');correct=false;}
@@ -230,7 +296,6 @@ function verifier(){
         const kind=sl.dataset.slot;
         if(kind==='sign'||kind==='sqrt'){
           const inp=sl.querySelector('input'); const ok=sl.dataset.ok==='1';
-          if(inp.checked)attempted=true;
           const good=(inp.checked===ok); if(!good)correct=false;
           if(inp.checked&&good)sl.classList.add('ok');
           if(inp.checked&&!good)sl.classList.add('bad');
@@ -238,7 +303,7 @@ function verifier(){
           inp.disabled=true;
         } else if(kind==='digit'){
           const ok=sl.dataset.ok; let sel=null;
-          sl.querySelectorAll('input').forEach(x=>{ if(x.checked){sel=x.value;attempted=true;} x.disabled=true; });
+          sl.querySelectorAll('input').forEach(x=>{ if(x.checked){sel=x.value;} x.disabled=true; });
           if(sel!==ok)correct=false;
           sl.querySelectorAll('.cell').forEach(cell=>{
             const x=cell.querySelector('input');
@@ -249,31 +314,28 @@ function verifier(){
         }
       });
     } else if(e.t==='circle'){
-      let sel=null;
-      box.querySelectorAll('.cdot').forEach(dot=>{
-        const x=dot.querySelector('input'); const ok=x.dataset.ok==='1';
-        if(x.checked){sel=ok;attempted=true;}
-        if(ok)dot.classList.add('miss');
-        if(x.checked&&ok){dot.classList.remove('miss');dot.classList.add('ok');}
-        if(x.checked&&!ok)dot.classList.add('bad');
-        x.disabled=true;
-      });
-      if(sel!==true)correct=false;
+      box.classList.add('locked');
+      const sel=box.querySelector('.cpt.sel');
+      box.querySelectorAll('.cpt').forEach(g=>{ if(g.dataset.ok==='1') g.classList.add('miss'); });
+      if(sel){ const ok=sel.dataset.ok==='1'; sel.classList.remove('miss'); sel.classList.add(ok?'ok':'bad'); if(!ok)correct=false; }
+      else correct=false;
     }
-    if(!attempted){ box.classList.add('unanswered'); verdict.className='verdict skip'; verdict.textContent='Non répondue — ne compte pas dans le score.'; return; }
     total++;
     if(correct){ score++; verdict.className='verdict ok'; verdict.textContent='✓ Correct'; }
     else { verdict.className='verdict no'; verdict.textContent='✗ Incorrect — la bonne réponse est indiquée en vert.'; }
   });
   const el=document.getElementById('resultat');
   el.textContent = total===0 ? 'Aucune question traitée.' : ('Score : '+score+' / '+total);
-  typeset();
+  layoutAnswers();
 }
 function recommencer(){
   document.getElementById('resultat').textContent='';
   build();
   window.scrollTo({top:0,behavior:'smooth'});
 }
-function typeset(){ if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear(); MathJax.typesetPromise([quiz]); } }
+function typeset(){
+  if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear(); MathJax.typesetPromise([quiz]).then(layoutAnswers); }
+  else layoutAnswers();
+}
 build();
 </script></body></html>

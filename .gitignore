@@ -15,7 +15,6 @@
 *.ilg
 *.ind
 main.pdf
-*.pdf
 *.json
 
 .DS_Store

@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fractions & Puissances — QCM</title>
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+:root{ --accent:#4f46e5; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Latin Modern Roman","Computer Modern",Georgia,"Times New Roman",serif;
+  background:#fdfdfd; color:#141414; line-height:1.5;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+main{max-width:760px;margin:0 auto;padding:24px 28px 120px}
+mjx-container{font-size:104%}
+
+/* barre de navigation haute */
+.topnav{
+  border-bottom:1px solid #ddd;background:#fff;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:12px 28px;position:sticky;top:0;z-index:900;
+}
+.topnav .brand{font-variant:small-caps;font-weight:700;font-size:1.05rem;margin-right:auto}
+.topnav a{font-size:.95rem}
+.topnav .accentbar{height:4px;background:var(--accent)}
+
+h1{font-variant:small-caps;font-size:2rem;text-align:center;margin:1.6rem 0 .4rem}
+.subtitle{text-align:center;color:#666;margin:0 0 2rem;font-size:1rem}
+.section-title{
+  font-variant:small-caps;font-size:1.4rem;margin:2.6rem 0 1.4rem;
+  padding:.5rem 0;border-bottom:2px solid var(--accent);
+}
+
+/* --- questions --- */
+.question{
+  background:#efefef;border-radius:6px;padding:14px 18px;margin:1.1rem 0;
+  display:grid;grid-template-columns:1fr;position:relative;
+}
+.qnum{
+  position:absolute;left:-10px;top:-10px;
+  background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;
+  min-width:26px;height:26px;border-radius:6px;padding:0 7px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 3px rgba(0,0,0,.2);
+}
+.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));column-gap:1.8rem;row-gap:.15rem;margin:.2rem 0 .1rem;}
+label.ans{display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:5px;cursor:pointer}
+label.ans:hover{background:rgba(0,0,0,.04)}
+label.ans input{transform:scale(1.15);cursor:pointer;flex:0 0 auto}
+
+/* correction */
+.ans.ok{background:#d8f5dd;color:#0a6b1e;font-weight:600}
+.ans.bad{background:#fbdada;color:#a11;font-weight:600}
+.ans.miss{background:#eafbe9;outline:2px dashed #2e9c46;outline-offset:-2px;color:#127a2c}
+.verdict{display:none;margin-top:.5rem;font-size:.85rem;font-weight:600}
+.question.done .verdict{display:block}
+.verdict.ok{color:#0a6b1e}.verdict.no{color:#a11}.verdict.skip{color:#888;font-weight:500;font-style:italic}
+.question.unanswered{opacity:.72}
+
+/* --- grilles chiffres / puissances --- */
+.grid{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:4px 0}
+.grid .lit{font-size:1.05rem}
+.gridbreak{flex-basis:100%;height:0}
+.digslot{display:inline-flex;align-items:center;gap:6px;vertical-align:middle}
+.slotlabel{font-size:.8rem;color:#777}
+.cells{display:inline-flex;flex-wrap:wrap;gap:3px}
+.cell{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border:1px solid #999;border-radius:4px;cursor:pointer;
+  font-size:.9rem;background:#fff;user-select:none;
+}
+.cell input{position:absolute;opacity:0;width:0;height:0}
+.cell:hover{border-color:var(--accent)}
+.cell.sel{background:var(--accent);color:#fff;border-color:var(--accent)}
+.cell.ok{background:#2e9c46;color:#fff;border-color:#2e9c46}
+.cell.bad{background:#c0392b;color:#fff;border-color:#c0392b}
+.cell.miss{outline:2px dashed #2e9c46;outline-offset:1px;color:#127a2c;font-weight:700}
+.signbox{
+  display:inline-flex;align-items:center;gap:5px;border:1px solid #999;border-radius:4px;
+  padding:3px 8px;cursor:pointer;background:#fff;font-size:.95rem;
+}
+.signbox input{transform:scale(1.1);cursor:pointer}
+.signbox.ok{background:#d8f5dd;border-color:#2e9c46}
+.signbox.bad{background:#fbdada;border-color:#c0392b}
+.signbox.miss{outline:2px dashed #2e9c46;outline-offset:1px}
+
+/* --- cercle trigonométrique --- */
+.circlewrap{position:relative;margin:6px auto}
+.circlewrap svg{position:absolute;left:0;top:0}
+.cdot{position:absolute;transform:translate(-50%,-50%);cursor:pointer}
+.cdot input{position:absolute;opacity:0;width:0;height:0}
+.dotmark{display:block;width:15px;height:15px;border-radius:50%;border:2px solid #666;background:#fff}
+.cdot:hover .dotmark{border-color:var(--accent)}
+.cdot input:checked + .dotmark{background:var(--accent);border-color:var(--accent)}
+.cdot.ok .dotmark{background:#2e9c46 !important;border-color:#2e9c46 !important}
+.cdot.bad .dotmark{background:#c0392b !important;border-color:#c0392b !important}
+.cdot.miss .dotmark{background:#fff;border-color:#2e9c46;box-shadow:0 0 0 3px rgba(46,156,70,.35)}
+.clabel{position:absolute;transform:translate(-50%,-50%);font-size:.8rem;color:#333;pointer-events:none;white-space:nowrap}
+
+/* --- barre de boutons fixe --- */
+.footer-buttons{
+  position:fixed;bottom:0;left:0;width:100%;background:#f7f7f7;border-top:1px solid #ccc;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:12px 22px;box-shadow:0 -2px 6px rgba(0,0,0,.06);z-index:1000;
+}
+.footer-buttons .left{display:flex;gap:1rem;flex-wrap:wrap}
+.footer-buttons button{
+  font-family:inherit;font-size:1rem;padding:10px 22px;border-radius:8px;cursor:pointer;border:1px solid #333;
+}
+.footer-buttons .verif{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+.footer-buttons .reset{background:#fff;color:#222}
+.footer-buttons button:hover{opacity:.92}
+.score-right{font-weight:700;font-size:1.05rem;white-space:nowrap;color:var(--accent)}
+
+/* --- page menu --- */
+.menu-grid{display:grid;grid-template-columns:1fr;gap:14px;margin:1.5rem 0}
+.menu-card{
+  display:flex;align-items:center;gap:16px;border:1px solid #ddd;border-left:6px solid var(--c);
+  border-radius:10px;padding:18px 20px;background:#fff;transition:box-shadow .12s,transform .05s;
+}
+.menu-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.08);text-decoration:none;transform:translateY(-1px)}
+.menu-card .idx{font-size:1.5rem;font-weight:800;color:var(--c);min-width:34px}
+.menu-card .mc-body{flex:1;display:block}
+.menu-card .mc-title{display:block;font-size:1.2rem;font-weight:700;color:#141414;font-variant:small-caps}
+.menu-card .mc-sub{display:block;color:#777;font-size:.9rem;margin-top:2px}
+.menu-card .arrow{color:var(--c);font-size:1.4rem}
+.corr-link{
+  display:block;text-align:center;margin:2rem 0 0;padding:16px;border:2px dashed #bbb;border-radius:10px;
+  font-size:1.1rem;font-variant:small-caps;font-weight:700;
+}
+.corr-link:hover{border-color:var(--accent);text-decoration:none;background:#fafaff}
+
+/* --- corrigés --- */
+.sol{border-bottom:1px solid #e6e6e6;padding:12px 0;display:flex;gap:12px}
+.sol .sn{font-weight:800;color:var(--accent);min-width:32px}
+.sol .sb{flex:1}
+.sol .sb p{margin:.3rem 0}
+
+.foot-note{color:#888;font-size:.82rem;text-align:center;margin-top:1.5rem}
+@media(max-width:520px){ main{padding:18px 16px 120px} h1{font-size:1.6rem} .topnav{padding:10px 16px} }
+</style></head><body style="--accent:#4f46e5"><div class="topnav" style="--accent:#4f46e5"><span class="brand">Fractions & Puissances</span><a href="index.html">Menu</a><a href="corriges.html">Corrigés</a></div><main><h1>Fractions & Puissances</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié ; ici, seules les réponses. Ton score porte sur les questions traitées.</p><div id="quiz"></div><p class="foot-note">34 questions · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#4f46e5"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>
+const DATA = [{"t":"mcq","c":[["0",0],["a",0],["a^1",0],["1",1]]},{"t":"mcq","c":[["1",0],["a",1],["a^2",0],["0",0]]},{"t":"mcq","c":[["4",1],["2",0],["-4",0],["-2",0]]},{"t":"mcq","c":[["a",0],["0",0],["1",1],["a^6",0]]},{"t":"mcq","c":[["a^{5^3}",0],["a^{2}",0],["a^{15}",0],["a^8",1]]},{"t":"mcq","c":[["\\dfrac{1}{a+b}",0],["\\dfrac{2}{ab}",0],["\\dfrac{b+a}{a+b}",0],["\\dfrac{a+b}{ab}",1]]},{"t":"mcq","c":[["-a^{3}",0],["\\dfrac{1}{a^{3}}",0],["a^{3}",1],["a^{-3}",0]]},{"t":"mcq","c":[["a^{3n}",1],["a^{3+n}",0],["a^{3^n}",0],["n\\ln(a^3)",0]]},{"t":"mcq","c":[["a^{-10}",0],["a^{-3}",0],["a^{3}",1],["\\dfrac{1}{a^{3}}",0]]},{"t":"mcq","c":[["3^{(n^2)}",0],["3n^2",0],["6n",0],["9^n",1]]},{"t":"mcq","c":[["b",0],["\\tfrac{b}{a}",0],["1 + \\tfrac{b}{a}",1],["a+b",0]]},{"t":"mcq","c":[["-1",0],["1",1],["2n",0],["(-1)^n",0]]},{"t":"mcq","c":[["-2",0],["-1",0],["0",1],["1",0],["2",0],["2^n",0]]},{"t":"mcq","c":[["(-2)^{2n+1}",0],["0",0],["2(-2)^{n}",0],["-(-2)^{n}",1]]},{"t":"mcq","c":[["3^{2n+1}",0],["2 \\times 3^{n+1}",0],["3^{n-1}",0],["2 \\times 3^{n}",1]]},{"t":"mcq","c":[["4",0],["\\tfrac{1}{8}",0],["8",1],["2^4",0]]},{"t":"mcq","c":[["a",0],["\\sqrt{a}",0],["a^2",1],["a\\sqrt{a}",0]]},{"t":"mcq","c":[["a^2",0],["a^3",0],["a^4",1],["a^6",0]]},{"t":"mcq","c":[["2^n",0],["2^{n+1}",0],["1",0],["\\dfrac{1}{2^{n-1}}",1]]},{"t":"mcq","c":[["\\tfrac{4}{9}",0],["-\\tfrac{4}{9}",0],["\\tfrac{2}{3}",0],["\\tfrac{9}{4}",1]]},{"t":"mcq","c":[["-3",0],["9",0],["\\tfrac{1}{3}",1],["-\\tfrac{1}{3}",0]]},{"t":"mcq","c":[["2a^{2}",1],["2a^{3}",0],["4a^{3}",0],["8a^{2}",0]]},{"t":"mcq","c":[["a",0],["a^{7/6}",0],["a^{1/6}",0],["a^{5/6}",1]]},{"t":"grid","parts":[{"lit":"p ="},{"digit":{"ok":"6","ds":[1,2,3,4,5,6,7,8,9]}},{"br":true},{"lit":"q ="},{"digit":{"ok":"1","ds":[1,2,3,4,5,6,7,8,9]}}]},{"t":"grid","parts":[{"lit":"a ="},{"digit":{"ok":"3","ds":[0,1,2,3,4,5,6,7,8,9]}},{"br":true},{"lit":"b ="},{"digit":{"ok":"1","ds":[0,1,2,3,4,5,6,7,8,9]}}]},{"t":"grid","parts":[{"lit":"10^{\\square}"},{"sign":false},{"digit":{"ok":"3","ds":[0,1,2,3,4,5,6,7,8,9]}},{"digit":{"ok":"9","ds":[0,1,2,3,4,5,6,7,8,9]}}]},{"t":"mcq","c":[["2\\sqrt{5}",0],["25\\sqrt{2}",0],["10\\sqrt{5}",0],["5\\sqrt{2}",1]]},{"t":"mcq","c":[["\\sqrt{a}",0],["a\\sqrt{a}",1],["\\dfrac{1}{\\sqrt{a}}",0],["a^{\\frac{3}{2}}",1]]},{"t":"mcq","c":[["2\\sqrt{a}",0],["a\\sqrt{2}",0],["\\sqrt{2a}",1],["\\dfrac{\\sqrt{a}}{2}",0]]},{"t":"grid","parts":[{"lit":"2^{\\square}"},{"sign":true},{"digit":{"ok":"4","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;3^{\\square}"},{"sign":true},{"digit":{"ok":"5","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;5^{\\square}"},{"sign":false},{"digit":{"ok":"2","ds":[0,1,2,3,4,5,6,7,8,9]}}]},{"t":"grid","parts":[{"lit":"2^{\\square}"},{"sign":false},{"digit":{"ok":"5","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;3^{\\square}"},{"sign":true},{"digit":{"ok":"5","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;5^{\\square}"},{"sign":false},{"digit":{"ok":"2","ds":[0,1,2,3,4,5,6,7,8,9]}}]},{"t":"grid","parts":[{"lit":"2^{\\square}"},{"sign":false},{"digit":{"ok":"1","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;3^{\\square}"},{"sign":false},{"digit":{"ok":"4","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;5^{\\square}"},{"sign":false},{"digit":{"ok":"1","ds":[0,1,2,3,4,5,6,7,8,9]}}]},{"t":"grid","parts":[{"lit":"a ="},{"digit":{"ok":"1","ds":[0,1,2,3,4,5,6,7,8,9]}},{"digit":{"ok":"2","ds":[0,1,2,3,4,5,6,7,8,9]}},{"br":true},{"lit":"b ="},{"digit":{"ok":"3","ds":[0,1,2,3,4,5,6,7,8,9]}},{"digit":{"ok":"1","ds":[0,1,2,3,4,5,6,7,8,9]}}]},{"t":"grid","parts":[{"lit":"2^{\\square}"},{"sign":false},{"digit":{"ok":"5","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;3^{\\square}"},{"sign":false},{"digit":{"ok":"0","ds":[0,1,2,3,4,5,6,7,8,9]}},{"lit":"\\times\\;5^{\\square}"},{"sign":false},{"digit":{"ok":"3","ds":[0,1,2,3,4,5,6,7,8,9]}}]}];
+const quiz = document.getElementById('quiz');
+let reg = [];
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function M(t){return '\\('+t+'\\)';}
+
+function renderMcq(q,n){
+  let h='<div class="answers">';
+  q.c.forEach(o=>{
+    const body = o[2] ? esc(o[0]) : M(o[0]);
+    h+='<label class="ans"><input type="checkbox" data-correct="'+(o[1]?1:0)+'">'+body+'</label>';
+  });
+  return h+'</div>';
+}
+function renderGrid(q,n){
+  let h='<div class="grid">'; let slot=0;
+  q.parts.forEach(p=>{
+    if(p.br){ h+='<div class="gridbreak"></div>'; return; }
+    if(p.lit!==undefined){ h+='<span class="lit">'+M(p.lit)+'</span>'; return; }
+    if(p.sign!==undefined){ slot++; h+='<label class="signbox" data-slot="sign" data-ok="'+(p.sign?1:0)+'"><input type="checkbox">'+M('-')+'</label>'; return; }
+    if(p.sqrt){ slot++; h+='<label class="signbox" data-slot="sqrt" data-ok="1"><input type="checkbox">'+M('\\sqrt{\\phantom{x}}')+'</label>'; return; }
+    if(p.digit){ slot++; const nm='q'+n+'s'+slot; let cells='';
+      p.digit.ds.forEach(d=>{ cells+='<label class="cell"><input type="radio" name="'+nm+'" value="'+d+'">'+d+'</label>'; });
+      h+='<span class="digslot" data-slot="digit" data-ok="'+p.digit.ok+'">'+(p.digit.label?'<span class="slotlabel">'+p.digit.label+'</span>':'')+'<span class="cells">'+cells+'</span></span>';
+    }
+  });
+  return h+'</div>';
+}
+function renderCircle(q,n){
+  const R=112, C=150, S=300, off=24;
+  let svg='<svg width="'+S+'" height="'+S+'">'
+    +'<circle cx="'+C+'" cy="'+C+'" r="'+R+'" fill="none" stroke="#444" stroke-width="1.3"/>'
+    +'<line x1="'+(C-R-14)+'" y1="'+C+'" x2="'+(C+R+14)+'" y2="'+C+'" stroke="#666"/>'
+    +'<line x1="'+C+'" y1="'+(C-R-14)+'" x2="'+C+'" y2="'+(C+R+14)+'" stroke="#666"/></svg>';
+  let dots='';
+  q.pts.forEach((p,idx)=>{
+    const px=C+R*p.x, py=C-R*p.y, lx=C+(R+off)*p.x, ly=C-(R+off)*p.y;
+    dots+='<label class="cdot" style="left:'+px+'px;top:'+py+'px"><input type="radio" name="q'+n+'" data-ok="'+(p.ok?1:0)+'"><span class="dotmark"></span></label>';
+    dots+='<span class="clabel" style="left:'+lx+'px;top:'+ly+'px">'+M(p.l)+'</span>';
+  });
+  return '<div class="circlewrap" style="width:'+S+'px;height:'+S+'px">'+svg+dots+'</div>';
+}
+
+function build(){
+  quiz.innerHTML=''; reg=[];
+  DATA.forEach((q,i)=>{
+    const n=i+1;
+    const box=document.createElement('div');
+    box.className='question';
+    let body='';
+    if(q.t==='mcq') body=renderMcq(q,n);
+    else if(q.t==='grid') body=renderGrid(q,n);
+    else if(q.t==='circle') body=renderCircle(q,n);
+    box.innerHTML='<div class="qnum">'+n+'</div>'+body+'<div class="verdict"></div>';
+    quiz.appendChild(box);
+    reg.push({t:q.t, box});
+  });
+  // reflet visuel des sélections (cellules)
+  quiz.addEventListener('change', e=>{
+    const inp=e.target;
+    if(inp.type==='radio'){
+      const grp=quiz.querySelectorAll('input[name="'+inp.name+'"]');
+      grp.forEach(x=>{ const cell=x.closest('.cell'); if(cell) cell.classList.toggle('sel', x.checked); });
+    }
+  });
+  typeset();
+}
+
+function verifier(){
+  let score=0, total=0;
+  reg.forEach(e=>{
+    const box=e.box; const verdict=box.querySelector('.verdict');
+    box.classList.add('done'); box.classList.remove('unanswered');
+    box.querySelectorAll('.ans,.cell,.signbox,.cdot').forEach(el=>el.classList.remove('ok','bad','miss'));
+    let attempted=false, correct=true;
+    if(e.t==='mcq'){
+      box.querySelectorAll('.ans').forEach(l=>{
+        const inp=l.querySelector('input'); const isC=inp.dataset.correct==='1';
+        if(inp.checked)attempted=true;
+        if(inp.checked&&isC)l.classList.add('ok');
+        if(inp.checked&&!isC){l.classList.add('bad');correct=false;}
+        if(!inp.checked&&isC){l.classList.add('miss');correct=false;}
+        inp.disabled=true;
+      });
+    } else if(e.t==='grid'){
+      box.querySelectorAll('[data-slot]').forEach(sl=>{
+        const kind=sl.dataset.slot;
+        if(kind==='sign'||kind==='sqrt'){
+          const inp=sl.querySelector('input'); const ok=sl.dataset.ok==='1';
+          if(inp.checked)attempted=true;
+          const good=(inp.checked===ok); if(!good)correct=false;
+          if(inp.checked&&good)sl.classList.add('ok');
+          if(inp.checked&&!good)sl.classList.add('bad');
+          if(!inp.checked&&ok)sl.classList.add('miss');
+          inp.disabled=true;
+        } else if(kind==='digit'){
+          const ok=sl.dataset.ok; let sel=null;
+          sl.querySelectorAll('input').forEach(x=>{ if(x.checked){sel=x.value;attempted=true;} x.disabled=true; });
+          if(sel!==ok)correct=false;
+          sl.querySelectorAll('.cell').forEach(cell=>{
+            const x=cell.querySelector('input');
+            if(x.value===ok)cell.classList.add('miss');
+            if(x.checked&&x.value===ok){cell.classList.remove('miss');cell.classList.add('ok');}
+            if(x.checked&&x.value!==ok)cell.classList.add('bad');
+          });
+        }
+      });
+    } else if(e.t==='circle'){
+      let sel=null;
+      box.querySelectorAll('.cdot').forEach(dot=>{
+        const x=dot.querySelector('input'); const ok=x.dataset.ok==='1';
+        if(x.checked){sel=ok;attempted=true;}
+        if(ok)dot.classList.add('miss');
+        if(x.checked&&ok){dot.classList.remove('miss');dot.classList.add('ok');}
+        if(x.checked&&!ok)dot.classList.add('bad');
+        x.disabled=true;
+      });
+      if(sel!==true)correct=false;
+    }
+    if(!attempted){ box.classList.add('unanswered'); verdict.className='verdict skip'; verdict.textContent='Non répondue — ne compte pas dans le score.'; return; }
+    total++;
+    if(correct){ score++; verdict.className='verdict ok'; verdict.textContent='✓ Correct'; }
+    else { verdict.className='verdict no'; verdict.textContent='✗ Incorrect — la bonne réponse est indiquée en vert.'; }
+  });
+  const el=document.getElementById('resultat');
+  el.textContent = total===0 ? 'Aucune question traitée.' : ('Score : '+score+' / '+total);
+  typeset();
+}
+function recommencer(){
+  document.getElementById('resultat').textContent='';
+  build();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function typeset(){ if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear(); MathJax.typesetPromise([quiz]); } }
+build();
+</script></body></html>

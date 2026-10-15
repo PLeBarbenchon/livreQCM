@@ -1,1 +1,0 @@
-window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']]},svg:{fontCache:'global'},startup:{pageReady:function(){return MathJax.startup.defaultPageReady().then(function(){if(window.layoutAnswers)window.layoutAnswers();});}}};

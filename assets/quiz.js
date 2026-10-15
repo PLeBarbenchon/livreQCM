@@ -12,7 +12,8 @@ var MSG = {
   noAnswer:  'Aucune question traitée.',
   score:     function(s, t){ return 'Score : ' + s + ' / ' + t; },
   solShow:   '💡 Voir la solution',
-  solHide:   '💡 Masquer la solution'
+  solHide:   '💡 Masquer la solution',
+  info:      '✎ Question à figure ou grille — à traiter sur le polycopié (non notée ici).'
 };
 
 var DATA  = window.QUIZ_DATA  || [];
@@ -33,7 +34,7 @@ function saveState(){
     var a = reg.map(function(e){
       var box = e.box;
       if(e.t==='mcq'){ var c=[]; box.querySelectorAll('.ans input').forEach(function(inp,idx){ if(inp.checked) c.push(idx); }); return {t:'m',c:c}; }
-      if(e.t==='grid'){ var s=[]; box.querySelectorAll('[data-slot]').forEach(function(sl){ var k=sl.dataset.slot; if(k==='sign'||k==='sqrt'){ s.push(sl.querySelector('input').checked?1:0); } else { var v=''; sl.querySelectorAll('input').forEach(function(x){ if(x.checked) v=x.value; }); s.push(v); } }); return {t:'g',s:s}; }
+      if(e.t==='grid'){ var s=[]; box.querySelectorAll('[data-slot]').forEach(function(sl){ var k=sl.dataset.slot; if(k==='sign'||k==='sqrt'||k==='check'){ s.push(sl.querySelector('input').checked?1:0); } else { var v=''; sl.querySelectorAll('input').forEach(function(x){ if(x.checked) v=x.value; }); s.push(v); } }); return {t:'g',s:s}; }
       if(e.t==='circle'){ var idx=-1,i=0; box.querySelectorAll('.cpt').forEach(function(g){ if(g.classList.contains('sel')) idx=i; i++; }); return {t:'c',i:idx}; }
       return null;
     });
@@ -47,7 +48,7 @@ function applyState(){
     var d=st.a[i]; if(!d) return; var box=e.box;
     if(e.t==='mcq' && d.t==='m'){ var ins=box.querySelectorAll('.ans input'); d.c.forEach(function(idx){ if(ins[idx]) ins[idx].checked=true; }); }
     else if(e.t==='grid' && d.t==='g'){ box.querySelectorAll('[data-slot]').forEach(function(sl,si){ var val=d.s[si], k=sl.dataset.slot;
-      if(k==='sign'||k==='sqrt'){ sl.querySelector('input').checked=!!val; }
+      if(k==='sign'||k==='sqrt'||k==='check'){ sl.querySelector('input').checked=!!val; }
       else if(val!=='' && val!=null){ sl.querySelectorAll('input').forEach(function(x){ if(x.value===String(val)){ x.checked=true; var cell=x.closest('.cell'); if(cell) cell.classList.add('sel'); } }); } }); }
     else if(e.t==='circle' && d.t==='c' && d.i>=0){ var g=box.querySelectorAll('.cpt')[d.i]; if(g) g.classList.add('sel'); }
   });
@@ -87,7 +88,8 @@ function renderGrid(q,n){
   let h='<div class="grid">'; let slot=0;
   q.parts.forEach(p=>{
     if(p.br){ h+='<div class="gridbreak"></div>'; return; }
-    if(p.lit!==undefined){ h+='<span class="lit">'+M(p.lit)+'</span>'; return; }
+    if(p.lit!==undefined){ h+='<span class="lit">'+(p.raw?p.lit:M(p.lit))+'</span>'; return; }
+    if(p.check!==undefined){ slot++; h+='<label class="signbox gridcheck" data-slot="check" data-ok="'+(p.check.ok?1:0)+'"><input type="checkbox"><span class="clab2">'+p.check.label+'</span></label>'; return; }
     if(p.sign!==undefined){ slot++; h+='<label class="signbox" data-slot="sign" data-ok="'+(p.sign?1:0)+'"><input type="checkbox">'+M('-')+'</label>'; return; }
     if(p.sqrt){ slot++; h+='<label class="signbox" data-slot="sqrt" data-ok="1"><input type="checkbox">'+M('\\sqrt{\\phantom{x}}')+'</label>'; return; }
     if(p.digit){ slot++; const nm='q'+n+'s'+slot; let cells='';
@@ -129,8 +131,10 @@ function build(){
     if(q.t==='mcq') body=renderMcq(q,n);
     else if(q.t==='grid') body=renderGrid(q,n);
     else if(q.t==='circle') body=renderCircle(q,n);
+    else if(q.t==='info') body='<div class="q-info">'+MSG.info+'</div>';
+    if(q.t==='info') box.classList.add('q-figure');
     box.innerHTML='<div class="qnum">'+qLabel(n)+'</div>'+body+'<div class="verdict"></div>';
-    if(SOL[i]){
+    if(SOL[i] && q.t!=='info'){
       var tg=document.createElement('button'); tg.type='button'; tg.className='sol-toggle'; tg.hidden=true;
       tg.setAttribute('aria-expanded','false'); tg.innerHTML=MSG.solShow;
       var sb=document.createElement('div'); sb.className='sol-box'; sb.hidden=true; sb.innerHTML=SOL[i];
@@ -199,6 +203,7 @@ let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeou
 function verifier(){
   let score=0, total=0;
   reg.forEach(e=>{
+    if(e.t==='info') return;   // question à figure : non notée
     const box=e.box; const verdict=box.querySelector('.verdict');
     box.querySelectorAll('.ans,.cell,.signbox,.cpt').forEach(el=>el.classList.remove('ok','bad','miss'));
     // une question est traitée si au moins une saisie est active
@@ -224,7 +229,7 @@ function verifier(){
     } else if(e.t==='grid'){
       box.querySelectorAll('[data-slot]').forEach(sl=>{
         const kind=sl.dataset.slot;
-        if(kind==='sign'||kind==='sqrt'){
+        if(kind==='sign'||kind==='sqrt'||kind==='check'){
           const inp=sl.querySelector('input'); const ok=sl.dataset.ok==='1';
           const good=(inp.checked===ok); if(!good)correct=false;
           if(inp.checked&&good)sl.classList.add('ok');

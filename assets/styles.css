@@ -61,6 +61,8 @@ label.ans input:focus-visible + .opt-box{outline:2px solid var(--accent);outline
 .question.done .verdict{display:block}
 .verdict.ok{color:#0a6b1e}.verdict.no{color:#a11}.verdict.skip{color:#888;font-weight:500;font-style:italic}
 .question.unanswered{opacity:.72}
+.question.q-figure{background:#f6f6f9;border-style:dashed}
+.q-info{color:#777;font-size:.92rem;font-style:italic;padding:2px 0}
 
 /* --- solution dépliable (icône 💡 + encadré) --- */
 .sol-toggle{display:inline-flex;align-items:center;gap:6px;margin-top:.55rem;font:inherit;font-size:.85rem;
@@ -99,6 +101,14 @@ label.ans input:focus-visible + .opt-box{outline:2px solid var(--accent);outline
 .signbox.ok{background:#d8f5dd;border-color:#2e9c46}
 .signbox.bad{background:#fbdada;border-color:#c0392b}
 .signbox.miss{outline:2px dashed #2e9c46;outline-offset:1px}
+/* cases à cocher génériques (grilles « coche les bonnes cases ») */
+.gridcheck{gap:7px}
+.gridcheck input{flex:0 0 auto;width:16px;height:16px;margin:0;accent-color:var(--accent);cursor:pointer}
+.gridcheck .clab2{line-height:1.1}
+.gridcheck.ok .clab2{color:#0a6b1e}
+.gridcheck.bad .clab2{color:#a11}
+.gridcheck.miss{background:#eafbe9}.gridcheck.miss .clab2{color:#127a2c;font-weight:700}
+.grid .lit+.gridcheck{margin-left:2px}
 
 /* --- cercle trigonométrique (SVG fluide) --- */
 .circlewrap{margin:8px auto;max-width:100%}

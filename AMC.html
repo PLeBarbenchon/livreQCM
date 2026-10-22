@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-Multiple-Choice — format et documentation</title>
+<script>
+window.MathJax={
+  tex:{inlineMath:[['\\(','\\)'],['$','$']],
+    macros:{R:'\\mathbb{R}',N:'\\mathbb{N}',Z:'\\mathbb{Z}',C:'\\mathbb{C}',Q:'\\mathbb{Q}',K:'\\mathbb{K}',
+      ch:'\\operatorname{ch}',sh:'\\operatorname{sh}',th:'\\operatorname{th}',non:['\\overline{#1}',1]}},
+  svg:{fontCache:'global'}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<style>
+:root{--accent:#4f46e5;--accent2:#0891b2;--ok:#15803d;--bad:#c0392b;}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Latin Modern Roman","Computer Modern",Georgia,"Times New Roman",serif;
+  background:#fdfdfd;color:#141414;line-height:1.6;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+main{max-width:820px;margin:0 auto;padding:24px 28px 90px}
+mjx-container{font-size:104%}
+
+.topnav{
+  border-bottom:1px solid #ddd;background:#fff;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:12px 28px;position:sticky;top:0;z-index:900;
+}
+.topnav .brand{font-variant:small-caps;font-weight:700;font-size:1.05rem;margin-right:auto}
+.topnav a{font-size:.95rem}
+
+h1{font-variant:small-caps;font-size:2.1rem;text-align:center;margin:1.6rem 0 .3rem}
+.subtitle{text-align:center;color:#666;margin:0 auto 2.4rem;font-size:1.05rem;max-width:620px}
+h2{
+  font-variant:small-caps;font-size:1.5rem;margin:2.8rem 0 1rem;
+  padding:.4rem 0;border-bottom:2px solid var(--accent);
+}
+h3{font-size:1.12rem;margin:1.8rem 0 .5rem;color:#2a2a35}
+p{margin:.7rem 0}
+.lead{font-size:1.05rem}
+code.inl{font-family:"SFMono-Regular",Menlo,Consolas,monospace;font-size:.9em;
+  background:#eef0fb;color:#3a2f8f;padding:1px 6px;border-radius:5px}
+
+/* cartes de documentation */
+.doc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:1.2rem 0}
+.doc-card{
+  display:block;border:1px solid #e1e1ea;border-left:5px solid var(--accent);
+  border-radius:10px;padding:14px 16px;background:#fff;transition:box-shadow .12s,transform .05s;
+}
+.doc-card:hover{box-shadow:0 6px 16px rgba(0,0,0,.08);text-decoration:none;transform:translateY(-1px)}
+.doc-card .dt{display:block;font-weight:700;font-size:1.02rem;color:#141414}
+.doc-card .dd{display:block;color:#777;font-size:.88rem;margin-top:3px}
+.doc-card .dt::after{content:" ↗";color:var(--accent);font-size:.85em}
+
+/* blocs de code AMC */
+figure.ex{margin:1.1rem 0 1.4rem}
+.code-wrap{position:relative;border:1px solid #e3e3ee;border-radius:10px;overflow:hidden;background:#fbfbfe}
+.code-wrap .cap{font-size:.82rem;color:#6a6a7a;background:#f1f1f8;border-bottom:1px solid #e7e7f0;
+  padding:7px 54px 7px 14px;font-variant:small-caps;letter-spacing:.02em}
+pre{margin:0;padding:14px 16px;overflow-x:auto}
+pre code{font-family:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  font-size:.86rem;line-height:1.55;color:#24242e;white-space:pre}
+.copybtn{position:absolute;top:6px;right:8px;font:inherit;font-size:.76rem;
+  background:#fff;border:1px solid #ccccda;border-radius:7px;padding:4px 10px;cursor:pointer;color:#555}
+.copybtn:hover{border-color:var(--accent);color:var(--accent)}
+.copybtn.done{color:var(--ok);border-color:var(--ok)}
+/* coloration syntaxique */
+.tok-cmd{color:#6d28d9}
+.tok-env{color:#0e7490;font-weight:600}
+.tok-ok{color:var(--ok);font-weight:700}
+.tok-bad{color:var(--bad);font-weight:700}
+.tok-cmt{color:#9aa0ab;font-style:italic}
+.tok-opt{color:#b45309}
+
+/* rendu "sur la copie" */
+.paper{border:1px solid #d8d8e2;border-radius:10px;background:#fff;padding:16px 18px;margin:.6rem 0 0;
+  box-shadow:inset 0 0 0 1px #fff, 0 1px 2px rgba(0,0,0,.03)}
+.paper .pq{font-weight:600;margin-bottom:.5rem}
+.paper .opt{display:flex;align-items:center;gap:10px;padding:3px 0}
+.paper .box{flex:0 0 auto;width:16px;height:16px;border:1.4px solid #333;border-radius:3px;display:inline-block}
+.paper .cnum{display:inline-block;min-width:1.4em;color:#888;font-size:.85em}
+.paper.horiz .opts{display:flex;flex-wrap:wrap;gap:4px 22px}
+.paperlabel{font-size:.78rem;color:#8a8a97;font-variant:small-caps;letter-spacing:.03em;margin:.9rem 0 .1rem}
+
+.note{border:1px solid #e4e4ee;border-left:4px solid var(--accent2);border-radius:8px;
+  background:#f7fdff;padding:12px 16px;margin:1.4rem 0;font-size:.97rem}
+.note b{color:#0e5a6b}
+ul.opts-list{margin:.6rem 0;padding-left:1.3rem}
+ul.opts-list li{margin:.35rem 0}
+.foot{color:#888;font-size:.84rem;text-align:center;margin-top:3rem;border-top:1px solid #eee;padding-top:1.2rem}
+.backlink{display:inline-block;margin-top:.4rem;font-variant:small-caps;font-weight:700}
+
+@media(max-width:620px){
+  main{padding:20px 15px 70px}
+  h1{font-size:1.65rem}
+  .doc-grid{grid-template-columns:1fr}
+  .topnav{padding:10px 15px;gap:12px}
+  .topnav .brand{flex-basis:100%;margin-right:0}
+  pre code{font-size:.8rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <span class="brand">Auto-Multiple-Choice</span>
+  <a href="index.html">← Accueil QCM</a>
+  <a href="https://www.auto-multiple-choice.net/" target="_blank" rel="noopener">Site officiel ↗</a>
+</div>
+
+<main>
+<h1>Auto-Multiple-Choice</h1>
+<p class="subtitle">Créer des QCM sur papier, les scanner et les corriger automatiquement.
+Documentation officielle et exemples de questions au format AMC.</p>
+
+<h2>Qu'est-ce qu'AMC ?</h2>
+<p class="lead">Auto-Multiple-Choice (AMC) est un logiciel libre qui gère tout le cycle d'un QCM sur
+papier&nbsp;: on écrit les questions (en <b>LaTeX</b> ou dans le format texte <b>AMC-TXT</b>), AMC
+génère des sujets mélangés — l'ordre des questions et des réponses change d'une copie à l'autre —,
+puis on scanne les copies remplies et le logiciel lit les cases cochées, calcule les notes selon un
+barème paramétrable et produit un corrigé annoté ainsi qu'un export des résultats.</p>
+<p>C'est l'outil idéal pour un contrôle en classe&nbsp;: la saisie est automatique, le barème peut
+pénaliser les mauvaises réponses, et chaque élève reçoit sa copie annotée. AMC est gratuit et
+fonctionne sous Linux, macOS et Windows.</p>
+
+<h2>Documentation officielle</h2>
+<div class="doc-grid">
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/" target="_blank" rel="noopener">
+    <span class="dt">Site officiel</span><span class="dd">Présentation, actualités, captures d'écran</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/doc/" target="_blank" rel="noopener">
+    <span class="dt">Manuel (documentation)</span><span class="dd">Toute la documentation, chapitre par chapitre</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/doc/usage/" target="_blank" rel="noopener">
+    <span class="dt">Prise en main</span><span class="dd">Le déroulé complet d'un projet d'examen</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/doc/latex/" target="_blank" rel="noopener">
+    <span class="dt">Format LaTeX</span><span class="dd">Syntaxe des questions avec le paquet automultiplechoice</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/doc/amc-txt/" target="_blank" rel="noopener">
+    <span class="dt">Format AMC-TXT</span><span class="dd">La version simplifiée, sans LaTeX</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/doc/scoring/" target="_blank" rel="noopener">
+    <span class="dt">Barèmes</span><span class="dd">Comment attribuer et moduler les points</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/doc/faq/" target="_blank" rel="noopener">
+    <span class="dt">FAQ</span><span class="dd">Les questions fréquentes</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/pdf/auto-multiple-choice-doc-en.pdf" target="_blank" rel="noopener">
+    <span class="dt">Manuel PDF (EN)</span><span class="dd">La documentation complète à télécharger</span></a>
+  <a class="doc-card" href="https://project.auto-multiple-choice.net/projects/auto-multiple-choice/wiki/Fran%C3%A7ais" target="_blank" rel="noopener">
+    <span class="dt">Wiki francophone</span><span class="dd">Astuces et contributions de la communauté</span></a>
+  <a class="doc-card" href="https://project.auto-multiple-choice.net/projects/auto-multiple-choice/boards" target="_blank" rel="noopener">
+    <span class="dt">Forum communautaire</span><span class="dd">Poser une question, chercher une réponse</span></a>
+  <a class="doc-card" href="https://www.auto-multiple-choice.net/install/" target="_blank" rel="noopener">
+    <span class="dt">Installation</span><span class="dd">Linux, macOS et Windows</span></a>
+</div>
+<p style="font-size:.9rem;color:#777">Le site est disponible en français&nbsp;: utilisez le sélecteur
+de langue en haut de chaque page. Le manuel complet est aussi livré avec le logiciel
+(menu <i>Aide</i>) en version française.</p>
+
+<h2>Le format LaTeX d'AMC</h2>
+<p>Un sujet AMC est un document LaTeX qui charge le paquet
+<code class="inl">automultiplechoice</code>. Les questions s'écrivent avec l'environnement
+<code class="inl">question</code> (une seule bonne réponse) ou <code class="inl">questionmult</code>
+(zéro, une ou plusieurs bonnes réponses). À l'intérieur, les réponses vont dans un environnement
+<code class="inl">reponses</code>, chaque réponse étant marquée <code class="inl">\bonne</code> ou
+<code class="inl">\mauvaise</code>. Chaque question porte un <b>identifiant unique</b>.</p>
+
+<h3>1 · Squelette complet d'un sujet</h3>
+<p>Ce document se compile tel quel&nbsp;; <code class="inl">\exemplaire{10}{…}</code> produit 10 copies
+mélangées.</p>
+<figure class="ex"><div class="code-wrap"><div class="cap">sujet.tex — document minimal compilable</div>
+<pre><code class="amc">\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais,bloc,completemulti]{automultiplechoice}
+
+\begin{document}
+
+% \exemplaire{N}{...} : génère N copies aux questions/réponses mélangées
+\exemplaire{10}{
+
+% --- en-tête de la copie : nom de l'élève ---
+\noindent{\bf QCM de mathématiques} \hfill Première S
+\champnom{\fbox{\begin{minipage}{.5\linewidth}
+Nom et prénom :
+
+\vspace*{.5cm}\dotfill
+\end{minipage}}}
+
+\vspace{1em}
+
+% --- les questions se placent ici ---
+\begin{question}{derivee-x2}
+  Quelle est la dérivée de $x \mapsto x^2$ sur $\R$ ?
+  \begin{reponses}
+    \bonne{$x \mapsto 2x$}
+    \mauvaise{$x \mapsto x$}
+    \mauvaise{$x \mapsto 2$}
+    \mauvaise{$x \mapsto \dfrac{x^3}{3}$}
+  \end{reponses}
+\end{question}
+
+\clearpage
+}
+\end{document}</code></pre></div></figure>
+
+<p class="paperlabel">Rendu sur la copie</p>
+<div class="paper">
+  <div class="pq">Question 1 — Quelle est la dérivée de \(x \mapsto x^2\) sur \(\R\) ?</div>
+  <div class="opt"><span class="box"></span><span class="cnum">A</span><span>\(x \mapsto 2x\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">B</span><span>\(x \mapsto x\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">C</span><span>\(x \mapsto 2\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">D</span><span>\(x \mapsto \dfrac{x^3}{3}\)</span></div>
+</div>
+
+<h3>2 · Question à réponses multiples</h3>
+<p>Avec <code class="inl">questionmult</code>, plusieurs <code class="inl">\bonne</code> sont possibles.
+L'option <code class="inl">completemulti</code> du paquet ajoute automatiquement une case
+« aucune de ces réponses n'est correcte ».</p>
+<figure class="ex"><div class="code-wrap"><div class="cap">question à choix multiples</div>
+<pre><code class="amc">\begin{questionmult}{puissances}
+  Soient $x,y > 0$ et $\alpha,\beta \in \R$.
+  Parmi ces égalités, lesquelles sont toujours vraies ?
+  \begin{reponses}
+    \bonne{$(xy)^\alpha = x^\alpha y^\alpha$}
+    \bonne{$x^{\alpha+\beta} = x^\alpha x^\beta$}
+    \mauvaise{$(x+y)^\alpha = x^\alpha + y^\alpha$}
+    \mauvaise{$x^{\alpha\beta} = x^\alpha x^\beta$}
+  \end{reponses}
+\end{questionmult}</code></pre></div></figure>
+
+<p class="paperlabel">Rendu sur la copie</p>
+<div class="paper">
+  <div class="pq">Question 2 — Soient \(x,y>0\) et \(\alpha,\beta\in\R\). Parmi ces égalités, lesquelles sont toujours vraies ?</div>
+  <div class="opt"><span class="box"></span><span class="cnum">A</span><span>\((xy)^\alpha = x^\alpha y^\alpha\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">B</span><span>\(x^{\alpha+\beta} = x^\alpha x^\beta\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">C</span><span>\((x+y)^\alpha = x^\alpha + y^\alpha\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">D</span><span>\(x^{\alpha\beta} = x^\alpha x^\beta\)</span></div>
+  <div class="opt"><span class="box"></span><span class="cnum">E</span><span style="color:#777">aucune de ces réponses n'est correcte</span></div>
+</div>
+
+<h3>3 · Réponses horizontales et ordre fixé</h3>
+<p>Pour des réponses courtes, <code class="inl">reponseshoriz</code> les place sur une même ligne.
+L'option <code class="inl">[o]</code> sur <code class="inl">reponses</code> empêche AMC de mélanger
+l'ordre des réponses (utile quand elles sont naturellement ordonnées).</p>
+<figure class="ex"><div class="code-wrap"><div class="cap">réponses sur une ligne, ordre conservé</div>
+<pre><code class="amc">\begin{question}{partie-entiere}
+  Que vaut $\lfloor -1{,}3 \rfloor$ ?
+  \begin{reponseshoriz}[o]
+    \bonne{$-2$}
+    \mauvaise{$-1$}
+    \mauvaise{$0$}
+    \mauvaise{$2$}
+  \end{reponseshoriz}
+\end{question}</code></pre></div></figure>
+
+<p class="paperlabel">Rendu sur la copie</p>
+<div class="paper horiz">
+  <div class="pq">Question 3 — Que vaut \(\lfloor -1{,}3 \rfloor\) ?</div>
+  <div class="opts">
+    <span class="opt"><span class="box"></span>\(-2\)</span>
+    <span class="opt"><span class="box"></span>\(-1\)</span>
+    <span class="opt"><span class="box"></span>\(0\)</span>
+    <span class="opt"><span class="box"></span>\(2\)</span>
+  </div>
+</div>
+
+<h3>4 · Barème et question indicative</h3>
+<p>Le barème se règle par question avec <code class="inl">\bareme</code> (ou globalement). Les clés
+courantes&nbsp;: <code class="inl">b</code> points par bonne case, <code class="inl">m</code>
+pénalité par mauvaise case, <code class="inl">e</code> pénalité d'erreur, <code class="inl">v</code>
+note si la question est laissée vide. Une question marquée
+<code class="inl">\QuestionIndicative</code> est affichée mais ne compte pas dans la note.</p>
+<figure class="ex"><div class="code-wrap"><div class="cap">barème personnalisé + question non notée</div>
+<pre><code class="amc">% 1 point par bonne réponse, -0,5 par mauvaise, 0 si laissée vide
+\begin{questionmult}{ensembles}\bareme{b=1,m=-0.5,v=0}
+  Lesquels de ces ensembles sont des intervalles de $\R$ ?
+  \begin{reponses}
+    \bonne{$[0,1]$}
+    \bonne{$\R$}
+    \mauvaise{$\Z$}
+    \mauvaise{$[0,1] \cup [2,3]$}
+  \end{reponses}
+\end{questionmult}
+
+% question d'ambiance, affichée mais pas comptée
+\begin{question}{ressenti}\QuestionIndicative
+  Ce sujet vous a semblé :
+  \begin{reponseshoriz}
+    \mauvaise{facile}\mauvaise{correct}\mauvaise{difficile}
+  \end{reponseshoriz}
+\end{question}</code></pre></div></figure>
+
+<h3>5 · Question ouverte (réponse à rédiger)</h3>
+<p>AMC gère aussi des questions ouvertes corrigées à la main avec
+<code class="inl">\AMCOpen</code>&nbsp;: on réserve des lignes pour la rédaction et des cases de
+notation que le correcteur coche, chacune avec son score.</p>
+<figure class="ex"><div class="code-wrap"><div class="cap">question ouverte avec cases de notation</div>
+<pre><code class="amc">\begin{question}{demonstration}
+  Démontrer que $\sqrt{2}$ est irrationnel.
+  \AMCOpen{lines=6}{
+    \wrongchoice[0]{0}\scoring{0}
+    \wrongchoice[1]{1}\scoring{1}
+    \correctchoice[2]{2}\scoring{2}
+  }
+\end{question}</code></pre></div></figure>
+
+<h2>Le format AMC-TXT (plus simple)</h2>
+<p>Si LaTeX n'est pas nécessaire, AMC-TXT permet d'écrire les mêmes QCM en texte presque brut&nbsp;:
+une étoile <code class="inl">*</code> ouvre une question, <code class="inl">**</code> une question
+multiple&nbsp;; <code class="inl">+</code> marque une bonne réponse et <code class="inl">-</code> une
+mauvaise.</p>
+<figure class="ex"><div class="code-wrap"><div class="cap">sujet.txt — équivalent en AMC-TXT</div>
+<pre><code class="amctxt"># AMC-TXT source
+Title: QCM de mathématiques
+Lang: FR
+
+*[id=derivee-x2] Quelle est la dérivée de x^2 sur R ?
++ 2x
+- x
+- 2
+
+**[id=puissances] Quelles égalités sont toujours vraies ?
++ (xy)^a = x^a y^a
++ x^(a+b) = x^a x^b
+- (x+y)^a = x^a + y^a</code></pre></div></figure>
+
+<div class="note">
+<b>À noter pour votre projet.</b> Votre banque <code class="inl">BanqueQCM</code> est déjà écrite
+dans ce format AMC&nbsp;: elle utilise <code class="inl">\begin{reponses}</code>,
+<code class="inl">\bonne{…}</code> et <code class="inl">\mauvaise{…}</code>. Les mêmes fichiers
+<code class="inl">.tex</code> peuvent donc servir à deux choses&nbsp;: produire le site d'entraînement
+en ligne <i>et</i>, en les plaçant dans un document <code class="inl">\exemplaire{…}{…}</code>,
+générer les sujets papier à distribuer puis à corriger automatiquement avec AMC.
+</div>
+
+<a class="backlink" href="index.html">← Retour à l'accueil des QCM</a>
+
+<div class="foot">
+  Page de référence — Auto-Multiple-Choice est un logiciel libre.
+  Liens et syntaxe vérifiés sur le site officiel auto-multiple-choice.net.
+</div>
+</main>
+
+<script>
+/* --- coloration syntaxique légère des blocs AMC --- */
+(function(){
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function highlight(raw, txt){
+    // on travaille ligne par ligne pour gérer les commentaires
+    return raw.split('\n').map(function(line){
+      // commentaire % (hors \%)
+      var ci=-1;
+      for(var i=0;i<line.length;i++){ if(line[i]==='%' && (i===0||line[i-1]!=='\\')){ ci=i; break; } }
+      var code=line, comment='';
+      if(ci>=0){ code=line.slice(0,ci); comment=line.slice(ci); }
+      var out=code
+        .replace(/\\(begin|end)(\{)([^}]*)(\})/g, function(m,kw,b1,env,b2){
+          return '<span class="tok-cmd">\\'+kw+'</span>'+b1+'<span class="tok-env">'+esc(env)+'</span>'+b2; })
+        .replace(/\\(bonne|correctchoice)\b/g, '<span class="tok-ok">\\$1</span>')
+        .replace(/\\(mauvaise|wrongchoice)\b/g, '<span class="tok-bad">\\$1</span>')
+        .replace(/\\([a-zA-Z@]+)/g, '<span class="tok-cmd">\\$1</span>')
+        .replace(/(\[)(o)(\])/g, '$1<span class="tok-opt">$2</span>$3');
+      if(comment) out+='<span class="tok-cmt">'+esc(comment)+'</span>';
+      return out;
+    }).join('\n');
+  }
+  function highlightTxt(raw){
+    return raw.split('\n').map(function(line){
+      if(/^\s*#/.test(line)) return '<span class="tok-cmt">'+esc(line)+'</span>';
+      if(/^\s*\*\*/.test(line)) return line.replace(/^(\s*)(\*\*)(\[[^\]]*\])?/, '$1<span class="tok-env">$2</span><span class="tok-opt">$3</span>');
+      if(/^\s*\*/.test(line))  return line.replace(/^(\s*)(\*)(\[[^\]]*\])?/, '$1<span class="tok-env">$2</span><span class="tok-opt">$3</span>');
+      if(/^\s*\+/.test(line))  return line.replace(/^(\s*)(\+)/, '$1<span class="tok-ok">$2</span>');
+      if(/^\s*-/.test(line))   return line.replace(/^(\s*)(-)/, '$1<span class="tok-bad">$2</span>');
+      if(/^[A-Za-z]+:/.test(line)) return line.replace(/^([A-Za-z]+:)/, '<span class="tok-cmd">$1</span>');
+      return esc(line);
+    }).join('\n');
+  }
+  document.querySelectorAll('pre code.amc, pre code.amctxt').forEach(function(el){
+    var raw=el.textContent;
+    el.dataset.raw=raw;
+    el.innerHTML = el.classList.contains('amctxt') ? highlightTxt(esc(raw)) : highlight(esc(raw));
+    // le highlighter attend du texte brut : on re-échappe proprement
+  });
+  // NB : esc() a déjà été appliqué dans l'appel ci-dessus pour amctxt ; pour amc,
+  // highlight() reçoit le brut échappé et n'insère que ses propres balises.
+
+  /* --- boutons « Copier » --- */
+  document.querySelectorAll('.code-wrap').forEach(function(w){
+    var code=w.querySelector('code'); if(!code) return;
+    var b=document.createElement('button'); b.className='copybtn'; b.type='button'; b.textContent='Copier';
+    b.addEventListener('click', function(){
+      var t=code.dataset.raw||code.textContent;
+      navigator.clipboard.writeText(t).then(function(){
+        b.textContent='Copié ✓'; b.classList.add('done');
+        setTimeout(function(){ b.textContent='Copier'; b.classList.remove('done'); }, 1600);
+      }).catch(function(){
+        b.textContent='Ctrl+C'; setTimeout(function(){ b.textContent='Copier'; },1600);
+      });
+    });
+    w.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

@@ -201,3 +201,11 @@ label.ans input:focus-visible + .opt-box{outline:2px solid var(--accent);outline
 @media(max-width:360px){
   .footer-buttons .verif,.footer-buttons .reset{padding:8px 12px}
 }
+
+/* code inline dans les réponses (chapitre informatique) */
+.opt-body code, .q-info code, .sol-box code, .gridcheck .clab2 code{
+  font-family:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  font-size:.9em;background:#eef0f4;color:#1f2d3d;padding:1px 5px;border-radius:4px;
+}
+.ans.ok .opt-body code,.ans.bad .opt-body code{background:rgba(255,255,255,.6)}
+.tag.pdf{background:#fee2e2;color:#b91c1c}

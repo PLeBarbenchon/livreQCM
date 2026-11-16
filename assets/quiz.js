@@ -79,7 +79,7 @@ function renderMcq(q,n){
   let h='<div class="answers">';
   q.c.forEach(function(o,ci){
     const L = String.fromCharCode(65+ci);   // A, B, C, D, ...
-    const body = o[2] ? esc(o[0]) : M(o[0]);
+    const body = o[2] ? o[0] : M(o[0]);
     h+='<label class="ans"><input type="checkbox" data-correct="'+(o[1]?1:0)+'"><span class="opt-box">'+L+'</span><span class="opt-body">'+body+'</span></label>';
   });
   return h+'</div>';

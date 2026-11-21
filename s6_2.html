@@ -1,7 +1,144 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>6.2 Espaces euclidiens</title>
+<title>6.2 Espaces euclidiens — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#059669"><div class="topnav" style="--accent:#059669"><span class="brand">6.2 · Espaces euclidiens</span><a href="index.html">Menu</a><a href="ch6.html">Chapitre 6</a></div><main><p class="chapno">Chapitre 6 — Algèbre bilinéaire</p><h1>Espaces euclidiens</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch6.html">← Retour au chapitre 6</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">6.2 · Espaces euclidiens</span><a href="index.html">Menu</a><a href="ch6.html">Chapitre 6</a></div><main><p class="chapno">Chapitre 6 — Algèbre bilinéaire</p><h1>Espaces euclidiens</h1>
+<div id="quiz" data-chap="6" data-start="17">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (6.1, 6.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="17").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">Une famille orthogonale est libre</div>
+  <div class="opt" data-ok>Une famille orthonormée de $n$ vecteurs est une base orthonormée de $E$</div>
+  <div class="opt">Une famille libre de $n$ vecteurs unitaires est une base orthonormée de $E$</div>
+  <div class="opt" data-ok>Une famille orthogonale de vecteurs non nuls de $E$ est toujours libre</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\| x + y \| = \| x \| + \| y \| \implies x \perp y$</div>
+  <div class="opt">$x\perp y \implies \| x + y \| = \| x \| + \| y \|$</div>
+  <div class="opt" data-ok>$ x\perp y \iff \| x + y \|^2 = \| x \|^2 + \| y \|^2$</div>
+  <div class="opt">$x\perp y \implies \| x - y\|^2 = \| x\| ^2 - \| y \|^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall i \in \{ 1, \dots, n\},~ x_i = \langle x, e_i \rangle$</div>
+  <div class="opt">$\langle x,y \rangle = \displaystyle \sum_{i=1}^n x_i y_i$</div>
+  <div class="opt" data-ok>$x = y \iff \forall i \in \{ 1, \dots, n\},~ x_i = y_i$</div>
+  <div class="opt">$\| x \| = \displaystyle \sum_{i=1}^n |x_i|$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left(u, v, w \right)$ est orthonormée</div>
+  <div class="opt">$(u, v, w)$ est base de $E$</div>
+  <div class="opt">$\left(u + v, v + w, u + w \right)$ est orthogonale</div>
+  <div class="opt">$\left(u + v, v + w, u + w \right)$ est orthonormée</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\big( (1, 0, 1), (0, 1, 0), (-1, 0, 1) \big)$</div>
+  <div class="opt" data-ok>$ \left(\hspace{-0.2mm}\dfrac{1}{2}(1, 0, 1), \dfrac{1}{2}(0, \sqrt{2}, 0), \dfrac{1}{2}(-1, 0, 1)\!\right)$</div>
+  <div class="opt">$\left(\!\dfrac{1}{\sqrt{2}} (1, 0, 1), \dfrac{1}{\sqrt{3}} (1, 1, 1), \dfrac{1}{\sqrt{2}} (1, 1, 0)\!\right)$</div>
+  <div class="opt">$ \left(\!\dfrac{1}{\sqrt{2}}(1, 0, 1),\dfrac{1}{\sqrt{2}}(0, \sqrt{2}, 0),\!\dfrac{1}{\sqrt{2}}(1, 0, 1)\!\right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(1,X,X^2)$ est orthogonale</div>
+  <div class="opt">$X^2 + 1$ et $X$ sont orthogonaux</div>
+  <div class="opt">$\big( X, X^2 - 1, X^2 - X \big)$ est orthonormée</div>
+  <div class="opt" data-ok>$\big(1, X, X^2-X \big)$ est orthogonale</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$P_0 = 1$ et $P_1 = X$</div>
+  <div class="opt" data-ok>$P_0 = \dfrac1{\sqrt2}$ et $P_1 = \sqrt{\dfrac{3}{2}} X$</div>
+  <div class="opt">$P_2 \in \mathrm{Vect}\left( X^2 - 1 \right)$</div>
+  <div class="opt">$P_2 = \dfrac{3\sqrt5}{2\sqrt2}\left(X^2 - \dfrac{2}{3}\right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{B} = \big(1, 2X - 1, 6X^2 - 6X + 1 \big)$</div>
+  <div class="opt" data-ok>$\forall (i,j)\in \N^2,~ \langle X^i,X^j\rangle = \dfrac{1}{i+j+1}$</div>
+  <div class="opt">$\mathcal{B} = \big(1, 2X - 1, \sqrt{5} (6X^2-6X+1) \big)$</div>
+  <div class="opt">la base $(1,X,X^2)$ est orthogonale</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(1,X,X^2)$ est orthogonale</div>
+  <div class="opt">$\left(1, X-1, X^2\right)$ est orthonormée</div>
+  <div class="opt" data-ok>$\langle \cdot, \cdot \rangle$ est un produit scalaire sur $\R_2[X]$</div>
+  <div class="opt">$\dist\big( X^2 + 3X + 1, \mathrm{Vect}(1,X) \big)= 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(1,X,\dots,X^n)$ est orthonormée</div>
+  <div class="opt" data-ok>$(1, X, \dots, X^n)$ est orthogonale</div>
+  <div class="opt" data-ok>$\langle X^2 - 3X + 1, X^2 + X - 1 \rangle = 0$</div>
+  <div class="opt">$X^2 + 1$ et $X^2 - 1$ sont orthogonaux</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$H = \mathrm{Vect}( 1 + X + X^2 + X^3 )^\perp$ et $\dim H = 2$</div>
+  <div class="opt">$H^\perp = \mathrm{Vect}(X-1)$ et $\dim H = 3$</div>
+  <div class="opt" data-ok>$\left( 1 - X, 1 + X - 2X^2, 1 + X + X^2 - 3X^3 \right)$ est une base orthogonale de $H$</div>
+  <div class="opt">$\left( \dfrac{1-X}{\sqrt{2}}, \dfrac{X-X^2}{\sqrt{2}}, \dfrac{X^2-X^3}{\sqrt{2}}\right)$ est une base orthonormée de $H$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dim F = 4$</div>
+  <div class="opt" data-ok>$\| \cos \| = \sqrt{\dfrac{2}{3}}$</div>
+  <div class="opt">$( 1, \ \cos,\ t\mapsto \cos(2t) )$ est orthogonale</div>
+  <div class="opt">$\left( \dfrac{1}{\sqrt{2}},\ \sqrt{\dfrac{3}{2}} \cos,\ \cos^2\!\right)$ est orthonormée</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Le déterminant de $G$ peut être strictement négatif</div>
+  <div class="opt" data-ok>$G \in GL_n(\R) \iff (u_1,\dots,u_p)$ est libre</div>
+  <div class="opt" data-ok>La matrice $G$ est symétrique</div>
+  <div class="opt">$G \in GL_n(\R) \iff (u_1,\dots,u_p)$ est orthogonale</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(e_1, \dots, e_n)$ est libre</div>
+  <div class="opt" data-ok>$(e_1, \dots, e_n)$ est génératrice de $E$</div>
+  <div class="opt">$(e_1, \dots, e_n)$ est base orthonormée</div>
+  <div class="opt">$n \leqslant \dim E$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(C_1, \dots, C_n)$ est orthonormée</div>
+  <div class="opt">$-1\leqslant \displaystyle \sum_{1\leqslant i,j\leqslant n} p_{i,j} \leqslant 1$</div>
+  <div class="opt">$\forall i\in \{ 1, \dots, n\},~ P_{i,i} \in \{-1,1\}$</div>
+  <div class="opt">$\forall i\in \{ 1, \dots, n\},~ \displaystyle \sum_{j=1}^n p_{i,j} \leqslant 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$L_n$ est de degré $n - 1$</div>
+  <div class="opt">$L_n$ est unitaire</div>
+  <div class="opt" data-ok>$L_n$ est orthogonal à $\R_{n-1}[X]$</div>
+  <div class="opt">$(L_0, \dots, L_n)$ est orthonormée</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

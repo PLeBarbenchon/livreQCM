@@ -1,7 +1,118 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>15.2 Extrema</title>
+<title>15.2 Extrema — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#db2777"><div class="topnav" style="--accent:#db2777"><span class="brand">15.2 · Extrema</span><a href="index.html">Menu</a><a href="ch15.html">Chapitre 15</a></div><main><p class="chapno">Chapitre 15 — Fonctions à deux variables</p><h1>Extrema</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch15.html">← Retour au chapitre 15</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">15.2 · Extrema</span><a href="index.html">Menu</a><a href="ch15.html">Chapitre 15</a></div><main><p class="chapno">Chapitre 15 — Fonctions à deux variables</p><h1>Extrema</h1>
+<div id="quiz" data-chap="15" data-start="37">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (15.1, 15.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="37").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f(a,b) = 0$</div>
+  <div class="opt" data-ok>$\nabla f(a,b) = (0,0)$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x}(a,b) = \dfrac{\partial f}{\partial y}(a,b) = 0$</div>
+  <div class="opt">$f$ admet un extremum local en $(a,b)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(x,y)\mapsto x^2 + y^2$</div>
+  <div class="opt">$(x,y)\mapsto x + y^2$</div>
+  <div class="opt" data-ok>$(x,y)\mapsto xy$</div>
+  <div class="opt" data-ok>$(x,y)\mapsto x^3 + y^3$</div>
+  <div class="opt">$(x,y)\mapsto x^2 + y^2 - 2x$</div>
+  <div class="opt">$(x,y)\mapsto e^{x+y}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Si $f$ admet un extremum local en $(a,b)$, alors $(a,b)$ est un point critique de $f$</div>
+  <div class="opt">Si $(a,b)$ est un point critique de $f$, alors $f$ admet un extremum local en $(a,b)$</div>
+  <div class="opt">La restriction de $f$ au disque unité ouvert est bornée et atteint ses bornes</div>
+  <div class="opt">La restriction de $f$ à $[0,1]^2$ atteint son maximum en un point critique de $f$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(x,y) \mapsto x^3 + 3y^2 + 1$ admet un minimum global en $(0,0)$</div>
+  <div class="opt" data-ok>$(x,y) \mapsto 3 - x^2 - 2y^2$ admet un maximum global en $(0,0)$</div>
+  <div class="opt">$(x,y) \mapsto 5 x^2 - 4 y^2$ admet un minimum local en $(0,0)$</div>
+  <div class="opt">$(x,y)\mapsto x y$ admet un extremum local en $(0,0)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f$ admet deux points critiques</div>
+  <div class="opt" data-ok>$f$ admet un unique point critique</div>
+  <div class="opt" data-ok>$f$ admet un minimum global</div>
+  <div class="opt">$f$ admet un maximum local</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ admet un unique point critique</div>
+  <div class="opt" data-ok>$f(1 + h, 1 + k) - f(1, 1) = hk$</div>
+  <div class="opt">$f$ admet un minimum local en $(1,1)$</div>
+  <div class="opt">$f$ admet un maximum global en $(1,1)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(1,0)$ est un point critique de $f$</div>
+  <div class="opt" data-ok>$f(1+h, k) = -2 + h^2 (3 + h) + k^2$</div>
+  <div class="opt">$f$ admet un minimum global en $(1,0)$</div>
+  <div class="opt">$f$ admet un maximum local en $(1,0)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ admet un unique point critique</div>
+  <div class="opt">$f$ admet un maximum global</div>
+  <div class="opt">$f$ admet un maximum local égal à $-4$</div>
+  <div class="opt" data-ok>$f$ admet un minimum global</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f$ admet un unique point critique</div>
+  <div class="opt">$(0,0)$ est un point critique de $f$</div>
+  <div class="opt">$f$ admet un minimum global en $(0,0)$</div>
+  <div class="opt" data-ok>$f$ n'admet aucun extremum local</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall (x,y)\in\R^2,\ f(x,y) \leqslant 2$</div>
+  <div class="opt" data-ok>$f$ admet un maximum global</div>
+  <div class="opt">$f$ admet un maximum local en $(1,0)$</div>
+  <div class="opt">$f$ admet un minimum global en $(0,0)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ admet un maximum global</div>
+  <div class="opt">$f$ admet un minimum local en $(0,0)$</div>
+  <div class="opt">$f$ admet un maximum local en $(0,0)$</div>
+  <div class="opt">$f$ atteint son minimum global en $(0,0)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ admet un minimum global</div>
+  <div class="opt">$f$ admet un maximum global</div>
+  <div class="opt">$f$ n'admet pas de minimum</div>
+  <div class="opt">$4$ est le minimum de $f$ sur $\R^2$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

@@ -1,7 +1,262 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>10.3 Séries numériques</title>
+<title>10.3 Séries numériques — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#ea580c"><div class="topnav" style="--accent:#ea580c"><span class="brand">10.3 · Séries numériques</span><a href="index.html">Menu</a><a href="ch10.html">Chapitre 10</a><a class="" href="pdf/BCPSTCh10_Suites_series_numeriques.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 10 — Suites et séries numériques</p><h1>Séries numériques</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch10.html">← Retour au chapitre 10</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">10.3 · Séries numériques</span><a href="index.html">Menu</a><a href="ch10.html">Chapitre 10</a></div><main><p class="chapno">Chapitre 10 — Suites et séries numériques</p><h1>Séries numériques</h1>
+<div id="quiz" data-chap="10" data-start="52">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (10.1, 10.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="52").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle \sum\limits_{n\geqslant 0} u_n$ diverge $\implies (u_n)$ diverge</div>
+  <div class="opt">$(u_n)$ converge $\iff \displaystyle \sum\limits_{n\geqslant 0} u_n$ converge</div>
+  <div class="opt" data-ok>$(u_n)$ converge $ \iff \displaystyle \sum\limits_{n\geqslant 0} (u_{n+1} - u_n)$ converge</div>
+  <div class="opt">$u_{n+1} - u_n \to 0 \implies (u_n)$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$S$ converge $\implies u_n\to 0$</div>
+  <div class="opt">$u_n\to 0 \implies$ $S$ converge</div>
+  <div class="opt">$(u_n)$ décroissante $\implies$ $S$ converge</div>
+  <div class="opt">$(u_n)$ croissante $\implies$ $S$ diverge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$S$ converge $\implies \displaystyle \sum_{n\geqslant 0} |u_n|$ converge</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 0} |u_n|$ diverge $\implies$ $S$ diverge</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 0} |u_n|$ converge $\implies$ $S$ converge</div>
+  <div class="opt">$S$ converge $\implies \displaystyle \sum_{n\geqslant 0} u_n^2$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} \dfrac{1}{n^{3/2}}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \dfrac{1}{\sqrt{n}}$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} \left(-\dfrac{2}{3}\right)^n$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \dfrac{1}{n}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 2} \dfrac{1}{\ln n}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \dfrac{\ln n}{n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle\sum_{n\geqslant 1} \dfrac{n^3}{\left( n^2+1\right)^2}$ diverge</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 1} \dfrac{n}{n^2 + 1}$ converge</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 1} \dfrac{n^4}{\left( n^3+n\right)^2}$ diverge</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 1} \dfrac{\sqrt{n}}{n^{5/4}}$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1}\sin\left( \dfrac{1}{n} \right)$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 2} \left( n^{1/n} - 1 \right)$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1}\left( 1 - \cos\dfrac{1}{n} \right)$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \left( e^{1/n} - 1\right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{n\geqslant 1} \left(e-\left(1+\dfrac{1}{n}\right)^n\right)$ converge</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 2} \dfrac{1}{n\ln n}$ converge</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{n\geqslant 2} \left( \dfrac{1}{\sqrt{n^2-1}}-\dfrac{1}{\sqrt{n^2+1}}\right)$ converge</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 1} \ln \left( \left (1 + \dfrac{1}{\sqrt{n+1}} \right)^2\right )$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\ell<1 \implies \displaystyle \sum_{n\geqslant 0} u_n$ converge</div>
+  <div class="opt">$\ell=1 \implies\displaystyle \sum_{n\geqslant 0} u_n$ diverge</div>
+  <div class="opt" data-ok>$\ell>1 \!\implies\!\displaystyle \sum_{n\geqslant 0} u_n$ diverge grossièrement</div>
+  <div class="opt">$\forall n\in\N,~ \dfrac{u_{n+1}}{u_n}<1 \!\! \implies \!\! \displaystyle\sum_{n\geqslant 0} u_n$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} \dfrac{n!}{n^n}$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} \dfrac{2^n n!}{n^n}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \dfrac{3^n n!}{n^n}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \dfrac{e^n n!}{n^n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">diverge si $\alpha \leqslant 0$</div>
+  <div class="opt" data-ok>converge si $a < 1$</div>
+  <div class="opt">converge si $\alpha > 1$</div>
+  <div class="opt">converge si $a < 2$ et $\alpha > 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n=1}^{+\infty} \dfrac{1}{n(n+1)} = 1$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 2} \ln\left(1 - \dfrac{1}{n}\right)$ converge</div>
+  <div class="opt">$\displaystyle \sum_{n=1}^{+\infty} \dfrac{1}{n(n+1)} = \dfrac{1}{2}$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} \ln\left(1 + \dfrac{1}{n^2}\right)$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} u_n$ converge et $\displaystyle \sum\limits_{n=1}^{+\infty} u_n = \dfrac{1}{4}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} u_n$ diverge</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} u_n$ converge et $\displaystyle \sum\limits_{n=1}^{+\infty} u_n = \dfrac{1}{2}$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} u_n$ converge et $\displaystyle \sum\limits_{n=1}^{+\infty} u_n = 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{n=0}^{+\infty}\dfrac{n+1}{n!}=e+1$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{n=0}^{+\infty}\dfrac{n+1}{n!}=2e$</div>
+  <div class="opt">$\displaystyle\sum_{n=0}^{+\infty}\dfrac{n^2-2}{n!}=2e$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{n=0}^{+\infty}\dfrac{n}{2^n}=2$</div>
+  <div class="opt">$\displaystyle\sum_{n=0}^{+\infty}\dfrac{n}{2^n}=1$</div>
+  <div class="opt">$\displaystyle\sum_{n=0}^{+\infty}\dfrac{n^2}{2^n}=4$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$S$ diverge</div>
+  <div class="opt">$S$ converge absolument</div>
+  <div class="opt" data-ok>$S$ converge et sa somme vaut $\ln2$</div>
+  <div class="opt">$\forall n\in\N^*,~\left|\displaystyle\sum_{k=1}^{n}\dfrac{(-1)^{k-1}}{k}-\ln2\right|\leqslant \dfrac{1}{n^2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n u_n \xrightarrow[n\to +\infty]{} 0 \implies S$ converge</div>
+  <div class="opt" data-ok>$n^2 u_n \xrightarrow[n\to +\infty]{} 0 \implies S$ converge</div>
+  <div class="opt">$S$ converge $\implies n^2 u_n \xrightarrow[n\to +\infty]{} 0$</div>
+  <div class="opt">$\forall n\in\N^*,~ u_n < \dfrac{1}{n} \implies S$ converge</div>
+  <div class="opt">$(n u_n)$ bornée $\!\implies\! S$ converge</div>
+  <div class="opt" data-ok>$(n^2 u_n)$ bornée $\!\implies\! S$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 0} \max(u_n, v_n)$ converge</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 0} \sqrt{u_n v_n}$ converge</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 0} (\sqrt{u_n} + \sqrt{v_n})$ converge</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 0} \dfrac{u_n}{v_n}$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 0} v_n$ converge $\implies u_n \underset{n\to +\infty}{\sim} v_n$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 0} v_n$ converge toujours</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 0} u_n$ converge $\implies v_n \underset{n\to +\infty}{=} o(u_n)$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 0} u_n$ et $\displaystyle \sum_{n\geqslant 0} v_n$ ont même nature</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 0} e^{-n^\alpha}$ converge $\iff \alpha>0$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 2}\dfrac{\ln n}{n^\alpha}$ converge $\iff \alpha \geqslant 1$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 0} e^{-n^\alpha}$ converge toujours</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 2}\dfrac{\ln n}{n^\alpha}$ converge $\iff \alpha>1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">pour tout $\alpha>0$</div>
+  <div class="opt">si et seulement si $\alpha\geqslant 1$</div>
+  <div class="opt" data-ok>si et seulement si $\alpha>1$</div>
+  <div class="opt">pour aucune valeur de $\alpha$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle \sum_{k=1}^{n} \sqrt[3]{k} \underset{n\to+\infty}{\sim} n\sqrt[3]{n}$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{k=1}^{n} \sqrt{k} \underset{n\to+\infty}{\sim} \dfrac{2}{3} n \sqrt{n}$</div>
+  <div class="opt">$\displaystyle \sum_{k=1}^{n} \ln(k) \underset{n\to+\infty}{\sim} \sqrt{n} \ln n$</div>
+  <div class="opt">$\displaystyle \sum_{k=1}^{n} \dfrac{1}{\sqrt{k}}\underset{n\to+\infty}{\sim}\sqrt{n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$H_n - \ln n \xrightarrow[n\to+\infty]{} 0$</div>
+  <div class="opt">$w_n \underset{n\to +\infty}{=} \dfrac{1}{2n} - \dfrac{1}{n^2} + o\left( \dfrac{1}{n^2} \right)$</div>
+  <div class="opt" data-ok>$\exists \gamma \in \R_+,~ H_n \underset{n\to +\infty}{=} \ln n + \gamma + o(1)$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} w_n$ converge et $\displaystyle \sum_{k=1}^{n} w_k = H_n-\ln(n)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$R_N \underset{N\to+\infty}{\sim} \dfrac{1}{(\alpha-1) N^{\alpha}}$</div>
+  <div class="opt">$R_N \underset{N\to+\infty}{\sim} \dfrac{\alpha}{N^{2\alpha}}$</div>
+  <div class="opt" data-ok>$R_N \underset{N\to+\infty}{\sim} \dfrac{1}{(\alpha-1) N^{\alpha-1}}$</div>
+  <div class="opt">$R_N \underset{N\to+\infty}{\sim} \dfrac{\alpha}{N^{\alpha - 1}}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} x_n$ converge et $\displaystyle \sum_{n\geqslant 1} y_n$ diverge</div>
+  <div class="opt" data-ok>$x_n \underset{n\to+\infty}{\sim} y_n$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} x_n$ et $\displaystyle \sum_{n\geqslant 1} y_n$ ont même nature</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} x_n$ converge absolument</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$a_n \underset{n\to+\infty}{\sim} b_n$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 2} a_n$ converge et $\displaystyle \sum_{n\geqslant 2} b_n$ diverge</div>
+  <div class="opt">$(|a_n|)$ et $(|b_n|)$ sont décroissantes</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 2} a_n$ diverge et $\displaystyle \sum_{n\geqslant 2} b_n$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$S$ converge $\iff \alpha>\dfrac{1}{2}$</div>
+  <div class="opt" data-ok>$u_n \underset{n\to+\infty}{\sim}\dfrac{(-1)^n}{n^\alpha}$</div>
+  <div class="opt">$S$ converge pour tout $\alpha > 0$</div>
+  <div class="opt">$S$ diverge si $\alpha \leqslant 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{w_{n+1}}{w_n}=1-\dfrac{1}{n}+O\left(\dfrac{1}{n^2}\right)$</div>
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} w_n$ converge</div>
+  <div class="opt">$\exists \ell \in \R_+^*,~ w_n \xrightarrow[n\to +\infty]{} \ell$</div>
+  <div class="opt" data-ok>$\displaystyle \sum_{n\geqslant 1} w_n$ diverge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle \sum_{n\geqslant 1} \dfrac{u_n}{S_n}$ converge toujours</div>
+  <div class="opt" data-ok>$(S_n)$ diverge $\implies \displaystyle \sum_{n\geqslant 1} \dfrac{u_n}{S_n}$ diverge</div>
+  <div class="opt" data-ok>$(S_n)$ converge $\implies \displaystyle \sum_{n\geqslant 1} \dfrac{u_n}{S_n}$ converge</div>
+  <div class="opt">$(S_n)$ diverge $\implies \displaystyle \sum_{n\geqslant 1} \dfrac{u_n}{S_n^2}$ diverge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$S$ diverge</div>
+  <div class="opt" data-ok>$S$ converge $\iff a > 1$</div>
+  <div class="opt">$S$ converge $\iff a > 0$</div>
+  <div class="opt">$S$ converge $\iff a \geqslant 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{n\geqslant 0} u_n$ converge</div>
+  <div class="opt" data-ok>$u_n \underset{n\to +\infty}{\sim} \sqrt{\dfrac{3}{n}}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{n\geqslant 0} u_n^2$ diverge</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 0} u_n^3$ diverge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle \sum_{k=1}^{+\infty} \dfrac{1}{k^2(k+1)^2} = \dfrac{\pi^2}{3}-3$</div>
+  <div class="opt">$\displaystyle \sum_{k=1}^{+\infty} \dfrac{1}{k^2(k+1)^2} = \dfrac{\pi^2}{6}-1$</div>
+  <div class="opt">$\displaystyle \sum_{k=1}^{+\infty} \dfrac{1}{k^2(k+1)^2} = \dfrac{\pi^2}{36}$</div>
+  <div class="opt">$\displaystyle \sum_{k=1}^{+\infty} \dfrac{1}{k^2(k+1)^2} = 3-\dfrac{\pi^2}{6}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\alpha < 1 \implies \displaystyle \sum_{n\geqslant 0} u_n$ converge</div>
+  <div class="opt">$\alpha = 1 \implies \displaystyle \sum_{n\geqslant 0} u_n$ converge</div>
+  <div class="opt" data-ok>$\alpha > 1 \implies \displaystyle \sum_{n\geqslant 0} u_n$ converge</div>
+  <div class="opt">$\alpha = 1 \implies \displaystyle \sum_{n\geqslant 0} u_n$ diverge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{u_{n+1}}{u_n} = \dfrac{2n+1}{2n+2}$</div>
+  <div class="opt">$\displaystyle\sum_{n\geqslant 1} u_n$ converge</div>
+  <div class="opt">$u_n \underset{n\to +\infty}{\sim} \dfrac{1}{2n}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{n\geqslant 1} u_n$ diverge</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

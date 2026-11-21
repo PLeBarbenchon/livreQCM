@@ -1,7 +1,162 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>5.3 Rang</title>
+<title>5.3 Rang — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#be123c"><div class="topnav" style="--accent:#be123c"><span class="brand">5.3 · Rang</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a><a class="" href="pdf/BCPSTCh5_Algebre_lineaire.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Rang</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch5.html">← Retour au chapitre 5</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">5.3 · Rang</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Rang</h1>
+<div id="quiz" data-chap="5" data-start="48">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (5.1, 5.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="48").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt" data-ok>$2$</div>
+  <div class="opt">$3$</div>
+  <div class="opt">$4$</div>
+  <div class="opt">$5$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$2$</div>
+  <div class="opt" data-ok>$3$</div>
+  <div class="opt">$4$</div>
+  <div class="opt">$5$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>est de rang $2$</div>
+  <div class="opt">est de rang $3$</div>
+  <div class="opt">admet une infinité de solutions</div>
+  <div class="opt" data-ok>est incompatible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">admet une unique solution</div>
+  <div class="opt">admet trois solutions</div>
+  <div class="opt" data-ok>admet une infinité de solutions</div>
+  <div class="opt">n'admet que la solution nulle</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\rg (A)\leqslant \min(n,p)$</div>
+  <div class="opt" data-ok>$\rg (A)=\rg (A^\top)$</div>
+  <div class="opt">$\rg (A)$ est le nombre de lignes de $A$</div>
+  <div class="opt">$\rg (A) = 0 \iff A$ a une colonne nulle</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\rg (A) = 0 \iff A = 0$</div>
+  <div class="opt">$\rg (A)\geqslant 1\implies A \text{ inversible}$</div>
+  <div class="opt" data-ok>$A \text{ inversible} \iff \rg (A) = n$</div>
+  <div class="opt">$A$ triangulaire $\implies \rg (A) = n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg (A+B) \leqslant \max \left\{ \rg (A), \rg (B) \right\}$</div>
+  <div class="opt" data-ok>$\rg (A+B) \leqslant \rg (A) + \rg (B)$</div>
+  <div class="opt">$\rg (A B)=\rg (A)\times \rg (B)$</div>
+  <div class="opt">$\rg (A+B)=\rg (A)+\rg (B)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AX = 0 \implies X = 0$</div>
+  <div class="opt" data-ok>$\rg (A) = 2$</div>
+  <div class="opt">$\rg (A) = 3$</div>
+  <div class="opt">$A$ est inversible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\rg \begin{pmatrix} 1 & -1 & 0 & 1 \\ 2 & 3 & -1 & 0 \\ 5 & 5 & -2 & 1 \end{pmatrix}=2$</div>
+  <div class="opt" data-ok>$\rg \begin{pmatrix} -1 & 3 & 2 \\ -1 & -3 & 4 \\ 1 & 2 & -3 \\ 2 & -2 & 0 \end{pmatrix}=3$</div>
+  <div class="opt">$\rg \begin{pmatrix} 1 & -1 & 0 & 1 \\ 2 & 3 & -1 & 0 \\ 5 & 5 & -2 & 1 \end{pmatrix}=3$</div>
+  <div class="opt">$\rg \begin{pmatrix} -1 & 3 & 2 \\ -1 & -3 & 4 \\ 1 & 2 & -3 \\ 2 & -2 & 0\end{pmatrix}=4$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AX = B$ a une unique solution</div>
+  <div class="opt">$AX=B$ est compatible</div>
+  <div class="opt">$A$ possède au moins une ligne nulle</div>
+  <div class="opt" data-ok>$\left\{ X\in \R^3 \mid AX = 0 \right\}$ est une droite</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AX=B$ a une infinité de solutions</div>
+  <div class="opt" data-ok>$AX=0$ a une infinité de solutions</div>
+  <div class="opt">$AB\neq 0$</div>
+  <div class="opt">la matrice $A$ est inversible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^2=0$</div>
+  <div class="opt" data-ok>$\rg (A)=1$</div>
+  <div class="opt" data-ok>$A^2=8A$</div>
+  <div class="opt">$A\in GL_3(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$m=1 \implies \rg (A_m) = 2$</div>
+  <div class="opt">$A_m\in GL_3(\R) \iff m\neq 1$</div>
+  <div class="opt">$m = -2 \implies \rg (A_m) = 1$</div>
+  <div class="opt" data-ok>$\rg (A_m) = 3\iff m\notin\{1,-2\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\rg (V_m) = 3 \iff m\notin\{1,2\}$</div>
+  <div class="opt">$m = 2\implies \rg (V_m) = 1$</div>
+  <div class="opt">$\rg (V_m) = 3$ pour tout $m$</div>
+  <div class="opt">$m=1 \implies \rg (V_m) = 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg (AB)=\rg (BA)$</div>
+  <div class="opt" data-ok>$\rg (AB) = n \implies \rg (A) = n$</div>
+  <div class="opt">$AB\not\in GL_n(\R) \implies A,B\not\in GL_n(\R)$</div>
+  <div class="opt">$\rg (AB) = \rg (A) \rg (B)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg (A) = \rg (B)$</div>
+  <div class="opt">$B\text{ inversible}$</div>
+  <div class="opt">$B=0$</div>
+  <div class="opt" data-ok>$\rg (A)+\rg (B)\leqslant n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$M^2 = 0$</div>
+  <div class="opt" data-ok>$\exists \lambda\in\R,~ M^2 = \lambda M$</div>
+  <div class="opt" data-ok>les lignes de $M$ sont proportionnelles</div>
+  <div class="opt">$M$ a une colonne non nulle</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\rg (A) = \rg (B) = 2$</div>
+  <div class="opt">$A$ et $B$ sont inversibles</div>
+  <div class="opt" data-ok>$BA$ est inversible</div>
+  <div class="opt">$\rg (BA) \leqslant 1$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

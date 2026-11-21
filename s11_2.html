@@ -4,5 +4,149 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#9333ea"><div class="topnav" style="--accent:#9333ea"><span class="brand">11.2 · Exponentielle et logarithme</span><a href="index.html">Menu</a><a href="ch11.html">Chapitre 11</a><a class="" href="pdf/BCPSTCh11_Fonctions_usuelles.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 11 — Fonctions usuelles</p><h1>Exponentielle et logarithme</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 11.14 à 11.28 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#9333ea"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"info"},{"t":"mcq","c":[["strictement croissante",0,"h"],["strictement décroissante",1,"h"],["constante",0,"h"],["ni croissante ni décroissante",0,"h"]]},{"t":"mcq","c":[["\\(-\\infty\\)",0,"h"],["\\(-1\\)",0,"h"],["\\(0\\)",1,"h"],["\\(1\\)",0,"h"],["\\(+\\infty\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{5}{3}\\)",0,"h"],["\\(\\ln \\dfrac{5}{3}\\)",0,"h"],["\\(\\ln 5 - \\ln 3\\)",0,"h"],["\\(\\dfrac{\\ln 5}{\\ln 3}\\)",1,"h"]]},{"t":"mcq","c":[["\\(x<1\\)",0,"h"],["\\(x = 1\\)",0,"h"],["\\(1<x<3\\)",0,"h"],["\\(x=3\\)",1,"h"],["\\(x>3\\)",0,"h"]]},{"t":"mcq","c":[["\\(x^x = e^{x}\\ln x\\)",0,"h"],["\\(x^x = e^{x\\ln x}\\)",1,"h"],["\\(x^x = x\\,e^{\\ln x}\\)",0,"h"],["\\(x^x = e^{((\\ln x)^{x})}\\)",0,"h"]]},{"t":"mcq","c":[["\\(e^{\\ln x} = x\\)",0,"h"],["\\(\\ln(e^x) = x\\)",1,"h"],["\\(\\ln \\dfrac{1}{x} = - \\ln x\\)",0,"h"],["\\(\\ln(x^2) = 2\\ln x\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\ln(ab)=\\ln a+\\ln b\\)",1,"h"],["\\(\\ln(a+b)=\\ln a\\ln b\\)",0,"h"],["\\(\\ln(a^n)=n\\ln a\\)",1,"h"],["\\(\\ln\\left(\\dfrac ab\\right)=\\dfrac{\\ln a}{\\ln b}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle \\lim_{x\\to 0^+} x\\ln x = -\\infty\\)",0,"h"],["\\(\\displaystyle \\lim_{x\\to 0} \\frac{\\ln(1+x)}{x} = 0\\)",0,"h"],["\\(\\displaystyle\\lim_{x\\to +\\infty} \\frac{2^x}{x^{10}} = 0\\)",0,"h"],["\\(\\displaystyle \\lim_{x\\to 0^+} x\\ln x = 0\\)",1,"h"],["\\(\\displaystyle \\lim_{x\\to 0} \\frac{\\ln(1+x)}{x} = 1\\)",1,"h"],["\\(\\displaystyle\\lim_{x\\to +\\infty} \\frac{2^x}{x^{10}} = 1\\)",0,"h"],["\\(\\displaystyle \\lim_{x\\to 0^+} x\\ln x = 1\\)",0,"h"],["\\(\\displaystyle \\lim_{x\\to 0} \\frac{\\ln(1+x)}{x} = +\\infty\\)",0,"h"],["\\(\\displaystyle\\lim_{x\\to +\\infty} \\frac{2^x}{x^{10}} = +\\infty\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\forall x\\in\\R,\\ e^x \\geqslant 1+x\\)",1,"h"],["\\(\\forall x\\in\\R,\\ e^x \\leqslant 1+x\\)",0,"h"],["\\(\\forall x>-1,\\ \\ln(1+x) \\leqslant x\\)",1,"h"],["\\(\\forall x>0,\\ \\ln x \\geqslant x-1\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\log x = 10\\ln x\\)",0,"h"],["\\(\\log x = \\dfrac{\\ln x}{10}\\)",0,"h"],["\\(\\log x = \\ln\\dfrac{x}{10}\\)",0,"h"],["\\(\\log x = \\dfrac{\\ln x}{\\ln 10}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\log(10^n) = 10n\\)",0,"h"],["\\(\\log(10^n) = n\\)",1,"h"],["\\(\\log(10^n) = 10^n\\)",0,"h"],["\\(\\log(10^n) = n\\ln 10\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\log_2 x = \\dfrac{\\ln 2}{\\ln x}\\)",0,"h"],["\\(\\log_2 x = \\dfrac{\\ln x}{\\ln 2}\\)",1,"h"],["\\(\\log_2 x = y \\iff x^2 = y\\)",0,"h"],["\\(\\log_2 x = y \\iff 2^y = x\\)",1,"h"]]},{"t":"grid","parts":[{"check":{"label":"\\(-\\)","ok":1}},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":1}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}}]},{"t":"mcq","c":[["\\(\\log_2 (8x) = 3 + \\log_2 x\\)",1,"h"],["\\(\\log_2 (8x) = 8\\log_2 x\\)",0,"h"],["\\(\\log_2\\left( x^3 \\right) = 3\\log_2 x\\)",1,"h"],["\\(\\log_2 (x+y) = \\log_2 (x) \\cdot \\log_2 (y)\\)",0,"h"],["\\(\\log_2 \\sqrt{x} = \\sqrt{\\log_2 x}\\)",0,"h"],["\\(\\log_2\\left(\\dfrac{x}{y}\\right) = \\log_2 x - \\log_2 y\\)",1,"h"]]}];window.QUIZ_START=14;window.QUIZ_CHAP=11;window.QUIZ_SOL=["<p>La fonction \\(x\\mapsto\\left(\\dfrac13\\right)^x\\) est strictement décroissante et passe par \\((0,1)\\) ; parmi les quatre courbes tracées, c'est \\(\\boxed{\\text{la courbe décroissant le plus rapidement}}\\) (base la plus petite) qui lui correspond.</p>","<p>Pour \\(a,b>0\\) et \\(x,y\\in\\R\\) : \\(\\boxed{a^{x+y}=a^xa^y}\\), \\(\\boxed{(a^x)^y=a^{xy}}\\) et \\(\\boxed{(ab)^x=a^xb^x}\\).</p>","<p>Pour \\(a\\in\\,]0,1[\\), \\(x\\mapsto a^x\\) est \\(\\boxed{\\text{strictement décroissante sur } \\R}\\).</p>","<p>Pour \\(a\\in\\,]0,1[\\), \\(\\boxed{\\displaystyle\\lim_{x\\to+\\infty} a^x = 0}\\).</p>","<p>\\(3^x=5 \\iff x\\ln3=\\ln5 \\iff \\boxed{x=\\dfrac{\\ln5}{\\ln3}}\\).</p>","<p>\\(4^x=2^{2x}\\), donc \\(2^{2x}=2^{x+3} \\iff 2x=x+3 \\iff \\boxed{x=3}\\).</p>","<p>Seule \\(\\boxed{\\ln(e^x)=x}\\) est vraie pour tout \\(x\\in\\R\\) (les trois autres supposent implicitement \\(x>0\\), ce qui n'est pas donné).</p>","<p>Sur \\(\\R^*\\), \\(\\boxed{(\\ln|x|)' = \\dfrac{1}{x}}\\).</p>","<p>\\(\\boxed{(\\ln\\circ\\, u)' = \\dfrac{u'}{u}}\\).</p>","<p>\\(\\boxed{\\displaystyle\\lim_{x\\to0^+} x\\ln x = 0}\\) (croissances comparées), \\(\\boxed{\\displaystyle\\lim_{x\\to0} \\dfrac{\\ln(1+x)}{x} = 1}\\) (taux d'accroissement de \\(\\ln\\) en \\(1\\)) et \\(\\boxed{\\displaystyle\\lim_{x\\to+\\infty} \\dfrac{2^x}{x^{10}} = +\\infty}\\) (l'exponentielle domine toute puissance).</p>","<p>Par convexité de l'exponentielle, \\(\\boxed{\\forall x\\in\\R,\\ e^x \\geqslant 1+x}\\) ; par concavité du logarithme, \\(\\boxed{\\forall x>-1,\\ \\ln(1+x) \\leqslant x}\\) (ces deux inégalités sont d'ailleurs équivalentes par changement de variable).</p>","<p>Pour \\(x>0\\), \\(\\boxed{\\log x = \\dfrac{\\ln x}{\\ln 10}}\\).</p>","<p>Pour \\(n\\in\\Z\\), \\(\\boxed{\\log(10^n) = n}\\).</p>","<p>\\(\\boxed{\\log_2 x = \\dfrac{\\ln x}{\\ln 2}}\\), et par définition \\(\\boxed{\\log_2 x = y \\iff 2^y = x}\\).</p>","<p>\\(\\dfrac18 = 2^{-3}\\), donc \\(\\boxed{\\log_2\\!\\left(\\dfrac18\\right) = -3}\\).</p>"];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body><div class="topnav"><span class="brand">11.2 · Exponentielle et logarithme</span><a href="index.html">Menu</a><a href="ch11.html">Chapitre 11</a></div><main><p class="chapno">Chapitre 11 — Fonctions usuelles</p><h1>Exponentielle et logarithme</h1>
+<div id="quiz" data-chap="11" data-start="14">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (11.1, 11.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="14").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">strictement croissante</div>
+  <div class="opt" data-ok>strictement décroissante</div>
+  <div class="opt">constante</div>
+  <div class="opt">ni croissante ni décroissante</div>
+  <div class="sol"><p>Pour $a,b>0$ et $x,y\in\R$ : $\boxed{a^{x+y}=a^xa^y}$, $\boxed{(a^x)^y=a^{xy}}$ et $\boxed{(ab)^x=a^xb^x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$-1$</div>
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="sol"><p>Pour $a\in\,]0,1[$, $x\mapsto a^x$ est $\boxed{\text{strictement décroissante sur } \R}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{5}{3}$</div>
+  <div class="opt">$\ln \dfrac{5}{3}$</div>
+  <div class="opt">$\ln 5 - \ln 3$</div>
+  <div class="opt" data-ok>$\dfrac{\ln 5}{\ln 3}$</div>
+  <div class="sol"><p>Pour $a\in\,]0,1[$, $\boxed{\displaystyle\lim_{x\to+\infty} a^x = 0}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x<1$</div>
+  <div class="opt">$x = 1$</div>
+  <div class="opt">$1<x<3$</div>
+  <div class="opt" data-ok>$x=3$</div>
+  <div class="opt">$x>3$</div>
+  <div class="sol"><p>$3^x=5 \iff x\ln3=\ln5 \iff \boxed{x=\dfrac{\ln5}{\ln3}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x^x = e^{x}\ln x$</div>
+  <div class="opt" data-ok>$x^x = e^{x\ln x}$</div>
+  <div class="opt">$x^x = x\,e^{\ln x}$</div>
+  <div class="opt">$x^x = e^{((\ln x)^{x})}$</div>
+  <div class="sol"><p>$4^x=2^{2x}$, donc $2^{2x}=2^{x+3} \iff 2x=x+3 \iff \boxed{x=3}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$e^{\ln x} = x$</div>
+  <div class="opt" data-ok>$\ln(e^x) = x$</div>
+  <div class="opt">$\ln \dfrac{1}{x} = - \ln x$</div>
+  <div class="opt">$\ln(x^2) = 2\ln x$</div>
+  <div class="sol"><p>Seule $\boxed{\ln(e^x)=x}$ est vraie pour tout $x\in\R$ (les trois autres supposent implicitement $x>0$, ce qui n'est pas donné).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\ln(ab)=\ln a+\ln b$</div>
+  <div class="opt">$\ln(a+b)=\ln a\ln b$</div>
+  <div class="opt" data-ok>$\ln(a^n)=n\ln a$</div>
+  <div class="opt">$\ln\left(\dfrac ab\right)=\dfrac{\ln a}{\ln b}$</div>
+  <div class="sol"><p>Sur $\R^*$, $\boxed{(\ln|x|)' = \dfrac{1}{x}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle \lim_{x\to 0^+} x\ln x = -\infty$</div>
+  <div class="opt">$\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x} = 0$</div>
+  <div class="opt">$\displaystyle\lim_{x\to +\infty} \frac{2^x}{x^{10}} = 0$</div>
+  <div class="opt" data-ok>$\displaystyle \lim_{x\to 0^+} x\ln x = 0$</div>
+  <div class="opt" data-ok>$\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x} = 1$</div>
+  <div class="opt">$\displaystyle\lim_{x\to +\infty} \frac{2^x}{x^{10}} = 1$</div>
+  <div class="opt">$\displaystyle \lim_{x\to 0^+} x\ln x = 1$</div>
+  <div class="opt">$\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x} = +\infty$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to +\infty} \frac{2^x}{x^{10}} = +\infty$</div>
+  <div class="sol"><p>$\boxed{(\ln\circ\, u)' = \dfrac{u'}{u}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall x\in\R,\ e^x \geqslant 1+x$</div>
+  <div class="opt">$\forall x\in\R,\ e^x \leqslant 1+x$</div>
+  <div class="opt" data-ok>$\forall x>-1,\ \ln(1+x) \leqslant x$</div>
+  <div class="opt">$\forall x>0,\ \ln x \geqslant x-1$</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to0^+} x\ln x = 0}$ (croissances comparées), $\boxed{\displaystyle\lim_{x\to0} \dfrac{\ln(1+x)}{x} = 1}$ (taux d'accroissement de $\ln$ en $1$) et $\boxed{\displaystyle\lim_{x\to+\infty} \dfrac{2^x}{x^{10}} = +\infty}$ (l'exponentielle domine toute puissance).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\log x = 10\ln x$</div>
+  <div class="opt">$\log x = \dfrac{\ln x}{10}$</div>
+  <div class="opt">$\log x = \ln\dfrac{x}{10}$</div>
+  <div class="opt" data-ok>$\log x = \dfrac{\ln x}{\ln 10}$</div>
+  <div class="sol"><p>Par convexité de l'exponentielle, $\boxed{\forall x\in\R,\ e^x \geqslant 1+x}$ ; par concavité du logarithme, $\boxed{\forall x>-1,\ \ln(1+x) \leqslant x}$ (ces deux inégalités sont d'ailleurs équivalentes par changement de variable).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\log(10^n) = 10n$</div>
+  <div class="opt" data-ok>$\log(10^n) = n$</div>
+  <div class="opt">$\log(10^n) = 10^n$</div>
+  <div class="opt">$\log(10^n) = n\ln 10$</div>
+  <div class="sol"><p>Pour $x>0$, $\boxed{\log x = \dfrac{\ln x}{\ln 10}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\log_2 x = \dfrac{\ln 2}{\ln x}$</div>
+  <div class="opt" data-ok>$\log_2 x = \dfrac{\ln x}{\ln 2}$</div>
+  <div class="opt">$\log_2 x = y \iff x^2 = y$</div>
+  <div class="opt" data-ok>$\log_2 x = y \iff 2^y = x$</div>
+  <div class="sol"><p>Pour $n\in\Z$, $\boxed{\log(10^n) = n}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">{center}</span></div>
+  <div class="sol"><p>$\boxed{\log_2 x = \dfrac{\ln x}{\ln 2}}$, et par définition $\boxed{\log_2 x = y \iff 2^y = x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\log_2 (8x) = 3 + \log_2 x$</div>
+  <div class="opt">$\log_2 (8x) = 8\log_2 x$</div>
+  <div class="opt" data-ok>$\log_2\left( x^3 \right) = 3\log_2 x$</div>
+  <div class="opt">$\log_2 (x+y) = \log_2 (x) \cdot \log_2 (y)$</div>
+  <div class="opt">$\log_2 \sqrt{x} = \sqrt{\log_2 x}$</div>
+  <div class="opt" data-ok>$\log_2\left(\dfrac{x}{y}\right) = \log_2 x - \log_2 y$</div>
+  <div class="sol"><p>$\dfrac18 = 2^{-3}$, donc $\boxed{\log_2\!\left(\dfrac18\right) = -3}$.</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

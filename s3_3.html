@@ -1,7 +1,449 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>3.3 Groupes, Anneaux, Corps</title>
+<title>3.3 Groupes, Anneaux, Corps — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#7c3aed"><div class="topnav" style="--accent:#7c3aed"><span class="brand">3.3 · Groupes, Anneaux, Corps</span><a href="index.html">Menu</a><a href="ch3.html">Chapitre 3</a></div><main><p class="chapno">Chapitre 3 — Structures algébriques</p><h1>Groupes, Anneaux, Corps</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch3.html">← Retour au chapitre 3</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">3.3 · Groupes, Anneaux, Corps</span><a href="index.html">Menu</a><a href="ch3.html">Chapitre 3</a></div><main><p class="chapno">Chapitre 3 — Structures algébriques</p><h1>Groupes, Anneaux, Corps</h1>
+<div id="quiz" data-chap="3" data-start="41">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (3.1, 3.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="41").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">Une application de $E$ dans $E$</div>
+  <div class="opt" data-ok>Une application de $E \times E$ dans $E$</div>
+  <div class="opt">Une relation d'ordre sur $E$</div>
+  <div class="opt">Une application de $E \times E$ dans un ensemble quelconque</div>
+  <div class="sol"><p>Une loi de composition interne sur $E$ est $\boxed{\text{une application de } E\times E \text{ dans } E}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall x \in E,\ x \star e = x$ uniquement</div>
+  <div class="opt">$\forall x \in E,\ e \star x = x$ uniquement</div>
+  <div class="opt" data-ok>$\forall x \in E,\ x \star e = e \star x = x$</div>
+  <div class="opt">$e \star e = e$ uniquement</div>
+  <div class="sol"><p>Un élément neutre $e$ pour $\star$ vérifie $\boxed{\forall x\in E,\ x\star e = e\star x = x}$ (neutre à droite <em>et</em> à gauche).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\star y$</div>
+  <div class="opt">$x^{-1}\star y^{-1}$</div>
+  <div class="opt" data-ok>$y^{-1}\star x^{-1}$</div>
+  <div class="opt">$y\star x$</div>
+  <div class="sol"><p>Si $x,y$ sont inversibles, $(x\star y)^{-1} = \boxed{y^{-1}\star x^{-1}}$ : on vérifie que $(x\star y)\star(y^{-1}\star x^{-1}) = x\star(y\star y^{-1})\star x^{-1} = x\star x^{-1} = e$, et de même dans l'autre sens. L'ordre est inversé, comme pour la transposée d'un produit de matrices.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Distributive</div>
+  <div class="opt">Commutative</div>
+  <div class="opt" data-ok>{-1mm}Avec un élément neutre</div>
+  <div class="opt" data-ok>{-1mm}Tout élément inversible</div>
+  <div class="opt" data-ok>Associative</div>
+  <div class="opt">{-1mm}Avec un élément absorbant</div>
+  <div class="sol"><p>$(G,\star)$ est un groupe si $\star$ est $\boxed{\text{associative}}$, possède $\boxed{\text{un élément neutre}}$ et si $\boxed{\text{tout élément est inversible}}$. La commutativité n'est pas exigée (elle caractérise les groupes <em>abéliens</em>).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(\mathbb{N},\ +)$</div>
+  <div class="opt">$(\mathbb{Z},\ \times)$</div>
+  <div class="opt" data-ok>$(\mathbb{Q}^*,\ \times)$</div>
+  <div class="opt">$(\mathbb{R},\ \times)$</div>
+  <div class="sol"><p>$(\N,+)$ n'a pas d'inverses, $(\Z,\times)$ non plus (sauf $\pm1$), $(\R,\times)$ non plus ($0$ n'est pas inversible) : seul $\boxed{(\mathbb Q^*,\times)}$ est un groupe.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Oui</div>
+  <div class="opt">Non</div>
+  <div class="opt">Ça dépend</div>
+  <div class="sol"><p>$\boxed{\text{Oui}}$ : $(\Z,+)$ est associative, commutative, possède un neutre ($0$) et tout entier a un opposé.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathbb Q_+^*$</div>
+  <div class="opt">$\mathbb Q_-^*$</div>
+  <div class="opt">$\Z^*$</div>
+  <div class="opt" data-ok>$\mathbb U$</div>
+  <div class="opt" data-ok>$\mathbb U_5$</div>
+  <div class="opt">$\{z\in\C,\ |z|\leqslant 1\}$</div>
+  <div class="sol"><p>$\mathbb Q_+^*$, $\mathbb U$ et $\mathbb U_5$ sont stables par multiplication, contiennent $1$ et tout élément y a un inverse de même nature : ce sont des groupes, $\boxed{\mathbb Q_+^*}$, $\boxed{\mathbb U}$ et $\boxed{\mathbb U_5}$. En revanche $\mathbb Q_-^*$ n'est pas stable (produit de deux négatifs positif), $\Z^*=\Z\setminus\{0\}$ n'a pas d'inverses entiers, et le disque $\{|z|\leqslant 1\}$ n'a pas d'inverses pour les éléments de module $<1$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Son élément neutre est $\mathrm{id}_X$.</div>
+  <div class="opt" data-ok>Le symétrique de $\sigma$ est la bijection réciproque $\sigma^{-1}$.</div>
+  <div class="opt">Il est commutatif quel que soit $X$.</div>
+  <div class="opt" data-ok>Il n'est pas commutatif dès que $X$ possède au moins $3$ éléments.</div>
+  <div class="sol"><p>L'élément neutre de $(\mathcal S_X,\circ)$ est $\boxed{\mathrm{id}_X}$, et le symétrique de $\sigma$ est $\boxed{\text{sa bijection réciproque } \sigma^{-1}}$. Il n'est commutatif que si $X$ a au plus deux éléments ; dès que $X$ possède au moins trois éléments, on peut construire deux permutations qui ne commutent pas, donc $\boxed{\text{il n'est pas commutatif dès que } X \text{ possède au moins } 3 \text{ éléments}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left(\dfrac13,\dfrac12\right)$</div>
+  <div class="opt">$(-3,-2)$</div>
+  <div class="opt" data-ok>$\left(-3,\dfrac12\right)$</div>
+  <div class="opt">$\left(\dfrac13,-2\right)$</div>
+  <div class="sol"><p>Dans le groupe produit, le symétrique de $(3,2)$ est $\left(\text{opposé de }3,\ \text{inverse de }2\right) = \boxed{\left(-3,\dfrac12\right)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\{0\}$</div>
+  <div class="opt">$\N$</div>
+  <div class="opt" data-ok>$2\Z$</div>
+  <div class="opt">$2\Z\cup3\Z$</div>
+  <div class="opt" data-ok>$\Z$</div>
+  <div class="opt">l'ensemble des entiers impairs</div>
+  <div class="sol"><p>$\{0\}$, $2\Z$ et $\Z$ sont bien des sous-groupes de $(\Z,+)$ : $\boxed{\{0\}}$, $\boxed{2\Z}$ et $\boxed{\Z}$. En revanche, $\N$ n'a pas d'opposés, $2\Z\cup3\Z$ n'est pas stable par addition ($2+3=5$), et les entiers impairs ne contiennent pas $0$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\Z$</div>
+  <div class="opt" data-ok>$\mathbb Q$</div>
+  <div class="opt">$\R_+$</div>
+  <div class="opt">$[-1,1]$</div>
+  <div class="opt" data-ok>$\{a+b\sqrt2,\ a,b\in\Z\}$</div>
+  <div class="opt">$\{a+b\sqrt2,\ a,b\in\N\}$</div>
+  <div class="sol"><p>$\Z$, $\mathbb Q$ et $\{a+b\sqrt2,\ a,b\in\Z\}$ sont stables par somme et opposé et contiennent $0$ : $\boxed{\Z}$, $\boxed{\mathbb Q}$ et $\boxed{\{a+b\sqrt2,\ a,b\in\Z\}}$. En revanche $\R_+$ n'a pas d'opposés, $[-1,1]$ n'est pas stable par addition ($1+1=2$), et $\{a+b\sqrt2,\ a,b\in\N\}$ n'a pas d'opposés.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\R$</div>
+  <div class="opt" data-ok>$i\R$</div>
+  <div class="opt">$\{z\in\C,\ |z|\leqslant 1\}$</div>
+  <div class="opt">$\{z\in\C,\ \mathrm{Re}(z)=1\}$</div>
+  <div class="opt">$\mathbb U$</div>
+  <div class="opt" data-ok>$\Z[i]=\{a+ib,\ a,b\in\Z\}$</div>
+  <div class="sol"><p>$\R$, $i\R$ et $\Z[i]=\{a+ib,\ a,b\in\Z\}$ sont stables par somme et opposé et contiennent $0$ : $\boxed{\R}$, $\boxed{i\R}$ et $\boxed{\Z[i]}$. En revanche $\{|z|\leqslant 1\}$ n'est pas stable par addition, $\{\mathrm{Re}(z)=1\}$ ne contient pas $0$, et $\mathbb U$ (le cercle unité) n'est pas stable par addition — ce n'est un groupe que pour la multiplication.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{0\}$</div>
+  <div class="opt">$\Z$</div>
+  <div class="opt">$5\Z$</div>
+  <div class="opt" data-ok>$6\Z$</div>
+  <div class="sol"><p>$2\Z\cap3\Z$ est l'ensemble des multiples communs à $2$ et $3$, c'est-à-dire des multiples de $\ppcm(2,3)=6$ : $\boxed{6\Z}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$2\Z$</div>
+  <div class="opt">$4\Z$</div>
+  <div class="opt">$10\Z$</div>
+  <div class="opt">$24\Z$</div>
+  <div class="sol"><p>L'ensemble $\{4a+6b,\ a,b\in\Z\}$ est le sous-groupe de $(\Z,+)$ engendré par $4$ et $6$, c'est-à-dire $\pgcd(4,6)\Z = \boxed{2\Z}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\R_+^*$</div>
+  <div class="opt">$\R_-^*$</div>
+  <div class="opt" data-ok>$\{-1,1\}$</div>
+  <div class="opt" data-ok>$\mathbb Q^*$</div>
+  <div class="opt">$\Z^*$</div>
+  <div class="opt" data-ok>$\{2^n,\ n\in\Z\}$</div>
+  <div class="sol"><p>$\R_+^*$, $\{-1,1\}$, $\mathbb Q^*$ et $\{2^n,\ n\in\Z\}$ sont stables par produit et inverse et contiennent $1$ : $\boxed{\R_+^*}$, $\boxed{\{-1,1\}}$, $\boxed{\mathbb Q^*}$ et $\boxed{\{2^n,\ n\in\Z\}}$. En revanche $\R_-^*$ n'est pas stable (produit de deux négatifs positif), et $\Z^*=\Z\setminus\{0\}$ n'a pas d'inverses entiers.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathbb U$</div>
+  <div class="opt" data-ok>$\R^*$</div>
+  <div class="opt">$i\R^*$</div>
+  <div class="opt" data-ok>$\{1,i,-1,-i\}$</div>
+  <div class="opt">$\{z\in\C,\ |z|=2\}$</div>
+  <div class="opt">$\{1,i\}$</div>
+  <div class="sol"><p>$\mathbb U$, $\R^*$ et $\{1,i,-1,-i\}=\mathbb U_4$ sont stables par produit et inverse et contiennent $1$ : $\boxed{\mathbb U}$, $\boxed{\R^*}$ et $\boxed{\{1,i,-1,-i\}}$. En revanche $i\R^*$ n'est pas stable ($i\times i=-1\notin i\R^*$), $\{|z|=2\}$ ne contient pas $1$, et $\{1,i\}$ n'est pas stable ($i\times i=-1\notin\{1,i\}$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$+\infty$</span></div>
+  <div class="sol"><p>$i^1=i$, $i^2=-1$, $i^3=-i$, $i^4=1$ : le sous-groupe engendré par $i$ est $\{1,i,-1,-i\}$, de cardinal $\boxed{4}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case" data-ok>$+\infty$</span></div>
+  <div class="sol"><p>Le sous-groupe engendré par $2$ est $\{2^n,\ n\in\Z\}$, qui est infini (les puissances de $2$ sont toutes distinctes) : cardinal $\boxed{+\infty}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$+\infty$</span></div>
+  <div class="sol"><p>$\mathbb U_4\cap\mathbb U_6 = \mathbb U_{\pgcd(4,6)} = \mathbb U_n$ avec $n=\boxed{2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathbb U_n$ est un sous-groupe de $\mathbb U_m$ si et seulement si $n$ divise $m$.</div>
+  <div class="opt">$\mathbb U_n$ est un sous-groupe de $\mathbb U_m$ si et seulement si $n\leqslant m$.</div>
+  <div class="opt" data-ok>$\mathbb U_n\cup\mathbb U_m$ est un sous-groupe de $\C^*$ si et seulement si $n\mid m$ ou $m\mid n$.</div>
+  <div class="opt">$\displaystyle\bigcup_{n\in\N^*}\mathbb U_n=\mathbb U$</div>
+  <div class="sol"><p>$\boxed{\mathbb U_n \text{ est un sous-groupe de } \mathbb U_m \text{ si et seulement si } n \text{ divise } m}$ (chaque racine $n$-ième de l'unité est alors une racine $m$-ième) ; et $\boxed{\mathbb U_n\cup\mathbb U_m \text{ est un sous-groupe de } \C^* \text{ si et seulement si } n\mid m \text{ ou } m\mid n}$. En revanche $n\leqslant m$ ne suffit pas (par exemple $\mathbb U_2\not\subset\mathbb U_3$), et $\bigcup_{n\in\N^*}\mathbb U_n$ est l'ensemble (dénombrable) des racines de l'unité, strictement inclus dans $\mathbb U$ (qui contient par exemple $e^{i}$, non racine de l'unité).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>l'ensemble des translations $x\mapsto x+b$, $b\in\R$</div>
+  <div class="opt" data-ok>l'ensemble des fonctions $x\mapsto ax+b$, avec $a\in\R^*$ et $b\in\R$</div>
+  <div class="opt">l'ensemble des fonctions $x\mapsto ax$, avec $a\in\R$</div>
+  <div class="opt" data-ok>l'ensemble des bijections $f$ telles que $f(0)=0$</div>
+  <div class="opt">l'ensemble des bijections $f$ telles que $f(0)=1$</div>
+  <div class="opt" data-ok>l'ensemble des bijections strictement croissantes</div>
+  <div class="opt">l'ensemble des bijections strictement décroissantes</div>
+  <div class="sol"><p>Sont des sous-groupes de $(\mathcal S_\R,\circ)$ : $\boxed{\text{les translations } x\mapsto x+b}$, $\boxed{\text{les fonctions } x\mapsto ax+b,\ a\in\R^*}$, $\boxed{\text{les bijections } f \text{ telles que } f(0)=0}$ et $\boxed{\text{les bijections strictement croissantes}}$ (chacun contient l'identité et est stable par composition et par passage à la réciproque). En revanche, l'ensemble des $x\mapsto ax$ avec $a\in\R$ contient des applications non bijectives ($a=0$) ; l'ensemble des $f$ telles que $f(0)=1$ ne contient pas l'identité ; et la composée de deux bijections strictement décroissantes est strictement croissante, donc cet ensemble n'est pas stable.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f(x \star y) = f(x) + f(y)$</div>
+  <div class="opt" data-ok>$\forall x, y \in G,\ f(x \star y) = f(x) \cdot f(y)$</div>
+  <div class="opt">$f(x \star y) = f(x) \star f(y)$</div>
+  <div class="opt">$f$ est bijective</div>
+  <div class="sol"><p>Un morphisme de groupes $f:(G,\star)\to(H,\cdot)$ vérifie $\boxed{\forall x,y\in G,\ f(x\star y)=f(x)\cdot f(y)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f(e_G)=e_H$</div>
+  <div class="opt" data-ok>$\forall x\in G,\ f(x^{-1})=f(x)^{-1}$</div>
+  <div class="opt" data-ok>$\forall x\in G,\ \forall n\in\Z,\ f(x^n)=f(x)^n$</div>
+  <div class="opt">$f$ est injective</div>
+  <div class="sol"><p>Pour tout morphisme $f:G\to H$ : $\boxed{f(e_G)=e_H}$, $\boxed{\forall x\in G,\ f(x^{-1})=f(x)^{-1}}$ et $\boxed{\forall x\in G,\forall n\in\Z,\ f(x^n)=f(x)^n}$. L'injectivité n'est en revanche jamais automatique.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\exp : (\R,+)\to(\R_+^*,\times)$</div>
+  <div class="opt" data-ok>$\ln : (\R_+^*,\times)\to(\R,+)$</div>
+  <div class="opt">$x\mapsto x^2$ de $(\R,+)$ dans $(\R,+)$</div>
+  <div class="opt" data-ok>$z\mapsto|z|$ de $(\C^*,\times)$ dans $(\R_+^*,\times)$</div>
+  <div class="opt">$n\mapsto n+1$ de $(\Z,+)$ dans $(\Z,+)$</div>
+  <div class="opt" data-ok>$\theta\mapsto e^{i\theta}$ de $(\R,+)$ dans $(\mathbb U,\times)$</div>
+  <div class="sol"><p>$\boxed{\exp:(\R,+)\to(\R_+^*,\times)}$, $\boxed{\ln:(\R_+^*,\times)\to(\R,+)}$, $\boxed{z\mapsto|z| \text{ de } (\C^*,\times) \text{ dans } (\R_+^*,\times)}$ et $\boxed{\theta\mapsto e^{i\theta} \text{ de } (\R,+) \text{ dans } (\mathbb U,\times)}$ vérifient bien $f(x\star y)=f(x)\cdot f(y)$ (propriétés usuelles de $\exp$, $\ln$, $|\cdot|$ et $e^{i\cdot}$). En revanche $x\mapsto x^2$ ne vérifie pas $(x+y)^2=x^2+y^2$ en général, et $n\mapsto n+1$ ne vérifie pas $(n+m)+1=(n+1)+(m+1)$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{x \in G \mid f(x) \neq e_H\}$</div>
+  <div class="opt" data-ok>$\{x \in G \mid f(x) = e_H\}$</div>
+  <div class="opt">$\{f(x) \mid x \in G\}$</div>
+  <div class="opt">$\{x \in H \mid f(x) = e_H\}$</div>
+  <div class="sol"><p>Le noyau de $f:G\to H$ est $\boxed{\{x\in G \mid f(x)=e_H\}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{0\}$</div>
+  <div class="opt">$\pi\Z$</div>
+  <div class="opt" data-ok>$2\pi\Z$</div>
+  <div class="opt">$\R$</div>
+  <div class="sol"><p>$e^{i\theta}=1 \iff \theta\in2\pi\Z$, donc le noyau est $\boxed{2\pi\Z}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ker f = H$</div>
+  <div class="opt">$f$ est surjectif</div>
+  <div class="opt" data-ok>$\ker f = \{e_G\}$</div>
+  <div class="opt">$\ima f = G$</div>
+  <div class="sol"><p>Un morphisme de groupes $f:G\to H$ est injectif si et seulement si $\boxed{\ker f = \{e_G\}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\exp$ est un isomorphisme de $(\R,+)$ sur $(\R_+^*,\times)$.</div>
+  <div class="opt" data-ok>La bijection réciproque d'un isomorphisme de groupes est un isomorphisme de groupes.</div>
+  <div class="opt">$\theta\mapsto e^{i\theta}$ est un isomorphisme de $(\R,+)$ sur $(\mathbb U,\times)$.</div>
+  <div class="opt">$z\mapsto|z|$ est un isomorphisme de $(\C^*,\times)$ sur $(\R_+^*,\times)$.</div>
+  <div class="sol"><p>$\boxed{\exp \text{ est un isomorphisme de } (\R,+) \text{ sur } (\R_+^*,\times)}$ (morphisme bijectif) et $\boxed{\text{la bijection réciproque d'un isomorphisme de groupes est un isomorphisme de groupes}}$. En revanche, $\theta\mapsto e^{i\theta}$ n'est pas injectif (noyau $2\pi\Z$) donc n'est pas un isomorphisme sur $\mathbb U$ ; de même $z\mapsto|z|$ n'est pas injectif (par exemple $|1|=|i|$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(A,+)$ est un groupe abélien</div>
+  <div class="opt">$(A,\times)$ est un groupe</div>
+  <div class="opt" data-ok>$\times$ est associative</div>
+  <div class="opt">$\times$ est commutative</div>
+  <div class="opt" data-ok>$\times$ est distributive sur $+$</div>
+  <div class="opt">$+$ est distributive sur $\times$</div>
+  <div class="opt" data-ok>$\times$ possède un élément neutre</div>
+  <div class="opt">{-1mm}tout élément non nul est inversible pour $\times$</div>
+  <div class="sol"><p>$(A,+,\times)$ est un anneau si $\boxed{(A,+) \text{ est un groupe abélien}}$, $\boxed{\times \text{ est associative}}$, $\boxed{\times \text{ est distributive sur } +}$ et $\boxed{\times \text{ possède un élément neutre}}$. Ni la commutativité de $\times$, ni l'inversibilité des éléments non nuls ne sont exigées (elles caractérisent respectivement les anneaux commutatifs et les corps).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(\mathbb{Z}, +, \times)$</div>
+  <div class="opt">$(\mathbb{R}[X], +, \times)$</div>
+  <div class="opt" data-ok>$(\mathbb{N}, +, \times)$</div>
+  <div class="opt">$(\mathcal{M}_n(\mathbb{R}), +, \times)$</div>
+  <div class="sol"><p>$(\N,+,\times)$ n'est pas un anneau car $\boxed{(\N,+) \text{ n'est pas un groupe}}$ (pas d'opposés).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(\N,+,\times)$</div>
+  <div class="opt" data-ok>$(\Z,+,\times)$</div>
+  <div class="opt">$(2\Z,+,\times)$</div>
+  <div class="opt" data-ok>$(\R[X],+,\times)$</div>
+  <div class="opt" data-ok>$(\mathcal M_2(\R),+,\times)$</div>
+  <div class="opt" data-ok>$(\mathcal F(\R,\R),+,\times)$</div>
+  <div class="sol"><p>$\boxed{(\Z,+,\times)}$, $\boxed{(\R[X],+,\times)}$, $\boxed{(\mathcal M_2(\R),+,\times)}$ et $\boxed{(\mathcal F(\R,\R),+,\times)}$ sont des anneaux (unité $1$, $1$, $I_2$ et la fonction constante $1$ respectivement). $(\N,+,\times)$ échoue car $(\N,+)$ n'est pas un groupe, et $(2\Z,+,\times)$ échoue car $2\Z$ ne contient pas d'élément neutre pour $\times$ ($1\notin2\Z$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\N$</div>
+  <div class="opt" data-ok>$\Z$</div>
+  <div class="opt">$2\Z$</div>
+  <div class="opt" data-ok>$\mathbb Q$</div>
+  <div class="opt" data-ok>$\{a+b\sqrt2,\ a,b\in\Z\}$</div>
+  <div class="opt" data-ok>l'ensemble $\mathbb D$ des nombres décimaux</div>
+  <div class="sol"><p>$\boxed{\Z}$, $\boxed{\mathbb Q}$, $\boxed{\{a+b\sqrt2,\ a,b\in\Z\}}$ et $\boxed{\text{l'ensemble } \mathbb D \text{ des nombres décimaux}}$ contiennent $1$ et sont stables par $+$, $-$ et $\times$. En revanche $\N$ n'a pas d'opposés, et $2\Z$ ne contient pas $1$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0\times a=0$</div>
+  <div class="opt" data-ok>$(-a)\times(-b)=a\times b$</div>
+  <div class="opt">Si $a^2=a$, alors $a=0$ ou $a=1$.</div>
+  <div class="opt">Si $ab=ac$ et $a\neq0$, alors $b=c$.</div>
+  <div class="sol"><p>Dans tout anneau : $\boxed{0\times a=0}$ et $\boxed{(-a)\times(-b)=a\times b}$ (conséquences de la distributivité). En revanche un idempotent ($a^2=a$) n'est pas forcément $0$ ou $1$, et la loi de simplification ($ab=ac,\ a\neq0\Rightarrow b=c$) échoue dès qu'il existe des diviseurs de zéro.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1-a$</div>
+  <div class="opt">$1+a$</div>
+  <div class="opt" data-ok>$1+a+a^2$</div>
+  <div class="opt">$1-a+a^2$</div>
+  <div class="sol"><p>$(1-a)(1+a+a^2) = 1+a+a^2-a-a^2-a^3 = 1-a^3 = 1$ car $a^3=0$ : l'inverse de $1-a$ est $\boxed{1+a+a^2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\Z^*$</div>
+  <div class="opt">$\{1\}$</div>
+  <div class="opt" data-ok>$\{-1,1\}$</div>
+  <div class="opt">$\{0,1\}$</div>
+  <div class="sol"><p>Les seuls entiers ayant un inverse entier pour $\times$ sont $\boxed{\{-1,1\}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">non nulles</div>
+  <div class="opt" data-ok>qui ne s'annulent pas sur $\R$</div>
+  <div class="opt">bijectives</div>
+  <div class="opt">strictement positives</div>
+  <div class="sol"><p>Une fonction $f$ est inversible pour le produit (point par point) si et seulement si $\boxed{\text{elle ne s'annule pas sur } \R}$ (on peut alors définir $1/f$ partout).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$+\infty$</span></div>
+  <div class="sol"><p>Les inversibles de $\Z[i]$ sont les éléments de module $1$, soit $\{1,-1,i,-i\}$ : il y en a $\boxed{4}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$A$ est commutatif</div>
+  <div class="opt" data-ok>$\forall a,b\in A,\ ab=0\Rightarrow a=0$ ou $b=0$</div>
+  <div class="opt">$\forall a,b\in A,\ a=0$ ou $b=0\Rightarrow ab=0$</div>
+  <div class="opt" data-ok>$A$ n'est pas l'anneau nul ($1\neq0$)</div>
+  <div class="opt">tout élément non nul est inversible</div>
+  <div class="opt">$A$ est fini</div>
+  <div class="sol"><p>Un anneau $A$ est intègre si et seulement si $\boxed{A \text{ est commutatif}}$, $\boxed{\forall a,b\in A,\ ab=0\Rightarrow a=0 \text{ ou } b=0}$ (absence de diviseurs de zéro) et $\boxed{A \text{ n'est pas l'anneau nul } (1\neq0)}$. L'implication réciproque ($a=0$ ou $b=0\Rightarrow ab=0$) est vraie dans <em>tout</em> anneau, ce n'est donc pas une condition caractéristique ; l'inversibilité de tout élément non nul définirait un corps, pas seulement l'intégrité ; et un anneau intègre peut être infini.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\Z$</div>
+  <div class="opt" data-ok>$\R$</div>
+  <div class="opt" data-ok>$\R[X]$</div>
+  <div class="opt">$\mathcal M_2(\R)$</div>
+  <div class="opt">$\mathcal F(\R,\R)$</div>
+  <div class="sol"><p>$\boxed{\Z}$, $\boxed{\R}$ et $\boxed{\R[X]}$ sont intègres (commutatifs, sans diviseur de zéro). $\mathcal M_2(\R)$ n'est ni commutatif ni intègre (il existe des matrices non nulles de produit nul), et $\mathcal F(\R,\R)$ a des diviseurs de zéro (deux indicatrices de supports disjoints).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f\neq0$ et $g\neq0$</div>
+  <div class="opt" data-ok>$fg=0$</div>
+  <div class="opt" data-ok>$f^2=f$</div>
+  <div class="opt">$f+g=0$</div>
+  <div class="sol"><p>$f$ et $g$ sont toutes deux non nulles : $\boxed{f\neq0 \text{ et } g\neq0}$. Leurs supports $\R_+$ et $\R_-^*$ sont disjoints, donc $\boxed{fg=0}$ : $f$ et $g$ sont des diviseurs de zéro, ce qui montre que $\mathcal F(\R,\R)$ n'est pas intègre. De plus $f$ est une fonction indicatrice, donc idempotente : $\boxed{f^2=f}$. En revanche $f+g$ vaut $1$ partout (sur $\R_+\cup\R_-^*=\R$), donc $f+g\neq0$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall a,b\in A,\ f(a+b)=f(a)+f(b)$</div>
+  <div class="opt" data-ok>$\forall a,b\in A,\ f(ab)=f(a)f(b)$</div>
+  <div class="opt" data-ok>$f(1_A)=1_B$</div>
+  <div class="opt">$f(0_A)=1_B$</div>
+  <div class="opt">$f$ est bijective</div>
+  <div class="opt">$A$ et $B$ sont commutatifs</div>
+  <div class="sol"><p>$f:A\to B$ est un morphisme d'anneaux si et seulement si $\boxed{\forall a,b\in A,\ f(a+b)=f(a)+f(b)}$, $\boxed{\forall a,b\in A,\ f(ab)=f(a)f(b)}$ et $\boxed{f(1_A)=1_B}$. La bijectivité et la commutativité ne sont pas exigées.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\begin{cases}\C\to\C\\z\mapsto\overline z\end{cases}$</div>
+  <div class="opt">$\begin{cases}\R\to\R\\ x\mapsto2x\end{cases}$</div>
+  <div class="opt">$\begin{cases}\R\to\R\\ x\mapsto0\end{cases}$</div>
+  <div class="opt">$\begin{cases}\C\to\R\\ z\mapsto|z|\end{cases}$</div>
+  <div class="opt" data-ok>{-1mm}$\begin{cases}\R[X]\!\to\!\R\\ P\mapsto P(0)\end{cases}$</div>
+  <div class="sol"><p>La conjugaison $\boxed{z\mapsto\overline z}$ de $\C$ dans $\C$ et l'évaluation $\boxed{P\mapsto P(0)}$ de $\R[X]$ dans $\R$ sont des morphismes d'anneaux (additives, multiplicatives, et envoient $1$ sur $1$). En revanche $x\mapsto2x$ n'est pas multiplicative ($2(xy)\neq(2x)(2y)$ en général), $x\mapsto0$ n'envoie pas $1$ sur $1$, et $z\mapsto|z|$ n'est pas additive.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$K$ est commutatif</div>
+  <div class="opt" data-ok>$1\neq0$</div>
+  <div class="opt">tout élément de $K$ est inversible</div>
+  <div class="opt" data-ok>tout élément non nul de $K$ est inversible</div>
+  <div class="opt">$(K,\times)$ est un groupe</div>
+  <div class="opt">$K$ est fini</div>
+  <div class="opt">$K$ contient $\mathbb Q$</div>
+  <div class="sol"><p>$(K,+,\times)$ est un corps si et seulement si $\boxed{K \text{ est commutatif}}$, $\boxed{1\neq0}$ et $\boxed{\text{tout élément non nul de } K \text{ est inversible}}$. (« Tout élément de $K$ est inversible », sans exclure $0$, est impossible ; $(K,\times)$ n'est jamais un groupe puisque $0$ n'y est pas inversible ; la finitude et le fait de contenir $\mathbb Q$ ne sont pas exigés.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(\mathbb{Z}, +, \times)$</div>
+  <div class="opt">$(\mathcal M_2(\R), +, \times)$</div>
+  <div class="opt" data-ok>$(\mathbb{Q}, +, \times)$</div>
+  <div class="opt">$(\mathbb{R}[X], +, \times)$</div>
+  <div class="sol"><p>Seul $\boxed{(\mathbb Q,+,\times)}$ est un corps : dans $\Z$, $2$ n'est pas inversible ; $\mathcal M_2(\R)$ n'est pas commutatif et a des diviseurs de zéro ; dans $\R[X]$, $X$ n'est pas inversible.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(\mathbb{Z}, +)$ n'est pas un groupe</div>
+  <div class="opt">$\times$ n'est pas commutative dans $\mathbb{Z}$</div>
+  <div class="opt">$\mathbb{Z}$ n'est pas intègre</div>
+  <div class="opt" data-ok>$2$ n'est pas inversible pour $\times$ dans $\mathbb{Z}$</div>
+  <div class="sol"><p>$(\Z,+,\times)$ n'est pas un corps car $\boxed{2 \text{ n'est pas inversible pour } \times \text{ dans } \Z}$ ($(\Z,+)$ est un groupe, $\times$ est commutative, et $\Z$ est intègre : ces trois propositions sont donc fausses).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Oui</div>
+  <div class="opt">Non</div>
+  <div class="opt">Ça dépend</div>
+  <div class="sol"><p>$\boxed{\text{Oui}}$ : si $ab=0$ avec $a\neq0$ dans un corps, alors $b=a^{-1}(ab)=a^{-1}\times0=0$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\Z$</div>
+  <div class="opt" data-ok>$\mathbb Q$</div>
+  <div class="opt" data-ok>$\R$</div>
+  <div class="opt" data-ok>$\C$</div>
+  <div class="opt">$\R[X]$</div>
+  <div class="sol"><p>$\boxed{\mathbb Q}$, $\boxed{\R}$ et $\boxed{\C}$ sont des corps. $\Z$ n'en est pas un ($2$ n'est pas inversible), ni $\R[X]$ ($X$ n'est pas inversible).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$-1+\sqrt2\vphantom{\dfrac{1+i}{2}}$</div>
+  <div class="opt">$1-\sqrt2\vphantom{\dfrac{1+i}{2}}$</div>
+  <div class="opt">$\dfrac{1-\sqrt2}{3}$</div>
+  <div class="opt">il n'existe pas$\vphantom{\dfrac{1+i}{2}}$</div>
+  <div class="sol"><p>$(1+\sqrt2)(-1+\sqrt2) = -1+\sqrt2-\sqrt2+2 = 1$. L'inverse de $1+\sqrt2$ est donc $\boxed{-1+\sqrt2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1-i$</div>
+  <div class="opt">$1+i$</div>
+  <div class="opt">$-1+i$</div>
+  <div class="opt" data-ok>$\dfrac{1-i}{2}$</div>
+  <div class="opt">$\dfrac{1+i}{2}$</div>
+  <div class="opt">$\dfrac{-1+i}{2}$</div>
+  <div class="sol"><p>$(1+i)(1-i) = 1-i^2 = 2$, donc $(1+i)\times\dfrac{1-i}{2} = 1$ : l'inverse de $1+i$ est $\boxed{\dfrac{1-i}{2}}$.</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

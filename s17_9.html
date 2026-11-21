@@ -1,7 +1,168 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>17.9 Bases de données SQL</title>
+<title>17.9 Bases de données SQL — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#475569"><div class="topnav" style="--accent:#475569"><span class="brand">17.9 · Bases de données SQL</span><a href="index.html">Menu</a><a href="ch17.html">Chapitre 17</a><a class="" href="pdf/BCPSTCh17_Informatique.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 17 — Informatique</p><h1>Bases de données SQL</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch17.html">← Retour au chapitre 17</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">17.9 · Bases de données SQL</span><a href="index.html">Menu</a><a href="ch17.html">Chapitre 17</a></div><main><p class="chapno">Chapitre 17 — Informatique</p><h1>Bases de données SQL</h1>
+<div id="quiz" data-chap="17" data-start="130">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (17.1, 17.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="130").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">les attributs sont les noms des lignes et les enregistrements ceux des colonnes</div>
+  <div class="opt" data-ok>les attributs sont les noms des colonnes et les enregistrements sont les lignes</div>
+  <div class="opt">les attributs sont les noms des tables et les enregistrements ceux des données</div>
+  <div class="opt">les attributs sont les valeurs contenues dans les cases de la table</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span></div>
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span></div>
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case" data-ok>$6$</span><span class="case">$7$</span></div>
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span></div>
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case" data-ok>$7$</span></div>
+  <div class="row"><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span></div>
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">{center}{3mm}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">de tous les enregistrements de la table</div>
+  <div class="opt">du nombre de lignes et de colonnes de la table</div>
+  <div class="opt">de la liste des requêtes que l'on peut faire sur la table</div>
+  <div class="opt" data-ok>du nom de la table, de ses attributs et du domaine de chaque attribut</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>HAVING</code> peut remplacer <code>WHERE</code> dans toute requête sans <code>GROUP BY</code></div>
+  <div class="opt" data-ok><code>WHERE</code> filtre les lignes avant le regroupement</div>
+  <div class="opt" data-ok><code>HAVING</code> filtre les groupes après le regroupement</div>
+  <div class="opt">Une requête peut contenir <code>WHERE COUNT(*) &gt; 2</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok><code>id</code></div>
+  <div class="opt" data-ok><code>nom</code></div>
+  <div class="opt" data-ok><code>date</code></div>
+  <div class="opt"><code>annee</code></div>
+  <div class="opt"><code>artiste</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">L'attribut <code>artiste</code> de la table <code>oeuvres</code> est une clé primaire</div>
+  <div class="opt" data-ok>L'attribut <code>artiste</code> de la table <code>oeuvres</code> est une clé étrangère</div>
+  <div class="opt">Une clé primaire peut prendre plusieurs fois la même valeur</div>
+  <div class="opt" data-ok>Une clé étrangère peut prendre plusieurs fois la même valeur</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>SELECT artistes FROM nom, date</code></div>
+  <div class="opt" data-ok><code>SELECT nom, date FROM artistes</code></div>
+  <div class="opt"><code>SELECT * FROM artistes WHERE nom, date</code></div>
+  <div class="opt"><code>FROM artistes SELECT nom, date</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>annee =! 1983</code></div>
+  <div class="opt"><code>annee =/= 1983</code></div>
+  <div class="opt" data-ok><code>annee &lt;&gt; 1983</code></div>
+  <div class="opt"><code>annee NOT 1983</code></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Berthe Morisot</div>
+  <div class="opt">Claude Monet</div>
+  <div class="opt">Léonard de Vinci</div>
+  <div class="opt" data-ok>Niki de Saint Phalle</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Berthe Morisot</div>
+  <div class="opt">Claude Monet</div>
+  <div class="opt">Léonard de Vinci</div>
+  <div class="opt">Niki de Saint Phalle</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>oeuvres.nom = artistes.nom</code></div>
+  <div class="opt"><code>oeuvres.id = artistes.id</code></div>
+  <div class="opt" data-ok><code>oeuvres.artiste = artistes.id</code></div>
+  <div class="opt"><code>oeuvres.annee = artistes.date</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>SELECT nom FROM oeuvres WHERE artiste = 1</code></div>
+  <div class="opt">{ SELECT nom FROM oeuvres, artistes WHERE artistes.nom = 'Claude Monet'}</div>
+  <div class="opt">{ SELECT oeuvres.nom FROM oeuvres WHERE artiste = 'Claude Monet'}</div>
+  <div class="opt" data-ok>{ SELECT oeuvres.nom FROM oeuvres JOIN artistes ON oeuvres.artiste = artistes.id WHERE artistes.nom = 'Claude Monet'}</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">une table vide</div>
+  <div class="opt" data-ok>une seule ligne : Claude Monet, Berthe Morisot</div>
+  <div class="opt">une seule ligne : Berthe Morisot, Claude Monet</div>
+  <div class="opt">deux lignes : Claude Monet, Berthe Morisot et Berthe Morisot, Claude Monet</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="cadre">
+    <div class="row"><span class="case">La Joconde</span><span class="case" data-ok>Fontaine Stravinsky</span></div>
+    <div class="row"><span class="case">La Cène</span><span class="case">Impression, soleil levant</span></div>
+    <div class="row"><span class="case">Le Berceau</span><span class="case">Les Nymphéas</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">1452</span><span class="case" data-ok>1498</span></div>
+    <div class="row"><span class="case">1506</span><span class="case">1872</span></div>
+    <div class="row"><span class="case">1914</span><span class="case">1983</span></div>
+  </div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">{ SELECT artistes.nom, MIN(annee) FROM artistes JOIN oeuvres ON oeuvres.artiste = artistes.id}</div>
+  <div class="opt" data-ok>{ SELECT artistes.nom, MIN(annee) FROM artistes JOIN oeuvres ON oeuvres.artiste = artistes.id GROUP BY artistes.id}</div>
+  <div class="opt">{ SELECT artistes.nom, annee FROM artistes JOIN oeuvres ON oeuvres.artiste = artistes.id ORDER BY annee ASC}</div>
+  <div class="opt">{ SELECT artistes.nom, MIN(annee) FROM artistes JOIN oeuvres ON oeuvres.artiste = artistes.id GROUP BY annee}</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

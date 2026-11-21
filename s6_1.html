@@ -1,7 +1,144 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>6.1 Produit scalaire</title>
+<title>6.1 Produit scalaire — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#059669"><div class="topnav" style="--accent:#059669"><span class="brand">6.1 · Produit scalaire</span><a href="index.html">Menu</a><a href="ch6.html">Chapitre 6</a></div><main><p class="chapno">Chapitre 6 — Algèbre bilinéaire</p><h1>Produit scalaire</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch6.html">← Retour au chapitre 6</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">6.1 · Produit scalaire</span><a href="index.html">Menu</a><a href="ch6.html">Chapitre 6</a></div><main><p class="chapno">Chapitre 6 — Algèbre bilinéaire</p><h1>Produit scalaire</h1>
+<div id="quiz" data-chap="6" data-start="1">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (6.1, 6.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="1").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Si $\varphi(x,x) > 0$ pour tout $x\neq 0$, alors $\varphi$ est un produit scalaire</div>
+  <div class="opt">Si $\varphi(x,x) = 0\implies x = 0$, alors $\varphi$ est un produit scalaire</div>
+  <div class="opt">Si $\varphi(x,x)\geqslant 0$ pour tout $x\in E$, alors $\varphi$ est un produit scalaire</div>
+  <div class="opt" data-ok>Si $\varphi$ est un produit scalaire et si $\varphi(x,y) = 0$ pour tout $y\in E$, alors $x = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\| x + y \|^2 - \| x - y \|^2 = 2 \langle x, y \rangle$</div>
+  <div class="opt">$\| x + y \| \, \| x - y \| = \| x \|^2 - \| y \|^2$</div>
+  <div class="opt" data-ok>$\| x + y \|^2 + \| x - y \|^2 = 2 \| x \|^2 + 2 \| y \|^2$</div>
+  <div class="opt">$\| x + y \|^2 = \| x \|^2 + \langle x,y \rangle + \|y\|^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\| x + y \| = \| x \| + \| y \| \iff x=0$</div>
+  <div class="opt">$\| x + y \|^2 \leqslant \| x \|^2 + \| y \|^2$</div>
+  <div class="opt">$\langle x, y \rangle = \| x \| \, \| y \| \iff (x,y)$ est liée</div>
+  <div class="opt" data-ok>$|\langle x, y \rangle| = \| x \| \, \| y \| \iff (x,y)$ est liée</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left\| \dfrac{x}{\|x\|^2} - \dfrac{y}{\|y\|^2} \right\| = \dfrac{\| x - y \|}{\| x \|\,\| y \|}$</div>
+  <div class="opt">$\left\| \dfrac{x}{\|x\|^2} - \dfrac{y}{\|y\|^2} \right\| = \dfrac{\| x - y \|}{\| x \|^2\,\| y \|^2}$</div>
+  <div class="opt">$\left\| \dfrac{x}{\|x\|} - \dfrac{y}{\|y\|}\right\| = \dfrac{\| x - y \|}{\| x \|\,\| y \|}$</div>
+  <div class="opt" data-ok>$\left\| \dfrac{x}{\|x\|} - \dfrac{y}{\| y \|} \right\|^2 = 2 - \dfrac{2\langle x,y\rangle}{\| x \|\,\| y \|}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\varphi_1$ n'est pas définie positive</div>
+  <div class="opt" data-ok>$\varphi_1$ est un produit scalaire sur $E$</div>
+  <div class="opt">$\varphi_2$ est un produit scalaire sur $E$</div>
+  <div class="opt">$\varphi_2$ n'est pas bilinéaire</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\varphi$ est un produit scalaire sur $\R[X]$</div>
+  <div class="opt" data-ok>$\varphi$ n'est pas définie positive</div>
+  <div class="opt">$\varphi$ est un produit scalaire sur $\R_{n+1}[X]$</div>
+  <div class="opt" data-ok>$\varphi$ est un produit scalaire sur $\R_n[X]$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(f,g)\mapsto f(0)\, g(0) + \displaystyle \int_{-1}^{1} f(t)g(t) (1-t^2) \, \mathrm{d}t$ définie sur $\mathcal{C} ([-1,1], \R)^2$</div>
+  <div class="opt">$(f,g) \mapsto f(1)\, g(1) + \displaystyle \int_{-1}^{1}t f(t) g(t) \, \mathrm{d}t$ définie sur $\mathcal{C} ([-1,1], \R)^2$</div>
+  <div class="opt">$(f,g) \mapsto f(0)\, g(1) + \displaystyle \int_{0}^{1} t f(t) g(t) \, \mathrm{d}t$ définie sur $\mathcal{C} ([0,1], \R)^2$</div>
+  <div class="opt">$(f,g) \mapsto f(1)\, g(0) + \displaystyle\int_{0}^{1} f^2(t) g^2(t) \, \mathrm{d}t$ définie sur $\mathcal{C} ([0,1],\R)^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(f,g)\mapsto f(0) g(0) + f'(1) g'(1)$</div>
+  <div class="opt">$(f,g)\mapsto \displaystyle \int_0^1 f'(t) g'(t) \, \mathrm{d}t$</div>
+  <div class="opt" data-ok>$(f,g)\mapsto f(0)g(0)+\displaystyle \int_0^1 f'(t) g'(t) \, \mathrm{d}t$</div>
+  <div class="opt">$(f,g)\mapsto f(1)g(1) + \displaystyle\int_0^1 f(t) g'(t) \, \mathrm{d}t$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$ \langle \cdot, \cdot \rangle$ n'est pas symétrique</div>
+  <div class="opt">$\langle A, B\rangle = \displaystyle \sum_{1\leqslant i,j\leqslant n} a_{i,j} b_{i,j}$</div>
+  <div class="opt">$ \langle \cdot, \cdot \rangle$ est un produit scalaire sur $\mathcal{M}_n(\R)$</div>
+  <div class="opt" data-ok>$ \langle \cdot, \cdot \rangle$ est un produit scalaire sur $\mathcal{S}_n(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(\tr A)^2 \leqslant \tr (A^\top A)$</div>
+  <div class="opt" data-ok>$(\tr A)^2 \leqslant n\tr (A^\top A)$</div>
+  <div class="opt">$2\tr (AB)\leqslant \tr (A^2)+\tr (B^2)$</div>
+  <div class="opt">$\tr (A^2)\geqslant 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x \perp y \iff \| x + \lambda y \| \geqslant \| x \|$ pour tout $\lambda \geqslant 0$</div>
+  <div class="opt" data-ok>$x \perp y \iff \| x + \lambda y \|\geqslant \| x \|$ pour tout $\lambda\in\R$</div>
+  <div class="opt" data-ok>$x \perp y \iff \| x + y \| = \| x - y\|$</div>
+  <div class="opt">$x \perp y$ et $y \perp z\implies x \perp z$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left( \displaystyle \sum_{i=1}^n |a_i| \right)^2 \leqslant n \displaystyle \sum_{i=1}^n a_i^2$</div>
+  <div class="opt">$\displaystyle \sum_{i=1}^n a_i = 1 \implies \displaystyle\sum_{i=1}^n \frac{1}{a_i} \geqslant n^2$</div>
+  <div class="opt">$\displaystyle \sum_{i=1}^n a_i^2 \leqslant \left(\sum_{i=1}^n a_i\right)^2$</div>
+  <div class="opt">$\displaystyle \sum_{i=1}^n a_i = 1 \implies \displaystyle\sum_{i=1}^n \frac{1}{a_i} \leqslant n^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$I\times J \geqslant b - a$</div>
+  <div class="opt" data-ok>$I\times J \geqslant (b - a)^2$</div>
+  <div class="opt">$I\times J \leqslant (b - a)^2$</div>
+  <div class="opt">$I\times J = (b - a)^2 \iff f=1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\rg f = \rg g$</div>
+  <div class="opt">$\ima f = \ima g$</div>
+  <div class="opt" data-ok>$\langle f(x),f(y)\rangle = \langle g(x), g(y) \rangle$</div>
+  <div class="opt">$f = g$ ou $f = -g$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left( \displaystyle \int_0^1 f(t) \, \mathrm{d}t \right)^2 \leqslant \dfrac{1}{\sqrt{3}} \displaystyle \int_0^1 f'(t)^2 \,\mathrm{d}t$</div>
+  <div class="opt">$\left( \displaystyle \int_0^1 f(t) \, \mathrm{d}t \right)^2 \leqslant \dfrac{1}{4} \displaystyle \int_0^1 f'(t)^2 \,\mathrm{d}t$</div>
+  <div class="opt" data-ok>$\displaystyle \int_0^1 f(t) \,\mathrm{d}t = \int_0^1 (1-t) f'(t) \, \mathrm{d}t$</div>
+  <div class="opt">$\left( \displaystyle \int_0^1 f(t) \, \mathrm{d}t \right)^2 = \dfrac{1}{3} \displaystyle \int_0^1 f'(t)^2 \, \mathrm{d}t$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$N = \{0\}$</div>
+  <div class="opt" data-ok>$\forall (x,y) \in E^2,~ \varphi(x,y)^2 \leqslant \varphi(x,x)\,\varphi(y,y)$</div>
+  <div class="opt" data-ok>$N$ est un sous-espace vectoriel de $E$</div>
+  <div class="opt">$\varphi(x,y)^2 = \varphi(x,x)\,\varphi(y,y) \implies (x,y)$ est liée</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

@@ -4,5 +4,222 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#0d9488"><div class="topnav" style="--accent:#0d9488"><span class="brand">9.3 · Coefficient binomial et binôme de Newton</span><a href="index.html">Menu</a><a href="ch9.html">Chapitre 9</a><a class="" href="pdf/BCPSTCh9_Sommes_produits_finis.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 9 — Sommes et produits finis</p><h1>Coefficient binomial et binôme de Newton</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 9.62 à 9.85 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#0d9488"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"mcq","c":[["\\(0 \\leqslant k \\leqslant n\\)",1,"h"],["\\(0 \\leqslant k < n\\)",0,"h"],["\\(0 < k \\leqslant n\\)",0,"h"],["\\(0 < k < n\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dbinom{n}{0} = n\\)",0,"h"],["\\(\\dbinom{n}{0} = 1\\)",1,"h"],["\\(\\dbinom{n}{1} = 1\\)",0,"h"],["\\(\\dbinom{n}{1} = n-1\\)",0,"h"],["\\(\\dbinom{n}{n-1} = n!\\)",0,"h"],["\\(\\dbinom{n}{2} = n^2\\)",0,"h"],["\\(\\dbinom{n}{1} = \\dbinom{n}{n-1}\\)",1,"h"],["\\(\\dbinom{n}{2} = \\dfrac{n(n-1)}{2}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\dbinom{k}{n}\\)",0,"h"],["\\(\\dbinom{n}{n-k}\\)",1,"h"],["\\(\\dbinom{n-k}{n}\\)",0,"h"],["\\(\\dfrac{n!}{(n-k)!\\,k!}\\)",1,"h"]]},{"t":"grid","parts":[{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":1}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":1}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"grid","parts":[{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":1}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":1}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"mcq","c":[["\\(\\dbinom{n}{k}+1\\)",0,"h"],["\\(\\dfrac{k+1}{n+1}\\dbinom{n}{k}\\)",0,"h"],["\\(\\dfrac{n+1}{k}\\dbinom{n}{k}\\)",0,"h"],["\\(\\dfrac{n+1}{k+1}\\dbinom{n}{k}\\)",1,"h"]]},{"t":"mcq","c":[["\\(k\\dbinom{n-1}{k-1}\\)",0,"h"],["\\(n\\dbinom{n-1}{k-1}\\)",1,"h"],["\\(n\\dbinom{n}{k-1}\\)",0,"h"],["\\((n-k+1)\\dbinom{n}{k-1}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\dbinom{n}{k} = \\dbinom{n-1}{k} + \\dbinom{n-1}{k-1}\\)",1,"h"],["\\(\\dbinom{n}{k} = \\dbinom{n-1}{k} + \\dbinom{n}{k-1}\\)",0,"h"],["\\(\\dbinom{n}{k} + \\dbinom{n}{k+1} = \\dbinom{n+1}{k}\\)",0,"h"],["\\(\\dbinom{n+1}{k} - \\dbinom{n}{k} = \\dbinom{n}{k-1}\\)",1,"h"]]},{"t":"mcq","c":[["\\(3(a+b)\\)",0,"h"],["\\(a^3+b^3\\)",0,"h"],["\\(a^3+3ab+b^3\\)",0,"h"],["\\(a^3+3a^2b^2+b^3\\)",0,"h"],["\\(a^3+a^2b+ab^2+b^3\\)",0,"h"],["\\(a^3+3a^2b+3ab^2+b^3\\)",1,"h"]]},{"t":"mcq","c":[["\\((a+b)^n = \\displaystyle\\sum_{k=1}^{n} \\dbinom{n}{k} a^{n-k} b^{k}\\)",0,"h"],["\\((a+b)^n = \\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k} a^k b^{n-k}\\)",1,"h"],["\\((a+b)^n = \\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k} a^k b^{k}\\)",0,"h"],["\\((a+b)^n = \\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k} a^{n-k} b^k\\)",1,"h"]]},{"t":"mcq","c":[["\\(n\\)",0,"h"],["\\(n+1\\)",1,"h"],["\\(2n\\)",0,"h"],["\\(2^n\\)",0,"h"],["\\(n!\\)",0,"h"]]},{"t":"grid","parts":[{"check":{"label":"","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":1}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"grid","parts":[{"check":{"label":"","ok":1}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":1}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":1}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"grid","parts":[{"check":{"label":"","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":1}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":1}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"grid","parts":[{"lit":"\\(x^0\\)","raw":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"check":{"label":"\\(10\\)","ok":0}},{"br":1},{"lit":"\\(x^1\\)","raw":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":1}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"check":{"label":"\\(10\\)","ok":0}},{"br":1},{"lit":"\\(x^2\\)","raw":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":1}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"check":{"label":"\\(10\\)","ok":0}},{"br":1},{"lit":"\\(x^3\\)","raw":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":1}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"check":{"label":"\\(10\\)","ok":0}},{"br":1},{"lit":"\\(x^4\\)","raw":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"check":{"label":"\\(10\\)","ok":0}}]},{"t":"grid","parts":[{"check":{"label":"","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":1}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"mcq","c":[["\\(0\\)",0,"h"],["\\(n\\)",0,"h"],["\\(n^2\\)",0,"h"],["\\(2^n\\)",1,"h"],["\\(n!\\)",0,"h"]]},{"t":"mcq","c":[["\\(0\\)",1,"h"],["\\(2^{n-1}\\)",0,"h"],["\\(2^n-1\\)",0,"h"],["\\(2^n\\)",0,"h"],["\\(\\dfrac{n(n-1)}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(0\\)",0,"h"],["\\((-1)^n\\)",1,"h"],["\\((-2)^n\\)",0,"h"],["\\(-3^n\\)",0,"h"],["\\((-3)^n\\)",0,"h"]]},{"t":"mcq","c":[["\\(2^n\\)",0,"h"],["\\(3^n\\)",0,"h"],["\\(n\\,2^{n-1}\\)",1,"h"],["\\(n\\,2^n\\)",0,"h"],["\\(\\dfrac{n(n+1)}{2}\\,2^n\\)",0,"h"]]},{"t":"mcq","c":[["\\(0\\)",0,"h"],["\\(\\dfrac{n}{2}\\)",0,"h"],["\\(2n\\)",0,"h"],["\\(2^{n-1}\\)",1,"h"],["\\(2^n\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dbinom{n}{p+1}\\)",0,"h"],["\\(\\dbinom{n+1}{p}\\)",0,"h"],["\\(\\dbinom{n+1}{p+1}\\)",1,"h"],["\\(2^n-2^p\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{2^n}{n+1}\\)",0,"h"],["\\(\\dfrac{2^{n+1}-1}{n+1}\\)",1,"h"],["\\(\\dfrac{1}{n+1}\\)",0,"h"],["\\((n+1) 2^{n+1}\\)",0,"h"]]},{"t":"mcq","c":[["\\((-1)^n\\, 2^n\\)",0,"h"],["\\(2^n \\cos\\left(\\dfrac{n\\pi}{2}\\right)\\)",1,"h"],["\\(2^n \\cos\\left(\\dfrac{n\\pi}{4}\\right)\\)",0,"h"],["\\((-2)^n \\cos\\left(\\dfrac{n\\pi}{4}\\right)\\)",0,"h"]]}];window.QUIZ_START=62;window.QUIZ_CHAP=9;window.QUIZ_SOL=["<p>Pour \\(0\\leqslant k\\leqslant n\\), \\(\\dbinom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!} \\geqslant 1\\) ; pour les autres valeurs de \\(k\\), on pose par convention \\(\\dbinom{n}{k}=0\\). Le coefficient est donc non nul si et seulement si \\(\\boxed{0\\leqslant k\\leqslant n}\\). (Les autres réponses oublient \\(k=0\\) ou \\(k=n\\), pour lesquels \\(\\dbinom{n}{0}=\\dbinom{n}{n}=1\\).)</p>","<p>On a \\(\\boxed{\\dbinom{n}{0}=1}\\) (une seule partie vide), \\(\\dbinom{n}{1}=n\\) (\\(n\\) singletons) et, par symétrie, \\(\\boxed{\\dbinom{n}{1}=\\dbinom{n}{n-1}}\\) (\\(=n\\), et non \\(n!\\)). Enfin \\(\\boxed{\\dbinom{n}{2}=\\dfrac{n(n-1)}{2}}\\), le nombre de paires d'éléments.</p>","<p>Par définition \\(\\dbinom{n}{k} = \\boxed{\\dfrac{n!}{k!\\,(n-k)!}}\\), expression symétrique en \\(k\\) et \\(n-k\\), d'où \\(\\boxed{\\dbinom{n}{k}=\\dbinom{n}{n-k}}\\). En revanche \\(\\dbinom{k}{n}\\) et \\(\\dbinom{n-k}{n}\\) sont nuls dès que \\(k<n\\).</p>","<p>\\(\\dbinom{7}{3} = \\dfrac{7\\times6\\times5}{3\\times2\\times1} = \\boxed{35}\\) (cases \\(3\\) pour les dizaines et \\(5\\) pour les unités).</p>","<p>Par symétrie, \\(\\dbinom{10}{8} = \\dbinom{10}{2} = \\dfrac{10\\times9}{2} = \\boxed{45}\\) (cases \\(4\\) pour les dizaines et \\(5\\) pour les unités).</p>","<p>\\(\\dbinom{n+1}{k+1} = \\dfrac{(n+1)!}{(k+1)!\\,(n-k)!} = \\dfrac{n+1}{k+1}\\times\\dfrac{n!}{k!\\,(n-k)!} = \\boxed{\\dfrac{n+1}{k+1}\\dbinom{n}{k}}\\).</p>","<p>\\(k\\dbinom{n}{k} = \\dfrac{n!}{(k-1)!\\,(n-k)!} = n\\,\\dfrac{(n-1)!}{(k-1)!\\,(n-k)!} = \\boxed{n\\dbinom{n-1}{k-1}}\\). De même, \\(\\dbinom{n}{k-1} = \\dfrac{n!}{(k-1)!\\,(n-k+1)!}\\), donc \\((n-k+1)\\dbinom{n}{k-1} = \\dfrac{n!}{(k-1)!\\,(n-k)!} = \\boxed{k\\dbinom{n}{k}}\\).</p>","<p>Formule de Pascal : \\(\\boxed{\\dbinom{n}{k} = \\dbinom{n-1}{k}+\\dbinom{n-1}{k-1}}\\). Appliquée au rang \\(n+1\\), elle donne \\(\\dbinom{n+1}{k} = \\dbinom{n}{k}+\\dbinom{n}{k-1}\\), c'est-à-dire \\(\\boxed{\\dbinom{n+1}{k}-\\dbinom{n}{k} = \\dbinom{n}{k-1}}\\). La troisième proposition est fausse : \\(\\dbinom{n}{k}+\\dbinom{n}{k+1} = \\dbinom{n+1}{k+1}\\).</p>","<p>Les coefficients sont ceux de la ligne \\(3\\) du triangle de Pascal, \\(1,3,3,1\\) : \\((a+b)^3 = \\boxed{a^3+3a^2b+3ab^2+b^3}\\).</p>","<p>\\(\\boxed{(a+b)^n = \\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k} a^k b^{n-k}} = \\boxed{\\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k} a^{n-k} b^k}\\) (les deux écritures sont équivalentes par symétrie \\(k\\leftrightarrow n-k\\)). La somme commence à \\(k=0\\), et dans chaque terme les exposants ont pour somme \\(n\\).</p>","<p>L'indice \\(k\\) va de \\(0\\) à \\(n\\) : il y a \\(\\boxed{n+1}\\) termes.</p>","<p>\\((b-a)^5 = \\displaystyle\\sum_{k=0}^{5} \\dbinom{5}{k}(-a)^k b^{5-k}\\). Le terme en \\(a^2b^3\\) correspond à \\(k=2\\) : \\(\\dbinom{5}{2}(-1)^2 = \\boxed{10}\\) (signe \\(+\\), cases \\(1\\) et \\(0\\)).</p>","<p>Le terme en \\(x^3\\) vaut \\(\\dbinom{5}{3}(-2x)^3 = 10\\times(-8)\\,x^3\\), d'où le coefficient \\(\\boxed{-80}\\) (cases \\(-\\), \\(8\\) et \\(0\\)).</p>","<p>Le terme en \\(x^2\\) vaut \\(\\dbinom{4}{2}\\,2^2(-x)^2 = 6\\times4\\,x^2\\), d'où le coefficient \\(\\boxed{24}\\) (signe \\(+\\), cases \\(2\\) et \\(4\\)).</p>","<p>Ligne \\(4\\) du triangle de Pascal : \\((1+x)^4 = 1+4x+6x^2+4x^3+x^4\\). Les coefficients sont \\(\\boxed{1,\\ 4,\\ 6,\\ 4,\\ 1}\\).</p>","<p>Le terme général est \\(\\dbinom{6}{k}(x^2)^{6-k}\\left(\\dfrac1x\\right)^k = \\dbinom{6}{k}x^{12-3k}\\). Il est constant pour \\(k=4\\), d'où \\(\\dbinom{6}{4} = \\boxed{15}\\) (signe \\(+\\), cases \\(1\\) et \\(5\\)).</p>","<p>Binôme avec \\(a=b=1\\) : \\(\\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k} = (1+1)^n = \\boxed{2^n}\\).</p>","<p>Binôme avec \\(a=-1\\) et \\(b=1\\) : \\(\\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k}(-1)^k = (1-1)^n = \\boxed{0}\\) (car \\(n\\geqslant 1\\) ; pour \\(n=0\\) la somme vaudrait \\(1\\)).</p>","<p>Binôme avec \\(a=-2\\) et \\(b=1\\) : \\(\\displaystyle\\sum_{k=0}^{n} \\dbinom{n}{k}(-2)^k = (1-2)^n = \\boxed{(-1)^n}\\).</p>","<p>Avec \\(k\\dbinom{n}{k} = n\\dbinom{n-1}{k-1}\\) (pour \\(k\\geqslant 1\\)) : \\(\\displaystyle\\sum_{k=0}^{n} k\\dbinom{n}{k} = n\\sum_{k=1}^{n} \\dbinom{n-1}{k-1} = n\\,2^{n-1}\\), d'où \\(\\boxed{n\\,2^{n-1}}\\). (On peut aussi dériver \\(x\\mapsto(1+x)^n\\) et prendre \\(x=1\\).)</p>","<p>Notons \\(P\\) (resp. \\(I\\)) la somme des \\(\\dbinom{n}{k}\\) pour \\(k\\) pair (resp. impair). On a \\(P+I = 2^n\\) et \\(P-I = (1-1)^n = 0\\) (car \\(n\\geqslant 1\\)), donc \\(P = \\boxed{2^{n-1}}\\).</p>","<p>Par la formule de Pascal, \\(\\dbinom{k}{p} = \\dbinom{k+1}{p+1}-\\dbinom{k}{p+1}\\). La somme télescope : \\(\\displaystyle\\sum_{k=p}^{n} \\dbinom{k}{p} = \\dbinom{n+1}{p+1}-\\dbinom{p}{p+1} = \\boxed{\\dbinom{n+1}{p+1}}\\), car \\(\\dbinom{p}{p+1}=0\\).</p>","<p>D'après la formule \\(\\dfrac{1}{k+1}\\dbinom{n}{k} = \\dfrac{1}{n+1}\\dbinom{n+1}{k+1}\\), on obtient \\(\\displaystyle\\sum_{k=0}^{n} \\dfrac{1}{k+1}\\dbinom{n}{k} = \\dfrac{1}{n+1}\\sum_{j=1}^{n+1} \\dbinom{n+1}{j} = \\boxed{\\dfrac{2^{n+1}-1}{n+1}}\\) (on retire le terme \\(j=0\\) de \\(2^{n+1}\\)).</p>","<p>On développe \\((1+i)^{2n} = \\displaystyle\\sum_{j=0}^{2n} \\dbinom{2n}{j} i^j\\) ; la partie réelle ne garde que les \\(j=2k\\) pairs, avec \\(i^{2k} = (-1)^k\\). Donc \\(\\displaystyle\\sum_{k=0}^{n} (-1)^k\\dbinom{2n}{2k} = \\mathrm{Re}\\big((1+i)^{2n}\\big) = \\mathrm{Re}\\big((2i)^n\\big) = \\boxed{2^n\\cos\\left(\\dfrac{n\\pi}{2}\\right)}\\), car \\(2i = 2e^{i\\pi/2}\\).</p>"];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body><div class="topnav"><span class="brand">9.3 · Coefficient binomial et binôme de Newton</span><a href="index.html">Menu</a><a href="ch9.html">Chapitre 9</a></div><main><p class="chapno">Chapitre 9 — Sommes et produits finis</p><h1>Coefficient binomial et binôme de Newton</h1>
+<div id="quiz" data-chap="9" data-start="62">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (9.1, 9.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="62").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0 \leqslant k \leqslant n$</div>
+  <div class="opt">$0 \leqslant k < n$</div>
+  <div class="opt">$0 < k \leqslant n$</div>
+  <div class="opt">$0 < k < n$</div>
+  <div class="sol"><p>Pour $0\leqslant k\leqslant n$, $\dbinom{n}{k} = \dfrac{n!}{k!\,(n-k)!} \geqslant 1$ ; pour les autres valeurs de $k$, on pose par convention $\dbinom{n}{k}=0$. Le coefficient est donc non nul si et seulement si $\boxed{0\leqslant k\leqslant n}$. (Les autres réponses oublient $k=0$ ou $k=n$, pour lesquels $\dbinom{n}{0}=\dbinom{n}{n}=1$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dbinom{n}{0} = n$</div>
+  <div class="opt" data-ok>$\dbinom{n}{0} = 1$</div>
+  <div class="opt">$\dbinom{n}{1} = 1$</div>
+  <div class="opt">$\dbinom{n}{1} = n-1$</div>
+  <div class="opt">$\dbinom{n}{n-1} = n!$</div>
+  <div class="opt">$\dbinom{n}{2} = n^2$</div>
+  <div class="opt" data-ok>$\dbinom{n}{1} = \dbinom{n}{n-1}$</div>
+  <div class="opt" data-ok>$\dbinom{n}{2} = \dfrac{n(n-1)}{2}$</div>
+  <div class="sol"><p>On a $\boxed{\dbinom{n}{0}=1}$ (une seule partie vide), $\dbinom{n}{1}=n$ ($n$ singletons) et, par symétrie, $\boxed{\dbinom{n}{1}=\dbinom{n}{n-1}}$ ($=n$, et non $n!$). Enfin $\boxed{\dbinom{n}{2}=\dfrac{n(n-1)}{2}}$, le nombre de paires d'éléments.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dbinom{k}{n}$</div>
+  <div class="opt" data-ok>$\dbinom{n}{n-k}$</div>
+  <div class="opt">$\dbinom{n-k}{n}$</div>
+  <div class="opt" data-ok>$\dfrac{n!}{(n-k)!\,k!}$</div>
+  <div class="sol"><p>Par définition $\dbinom{n}{k} = \boxed{\dfrac{n!}{k!\,(n-k)!}}$, expression symétrique en $k$ et $n-k$, d'où $\boxed{\dbinom{n}{k}=\dbinom{n}{n-k}}$. En revanche $\dbinom{k}{n}$ et $\dbinom{n-k}{n}$ sont nuls dès que $k<n$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>$\dbinom{7}{3} = \dfrac{7\times6\times5}{3\times2\times1} = \boxed{35}$ (cases $3$ pour les dizaines et $5$ pour les unités).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>Par symétrie, $\dbinom{10}{8} = \dbinom{10}{2} = \dfrac{10\times9}{2} = \boxed{45}$ (cases $4$ pour les dizaines et $5$ pour les unités).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dbinom{n}{k}+1$</div>
+  <div class="opt">$\dfrac{k+1}{n+1}\dbinom{n}{k}$</div>
+  <div class="opt">$\dfrac{n+1}{k}\dbinom{n}{k}$</div>
+  <div class="opt" data-ok>$\dfrac{n+1}{k+1}\dbinom{n}{k}$</div>
+  <div class="sol"><p>$\dbinom{n+1}{k+1} = \dfrac{(n+1)!}{(k+1)!\,(n-k)!} = \dfrac{n+1}{k+1}\times\dfrac{n!}{k!\,(n-k)!} = \boxed{\dfrac{n+1}{k+1}\dbinom{n}{k}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$k\dbinom{n-1}{k-1}$</div>
+  <div class="opt" data-ok>$n\dbinom{n-1}{k-1}$</div>
+  <div class="opt">$n\dbinom{n}{k-1}$</div>
+  <div class="opt" data-ok>$(n-k+1)\dbinom{n}{k-1}$</div>
+  <div class="sol"><p>$k\dbinom{n}{k} = \dfrac{n!}{(k-1)!\,(n-k)!} = n\,\dfrac{(n-1)!}{(k-1)!\,(n-k)!} = \boxed{n\dbinom{n-1}{k-1}}$. De même, $\dbinom{n}{k-1} = \dfrac{n!}{(k-1)!\,(n-k+1)!}$, donc $(n-k+1)\dbinom{n}{k-1} = \dfrac{n!}{(k-1)!\,(n-k)!} = \boxed{k\dbinom{n}{k}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dbinom{n}{k} = \dbinom{n-1}{k} + \dbinom{n-1}{k-1}$</div>
+  <div class="opt">$\dbinom{n}{k} = \dbinom{n-1}{k} + \dbinom{n}{k-1}$</div>
+  <div class="opt">$\dbinom{n}{k} + \dbinom{n}{k+1} = \dbinom{n+1}{k}$</div>
+  <div class="opt" data-ok>$\dbinom{n+1}{k} - \dbinom{n}{k} = \dbinom{n}{k-1}$</div>
+  <div class="sol"><p>Formule de Pascal : $\boxed{\dbinom{n}{k} = \dbinom{n-1}{k}+\dbinom{n-1}{k-1}}$. Appliquée au rang $n+1$, elle donne $\dbinom{n+1}{k} = \dbinom{n}{k}+\dbinom{n}{k-1}$, c'est-à-dire $\boxed{\dbinom{n+1}{k}-\dbinom{n}{k} = \dbinom{n}{k-1}}$. La troisième proposition est fausse : $\dbinom{n}{k}+\dbinom{n}{k+1} = \dbinom{n+1}{k+1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$3(a+b)$</div>
+  <div class="opt">$a^3+b^3$</div>
+  <div class="opt">$a^3+3ab+b^3$</div>
+  <div class="opt">$a^3+3a^2b^2+b^3$</div>
+  <div class="opt">$a^3+a^2b+ab^2+b^3$</div>
+  <div class="opt" data-ok>$a^3+3a^2b+3ab^2+b^3$</div>
+  <div class="sol"><p>Les coefficients sont ceux de la ligne $3$ du triangle de Pascal, $1,3,3,1$ : $(a+b)^3 = \boxed{a^3+3a^2b+3ab^2+b^3}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(a+b)^n = \displaystyle\sum_{k=1}^{n} \dbinom{n}{k} a^{n-k} b^{k}$</div>
+  <div class="opt" data-ok>$(a+b)^n = \displaystyle\sum_{k=0}^{n} \dbinom{n}{k} a^k b^{n-k}$</div>
+  <div class="opt">$(a+b)^n = \displaystyle\sum_{k=0}^{n} \dbinom{n}{k} a^k b^{k}$</div>
+  <div class="opt" data-ok>$(a+b)^n = \displaystyle\sum_{k=0}^{n} \dbinom{n}{k} a^{n-k} b^k$</div>
+  <div class="sol"><p>$\boxed{(a+b)^n = \displaystyle\sum_{k=0}^{n} \dbinom{n}{k} a^k b^{n-k}} = \boxed{\displaystyle\sum_{k=0}^{n} \dbinom{n}{k} a^{n-k} b^k}$ (les deux écritures sont équivalentes par symétrie $k\leftrightarrow n-k$). La somme commence à $k=0$, et dans chaque terme les exposants ont pour somme $n$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n$</div>
+  <div class="opt" data-ok>$n+1$</div>
+  <div class="opt">$2n$</div>
+  <div class="opt">$2^n$</div>
+  <div class="opt">$n!$</div>
+  <div class="sol"><p>L'indice $k$ va de $0$ à $n$ : il y a $\boxed{n+1}$ termes.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$-$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case" data-ok>$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>$(b-a)^5 = \displaystyle\sum_{k=0}^{5} \dbinom{5}{k}(-a)^k b^{5-k}$. Le terme en $a^2b^3$ correspond à $k=2$ : $\dbinom{5}{2}(-1)^2 = \boxed{10}$ (signe $+$, cases $1$ et $0$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$-$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case" data-ok>$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case" data-ok>$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>Le terme en $x^3$ vaut $\dbinom{5}{3}(-2x)^3 = 10\times(-8)\,x^3$, d'où le coefficient $\boxed{-80}$ (cases $-$, $8$ et $0$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$-$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>Le terme en $x^2$ vaut $\dbinom{4}{2}\,2^2(-x)^2 = 6\times4\,x^2$, d'où le coefficient $\boxed{24}$ (signe $+$, cases $2$ et $4$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$x^0$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$10$</span></div>
+  <div class="row"><span class="lab">$x^1$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$10$</span></div>
+  <div class="row"><span class="lab">$x^2$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case" data-ok>$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$10$</span></div>
+  <div class="row"><span class="lab">$x^3$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$10$</span></div>
+  <div class="row"><span class="lab">$x^4$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="case">$10$</span></div>
+  <div class="sol"><p>Ligne $4$ du triangle de Pascal : $(1+x)^4 = 1+4x+6x^2+4x^3+x^4$. Les coefficients sont $\boxed{1,\ 4,\ 6,\ 4,\ 1}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$-$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>Le terme général est $\dbinom{6}{k}(x^2)^{6-k}\left(\dfrac1x\right)^k = \dbinom{6}{k}x^{12-3k}$. Il est constant pour $k=4$, d'où $\dbinom{6}{4} = \boxed{15}$ (signe $+$, cases $1$ et $5$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$n$</div>
+  <div class="opt">$n^2$</div>
+  <div class="opt" data-ok>$2^n$</div>
+  <div class="opt">$n!$</div>
+  <div class="sol"><p>Binôme avec $a=b=1$ : $\displaystyle\sum_{k=0}^{n} \dbinom{n}{k} = (1+1)^n = \boxed{2^n}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$2^{n-1}$</div>
+  <div class="opt">$2^n-1$</div>
+  <div class="opt">$2^n$</div>
+  <div class="opt">$\dfrac{n(n-1)}{2}$</div>
+  <div class="sol"><p>Binôme avec $a=-1$ et $b=1$ : $\displaystyle\sum_{k=0}^{n} \dbinom{n}{k}(-1)^k = (1-1)^n = \boxed{0}$ (car $n\geqslant 1$ ; pour $n=0$ la somme vaudrait $1$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$(-1)^n$</div>
+  <div class="opt">$(-2)^n$</div>
+  <div class="opt">$-3^n$</div>
+  <div class="opt">$(-3)^n$</div>
+  <div class="sol"><p>Binôme avec $a=-2$ et $b=1$ : $\displaystyle\sum_{k=0}^{n} \dbinom{n}{k}(-2)^k = (1-2)^n = \boxed{(-1)^n}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$2^n$</div>
+  <div class="opt">$3^n$</div>
+  <div class="opt" data-ok>$n\,2^{n-1}$</div>
+  <div class="opt">$n\,2^n$</div>
+  <div class="opt">$\dfrac{n(n+1)}{2}\,2^n$</div>
+  <div class="sol"><p>Avec $k\dbinom{n}{k} = n\dbinom{n-1}{k-1}$ (pour $k\geqslant 1$) : $\displaystyle\sum_{k=0}^{n} k\dbinom{n}{k} = n\sum_{k=1}^{n} \dbinom{n-1}{k-1} = n\,2^{n-1}$, d'où $\boxed{n\,2^{n-1}}$. (On peut aussi dériver $x\mapsto(1+x)^n$ et prendre $x=1$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$\dfrac{n}{2}$</div>
+  <div class="opt">$2n$</div>
+  <div class="opt" data-ok>$2^{n-1}$</div>
+  <div class="opt">$2^n$</div>
+  <div class="sol"><p>Notons $P$ (resp. $I$) la somme des $\dbinom{n}{k}$ pour $k$ pair (resp. impair). On a $P+I = 2^n$ et $P-I = (1-1)^n = 0$ (car $n\geqslant 1$), donc $P = \boxed{2^{n-1}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dbinom{n}{p+1}$</div>
+  <div class="opt">$\dbinom{n+1}{p}$</div>
+  <div class="opt" data-ok>$\dbinom{n+1}{p+1}$</div>
+  <div class="opt">$2^n-2^p$</div>
+  <div class="sol"><p>Par la formule de Pascal, $\dbinom{k}{p} = \dbinom{k+1}{p+1}-\dbinom{k}{p+1}$. La somme télescope : $\displaystyle\sum_{k=p}^{n} \dbinom{k}{p} = \dbinom{n+1}{p+1}-\dbinom{p}{p+1} = \boxed{\dbinom{n+1}{p+1}}$, car $\dbinom{p}{p+1}=0$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{2^n}{n+1}$</div>
+  <div class="opt" data-ok>$\dfrac{2^{n+1}-1}{n+1}$</div>
+  <div class="opt">$\dfrac{1}{n+1}$</div>
+  <div class="opt">$(n+1) 2^{n+1}$</div>
+  <div class="sol"><p>D'après la formule $\dfrac{1}{k+1}\dbinom{n}{k} = \dfrac{1}{n+1}\dbinom{n+1}{k+1}$, on obtient $\displaystyle\sum_{k=0}^{n} \dfrac{1}{k+1}\dbinom{n}{k} = \dfrac{1}{n+1}\sum_{j=1}^{n+1} \dbinom{n+1}{j} = \boxed{\dfrac{2^{n+1}-1}{n+1}}$ (on retire le terme $j=0$ de $2^{n+1}$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(-1)^n\, 2^n$</div>
+  <div class="opt" data-ok>$2^n \cos\left(\dfrac{n\pi}{2}\right)$</div>
+  <div class="opt">$2^n \cos\left(\dfrac{n\pi}{4}\right)$</div>
+  <div class="opt">$(-2)^n \cos\left(\dfrac{n\pi}{4}\right)$</div>
+  <div class="sol"><p>On développe $(1+i)^{2n} = \displaystyle\sum_{j=0}^{2n} \dbinom{2n}{j} i^j$ ; la partie réelle ne garde que les $j=2k$ pairs, avec $i^{2k} = (-1)^k$. Donc $\displaystyle\sum_{k=0}^{n} (-1)^k\dbinom{2n}{2k} = \mathrm{Re}\big((1+i)^{2n}\big) = \mathrm{Re}\big((2i)^n\big) = \boxed{2^n\cos\left(\dfrac{n\pi}{2}\right)}$, car $2i = 2e^{i\pi/2}$.</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

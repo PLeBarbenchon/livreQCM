@@ -1,7 +1,284 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>10.2 Étude générale d'une suite</title>
+<title>10.2 Étude générale d'une suite — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#ea580c"><div class="topnav" style="--accent:#ea580c"><span class="brand">10.2 · Étude générale d'une suite</span><a href="index.html">Menu</a><a href="ch10.html">Chapitre 10</a><a class="" href="pdf/BCPSTCh10_Suites_series_numeriques.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 10 — Suites et séries numériques</p><h1>Étude générale d'une suite</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch10.html">← Retour au chapitre 10</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">10.2 · Étude générale d'une suite</span><a href="index.html">Menu</a><a href="ch10.html">Chapitre 10</a></div><main><p class="chapno">Chapitre 10 — Suites et séries numériques</p><h1>Étude générale d'une suite</h1>
+<div id="quiz" data-chap="10" data-start="19">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (10.1, 10.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="19").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{u_n}{v_n}\xrightarrow[n\to+\infty]{} -\infty$</div>
+  <div class="opt">$\dfrac{v_n}{u_n}$ est une forme indéterminée</div>
+  <div class="opt">$\dfrac{u_n + v_n}{u_n - v_n}\xrightarrow[n\to+\infty]{} 0$</div>
+  <div class="opt">$2 u_n - 3 v_n$ n'a pas de limite</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ est croissante</div>
+  <div class="opt" data-ok>$\forall n\in\N,~ 0 \leqslant u_n \leqslant 1$</div>
+  <div class="opt">$(u_n)$ est convergente de limite $1$</div>
+  <div class="opt">$(u_n)$ n'admet pas de limite</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N,~ v_n = \sqrt{2n+1}$</div>
+  <div class="opt" data-ok>$(v_n)$ est convergente de limite $1$</div>
+  <div class="opt">$\forall n\in\N,~ 0 \leqslant v_n \leqslant 1$</div>
+  <div class="opt">$(v_n)$ est décroissante</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N^*,~x_{2n} \geqslant 0$</div>
+  <div class="opt">la suite $(x_n)$ est divergente</div>
+  <div class="opt">la suite $(|x_n|)$ est décroissante</div>
+  <div class="opt" data-ok>$\exists N\in\N,~ \forall n\geqslant N,~ x_n \leqslant 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">la suite $\left( \dfrac{v_n}{w_n}\right)$ est convergente</div>
+  <div class="opt">$(w_n)$ est strictement croissante</div>
+  <div class="opt" data-ok>la suite $\left( \dfrac{w_n}{v_n}\right)$ est convergente</div>
+  <div class="opt">la suite $(v_n)$ est géométrique</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ln(1+u_n) \underset{n\to+\infty}{\sim} \dfrac{u_n^2}{2}$</div>
+  <div class="opt">$e^{u_n} \underset{n\to+\infty}{\sim} u_n$</div>
+  <div class="opt" data-ok>$\cos(u_n)-1\underset{n\to+\infty}{\sim}-\dfrac{u_n^2}{2}$</div>
+  <div class="opt">$\sin(u_n) \underset{n\to+\infty}{\sim} 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">la suite $(u_n)$ est convergente</div>
+  <div class="opt">$\exists n_0\in\N,~ (u_n)_{n\geqslant n_0}$ est monotone</div>
+  <div class="opt">$(u_n)$ converge $\!\iff\! (u_n)$ monotone</div>
+  <div class="opt" data-ok>$(u_n)$ croissante $\!\implies\! (u_n)$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Si $(v_{2n})$ et $(v_{2n+1})$ sont convergentes, alors $(v_n)$ converge</div>
+  <div class="opt">Si $(v_{2n})$ et $(v_{3n})$ sont convergentes, alors $(v_n)$ converge</div>
+  <div class="opt">Si $(v_{n^2})$ est convergente, alors $(v_{n^2+1})$ converge</div>
+  <div class="opt" data-ok>Si $(v_n)$ est monotone et si $(v_{n^3})$ est convergente, alors $(v_n)$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$u_{n+1}-u_n \underset{n\to +\infty}{=} o(u_n)$</div>
+  <div class="opt">$(u_n)$ est bornée</div>
+  <div class="opt" data-ok>$(u_n)$ est sous-linéaire : $u_n \underset{n\to +\infty}{=} o(n)$</div>
+  <div class="opt">$(u_n)$ admet une limite finie ou non</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N^*,~ H_{2n}-H_n \geqslant \dfrac{1}{2}$</div>
+  <div class="opt">$(H_n)$ est majorée par $2$</div>
+  <div class="opt">$H_{2n}-H_n \xrightarrow[n\to +\infty]{} +\infty$</div>
+  <div class="opt">$(H_n)$ est convergente</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N^*,~ S_n \leqslant T_n$</div>
+  <div class="opt" data-ok>$\forall n\in\N^*,~ S_n \leqslant \dfrac{n^2}{n^2+1}$</div>
+  <div class="opt">les suites $(S_n)$ et $(T_n)$ sont adjacentes</div>
+  <div class="opt">la suite $(T_n)$ converge vers $\dfrac{1}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(U_n)$ est divergente</div>
+  <div class="opt">$(V_n)$ est croissante</div>
+  <div class="opt" data-ok>$(U_n)$ et $(V_n)$ sont adjacentes</div>
+  <div class="opt" data-ok>la suite $(V_n-U_n)$ tend vers $0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(x_n)$ et $(y_n)$ sont adjacentes</div>
+  <div class="opt">$x_n \xrightarrow[n\to \infty]{} e-1$</div>
+  <div class="opt">$(y_n)$ est croissante</div>
+  <div class="opt" data-ok>$\forall n\in\N^*,~ y_n-x_n = \dfrac{1}{n\times n!}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N^*,~ v_n \geqslant u_n$</div>
+  <div class="opt" data-ok>$(u_n)$ converge $\implies (v_n)$ converge</div>
+  <div class="opt">$(v_n)$ converge $\implies (u_n)$ converge</div>
+  <div class="opt">$(v_n)$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(u_n)$ converge $\implies (v_n)$ converge</div>
+  <div class="opt">$\forall n\in\N^*,~ v_n \geqslant u_n$</div>
+  <div class="opt">$(v_n)$ converge</div>
+  <div class="opt" data-ok>$(v_n)$ converge $\implies (u_n)$ converge</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Si $f$ admet un point fixe, alors $(u_n)$ est convergente</div>
+  <div class="opt">Si $f$ est croissante, alors $(u_n)$ est croissante</div>
+  <div class="opt">Si $f$ est monotone, alors $(u_n)$ est monotone</div>
+  <div class="opt" data-ok>Si $f$ est bornée, alors $(u_n)$ est bornée</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(u_{2n+1})$ est monotone</div>
+  <div class="opt">$(u_n)$ est monotone</div>
+  <div class="opt">$(u_{2n})$ et $(u_{2n+1})$ ont même monotonie</div>
+  <div class="opt">$(u_n)$ converge si $f$ admet un point fixe</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ est croissante et non majorée</div>
+  <div class="opt" data-ok>$u_n\xrightarrow[n\to+\infty]{}\dfrac{1+\sqrt{5}}{2}$</div>
+  <div class="opt">$(u_n)$ converge vers $2$</div>
+  <div class="opt">$u_n\xrightarrow[n\to+\infty]{}\dfrac{1-\sqrt{5}}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ est divergente</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n}u_k^2 \xrightarrow[n\to+\infty]{} +\infty$</div>
+  <div class="opt" data-ok>$(u_n)$ est décroissante de limite nulle</div>
+  <div class="opt">$\lim\limits_{n\to +\infty} \displaystyle\prod_{k=0}^{n}(1-u_k) > 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(u_n) \xrightarrow[n\to +\infty]{} \dfrac{\sqrt{5}-1}{2}$</div>
+  <div class="opt">$(u_n)$ est croissante</div>
+  <div class="opt">$(u_{2n})$ et $(u_{2n+1})$ ont même monotonie</div>
+  <div class="opt">$(u_n) \xrightarrow[n\to +\infty]{} \dfrac{1+\sqrt{5}}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(w_n)$ est croissante</div>
+  <div class="opt">$(w_n)$ converge vers $\dfrac{3 w_1}{2}$</div>
+  <div class="opt">$(w_n)$ est majorée</div>
+  <div class="opt" data-ok>$\forall n\in\N^*,~ w_{n+1}^2 - w_n^2 \geqslant \dfrac{2}{n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N^*,~ n x_n > 1$</div>
+  <div class="opt">$x_n\underset{n\to+\infty}{\sim}\dfrac{1}{n^3}$</div>
+  <div class="opt">$(x_n)$ est croissante</div>
+  <div class="opt" data-ok>$x_n\underset{n\to+\infty}{\sim}\dfrac{1}{n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(y_n)$ est décroissante</div>
+  <div class="opt" data-ok>$y_n=\dfrac{\pi}{2}-\dfrac{1}{n}+o\left(\dfrac{1}{n}\right)$</div>
+  <div class="opt">$(\tan y_n)$ converge</div>
+  <div class="opt">$y_n=\dfrac{\pi}{2}-\dfrac{1}{n^2}+o\left(\dfrac{1}{n^2}\right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$u_n \underset{n\to +\infty}{=} o(v_n)$</div>
+  <div class="opt" data-ok>$v_n \underset{n\to +\infty}{=} O(u_n)$</div>
+  <div class="opt">$v_n \underset{n\to +\infty}{=} o(u_n)$</div>
+  <div class="opt" data-ok>$u_n \underset{n\to +\infty}{\sim} v_n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x_n \underset{n\to +\infty}{=} o(y_n)$</div>
+  <div class="opt">$x_n \underset{n\to +\infty}{=} O(y_n)$</div>
+  <div class="opt" data-ok>$y_n \underset{n\to +\infty}{=} o(x_n)$</div>
+  <div class="opt">$x_n \underset{n\to +\infty}{\sim} y_n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$u_n \underset{n\to +\infty}{\sim} v_n$ et $e^{u_n} \underset{n\to +\infty}{\sim} e^{v_n}$</div>
+  <div class="opt" data-ok>$u_n \underset{n\to +\infty}{\sim} w_n$ et $\ln u_n \underset{n\to +\infty}{\sim} \ln w_n$</div>
+  <div class="opt">$u_n \underset{n\to +\infty}{\sim} v_n$ et $e^{u_n} \underset{n\to +\infty}{\sim} n e^{v_n}$</div>
+  <div class="opt">$v_n \underset{n\to +\infty}{\sim} w_n$ et $v_n^{v_n} \underset{n\to +\infty}{\sim} w_n^{w_n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sqrt{n^2+1}-n\underset{n\to+\infty}{\sim}\dfrac{1}{2n}$</div>
+  <div class="opt">$\dfrac{3}{n^2}+\dfrac{5}{4^n}\underset{n\to+\infty}{\sim}\dfrac{5}{4^n}$</div>
+  <div class="opt">$\dfrac{2^n + n + 3}{2^{n+1} + n + 1}\xrightarrow[n\to+\infty]{}1$</div>
+  <div class="opt">$\dfrac{n^5 + n - 1}{n^3 (n^2 + \ln n)}\xrightarrow[n\to+\infty]{}+\infty$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(c_n)$ converge $\iff \theta=\dfrac{\pi}{2}$</div>
+  <div class="opt">$(c_n)$ converge et $(s_n)$ diverge</div>
+  <div class="opt" data-ok>$(c_n)$ et $(s_n)$ sont bornées et divergentes</div>
+  <div class="opt">$(c_{n+1}-c_n)$ converge vers $0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$u_n-\dfrac{1}{2}\underset{n\to +\infty}{=} \dfrac{3}{n} + o\left( \dfrac{1}{n} \right)$</div>
+  <div class="opt">$u_n-\dfrac{1}{2}\underset{n\to +\infty}{=} \dfrac{6}{n} + o\left( \dfrac{1}{n} \right)$</div>
+  <div class="opt">$u_n \underset{n\to +\infty}{=} \dfrac{1}{2} - \dfrac{3}{n} - \dfrac{7}{4n^2} + o\left( \dfrac{1}{n^2} \right)$</div>
+  <div class="opt" data-ok>$u_n \underset{n\to +\infty}{=} \dfrac{1}{2} - \dfrac{3}{n} + \dfrac{7}{4n^2} + o\left( \dfrac{1}{n^2} \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$u_n - e \underset{n\to+\infty}{\sim} \dfrac{e}{2n}$</div>
+  <div class="opt">$u_n \underset{n\to+\infty}{=} e + o\left(\dfrac{1}{n^2}\right)$</div>
+  <div class="opt" data-ok>$u_n = e - \dfrac{e}{2n} + o\left( \dfrac{1}{n} \right)$</div>
+  <div class="opt">$u_n \underset{n\to+\infty}{\sim} \dfrac{e}{2n}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$v_n\xrightarrow[n\to+\infty]{}1$</div>
+  <div class="opt" data-ok>$v_n\underset{n\to+\infty}{\sim}(-1)^{n+1}\,\dfrac{\pi}{3n}$</div>
+  <div class="opt">$(v_n)$ diverge</div>
+  <div class="opt">$v_n\underset{n\to+\infty}{\sim}(-1)^{n}\, \dfrac{\pi}{2}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\sqrt{2\pi}\vphantom{\sqrt{2\pi n}}$</span><span class="case">$2\pi\vphantom{\sqrt{2\pi n}}$</span></div>
+  </div>
+  <span class="lab">$\times$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\sqrt{n}\vphantom{\sqrt{2\pi n}}$</span><span class="case">$n\vphantom{\sqrt{2\pi n}}$</span></div>
+  </div>
+  <span class="lab">$\times$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$e^n\vphantom{\sqrt{2\pi n}}$</span><span class="case" data-ok>$n^n\vphantom{\sqrt{2\pi n}}$</span></div>
+  </div>
+  <span class="lab">$/$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$e^n\vphantom{\sqrt{2\pi n}}$</span><span class="case">$n^n\vphantom{\sqrt{2\pi n}}$</span></div>
+  </div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="cadre">
+    <div class="row"><span class="case">$2^n$</span><span class="case" data-ok>$4^n$</span></div>
+  </div>
+  <span class="lab">$\times$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$1$</span><span class="case">$\pi$</span></div>
+  </div>
+  <span class="lab">$/$</span>
+  <span class="case" data-ok>$\Big ($</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$4$</span></div>
+  </div>
+  <span class="case" data-ok>$\pi$</span>
+  <span class="case" data-ok>$\Big )$ {center}</span>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

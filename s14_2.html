@@ -1,7 +1,257 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>14.2 Second ordre</title>
+<title>14.2 Second ordre — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#65a30d"><div class="topnav" style="--accent:#65a30d"><span class="brand">14.2 · Second ordre</span><a href="index.html">Menu</a><a href="ch14.html">Chapitre 14</a></div><main><p class="chapno">Chapitre 14 — Équations différentielles</p><h1>Second ordre</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch14.html">← Retour au chapitre 14</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">14.2 · Second ordre</span><a href="index.html">Menu</a><a href="ch14.html">Chapitre 14</a></div><main><p class="chapno">Chapitre 14 — Équations différentielles</p><h1>Second ordre</h1>
+<div id="quiz" data-chap="14" data-start="44">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (14.1, 14.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="44").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\lambda e^{-2x}+\mu e^{-3x}$ est solution de $y'' - 5y' + 6y = 0$</div>
+  <div class="opt" data-ok>$x\mapsto\lambda e^{2x}+\mu e^{3x}$ est solution de $y'' - 5y' + 6y = 0$</div>
+  <div class="opt">$x\mapsto \lambda + \mu e^{-3x}$ est solution de $y'' - 3y' = 0$</div>
+  <div class="opt" data-ok>$x\mapsto \lambda + \mu e^{3x}$ est solution de $y'' - 3y' = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f_{\lambda,\mu} : x\mapsto \lambda \cos(\omega x - \mu)$</div>
+  <div class="opt">$f_{\lambda,\mu} : x\mapsto \lambda e^{\omega x} + \mu e^{-\omega x}$</div>
+  <div class="opt">$f_{\lambda,\mu} : x\mapsto \lambda \big( \cos(\omega x) + \sin(\omega x) \big)$</div>
+  <div class="opt" data-ok>$f_{\lambda,\mu} : x\mapsto \lambda \cos(\omega x) + \mu \sin(\omega x)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{S} = \left\{ \ch, \sh \right\}$</div>
+  <div class="opt">$\mathcal{S} = \left\{ \cos, \sin \right\}$</div>
+  <div class="opt">$\left\{ y\in \mathcal{S} \mid y(0) = 1\right\} = \left\{ \ch \right\}$</div>
+  <div class="opt" data-ok>$(E)$ admet des solutions bornées sur $\R_+$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f_{\lambda,\mu} : x\mapsto e^{x}\left( \lambda \cos(2x) + \mu \sin(2x) \right)$</div>
+  <div class="opt" data-ok>$f_{\lambda,\mu} : x\mapsto e^{-x}\left( \lambda \cos(2x) + \mu \sin(2x) \right)$</div>
+  <div class="opt">$f_{\lambda,\mu} : x\mapsto e^{2x} \left( \lambda \cos(x) + \mu \sin(x) \right)$</div>
+  <div class="opt">$f_{\lambda,\mu} : x\mapsto e^{-2x} \left( \lambda \cos(x) + \mu \sin(x) \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{ x\mapsto \lambda e^{-2x} \mid \lambda \in \R \right\}$</div>
+  <div class="opt" data-ok>$\left\{ x\mapsto (\lambda x + \mu) e^{-2x} \mid (\lambda,\mu)\in\R^2 \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto (\lambda x + \mu) e^{2x} \mid (\lambda,\mu)\in\R^2 \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto \lambda e^{2x} + \mu e^{-2x} \mid (\lambda,\mu)\in\R^2 \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$a=4$ et $b=4$</div>
+  <div class="opt" data-ok>$a=-4$ et $b=4$</div>
+  <div class="opt">$a=4$ et $b=-4$</div>
+  <div class="opt" data-ok>$x\mapsto e^{2x}$ est aussi solution</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$a=4$ et $b=4$</div>
+  <div class="opt" data-ok>$a=-4$ et $b=4$</div>
+  <div class="opt">$a=4$ et $b=-4$</div>
+  <div class="opt" data-ok>$x\mapsto e^{2x}$ est aussi solution</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$a = 2$ et $b = 5$</div>
+  <div class="opt" data-ok>$a = -2$ et $b = 5$</div>
+  <div class="opt">$a = -2$ et $b = 3$</div>
+  <div class="opt">$x\mapsto e^x \tan(2x)$ est aussi solution</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$2\pi\sqrt{\dfrac{k}{m}}$</div>
+  <div class="opt" data-ok>$2\pi\sqrt{\dfrac{m}{k}}$</div>
+  <div class="opt">$\sqrt{\dfrac{k}{m}}$</div>
+  <div class="opt">$\pi\sqrt{\dfrac{k}{m}}$</div>
+  <div class="opt">$\pi\sqrt{\dfrac{m}{k}}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{ x\mapsto \lambda e^{3x} - \dfrac{1}{9} \mid \lambda\in\R \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto(\lambda x + \mu)e^{-3x} \mid (\lambda,\mu)\in\R^2 \right\}$</div>
+  <div class="opt" data-ok>$\left\{ x\mapsto (\lambda x + \mu) e^{3x} + \dfrac{1}{9} \mid (\lambda,\mu)\in\R^2 \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto(\lambda x + \mu)e^{-3x} + \dfrac{1}{9} \!\mid\! (\lambda,\mu)\in\R^2 \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left\{ x\mapsto \lambda e^{-x} + \mu e^{2x} - x^2 + 2x - 2 \mid (\lambda,\mu) \in \R^2 \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto \lambda e^{x} + \mu e^{-2x} + x^2 - 2x \mid (\lambda,\mu) \in \R^2 \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto \lambda e^{-x} + \mu e^{2x} - x^2 + 2 \mid (\lambda,\mu) \in \R^2 \right\}$</div>
+  <div class="opt">$\left\{ x\mapsto \lambda e^{x} + \mu e^{2x} + x^2 + x \mid (\lambda,\mu) \in \R^2 \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto \dfrac{x^2}{2} e^x$</div>
+  <div class="opt" data-ok>$x\mapsto \dfrac{x^3}{6} e^x$</div>
+  <div class="opt">$x\mapsto \dfrac{x^3}{3} e^x$</div>
+  <div class="opt">$x\mapsto x e^x$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$P(m)\neq 0 \!\implies\! x\mapsto \dfrac{e^{mx}}{P(m)} \in \mathcal{S}_m$</div>
+  <div class="opt">$P(m) = 0 \!\implies\! x\mapsto x e^{mx} \in \mathcal{S}_m$</div>
+  <div class="opt">$P'(m) \neq 0 \!\implies\! x\mapsto \dfrac{x e^{mx}}{P'(m)} \in \mathcal{S}_m$</div>
+  <div class="opt">$P''(m) \neq 0 \!\implies\! x\mapsto \dfrac{x^2 e^{mx}}{P''(m)} \in \mathcal{S}_m$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto -x e^x + e^{-x}$</div>
+  <div class="opt">$x\mapsto e^x - e^{-2x} + e^{-x}$</div>
+  <div class="opt">$x\mapsto e^{2x} - x e^x + 2e^{-x}$</div>
+  <div class="opt" data-ok>$x\mapsto e^x + 3 e^{2x} - x e^x + e^{-x}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto \left( 1 + x^2 \right) e^{-x/2}$</div>
+  <div class="opt">$x\mapsto \left( \lambda + x \right) e^{-x/2}$</div>
+  <div class="opt">$x\mapsto( \lambda + \mu x) e^{-2x} + x^2 e^{-x/2}$</div>
+  <div class="opt" data-ok>$x\mapsto \left( \lambda + \mu x + x^2 \right) e^{-x/2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">bornées sur $\R$</div>
+  <div class="opt">paires ou impaires</div>
+  <div class="opt">$2\pi$-périodiques</div>
+  <div class="opt" data-ok>non bornées sur $\R_+$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto e^x + e^{2x} - \dfrac{\sin(2x)}{4}$</div>
+  <div class="opt">$x\mapsto e^x - \dfrac{\cos(2x)+3\sin(2x)}{4}$</div>
+  <div class="opt">$x\mapsto e^{2x} + \dfrac{3\cos(2x)+\sin(2x)}{4}$</div>
+  <div class="opt" data-ok>$x\mapsto 2e^x - e^{2x} + \dfrac{3\cos(2x)-\sin(2x)}{4}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto \dfrac{\sin x}{5}\, e^x$</div>
+  <div class="opt">$x\mapsto \dfrac{\sin x + \cos x}{10}$</div>
+  <div class="opt" data-ok>$x\mapsto \dfrac{\sin x - \cos x}{10} \, e^x$</div>
+  <div class="opt">$x\mapsto \dfrac{\sin x + \cos x}{10} \, e^x$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto 1 - \cos x$</div>
+  <div class="opt">$x\mapsto 1 + \cos x$</div>
+  <div class="opt">$x\mapsto \cos x - 1$</div>
+  <div class="opt">$x\mapsto 1 - \sin x$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto 3\cos(3x)$</div>
+  <div class="opt">$x\mapsto 3\cos(\sqrt{3} \, x) + \sin(\sqrt{3} \, x)$</div>
+  <div class="opt">$x\mapsto e^{\sqrt{3} \, x} + e^{-\sqrt{3} \, x}$</div>
+  <div class="opt" data-ok>$x\mapsto 3 \cos (\sqrt{3} \, x)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto \left( 1 + 2x + \dfrac{x^2}{2} \right) e^{-x}$</div>
+  <div class="opt">$x\mapsto (1+2x) e^{-x}$</div>
+  <div class="opt">$x\mapsto \left(1 + x + \dfrac{x^2}{2} \right)e^{-x}$</div>
+  <div class="opt">$x\mapsto \left( 1 + 2x + x^2 \right) e^{-x}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\lambda - \mu = \dfrac{\sqrt{5}}{2}$</div>
+  <div class="opt" data-ok>$\lambda + \mu = -2$</div>
+  <div class="opt">$r_1 + r_2 = 0$ et $y_p(x) = -\dfrac{\cos x}{2}$</div>
+  <div class="opt" data-ok>$r_1 + r_2 = 1$ et $y_p(x) = \cos(x) - \sin(x)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall x\in\R,\ g(x) = \sin x \displaystyle \int_0^x \cos(t) f(t)\, \dd t - \cos x \displaystyle \int_0^x \sin(t) f(t)\, \dd t$</div>
+  <div class="opt">$g'(0) = f(0)$</div>
+  <div class="opt" data-ok>$g$ est l'unique solution sur $\R$ de $y'' + y = f(x)$ telle que $y(0) = y'(0) = 0$</div>
+  <div class="opt">$g$ est solution sur $\R$ de $y'' - y = f(x)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\cos(\omega x)+\dfrac{\cos(\omega_0x)}{\omega^2-\omega_0^2}$</div>
+  <div class="opt">$x\mapsto\dfrac{\cos(\omega_0x)-\cos(\omega x)}{\omega^2-\omega_0^2}$</div>
+  <div class="opt" data-ok>$x\mapsto\cos(\omega x)+\dfrac{\cos(\omega_0x)-\cos(\omega x)}{\omega^2-\omega_0^2}$</div>
+  <div class="opt">$x\mapsto\cos(\omega x)+\dfrac{\cos(\omega_0x)-\cos(\omega x)}{\omega_0^2-\omega^2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f(0) = 0$ et $f(\pi) = 0$</div>
+  <div class="opt">$f(0) = 1$ et $f(\pi) = 1$</div>
+  <div class="opt">$f(0) = 0$ et $f(\pi) = 1$</div>
+  <div class="opt" data-ok>$f(0) = \pi$ et $f(1) = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$|a|<1 \implies \mathcal{S}_a = \mathrm{Vect}(\cos,\sin)$</div>
+  <div class="opt">$a\neq 1 \implies x\mapsto \dfrac{e^x}{2a-2} \in \mathcal{S}_a$</div>
+  <div class="opt" data-ok>$a = 1 \implies x\mapsto \dfrac{x^2}{2} e^x \in \mathcal{S}_a$</div>
+  <div class="opt">$a = -1 \implies x\mapsto \dfrac{x^2}{2} e^{-x} \in \mathcal{S}_a$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Toute solution de $(E)$ est périodique</div>
+  <div class="opt">Toute solution de $(E)$ est de la forme $t\mapsto A\cos(2t)$ avec $A\in\R$</div>
+  <div class="opt">Lorsque $t\to +\infty$, la solution de $(E)$ tend vers $+\infty$</div>
+  <div class="opt" data-ok>L'unique solution au problème est bornée sur $\R_+$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f(0)=1$ et $f'(0)=0$</div>
+  <div class="opt">$f$ est constante</div>
+  <div class="opt">$f$ est impaire</div>
+  <div class="opt" data-ok>$f$ est de classe $\mathcal{C}^2$ et $f'' + f = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">sont toutes paires</div>
+  <div class="opt">sont toutes impaires</div>
+  <div class="opt" data-ok>sont de classe $\mathcal{C}^2$ et $f'' + f = 2 \ch$</div>
+  <div class="opt">sont de classe $\mathcal{C}^2$ et $f'' + f = 2 \sh$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f_a\in \mathcal{S}_H \iff a = 1$</div>
+  <div class="opt">$f_a\in \mathcal{S}_H \iff a \in \{-1,1\}$</div>
+  <div class="opt">$x\mapsto e^{-x}$ est solution de $(E)$</div>
+  <div class="opt">$x\mapsto x e^{-x}$ est solution de $(E)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$y\in\mathcal{S} \iff z=y\circ\tan$ vérifie $z'' + z = 0$</div>
+  <div class="opt">$y\in\mathcal{S} \iff z=y\circ\tan$ vérifie $z'' - z = 0$</div>
+  <div class="opt">les solutions de $(E)$ sont les $x\mapsto\dfrac{\lambda + \mu\, \ch x}{\sqrt{1 + x^2}}$ avec $(\lambda, \mu)\in\R^2$</div>
+  <div class="opt" data-ok>les solutions de $(E)$ sont les $x\mapsto\dfrac{\lambda + \mu x}{\sqrt{1 + x^2}}$ avec $(\lambda, \mu)\in\R^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathcal{S} = \left\{ x\mapsto \lambda x + \dfrac{\mu}{x} \mid (\lambda,\mu) \in \R^2 \right\}$</div>
+  <div class="opt">$\mathcal{S} = \left\{ x\mapsto \lambda x + \dfrac{\mu}{x^2} \mid(\lambda,\mu) \in \R^2 \right\}$</div>
+  <div class="opt" data-ok>$y\in\mathcal{S} \iff (y\circ\exp)'' - y\circ\exp = 0$</div>
+  <div class="opt">$y\in\mathcal{S} \iff (y\circ\exp)'' + y\circ\exp = 0$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

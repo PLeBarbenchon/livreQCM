@@ -1,7 +1,287 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12.1 Représentation de fonctions</title>
+<title>12.1 Représentation de fonctions — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#dc2626"><div class="topnav" style="--accent:#dc2626"><span class="brand">12.1 · Représentation de fonctions</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a><a class="" href="pdf/BCPSTCh12_Etude_de_fonctions.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Représentation de fonctions</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch12.html">← Retour au chapitre 12</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">12.1 · Représentation de fonctions</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Représentation de fonctions</h1>
+<div id="quiz" data-chap="12" data-start="1">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (12.1, 12.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="1").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="axe">
+  <span class="int"></span>
+  <span class="pt" data-lab="$-1$"></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$0$"></span>
+  <span class="int" data-ok></span>
+  <span class="pt" data-lab="$1$"></span>
+  <span class="int" data-ok></span>
+  <div class="sol"><p>Il faut $x>0$ (pour $\ln x$) et $x\neq1$ (dénominateur) : $\boxed{]0,\ 1[\ \cup\ ]1,\ +\infty[}$.</p></div>
+</div>
+
+<div class="q" data-type="axe">
+  <span class="int"></span>
+  <span class="pt" data-lab="$-2$" data-ok></span>
+  <span class="int" data-ok></span>
+  <span class="pt" data-lab="$0$" data-ok></span>
+  <span class="int" data-ok></span>
+  <span class="pt" data-lab="$2$" data-ok></span>
+  <span class="int"></span>
+  <div class="sol"><p>Il faut $4-x^2\geqslant 0 \iff -2\leqslant x\leqslant 2$ : $\boxed{[-2,\ 2]}$.</p></div>
+</div>
+
+<div class="q" data-type="axe">
+  <span class="int" data-ok></span>
+  <span class="pt" data-lab="$-1$"></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$0$"></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$1$"></span>
+  <span class="int" data-ok></span>
+  <div class="sol"><p>Il faut $x^2-1>0 \iff |x|>1$ : $\boxed{]-\infty,\ -1[\ \cup\ ]1,\ +\infty[}$.</p></div>
+</div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathcal D$ est symétrique par rapport à $0$ et $\forall x\in \mathcal D,\ f(-x)=f(x)$</div>
+  <div class="opt">$\mathcal D$ est symétrique par rapport à $0$ et $\forall x\in \mathcal D,\ f(-x)=-f(x)$</div>
+  <div class="opt" data-ok>$\mathcal D$ est symétrique par rapport à $0$ et la courbe de $f$ est symétrique par rapport à l'axe des ordonnées</div>
+  <div class="opt">$\mathcal D$ est symétrique par rapport à $0$ et la courbe de $f$ est symétrique par rapport à l'origine</div>
+  <div class="sol"><p>$f$ est paire si et seulement si $\boxed{\mathcal D \text{ est symétrique par rapport à } 0 \text{ et } \forall x\in\mathcal D,\ f(-x)=f(x)}$, ce qui équivaut à dire que $\boxed{\text{la courbe de } f \text{ est symétrique par rapport à l'axe des ordonnées}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto x^3$</div>
+  <div class="opt">$x\mapsto \cos x$</div>
+  <div class="opt" data-ok>$x\mapsto x|x|$</div>
+  <div class="opt">$x\mapsto x+1$</div>
+  <div class="opt" data-ok>$x\mapsto e^x-e^{-x}$</div>
+  <div class="opt">$x\mapsto x^2+x$</div>
+  <div class="sol"><p>$\boxed{x^3}$, $\boxed{x|x|}$ (car $(-x)|-x|=-x|x|$) et $\boxed{e^x-e^{-x}}$ (soit $2\sh x$) sont impaires ; $\cos$, $x+1$ et $x^2+x$ ne le sont pas.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$-1$</div>
+  <div class="opt">ça dépend</div>
+  <div class="sol"><p>$f(-0)=-f(0)$ donne $f(0)=-f(0)$, donc $\boxed{f(0)=0}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">n'existe pas</div>
+  <div class="opt" data-ok>est la fonction nulle</div>
+  <div class="opt">est une fonction constante quelconque</div>
+  <div class="opt">est $x\mapsto|x|$</div>
+  <div class="sol"><p>Une fonction à la fois paire et impaire vérifie $f(x)=f(-x)=-f(x)$, donc $2f(x)=0$ : $\boxed{\text{c'est la fonction nulle}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f+g$ est impaire</div>
+  <div class="opt">$f+g$ est paire</div>
+  <div class="opt">$fg$ est impaire</div>
+  <div class="opt" data-ok>$fg$ est paire</div>
+  <div class="opt" data-ok>$f\circ g$ est impaire</div>
+  <div class="opt">$f\circ g$ est paire</div>
+  <div class="sol"><p>$(f+g)(-x)=-f(x)-g(x)=-(f+g)(x)$ : $\boxed{f+g \text{ est impaire}}$. $(fg)(-x)=(-f(x))(-g(x))=(fg)(x)$ : $\boxed{fg \text{ est paire}}$. $(f\circ g)(-x)=f(-g(x))=-f(g(x))$ : $\boxed{f\circ g \text{ est impaire}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">paire</div>
+  <div class="opt" data-ok>impaire</div>
+  <div class="opt">ni paire ni impaire</div>
+  <div class="sol"><p>Comme $\left(-x+\sqrt{x^2+1}\right)\left(x+\sqrt{x^2+1}\right)=1$, on a $f(-x)=\ln\!\left(\dfrac{1}{x+\sqrt{x^2+1}}\right)=-\ln\!\left(x+\sqrt{x^2+1}\right)=-f(x)$ : $f$ est $\boxed{\text{impaire}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\pi}{2}$</div>
+  <div class="opt" data-ok>$\pi$</div>
+  <div class="opt">$2\pi$</div>
+  <div class="opt">$4\pi$</div>
+  <div class="sol"><p>$\sin$ est $2\pi$-périodique, donc $\sin(2x)$ est $\boxed{\pi}$-périodique.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\pi}{3}$</div>
+  <div class="opt" data-ok>$\dfrac{2\pi}{3}$</div>
+  <div class="opt">$2\pi$</div>
+  <div class="opt">$6\pi$</div>
+  <div class="sol"><p>$\cos$ est $2\pi$-périodique, donc $\cos(3x)$ est $\boxed{\dfrac{2\pi}{3}}$-périodique.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\pi$</div>
+  <div class="opt" data-ok>$2\pi$</div>
+  <div class="opt">$4\pi$</div>
+  <div class="opt">non périodique</div>
+  <div class="sol"><p>$\sin x$ a pour période $2\pi$, $\cos(2x)$ a pour période $\pi$ ; la plus petite période commune est $\boxed{2\pi}$ (on vérifie que $\pi$ n'en est pas une : $f(x+\pi)=-\sin x+\cos(2x)\neq f(x)$ en général).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto|\sin x|$</div>
+  <div class="opt">$x\mapsto\sin(x^2)$</div>
+  <div class="opt" data-ok>$x\mapsto x-\lfloor x\rfloor$</div>
+  <div class="opt">$x\mapsto x\sin x$</div>
+  <div class="sol"><p>$\boxed{|\sin x|}$ (période $\pi$) et $\boxed{x-\lfloor x\rfloor}$ (période $1$) sont périodiques ; $\sin(x^2)$ et $x\sin x$ ne le sont pas.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Une fonction périodique et monotone sur $\R$ est constante</div>
+  <div class="opt">Une fonction périodique sur $\R$ est bornée</div>
+  <div class="opt">La somme de deux fonctions périodiques sur $\R$ est périodique</div>
+  <div class="opt" data-ok>Si $f$ est $T$-périodique, alors $x\mapsto f(2x)$ est $\dfrac T2$-périodique</div>
+  <div class="sol"><p>$\boxed{\text{une fonction périodique et monotone sur } \R \text{ est constante}}$ (sinon la périodicité contredirait la monotonie stricte) et $\boxed{\text{si } f \text{ est } T\text{-périodique}, x\mapsto f(2x) \text{ est } \frac T2\text{-périodique}}$. En revanche une fonction périodique n'est pas forcément bornée (ex. $\tan$), et la somme de deux fonctions périodiques n'est pas forcément périodique.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall x\in I,\ f'(x)\geqslant 0$</div>
+  <div class="opt" data-ok>$\forall x,y\in I,\ x\leqslant y \Rightarrow f(x)\leqslant f(y)$</div>
+  <div class="opt">$\forall x,y\in I,\ x\leqslant y \Rightarrow f(x)\geqslant f(y)$</div>
+  <div class="opt">$\exists x,y\in I,\ x\leqslant y$ et $f(x)\leqslant f(y)$</div>
+  <div class="sol"><p>$f$ est croissante sur $I$ si $\boxed{\forall x,y\in I,\ x\leqslant y \Rightarrow f(x)\leqslant f(y)}$ (la caractérisation par $f'\geqslant 0$ ne vaut que pour une fonction dérivable, ce n'est pas la définition générale).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$g\circ f$ est décroissante</div>
+  <div class="opt">$g\circ f$ est croissante</div>
+  <div class="opt" data-ok>$f\circ g$ est décroissante</div>
+  <div class="opt">$f\circ g$ est croissante</div>
+  <div class="opt">$f+g$ est croissante</div>
+  <div class="opt">$fg$ est décroissante</div>
+  <div class="sol"><p>La composée d'une fonction croissante et d'une décroissante est décroissante, dans les deux ordres : $\boxed{g\circ f \text{ est décroissante}}$ et $\boxed{f\circ g \text{ est décroissante}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sin$</div>
+  <div class="opt" data-ok>$\arctan$</div>
+  <div class="opt" data-ok>$x\mapsto\dfrac{1}{1+x^2}$</div>
+  <div class="opt">$x\mapsto x\sin x$</div>
+  <div class="opt">$x\mapsto e^{-x}$</div>
+  <div class="opt">$\tan$</div>
+  <div class="sol"><p>$\boxed{\sin}$, $\boxed{\arctan}$ et $\boxed{x\mapsto\dfrac1{1+x^2}}$ sont bornées sur $\R$ ; $x\sin x$, $e^{-x}$ et $\tan$ ne le sont pas.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est majorée et minorée sur $I$</div>
+  <div class="opt" data-ok>$\exists M\in\R,\ \forall x\in I,\ |f(x)|\leqslant M$</div>
+  <div class="opt">$\forall x\in I,\ \exists M\in\R,\ |f(x)|\leqslant M$</div>
+  <div class="opt" data-ok>$|f|$ est majorée sur $I$</div>
+  <div class="sol"><p>$\boxed{f \text{ majorée et minorée sur } I}$, $\boxed{\exists M\in\R,\ \forall x\in I,\ |f(x)|\leqslant M}$ et $\boxed{|f| \text{ majorée sur } I}$ sont trois formulations équivalentes de « $f$ bornée » ; la troisième proposition a les quantificateurs dans le mauvais ordre (elle est toujours vraie, même pour $f$ non bornée).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est minorée</div>
+  <div class="opt">$f$ est majorée</div>
+  <div class="opt" data-ok>$f$ admet un minimum</div>
+  <div class="opt">$f$ admet un maximum</div>
+  <div class="sol"><p>Sur $]0,1]$, $f(x)=\dfrac1x\geqslant 1$ : $\boxed{f \text{ est minorée}}$ et $\boxed{f \text{ admet un minimum}}$ (atteint en $x=1$, $f(1)=1$) ; $f$ n'est pas majorée ($f\to+\infty$ en $0^+$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$\alpha =$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span></div>
+  <div class="row"><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">{minipage} {center}</span></div>
+  <div class="sol"><p>Sur $]-\infty,-1]$, $f$ croît continûment de $-\infty$ à $3$ : une solution. Sur $[-1,2]$, $f$ décroît de $3$ à $-1$ : une solution. Sur $[2,+\infty[$, $f$ croît de $-1$ à $+\infty$ : une solution. Soit $\boxed{\alpha=3}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f$ est majorée sur $\R$</div>
+  <div class="opt" data-ok>$f(0)>f(1)$</div>
+  <div class="opt" data-ok>$f$ admet un minimum sur $[-1,+\infty[$</div>
+  <div class="opt">l'équation $f(x)=4$ admet deux solutions</div>
+  <div class="sol"><p>$f$ décroît sur $[-1,2]$, donc $\boxed{f(0)>f(1)}$ ; sur $[-1,+\infty[$, $f$ décroît de $3$ à $-1$ puis croît vers $+\infty$, donc $\boxed{f \text{ admet un minimum (égal à } -1\text{) sur cet intervalle}}$. $f$ n'est pas majorée (elle tend vers $+\infty$), et $f(x)=4$ n'a qu'une solution (sur la branche croissante après $x=2$, le maximum local $3$ étant atteint avant).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to1^+}f(x)=+\infty$</div>
+  <div class="opt">$\displaystyle\lim_{x\to1^-}f(x)=+\infty$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to+\infty}f(x)=2$</div>
+  <div class="opt">$\displaystyle\lim_{x\to-\infty}f(x)=-2$</div>
+  <div class="opt" data-ok>$f(0)=0$</div>
+  <div class="opt">$f$ est décroissante sur $\R\setminus\{1\}$</div>
+  <div class="sol"><p>Avec $f(x)=\dfrac{2x}{x-1}$ : $\boxed{\displaystyle\lim_{x\to1^+}f(x)=+\infty}$ (et $\displaystyle\lim_{x\to1^-}f(x)=-\infty$, pas $+\infty$) ; $\boxed{\displaystyle\lim_{x\to+\infty}f(x)=2}$ (et la limite en $-\infty$ vaut aussi $2$, pas $-2$) ; $\boxed{f(0)=0}$. Enfin $f'(x)=\dfrac{-2}{(x-1)^2}<0$ : $f$ est décroissante sur $]1,+\infty[$, non croissante.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$x = \alpha$</span><span class="lab">$\alpha =$</span><span class="case">$-3$</span><span class="case">$-2$</span><span class="case" data-ok>$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$y = \beta$ avec $\beta = $</span><span class="case">$-3$</span><span class="case">$-2$</span><span class="case">$-1$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">{center} {trouver plus dur}</span></div>
+  <div class="sol"><p>Le dénominateur $x^2-1$ s'annule en $\pm1$ (numérateur non nul en ces points) : asymptotes verticales $\boxed{x=-1 \text{ et } x=1}$. Comme $f(x)\to2$ quand $x\to\pm\infty$ (quotient des coefficients dominants) : asymptote horizontale $\boxed{y=2}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a =$</span><span class="case">$-3$</span><span class="case">$-2$</span><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$b = $</span><span class="case">$-3$</span><span class="case">$-2$</span><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">{center}</span></div>
+  <div class="sol"><p>$f(x) = x+1+\dfrac1x$, et $\dfrac1x\to0$ quand $x\to+\infty$ : asymptote oblique $\boxed{y=x+1}$, soit $a=1,\ b=1$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(-2,1)$</div>
+  <div class="opt">$(-2,-1)$</div>
+  <div class="opt" data-ok>$(2,1)$</div>
+  <div class="opt">$(2,-1)$</div>
+  <div class="sol"><p>$x\mapsto f(x-2)+1$ s'obtient par la translation de vecteur $\boxed{(2,1)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">à l'axe des abscisses</div>
+  <div class="opt" data-ok>à l'axe des ordonnées</div>
+  <div class="opt">à l'origine</div>
+  <div class="opt">à la droite d'équation $y=x$</div>
+  <div class="sol"><p>$x\mapsto f(-x)$ s'obtient par la symétrie par rapport à $\boxed{\text{l'axe des ordonnées}}$.</p></div>
+</div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">la symétrie par rapport à la droite d'équation $y=2$</div>
+  <div class="opt" data-ok>la symétrie par rapport à la droite d'équation $y=1$</div>
+  <div class="opt" data-ok>la symétrie par rapport à l'axe des abscisses, suivie de la translation de vecteur $(0,2)$</div>
+  <div class="opt">la translation de vecteur $(0,2)$, suivie de la symétrie par rapport à l'axe des abscisses</div>
+  <div class="sol"><p>Le point $(x,2-f(x))$ est le symétrique de $(x,f(x))$ par rapport à la droite $y=1$ (réflexion $y\mapsto2\cdot1-y$) : $\boxed{\text{symétrie par rapport à } y=1}$. De façon équivalente, $\boxed{\text{symétrie par rapport à l'axe des abscisses, suivie de la translation de vecteur } (0,2)}$ (on obtient $-f(x)$ puis $-f(x)+2=2-f(x)$). L'ordre inverse donnerait $-(f(x)+2)=-f(x)-2\neq2-f(x)$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x=-4$</div>
+  <div class="opt" data-ok>$x=-2$</div>
+  <div class="opt">$x=2$</div>
+  <div class="opt">$x=4$</div>
+  <div class="sol"><p>Le sommet de la parabole est en $x=-\dfrac{4}{2}=-2$ : axe $\boxed{x=-2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(0,0)$</div>
+  <div class="opt" data-ok>$(1,1)$</div>
+  <div class="opt">$(-1,1)$</div>
+  <div class="opt">$(1,-1)$</div>
+  <div class="opt">$(-1,-1)$</div>
+  <div class="sol"><p>$f(x)=\dfrac{x+1}{x-1} = 1+\dfrac{2}{x-1}$ : le centre de symétrie de l'hyperbole est à l'intersection des asymptotes $x=1$ et $y=1$, soit $\boxed{(1,1)}$.</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

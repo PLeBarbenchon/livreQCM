@@ -1,7 +1,253 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>4.1 Géométrie dans le plan</title>
+<title>4.1 Géométrie dans le plan — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#b45309"><div class="topnav" style="--accent:#b45309"><span class="brand">4.1 · Géométrie dans le plan</span><a href="index.html">Menu</a><a href="ch4.html">Chapitre 4</a></div><main><p class="chapno">Chapitre 4 — Géométrie</p><h1>Géométrie dans le plan</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch4.html">← Retour au chapitre 4</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">4.1 · Géométrie dans le plan</span><a href="index.html">Menu</a><a href="ch4.html">Chapitre 4</a></div><main><p class="chapno">Chapitre 4 — Géométrie</p><h1>Géométrie dans le plan</h1>
+<div id="quiz" data-chap="4" data-start="1">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (4.1, 4.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="1").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\overrightarrow{u}$ et $\overrightarrow{v}$ sont orthogonaux</div>
+  <div class="opt">$\|\overrightarrow{u}\| = 4$</div>
+  <div class="opt" data-ok>$\overrightarrow{u}$ et $\overrightarrow{w}$ sont colinéaires</div>
+  <div class="opt">$\overrightarrow{u}$ et $\overrightarrow{v}$ sont colinéaires</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\|\overrightarrow{v}\| = \dfrac{\sqrt{5}}{2}$</div>
+  <div class="opt">$\|\overrightarrow{v}\| = \dfrac{\sqrt{2}}{\sqrt{5}}$</div>
+  <div class="opt" data-ok>$\|\overrightarrow{v}\| = \dfrac{4\sqrt{5}}{5}$</div>
+  <div class="opt">$\|\overrightarrow{v}\| = \dfrac{2\sqrt{5}}{5}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{2\pi}{3}$</div>
+  <div class="opt">$-\dfrac{7\pi}{3}$</div>
+  <div class="opt">$\dfrac{5\pi}{6}$</div>
+  <div class="opt">$\dfrac{4\pi}{3}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\arctan \dfrac{11}{7}$</div>
+  <div class="opt">$\arcsin \dfrac{11}{\sqrt{170}}$</div>
+  <div class="opt" data-ok>$\dfrac{\pi}{2}\! +\! \arctan \dfrac{11}{7}$</div>
+  <div class="opt">$2\pi - \arctan \dfrac{11}{7}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(\overrightarrow{u},\overrightarrow{v})$ est une base du plan</div>
+  <div class="opt">$(O,\overrightarrow{u},\overrightarrow{v})$ est orthogonal</div>
+  <div class="opt">$\overrightarrow{u}$ et $\overrightarrow{v}$ sont colinéaires</div>
+  <div class="opt" data-ok>$(O,\overrightarrow{u},\overrightarrow{v})$ est un repère direct</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(1,2)$</div>
+  <div class="opt">$(-1,2)$</div>
+  <div class="opt" data-ok>$(2,-1)$</div>
+  <div class="opt">$(3,0)$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$a ~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case" data-ok>$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$x_M ~+~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span></div>
+  </div>
+  <span class="lab">$y_M$</span>
+  <span class="lab">$b ~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span></div>
+  </div>
+  <span class="lab">$x_M ~+~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$-1$</span><span class="case">$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$y_M$</span>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$m = 1$</div>
+  <div class="opt">$m \in \left\{-1,\, 0 \right\}$</div>
+  <div class="opt" data-ok>$m \in \left\{0,\, 1\right\}$</div>
+  <div class="opt">$m = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$m \not \in \{ 2,\, 3\}$</div>
+  <div class="opt">$m \in \left[ \dfrac{2}{3},2\right]$</div>
+  <div class="opt" data-ok>$m \not \in \left\{ \dfrac{2}{3},\, 2 \right\}$</div>
+  <div class="opt">$m \neq -2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">sont égaux si $m=-5$</div>
+  <div class="opt" data-ok>forment une base pour $m \in \left[ 1,2\right]$</div>
+  <div class="opt">sont toujours orthogonaux</div>
+  <div class="opt">forment une famille libre si $m>0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$m \in \{1,\, 3\}$</div>
+  <div class="opt" data-ok>$m = -\dfrac{1}{2}$ uniquement</div>
+  <div class="opt">$m \in \{-1,\, -3\}$</div>
+  <div class="opt">aucune valeur réelle de $m$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$11$</div>
+  <div class="opt" data-ok>$\dfrac{11}{2}$</div>
+  <div class="opt">$-11$</div>
+  <div class="opt">$-\dfrac{11}{2}$</div>
+</div>
+
+<div class="q" data-type="axe">
+  <span class="int"></span>
+  <span class="pt" data-lab="$-1$"></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$-\tfrac{1}{8}$" data-ok></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$0$"></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$\tfrac{1}{8}$"></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$1$" data-ok></span>
+  <span class="int"></span>
+  <span class="pt" data-lab="$2$"></span>
+  <span class="int"></span>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\dfrac{7\pi}{6}$</div>
+  <div class="opt">$\dfrac{\pi}{2}$</div>
+  <div class="opt">$\dfrac{5\pi}{6}$</div>
+  <div class="opt">$\dfrac{7\pi}{6}$</div>
+  <div class="opt">$\dfrac{3\pi}{2}$</div>
+  <div class="opt" data-ok>$\dfrac{11\pi}{6}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$ABDC$ est un rectangle</div>
+  <div class="opt" data-ok>$ABDC$ est un losange</div>
+  <div class="opt">l'aire de $ABDC$ vaut $4$</div>
+  <div class="opt" data-ok>$BCD$ est isocèle en $D$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">un cercle de rayon 3</div>
+  <div class="opt">une droite dirigée par $(1,2)$</div>
+  <div class="opt" data-ok>la droite d'équation $x+2y-3=0$</div>
+  <div class="opt">la droite d'équation $2x-y-3=0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x - 2y + 7 = 0$</div>
+  <div class="opt" data-ok>$2x + y - 11 = 0$</div>
+  <div class="opt">$2x - y + 1 = 0$</div>
+  <div class="opt">$3x+5y=-1$</div>
+  <div class="opt">$x + y = 8 + t$</div>
+  <div class="opt" data-ok>$x = \dfrac{11-y}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(9,1)$ est normal à $\mathcal{D}'$</div>
+  <div class="opt" data-ok>$(1,9)$ dirige la droite $(PQ)$</div>
+  <div class="opt">$(9,1)$ dirige $\mathcal{D}'$</div>
+  <div class="opt" data-ok>$(-9,1)$ est normal à $(PQ)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathcal{D}\cap\mathcal{D}' = \left\{ \left( \dfrac{100}{17} , -\dfrac{13}{17} \right) \right\}$</div>
+  <div class="opt">$\mathcal{D}$ et $\mathcal{D}'$ sont parallèles</div>
+  <div class="opt">$\mathcal{D}$ et $\mathcal{D}'$ sont perpendiculaires</div>
+  <div class="opt" data-ok>$\mathcal{D}$ et $\mathcal{D}'$ s'intersectent en un point</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$H(2,2)$</div>
+  <div class="opt">$AH = 5$</div>
+  <div class="opt" data-ok>$CH = 2\sqrt{5}$</div>
+  <div class="opt">$HB=1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{5}{9}\,\overrightarrow{AB}$</div>
+  <div class="opt" data-ok>$\dfrac{75}{97}\,\overrightarrow{AB}$</div>
+  <div class="opt">$\dfrac{1}{2}\,\overrightarrow{AB}$</div>
+  <div class="opt">$\dfrac{7}{8}\,\overrightarrow{AB}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\sqrt{97}$</div>
+  <div class="opt">$\dfrac{\sqrt{97}}{9}$</div>
+  <div class="opt" data-ok>$\dfrac{1}{\sqrt{97}}$</div>
+  <div class="opt">$\dfrac{3}{\sqrt{97}}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a~=~$</span><span class="case">$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span></div>
+  <div class="row"><span class="lab">$b~=~$</span><span class="case" data-ok>$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">{minipage} {minipage}{0.54} {}{1.4pt} $R=$</span><span class="case">}</span><span class="case">}</span><span class="case">}</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">}</span><span class="case">}</span><span class="case">}</span><span class="case">} {minipage} {center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">forme une droite</div>
+  <div class="opt">est un singleton</div>
+  <div class="opt" data-ok>est l'ensemble vide</div>
+  <div class="opt">forme un cercle</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">forme un cercle</div>
+  <div class="opt" data-ok>est un singleton</div>
+  <div class="opt">est l'ensemble vide</div>
+  <div class="opt">forme une droite</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\Omega\left(\dfrac{3}{4},-\dfrac{5}{4}\right)$ et $R = \dfrac{5\sqrt{2}}{4}$</div>
+  <div class="opt">$\Omega\left(\dfrac{3}{2},-\dfrac{5}{2}\right)$ et $R = \dfrac{5\sqrt{2}}{2}$</div>
+  <div class="opt">$\Omega\left(-\dfrac{3}{4},\dfrac{5}{4}\right)$ et $R = \dfrac{5\sqrt{2}}{4}$</div>
+  <div class="opt">$\Omega\left(\dfrac{3}{4},-\dfrac{5}{4}\right)$ et $R = \dfrac{4\sqrt{2}}{5}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">la droite $\mathcal{D}$ est tangente à $\mathcal{C}$</div>
+  <div class="opt">$\mathcal{D}$ et $\mathcal{C}$ ne se coupent pas</div>
+  <div class="opt" data-ok>$(1,1)\in \mathcal{C}\cap\mathcal{D}$</div>
+  <div class="opt" data-ok>$\mathcal{C}$ et $\mathcal{D}$ se coupent en deux points</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal D_m\cap\mathcal{C}\neq \emptyset$ pour tout $m \in \R$</div>
+  <div class="opt" data-ok>$\mathcal D_{1/\sqrt{3}}$ est tangente à $\mathcal{C}$</div>
+  <div class="opt">$\mathcal D_m\cap \mathcal{C}=\emptyset$ quel que soit $m\in\R$</div>
+  <div class="opt" data-ok>$\mathcal D_m\cap\mathcal{C} \neq \emptyset \iff m \in \left[ -\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right]$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

@@ -1,7 +1,251 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12.5 Dérivabilité et théorèmes des accroissements finis</title>
+<title>12.5 Dérivabilité et théorèmes des accroissements finis — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#dc2626"><div class="topnav" style="--accent:#dc2626"><span class="brand">12.5 · Dérivabilité et théorèmes des accroissements finis</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a><a class="" href="pdf/BCPSTCh12_Etude_de_fonctions.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Dérivabilité et théorèmes des accroissements finis</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch12.html">← Retour au chapitre 12</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">12.5 · Dérivabilité et théorèmes des accroissements finis</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Dérivabilité et théorèmes des accroissements finis</h1>
+<div id="quiz" data-chap="12" data-start="123">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (12.1, 12.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="123").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{f(a+h)-f(a)}{h}$ admet une limite finie quand $h\to0$</div>
+  <div class="opt" data-ok>$\dfrac{f(x)-f(a)}{x-a}$ admet une limite finie quand $x\to a$</div>
+  <div class="opt">$\dfrac{f(a+h)-f(a-h)}{2h}$ admet une limite finie quand $h\to0$</div>
+  <div class="opt">$f$ est continue en $a$</div>
+  <div class="sol"><p>$f$ est dérivable en $a$ si et seulement si $\boxed{\dfrac{f(a+h)-f(a)}{h}}$ (ou, de façon équivalente, $\boxed{\dfrac{f(x)-f(a)}{x-a}}$) admet une limite finie ; le taux symétrique $\dfrac{f(a+h)-f(a-h)}{2h}$ peut exister sans que $f$ soit dérivable (ex. $|x|$ en $0$), et la continuité est nécessaire mais non suffisante.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">la pente de la tangente à la courbe de $f$ au point d'abscisse $a$</div>
+  <div class="opt" data-ok>la pente de la corde joignant les points de la courbe d'abscisses $a$ et $b$</div>
+  <div class="opt">la valeur moyenne de $f$ sur $[a,b]$</div>
+  <div class="opt">toujours égal à $f'\left(\dfrac{a+b}2\right)$</div>
+  <div class="sol"><p>$\boxed{\dfrac{f(b)-f(a)}{b-a} \text{ est la pente de la corde joignant les points d'abscisses } a \text{ et } b}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$y = ax+b$</span><span class="lab">$a =$</span><span class="case">$-$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span></div>
+  <div class="row"><span class="lab">$b =$</span><span class="case" data-ok>$-$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span></div>
+  <div class="sol"><p>$\ln(1)=0$ et $\ln'(1)=1$ : la tangente a pour équation $y=1\times(x-1)+0$, soit $\boxed{a=1,\ b=-1}$ (c'est-à-dire $y=x-1$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-2\vphantom{\dfrac12}$</div>
+  <div class="opt">$-1\vphantom{\dfrac12}$</div>
+  <div class="opt">$0\vphantom{\dfrac12}$</div>
+  <div class="opt">$\dfrac12$</div>
+  <div class="opt" data-ok>$1\vphantom{\dfrac12}$</div>
+  <div class="opt">$2\vphantom{\dfrac12}$</div>
+  <div class="sol"><p>La fonction tracée est $f(x)=\dfrac{x^2}{4}$, donc $f'(x)=\dfrac x2$ et $\boxed{f'(2) = 1}$ (ce qui correspond bien à la pente de la tangente dessinée, passant par $(-0.5,-1.5)$ et $(3.5,2.5)$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok></span><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>Pour $f:x\mapsto x^3$, $f'(x)=3x^2$, donc $f'(1)=3$ et $f(1)=1$ : la tangente a pour équation $y=3(x-1)+1=3x-2$, d'ordonnée à l'origine $\boxed{-2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x=-\dfrac12$</div>
+  <div class="opt" data-ok>$x=\dfrac12$</div>
+  <div class="opt">$x=2$</div>
+  <div class="opt">$x=e^2$</div>
+  <div class="sol"><p>$\ln'(x)=\dfrac1x=2 \iff \boxed{x=\dfrac12}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto|x|$</div>
+  <div class="opt" data-ok>$x\mapsto\sqrt x$</div>
+  <div class="opt">$x\mapsto x|x|$</div>
+  <div class="opt">$\sin$</div>
+  <div class="opt" data-ok>$x\mapsto\sqrt[3]{x}$</div>
+  <div class="opt">$x\mapsto e^{|x|}-|x|$</div>
+  <div class="sol"><p>$\boxed{|x|}$ (point anguleux), $\boxed{\sqrt x}$ et $\boxed{\sqrt[3]x}$ (tangente verticale en $0$) ne sont pas dérivables en $0$ ; en revanche $x|x|$, $\sin$ et $e^{|x|}-|x|$ sont dérivables en $0$ (pour les deux dernières, les dérivées à droite et à gauche en $0$ coïncident et valent $0$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto|x|$</div>
+  <div class="opt" data-ok>$x\mapsto x|x|$</div>
+  <div class="opt" data-ok>$\exp$</div>
+  <div class="opt">$x\mapsto\lfloor x\rfloor$</div>
+  <div class="sol"><p>$\boxed{x\mapsto x|x|}$ (dérivée $2|x|$, continue) et $\boxed{\exp}$ sont de classe $\mathcal C^1$ sur $\R$ ; $|x|$ n'est pas dérivable en $0$ et $\lfloor x\rfloor$ n'est même pas continue.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est continue en $0$</div>
+  <div class="opt" data-ok>$f$ est dérivable en $0$</div>
+  <div class="opt">$f'$ est continue en $0$</div>
+  <div class="opt">$f$ est de classe $\mathcal C^1$ sur $\R$</div>
+  <div class="sol"><p>$|f(x)|\leqslant x^2\to0$ donc $\boxed{f \text{ est continue en } 0}$ ; $\dfrac{f(h)-f(0)}{h}=h\sin\dfrac1h\to0$ donc $\boxed{f \text{ est dérivable en } 0 \text{ (avec } f'(0)=0)}$. En revanche, pour $x\neq0$, $f'(x)=2x\sin\dfrac1x-\cos\dfrac1x$ n'a pas de limite en $0$ (le terme $-\cos(1/x)$ oscille) : $f'$ n'est pas continue en $0$, donc $f$ n'est pas $\mathcal C^1$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Si $f'(f^{-1}(y))\neq0$, alors $f^{-1}$ est dérivable en $y$ et $(f^{-1})'(y)=\dfrac{1}{f'(f^{-1}(y))}$.</div>
+  <div class="opt">$f^{-1}$ est dérivable en $y$ et $(f^{-1})'(y)=\dfrac{1}{f'(y)}$.</div>
+  <div class="opt">$f^{-1}$ est dérivable en $y$ et $(f^{-1})'(y)=\dfrac{1}{f(y)}$.</div>
+  <div class="opt" data-ok>Si $f'(f^{-1}(y))=0$, alors $f^{-1}$ n'est pas dérivable en $y$.</div>
+  <div class="sol"><p>$\boxed{\text{Si } f'(f^{-1}(y))\neq0, \text{ alors } f^{-1} \text{ est dérivable en } y \text{ et } (f^{-1})'(y)=\dfrac{1}{f'(f^{-1}(y))}}$ ; et $\boxed{\text{si } f'(f^{-1}(y))=0, \text{ alors } f^{-1} \text{ n'est pas dérivable en } y}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{1}{13}$</div>
+  <div class="opt" data-ok>$\dfrac14$</div>
+  <div class="opt">$4$</div>
+  <div class="opt">$13$</div>
+  <div class="sol"><p>$f(1)=1+1=2$ donc $f^{-1}(2)=1$ ; $f'(x)=3x^2+1$, $f'(1)=4$ : $\boxed{(f^{-1})'(2) = \dfrac14}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">sur $\R$</div>
+  <div class="opt" data-ok>sur $\R^*$</div>
+  <div class="opt">sur $]0,+\infty[$</div>
+  <div class="opt">nulle part</div>
+  <div class="sol"><p>$f'(0)=0$ (pour $f:x\mapsto x^3$), donc $f^{-1}:x\mapsto\sqrt[3]x$ n'est pas dérivable en $0$ : elle est dérivable $\boxed{\text{sur } \R^*}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{1}{1+e}$</div>
+  <div class="opt" data-ok>$\dfrac12$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$2$</div>
+  <div class="opt">$1+e$</div>
+  <div class="sol"><p>$f(0)=0+1=1$ donc $f^{-1}(1)=0$ ; $f'(x)=1+e^x$, $f'(0)=2$ : $\boxed{(f^{-1})'(1) = \dfrac12}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Si $f$ admet un extremum local en $a$ et si $a$ n'est pas une borne de $I$, alors $f'(a)=0$.</div>
+  <div class="opt">Si $f'(a)=0$, alors $f$ admet un extremum local en $a$.</div>
+  <div class="opt">Si $f$ admet un extremum local en $a$, alors $f'(a)=0$, même si $a$ est une borne de $I$.</div>
+  <div class="opt" data-ok>$x\mapsto x$ admet un maximum sur $[0,1]$ en un point où sa dérivée ne s'annule pas.</div>
+  <div class="sol"><p>$\boxed{\text{Si } f \text{ admet un extremum local en } a \text{ et si } a \text{ n'est pas une borne de } I, \text{ alors } f'(a)=0}$ (la condition n'est que nécessaire, et seulement en un point intérieur) ; $\boxed{x\mapsto x \text{ admet un maximum sur } [0,1] \text{ en } x=1, \text{ où } f'(1)=1\neq0}$ (car $1$ est une borne de l'intervalle).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0$ est un point critique de $f$</div>
+  <div class="opt">$f$ admet un minimum local en $0$</div>
+  <div class="opt">$f$ admet un maximum local en $0$</div>
+  <div class="opt" data-ok>$f$ est strictement croissante sur $\R$</div>
+  <div class="sol"><p>$f'(0)=0$ : $\boxed{0 \text{ est un point critique de } f}$ ; et $f'(x)=3x^2\geqslant 0$ (nul seulement en $0$) donc $\boxed{f \text{ est strictement croissante sur } \R}$ (sans extremum local en $0$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span></div>
+  <div class="sol"><p>$f'(x)=3x^2-3=0 \iff x=\pm1$ : $\boxed{2 \text{ points critiques}}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span></div>
+  <div class="sol"><p>$f'(x)=1-\dfrac{1}{x^2}=0 \iff x=1$ (sur $]0,+\infty[$), et $f(1)=2$ : $\boxed{\min = 2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f$ est constante sur $[a,b]$</div>
+  <div class="opt" data-ok>il existe $c\in\,]a,b[$ tel que $f'(c)=0$</div>
+  <div class="opt">il existe $c\in\,]a,b[$ tel que $f(c)=0$</div>
+  <div class="opt">il existe un unique $c\in\,]a,b[$ tel que $f'(c)=0$</div>
+  <div class="sol"><p>Le théorème de Rolle affirme qu'$\boxed{\text{il existe } c\in\,]a,b[ \text{ tel que } f'(c)=0}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">la continuité sur $[-1,1]$</div>
+  <div class="opt" data-ok>la dérivabilité sur $]-1,1[$</div>
+  <div class="opt">$f(-1)=f(1)$</div>
+  <div class="opt">c'est faux, le théorème s'applique</div>
+  <div class="sol"><p>$f(-1)=f(1)=1$ et $f$ est continue sur $[-1,1]$, mais $\boxed{|x| \text{ n'est pas dérivable sur } ]-1,1[}$ (point anguleux en $0$) : c'est cette hypothèse qui fait défaut.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f'(c)=0$</div>
+  <div class="opt" data-ok>$f(b)-f(a)=f'(c)(b-a)$</div>
+  <div class="opt">$f(b)-f(a)=f'(c)$</div>
+  <div class="opt">$f(c)=\dfrac{f(a)+f(b)}2$</div>
+  <div class="sol"><p>Le théorème des accroissements finis affirme qu'il existe $c\in\,]a,b[$ tel que $\boxed{f(b)-f(a)=f'(c)(b-a)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$c\vphantom{\dfrac{x}{x}}$</div>
+  <div class="opt">$\dfrac1c\vphantom{\dfrac{x}{x}}$</div>
+  <div class="opt" data-ok>$\dfrac xc$</div>
+  <div class="opt">$\dfrac{c}{x}$</div>
+  <div class="opt">$x\ln c\vphantom{\dfrac{x}{x}}$</div>
+  <div class="opt">$c\ln x\vphantom{\dfrac{x}{x}}$</div>
+  <div class="sol"><p>$\ln(1+x)-\ln(1) = \dfrac1c\times\big((1+x)-1\big)$, d'où $\boxed{\ln(1+x) = \dfrac xc}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{x}{1+x}\leqslant \ln(1+x)\leqslant x$</div>
+  <div class="opt">$x\leqslant \ln(1+x)\leqslant \dfrac{x}{1+x}$</div>
+  <div class="opt">$\ln(1+x)\leqslant \dfrac{x}{1+x}$</div>
+  <div class="opt">$\ln(1+x)\geqslant x$</div>
+  <div class="sol"><p>Comme $1<c<1+x$, on a $\dfrac{1}{1+x}<\dfrac1c<1$, donc en multipliant par $x>0$ : $\boxed{\dfrac{x}{1+x} < \ln(1+x) < x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$|f(x)-f(y)|\leqslant M$</div>
+  <div class="opt" data-ok>$|f(x)-f(y)|\leqslant M|x-y|$</div>
+  <div class="opt">$|f(x)-f(y)|\geqslant M|x-y|$</div>
+  <div class="opt">$|f(x)|\leqslant M|x|$</div>
+  <div class="sol"><p>Si $|f'|\leqslant M$ sur $I$, alors pour tous $x,y\in I$ : $\boxed{|f(x)-f(y)| \leqslant M|x-y|}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sin$ sur $\R$</div>
+  <div class="opt">$x\mapsto x^2$ sur $\R$</div>
+  <div class="opt" data-ok>$x\mapsto|x|$ sur $\R$</div>
+  <div class="opt">$x\mapsto\sqrt x$ sur $\R_+$</div>
+  <div class="opt" data-ok>$\arctan$ sur $\R$</div>
+  <div class="opt" data-ok>$x\mapsto x^2$ sur $[0,1]$</div>
+  <div class="sol"><p>$\boxed{\sin}$ ($|\sin'|=|\cos|\leqslant 1$), $\boxed{x\mapsto|x|}$ (inégalité triangulaire), $\boxed{\arctan}$ ($|\arctan'|\leqslant 1$) sont lipschitziennes sur $\R$, et $\boxed{x\mapsto x^2 \text{ sur } [0,1]}$ (dérivée $2x$ bornée par $2$ sur ce segment) l'est aussi ; en revanche $x^2$ n'est pas lipschitzienne sur $\R$ tout entier, ni $\sqrt x$ sur $\R_+$ (dérivée non bornée près de $0$).</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>$|(\sin(3x))'|=|3\cos(3x)|\leqslant 3$, borne atteinte : $\boxed{K=3}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Une fonction lipschitzienne est continue.</div>
+  <div class="opt">Une fonction continue est lipschitzienne.</div>
+  <div class="opt">Une fonction lipschitzienne est dérivable.</div>
+  <div class="opt" data-ok>Une fonction dérivable à dérivée bornée sur un intervalle y est lipschitzienne.</div>
+  <div class="sol"><p>$\boxed{\text{Une fonction lipschitzienne est continue}}$ ; et $\boxed{\text{une fonction dérivable à dérivée bornée sur un intervalle y est lipschitzienne}}$ (c'est l'IAF). En revanche une fonction continue (ex. $\sqrt x$) n'est pas forcément lipschitzienne, et une fonction lipschitzienne (ex. $|x|$) n'est pas forcément dérivable.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est continue en $0$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to0}f'(x)=0$</div>
+  <div class="opt" data-ok>$f$ est dérivable en $0$ et $f'(0)=0$</div>
+  <div class="opt">$f$ n'est pas dérivable en $0$</div>
+  <div class="sol"><p>$\boxed{f \text{ est continue en } 0}$ (car $e^{-1/x^2}\to0$ quand $x\to0$) ; $f'(x)=\dfrac{2}{x^3}e^{-1/x^2}$ pour $x\neq0$, et $\boxed{\displaystyle\lim_{x\to0}f'(x)=0}$ (l'exponentielle décroît plus vite que toute puissance) ; par le théorème de la limite de la dérivée, $\boxed{f \text{ est dérivable en } 0 \text{ et } f'(0)=0}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$f'\geqslant 0$</span><span class="lab">$I$</span><span class="case" data-ok>$\Rightarrow$</span></div>
+  <div class="row"><span class="case" data-ok>$f$ est croissante sur $I$ {1mm} $f'>0$ sur $I$</span><span class="case" data-ok>$\Rightarrow$</span></div>
+  <div class="row"><span class="case">$f$ est strictement croissante sur $I$ {1mm} $f'=0$ sur $I$</span><span class="case" data-ok>$\Rightarrow$</span></div>
+  <div class="row"><span class="case" data-ok>$f$ est constante sur $I$ {minipage} {center}</span></div>
+  <div class="sol"><p>$\boxed{f'\geqslant 0 \text{ sur } I \iff f \text{ croissante sur } I}$ (double implication) ; $\boxed{f'>0 \text{ sur } I \implies f \text{ strictement croissante sur } I}$ (implication simple seulement : la réciproque est fausse, ex. $x\mapsto x^3$ strictement croissante avec $f'(0)=0$) ; $\boxed{f'=0 \text{ sur } I \iff f \text{ constante sur } I}$ (double implication).</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

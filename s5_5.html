@@ -1,7 +1,270 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>5.5 Applications linéaires</title>
+<title>5.5 Applications linéaires — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#be123c"><div class="topnav" style="--accent:#be123c"><span class="brand">5.5 · Applications linéaires</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a><a class="" href="pdf/BCPSTCh5_Algebre_lineaire.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Applications linéaires</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch5.html">← Retour au chapitre 5</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">5.5 · Applications linéaires</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Applications linéaires</h1>
+<div id="quiz" data-chap="5" data-start="98">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (5.1, 5.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="98").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg f < \dim(E)$</div>
+  <div class="opt" data-ok>$\rg f = \dim(\textrm{Im}(f))$</div>
+  <div class="opt" data-ok>$\rg f = \dim E \iff f$ est injective</div>
+  <div class="opt">$\dim(E) \!=\! \dim(F) \!\implies\! \rg f \!=\! \dim(E)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f \mapsto 3f(0)+f(1)$ sur $\mathcal{C}^0([0,1],\R)$</div>
+  <div class="opt">$(x,y)\mapsto xy$ sur $\R^2$</div>
+  <div class="opt" data-ok>$(x,y,z)\mapsto(x+2y-z,\ y-z)$ sur $\R^3$</div>
+  <div class="opt">$P\mapsto X^2+XP'(X)+P(0)$ sur $\R[X]$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$M\mapsto AM+A$ est linéaire</div>
+  <div class="opt">$M\mapsto A M^2$ est un endomorphisme</div>
+  <div class="opt">$M\mapsto AM$ est un isomorphisme</div>
+  <div class="opt" data-ok>$M\mapsto AM-MA$ est linéaire</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">L'image par $f$ d'une base de $E$ est une base de $F$</div>
+  <div class="opt" data-ok>L'image par $f$ d'une famille liée est une famille liée</div>
+  <div class="opt">L'image par $f$ d'une famille libre est une famille libre</div>
+  <div class="opt">L'image par $f$ d'une famille génératrice de $E$ est génératrice de $F$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est injective $\iff \ker f = \{0_E\}$</div>
+  <div class="opt">$f$ est injective $\iff \ker f = \varnothing$</div>
+  <div class="opt">$\ker f$ est un sous-espace vectoriel de $F$</div>
+  <div class="opt">$f$ est surjective $\iff \ima f = E$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg f=1$</div>
+  <div class="opt" data-ok>$\rg f=2$</div>
+  <div class="opt">$f$ est un automorphisme de $\R^3$</div>
+  <div class="opt" data-ok>$\ker f=\mathrm{Vect}\big((1,1,1)\big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg f = 1$ et $\dim\ker f = 3$</div>
+  <div class="opt">$f$ est surjective</div>
+  <div class="opt">$\rg f=2$ et $\dim\ker f = 1$</div>
+  <div class="opt" data-ok>$\mathrm{Vect} \big((1,0,-2,-1)\big)\subset \ker f$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ker f=\mathrm{Vect}\big((1,1,0)\big)$</div>
+  <div class="opt" data-ok>$f$ est un automorphisme de $\R^3$</div>
+  <div class="opt">$f$ est injective mais non surjective</div>
+  <div class="opt">$f$ est surjective et non injective</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dim\ker f+\rg f=\dim F$</div>
+  <div class="opt">$\dim E > \dim F\implies f$ surjective</div>
+  <div class="opt" data-ok>$\dim E > \dim F \implies f$ non injective</div>
+  <div class="opt">$\dim E=\dim F \implies f$ bijective</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$P \mapsto XP$ est un isomorphisme</div>
+  <div class="opt" data-ok>$P \mapsto P(X+1)$ est injectif</div>
+  <div class="opt" data-ok>$P \mapsto P'$ est surjectif</div>
+  <div class="opt">$P\mapsto P - XP'$ est un isomorphisme</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ker \varphi = \mathrm{Vect}(X + 1)$</div>
+  <div class="opt" data-ok>$\mathrm{Mat}_{\mathcal{B}} (\varphi) = \begin{pmatrix} 3 & -2 & 0 \\ 0 & 3 & -4 \\ 0 & 0 & 3 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$\varphi$ est bijectif</div>
+  <div class="opt">$\mathrm{Mat}_{\mathcal{B}}(\varphi) = \begin{pmatrix} 3 & 0 & 0 \\ -2 & 3 & 0 \\ 0 & -4 & 3 \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f(P)=3P-XP'+P(1)$</div>
+  <div class="opt" data-ok>$\ker f = \mathrm{Vect}(7X^3+X-2)$</div>
+  <div class="opt">$f(P)=P-3XP'+P(0)$</div>
+  <div class="opt" data-ok>$f$ est surjective</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ima f = \mathrm{Vect} \big((2,3,1)\big)$</div>
+  <div class="opt" data-ok>$\ker f = \mathrm{Vect} \big((3,-4,2)\big)$</div>
+  <div class="opt">$f$ est bijectif</div>
+  <div class="opt">$\ker f=\mathrm{Vect}\big((2,-4,3)\big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\varphi$ est surjective</div>
+  <div class="opt">$\varphi$ est un isomorphisme</div>
+  <div class="opt">$\ker\varphi=\R_1[X] \setminus \R_0[X]$</div>
+  <div class="opt" data-ok>$\ima \varphi = \mathrm{Vect} \big(X, X^2-2, X^3-4X\big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\Delta$ est un isomorphisme de $\R_n[X]$</div>
+  <div class="opt" data-ok>$\rg \Delta = n$</div>
+  <div class="opt">$\Delta$ est injective</div>
+  <div class="opt">$\mathrm{Mat}_{(1,X,\dots,X^n)}(\Delta)$ est diagonale</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\psi \in GL(\mathcal{M}_n(\R))\!\iff\! A\in GL_n(\R)$</div>
+  <div class="opt">$\ima \psi = \{ X\in \mathcal{M}_n(\R) \mid \tr (X)=0 \}$</div>
+  <div class="opt">$\psi$ est un automorphisme de $\mathcal{M}_n(\R)$</div>
+  <div class="opt" data-ok>$\psi$ est un endomorphisme de $\mathcal{M}_n(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f:(x,y,z) \mapsto (y, x-y+z)$</div>
+  <div class="opt">$f$ est injective</div>
+  <div class="opt">$f:(x,y,z) \mapsto (y, x+y+z)$</div>
+  <div class="opt">une telle application n'existe pas</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ker (g\circ f) \subset \ker f$</div>
+  <div class="opt" data-ok>$g\circ f = 0 \iff \ima f \subset \ker g$</div>
+  <div class="opt">$\ima (g\circ f)=\ima g$</div>
+  <div class="opt">$g\circ f = 0 \Rightarrow f=0$ ou $g=0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg (g\circ f) \geqslant \max \big(\rg f, \rg g \big)$</div>
+  <div class="opt" data-ok>$g$ bijectif $\implies \rg (g\circ f) = \rg f$</div>
+  <div class="opt">$\rg (f+g) = \rg f + \rg g$</div>
+  <div class="opt">$\rg (g\circ f)=\rg g \times\rg f$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ima p = \ker(p+\mathrm{id}_E)$</div>
+  <div class="opt" data-ok>$E = \ker p \oplus \ker (p-\mathrm{id}_E)$</div>
+  <div class="opt">$p\neq 0\implies p$ injectif</div>
+  <div class="opt">$(\mathrm{id}_E-p)\circ (\mathrm{id}_E - p) = \mathrm{id}_E$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$s = \mathrm{id}_E$ ou $s = -\mathrm{id}_E$</div>
+  <div class="opt">$\ker (s - \mathrm{id}_E) = \ima (s - \mathrm{id}_E)$</div>
+  <div class="opt" data-ok>$s$ est bijectif et $s^{-1} = s$</div>
+  <div class="opt" data-ok>$E = \ker(s-\mathrm{id}_E) \oplus \ker(s+\mathrm{id}_E)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$p$ est un projecteur</div>
+  <div class="opt">$\ima p = \mathrm{Vect}\big((1,1,1)\big)$</div>
+  <div class="opt">$p$ est une symétrie</div>
+  <div class="opt" data-ok>$\ker p = \mathrm{Vect}\big( (1,-1,0), (1,0,-1) \big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$s$ n'est pas injectif</div>
+  <div class="opt">$s$ est un projecteur</div>
+  <div class="opt" data-ok>$F = \mathrm{Vect}\big( (1,-1,0), (1,0,-1) \big)$</div>
+  <div class="opt">$G = \mathrm{Vect}\big( (1,-1,0), (1,0,-1) \big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f\circ f = f$</div>
+  <div class="opt">$f = \mathrm{id}_E$ ou $f = 2 \mathrm{id}_E$</div>
+  <div class="opt">$E = \ker(f-\mathrm{id}_E) \oplus \ker(f+2\mathrm{id}_E)$</div>
+  <div class="opt" data-ok>$f$ est un automorphisme de $E$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f^2=0 \implies \rg f \leqslant 1$</div>
+  <div class="opt">$\ker f =\ima f$</div>
+  <div class="opt">$f^2 = 0 \implies f = 0$</div>
+  <div class="opt">$\R^3 = \ker f \oplus \ima f$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ker \Delta\neq\{0\}$</div>
+  <div class="opt" data-ok>$\Delta$ est un automorphisme de $F$</div>
+  <div class="opt">$\Delta$ n'est pas injectif</div>
+  <div class="opt">$\Delta$ n'est pas surjectif</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$E = \ker\varphi \oplus \ima \varphi$</div>
+  <div class="opt" data-ok>$\dim\ker\varphi=n-1$</div>
+  <div class="opt" data-ok>$\varphi$ est surjective</div>
+  <div class="opt">$\ker\varphi=\{0_E\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f$ n'est pas bijective</div>
+  <div class="opt" data-ok>$\mathcal{B}=(u,v,w)$ est une base de $\R^3$</div>
+  <div class="opt">$\operatorname{Mat}_{(u,v,w)}(f)=A$</div>
+  <div class="opt">$f(u) = 2u$, $f(v) = -3v$ et $f(w) = w$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^n = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 2^n & 0 \\ 0 & 0 & 0 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$\rg(A)=2$ et $\ker f=\mathrm{Vect}(u_3)$</div>
+  <div class="opt">$\mathrm{Mat}_{(u_1,u_2,u_3)}(f) = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \end{pmatrix}$</div>
+  <div class="opt">$A$ est inversible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\varphi$ est surjective et non injective</div>
+  <div class="opt" data-ok>$\varphi$ est un isomorphisme</div>
+  <div class="opt">$\varphi$ est injective et non surjective</div>
+  <div class="opt">$\ker \varphi = \mathrm{Vect} \big( (X-a_0) \dots (X-a_n) \big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ker u \subset \ima (u^2)$</div>
+  <div class="opt">$u^2=0$</div>
+  <div class="opt" data-ok>$\rg u + \rg (u^2) \leqslant \dim E$</div>
+  <div class="opt">$u$ est inversible si $u\neq 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg \varphi = 3$</div>
+  <div class="opt" data-ok>$\ker\varphi = \mathrm{Vect}(I_2,A)$</div>
+  <div class="opt">$\ker\varphi = \mathrm{Vect}(I_2)$</div>
+  <div class="opt">$\varphi$ est un automorphisme de $\mathcal{M}_2(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$E = \ker f \oplus \ima f$</div>
+  <div class="opt">$\ker f \cap \ima f = \{0_E\}$</div>
+  <div class="opt">$\ima (f)\subset\ima (f^2)$ et $\ker f \subset \ker(f^2)$</div>
+  <div class="opt" data-ok>$\rg (f^2) = \rg f\implies E = \ker f \oplus \ima f$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg f \leqslant 3$</div>
+  <div class="opt" data-ok>$\rg f \in \{3,4\}$</div>
+  <div class="opt">$\rg f = 3$</div>
+  <div class="opt">$\rg f \geqslant 4$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

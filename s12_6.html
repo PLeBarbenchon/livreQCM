@@ -1,7 +1,119 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12.6 Convexité</title>
+<title>12.6 Convexité — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#dc2626"><div class="topnav" style="--accent:#dc2626"><span class="brand">12.6 · Convexité</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a><a class="" href="pdf/BCPSTCh12_Etude_de_fonctions.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Convexité</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch12.html">← Retour au chapitre 12</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">12.6 · Convexité</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Convexité</h1>
+<div id="quiz" data-chap="12" data-start="151">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (12.1, 12.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="151").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall x,y\in I,\ \forall t\in[0,1],\ f\big(tx+(1-t)y\big)\leqslant tf(x)+(1-t)f(y)$</div>
+  <div class="opt">$\forall x,y\in I,\ \forall t\in[0,1],\ f\big(tx+(1-t)y\big)\geqslant tf(x)+(1-t)f(y)$</div>
+  <div class="opt">$\forall x,y\in I,\ \forall t\in[0,1],\ f\big(tx+(1-t)y\big)=tf(x)+(1-t)f(y)$</div>
+  <div class="opt">$\forall x,y\in I,\ f\left(\dfrac{x+y}{2}\right)\geqslant \dfrac{f(x)+f(y)}{2}$</div>
+  <div class="sol"><p>$f$ est convexe sur $I$ si et seulement si $\boxed{\forall x,y\in I,\ \forall t\in[0,1],\ f\big(tx+(1-t)y\big)\leqslant tf(x)+(1-t)f(y)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>La courbe de $f$ est en dessous de chacune de ses cordes (entre les deux points).</div>
+  <div class="opt">La courbe de $f$ est au-dessus de chacune de ses cordes (entre les deux points).</div>
+  <div class="opt" data-ok>Si $f$ est dérivable, la courbe de $f$ est au-dessus de chacune de ses tangentes.</div>
+  <div class="opt">Si $f$ est dérivable, la courbe de $f$ est en dessous de chacune de ses tangentes.</div>
+  <div class="sol"><p>Pour $f$ convexe, $\boxed{\text{la courbe est en dessous de chacune de ses cordes}}$ ; et, si $f$ est dérivable, $\boxed{\text{la courbe est au-dessus de chacune de ses tangentes}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathcal C_1$</div>
+  <div class="opt">$\mathcal C_2$</div>
+  <div class="opt">$\mathcal C_3$</div>
+  <div class="opt" data-ok>$\mathcal C_4$</div>
+  <div class="sol"><p>$\mathcal C_1$ ($x\mapsto x^2/2$, $f''>0$) et $\mathcal C_4$ (ligne brisée en V, convexe par pentes croissantes) sont convexes sur $[-2,2]$ ; $\mathcal C_2$ ($2-x^2/2$) est concave, et $\mathcal C_3$ ($x^3/4$) change de convexité en $0$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\exp$ sur $\R$</div>
+  <div class="opt">$\ln$ sur $]0,+\infty[$</div>
+  <div class="opt" data-ok>$x\mapsto|x|$ sur $\R$</div>
+  <div class="opt">$x\mapsto x^3$ sur $\R$</div>
+  <div class="opt" data-ok>$x\mapsto\dfrac1x$ sur $]0,+\infty[$</div>
+  <div class="opt">$x\mapsto\sqrt x$ sur $\R_+$</div>
+  <div class="sol"><p>$\boxed{\exp}$ sur $\R$ ($f''=e^x>0$), $\boxed{x\mapsto|x|}$ sur $\R$ et $\boxed{x\mapsto\dfrac1x}$ sur $]0,+\infty[$ ($f''=2/x^3>0$) sont convexes ; en revanche $\ln$ est concave, $x^3$ change de convexité en $0$, et $\sqrt x$ est concave.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f\geqslant 0$ sur $I$</div>
+  <div class="opt">$f'\geqslant 0$ sur $I$</div>
+  <div class="opt" data-ok>$f''\geqslant 0$ sur $I$</div>
+  <div class="opt" data-ok>$f'$ est croissante sur $I$</div>
+  <div class="sol"><p>Pour $f$ deux fois dérivable, $f$ est convexe sur $I$ si et seulement si $\boxed{f''\geqslant 0 \text{ sur } I}$, ce qui équivaut à $\boxed{f' \text{ croissante sur } I}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$-$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span></div>
+  <div class="sol"><p>$f''(x)=6x-6=0 \iff x=1$ : $\boxed{\text{point d'inflexion en } x=1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$[a,b]$</div>
+  <div class="opt">$]a,b]$</div>
+  <div class="opt" data-ok>$[a,b[$</div>
+  <div class="opt">$]a,b[$</div>
+  <div class="sol"><p>$f(x)=xe^x$, $f'(x)=(1+x)e^x$, $f''(x)=(2+x)e^x$. $f''\geqslant 0 \iff x\geqslant -2$ : $f$ est convexe sur $\boxed{[-2,+\infty[}$ (réponse C pour le type d'intervalle, avec $a=-2$ et $b=+\infty$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall x\in\R,\ e^x\geqslant 1+x$</div>
+  <div class="opt">$\forall x\in\R,\ e^x\leqslant 1+x$</div>
+  <div class="opt">$\forall x>0,\ \ln x\geqslant x-1$</div>
+  <div class="opt" data-ok>$\forall x>0,\ \ln x\leqslant x-1$</div>
+  <div class="sol"><p>Par convexité de $\exp$ (tangente en $0$) : $\boxed{\forall x\in\R,\ e^x\geqslant 1+x}$ ; par concavité de $\ln$ (tangente en $1$) : $\boxed{\forall x>0,\ \ln x\leqslant x-1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sin x\geqslant \dfrac{2x}{\pi}$</div>
+  <div class="opt">$\sin x\leqslant \dfrac{2x}{\pi}$</div>
+  <div class="opt" data-ok>$\sin x\leqslant x$</div>
+  <div class="opt">$\sin x\geqslant x$</div>
+  <div class="sol"><p>Par concavité de $\sin$ sur $\left[0,\dfrac\pi2\right]$, la courbe est au-dessus de la corde reliant $(0,0)$ à $\left(\dfrac\pi2,1\right)$, d'équation $y=\dfrac{2x}\pi$ : $\boxed{\sin x \geqslant \dfrac{2x}{\pi}}$ ; et au-dessous de la tangente en $0$ (d'équation $y=x$) : $\boxed{\sin x \leqslant x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>La somme de deux fonctions convexes est convexe.</div>
+  <div class="opt">Le produit de deux fonctions convexes est convexe.</div>
+  <div class="opt" data-ok>$f$ est concave si et seulement si $-f$ est convexe.</div>
+  <div class="opt" data-ok>Si $f$ est convexe et $g$ convexe croissante, alors $g\circ f$ est convexe.</div>
+  <div class="sol"><p>$\boxed{\text{La somme de deux fonctions convexes est convexe}}$ ; $\boxed{f \text{ est concave si et seulement si } -f \text{ est convexe}}$ (par définition) ; $\boxed{\text{si } f \text{ est convexe et } g \text{ convexe croissante, alors } g\circ f \text{ est convexe}}$. En revanche le produit de deux fonctions convexes n'est pas convexe en général.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>constante</div>
+  <div class="opt">croissante non constante</div>
+  <div class="opt">nulle</div>
+  <div class="opt">on ne peut rien dire</div>
+  <div class="sol"><p>Une fonction convexe sur $\R$ tout entier et majorée est nécessairement $\boxed{\text{constante}}$ (sinon la convexité forcerait $f$ à tendre vers $+\infty$ d'au moins un côté).</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

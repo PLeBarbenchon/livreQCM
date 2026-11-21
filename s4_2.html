@@ -1,7 +1,245 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>4.2 Géométrie dans l'espace</title>
+<title>4.2 Géométrie dans l'espace — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#b45309"><div class="topnav" style="--accent:#b45309"><span class="brand">4.2 · Géométrie dans l'espace</span><a href="index.html">Menu</a><a href="ch4.html">Chapitre 4</a></div><main><p class="chapno">Chapitre 4 — Géométrie</p><h1>Géométrie dans l'espace</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch4.html">← Retour au chapitre 4</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">4.2 · Géométrie dans l'espace</span><a href="index.html">Menu</a><a href="ch4.html">Chapitre 4</a></div><main><p class="chapno">Chapitre 4 — Géométrie</p><h1>Géométrie dans l'espace</h1>
+<div id="quiz" data-chap="4" data-start="29">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (4.1, 4.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="29").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\overrightarrow{u}\cdot\overrightarrow{v} = 1$</div>
+  <div class="opt">$\overrightarrow{u}\cdot\overrightarrow{v} = 3$</div>
+  <div class="opt" data-ok>$\|\overrightarrow{u}\| = \sqrt{6}$</div>
+  <div class="opt">$\|\overrightarrow{v}\| = 3$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a~=~$</span><span class="case">$-$</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">}</span><span class="case">} $b=$</span><span class="case">$-$</span><span class="case">}</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>} $c=$</span><span class="case" data-ok>$-$</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">} {center}</span></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$d~=~$</span><span class="case" data-ok>$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case" data-ok>$7$</span><span class="case">$8$</span><span class="case">{center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\overrightarrow{AB}$ et $\overrightarrow{AC}$ sont orthogonaux</div>
+  <div class="opt">$ABC$ est rectangle en $A$</div>
+  <div class="opt" data-ok>$\overrightarrow{AB}\cdot\overrightarrow{AC}=1$</div>
+  <div class="opt">$A$, $B$ et $C$ sont alignés</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est une base directe</div>
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est liée</div>
+  <div class="opt" data-ok>$\det\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right) = -2$</div>
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est orthogonale</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ forme une base de $\R^3$</div>
+  <div class="opt" data-ok>$\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}$ sont coplanaires</div>
+  <div class="opt">$\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}$ sont deux à deux orthogonaux</div>
+  <div class="opt">$\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}$ sont colinéaires</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est une base indirecte</div>
+  <div class="opt" data-ok>$\overrightarrow{u} \wedge \overrightarrow{v} = \overrightarrow{w}$</div>
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est orthonormée</div>
+  <div class="opt">$\overrightarrow{w} \wedge \overrightarrow{v} = -\overrightarrow{u}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est orthonormée</div>
+  <div class="opt" data-ok>$\overrightarrow{u} \wedge \overrightarrow{v} = \overrightarrow{w}$</div>
+  <div class="opt">$\det\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right) = -1$</div>
+  <div class="opt">$\left(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}\right)$ est liée</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w})$ est orthonormée</div>
+  <div class="opt">$(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w})$ est indirecte</div>
+  <div class="opt" data-ok>$(\overrightarrow{u},\overrightarrow{v},\overrightarrow{w})$ est directe</div>
+  <div class="opt">$\left( \overrightarrow{u}\wedge \overrightarrow{v} \right) \wedge \overrightarrow{w} \neq \overrightarrow{0}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$24$</div>
+  <div class="opt">$12$</div>
+  <div class="opt">$8$</div>
+  <div class="opt">$48$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">colinéaires si $m \in \{0,1\}$</div>
+  <div class="opt">toujours orthogonaux</div>
+  <div class="opt">égaux si $m \in \{0,1\}$</div>
+  <div class="opt" data-ok>toujours linéairement indépendants</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$m~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$\neq$</span><span class="case">$=\hspace{-1mm}\vphantom{\neq}$</span><span class="case" data-ok>$>\hspace{-1mm}\vphantom{\neq}$</span><span class="case">$<\hspace{-1mm}\vphantom{\neq}$</span><span class="case">$\geqslant \hspace{-1mm}\vphantom{\neq}$</span><span class="case">$\leqslant \hspace{-1mm}\vphantom{\neq}$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$+$</span><span class="case">$-$</span></div>
+  </div>
+  <span class="lab">$\dfrac{9}{26}$</span>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">forment toujours une famille libre</div>
+  <div class="opt">ont pour déterminant $m^2+m+1$</div>
+  <div class="opt" data-ok>ont pour déterminant $-m(20m+1)$</div>
+  <div class="opt">forment une base directe si $m > 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x - y + z = 0$</div>
+  <div class="opt" data-ok>$x - y + z = 4$</div>
+  <div class="opt">$x + y - z = 1$</div>
+  <div class="opt">$x + y - z = 2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Le vecteur $\overrightarrow{n} = (2,0,-1)$ est normal au plan $\mathcal{P}$</div>
+  <div class="opt" data-ok>Les points $A(6,-4,1)$ et $B(3,-2,2)$ appartiennent à $\mathcal{P}$</div>
+  <div class="opt">Une équation cartésienne de $\mathcal{P}$ est $2x + 3y - 6z = 4$</div>
+  <div class="opt" data-ok>La droite dirigée par $(3,1,7)$ et passant par l'origine est perpendiculaire à $\mathcal{P}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Le vecteur $(1,0,-1)$ est normal à $\mathcal{P}'$</div>
+  <div class="opt" data-ok>Une équation cartésienne de $\mathcal{P}'$ est $x-2y+z+1=0$</div>
+  <div class="opt">Le point $A(2,3,2)$ appartient à $\mathcal{P}'$</div>
+  <div class="opt">La droite dirigée par $(2,1,0)$ passant par $B(1,1,1)$ coupe $\mathcal{P}'$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">un point</div>
+  <div class="opt" data-ok>une droite</div>
+  <div class="opt">un plan</div>
+  <div class="opt">l'ensemble vide</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a~=~$</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">}</span><span class="case">} {}{1.2pt} $b=$</span><span class="case">$-$</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">}</span><span class="case">} {}{1.2pt} $c=$</span><span class="case" data-ok>$-$</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">} {center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A(1,1,1)\in\mathcal{D}$</div>
+  <div class="opt" data-ok>$(1,-1,1)$ dirige $\mathcal{D}$</div>
+  <div class="opt">$(1,0,1)$ est normal à $\mathcal{D}$</div>
+  <div class="opt">$(x,y,z)\in\mathcal{D} \implies x=z=0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(-3,2,-1)$ est normal à $\Delta$</div>
+  <div class="opt">$\Delta : \begin{cases} x + y - z = 1 \\ x + z = 0 \end{cases}$</div>
+  <div class="opt">$(1,0,-3)$ est un vecteur directeur de $\Delta$</div>
+  <div class="opt" data-ok>$\Delta : \begin{cases} x -3z + 5 = 0 \\ y + 2z - 3 = 0 \end{cases}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Le point $(-2,3,-2)$ appartient à la droite $\Delta'$</div>
+  <div class="opt">La droite $\Delta'$ n'intersecte pas le plan d'équation $3x-2y+z=0$</div>
+  <div class="opt" data-ok>La droite $\Delta'$ est orthogonale au plan d'équation cartésienne $3x-2y+z=0$</div>
+  <div class="opt">La droite passant par l'origine et dirigée par $(1,1,1)$ est perpendiculaire à $\Delta'$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a~=~$</span><span class="case">$-$</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">} {}{1.2pt} $b=$</span><span class="case">$-$</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">} {}{1.2pt} $c=$</span><span class="case">$-$</span><span class="case">}</span><span class="case">}</span><span class="case" data-ok>}</span><span class="case">} {center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$\sqrt{2}$</div>
+  <div class="opt">$\sqrt{3}$</div>
+  <div class="opt">$2$</div>
+  <div class="opt">$3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left( \dfrac{1}{2}, \dfrac{1}{4}, \dfrac{-1}{4} \right)$</div>
+  <div class="opt">$\left( \dfrac{3}{2}, \dfrac{3}{4}, \dfrac{-5}{4} \right)$</div>
+  <div class="opt" data-ok>$\left( \dfrac{3}{2}, \dfrac{1}{4}, -\dfrac{3}{4} \right)$</div>
+  <div class="opt">$\left( \dfrac{3}{2}, \dfrac{1}{2}, -1 \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$\sqrt{2}$</div>
+  <div class="opt">$\sqrt{3}$</div>
+  <div class="opt">$2$</div>
+  <div class="opt" data-ok>$3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x^2+y^2+z^2 + x - y = 25$</div>
+  <div class="opt" data-ok>$x^2+y^2+z^2 + 2x - 2y - 23 = 0$</div>
+  <div class="opt">$(x-1)^2+(y+1)^2+z^2 = 5$</div>
+  <div class="opt">$x^2+y^2+z^2 - 2x + 2y = 23$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\Omega'(4,-2,2)$ et $R' = 3$</div>
+  <div class="opt" data-ok>$\Omega'(2,-1,1)$ et $R' = 3$</div>
+  <div class="opt">$\Omega'(2,-1,1)$ et $R' = 9$</div>
+  <div class="opt">$\Omega'(-2,1,-1)$ et $R' = 3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>un cercle</div>
+  <div class="opt">une sphère</div>
+  <div class="opt">un singleton</div>
+  <div class="opt">l'ensemble vide</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathcal{S}\cap \Pi$ est un cercle</div>
+  <div class="opt">$\Pi$ est tangent à $\mathcal{S}$</div>
+  <div class="opt">$\Pi\cap\mathcal{S} = \emptyset$</div>
+  <div class="opt" data-ok>$\Omega$ appartient à $\Pi$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{S}' \cap \Pi = \emptyset$</div>
+  <div class="opt">$\Omega'$ appartient à $\Pi$</div>
+  <div class="opt" data-ok>$\Pi$ est tangent à $\mathcal{S}'$</div>
+  <div class="opt">$\mathcal{S}' \cap \Pi$ est un cercle de rayon $1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x + 2y + 2z = 9$</div>
+  <div class="opt">$x + 2y + 2z = 0$</div>
+  <div class="opt">$x + 2y + 2z = 3$</div>
+  <div class="opt">$x + 2y + 2z = 18$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

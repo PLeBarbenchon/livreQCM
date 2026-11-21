@@ -1,7 +1,290 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12.7 Développements limités et développements asymptotiques</title>
+<title>12.7 Développements limités et développements asymptotiques — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#dc2626"><div class="topnav" style="--accent:#dc2626"><span class="brand">12.7 · Développements limités et développements asymptotiques</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a><a class="" href="pdf/BCPSTCh12_Etude_de_fonctions.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Développements limités et développements asymptotiques</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch12.html">← Retour au chapitre 12</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">12.7 · Développements limités et développements asymptotiques</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Développements limités et développements asymptotiques</h1>
+<div id="quiz" data-chap="12" data-start="162">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (12.1, 12.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="162").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f(x)\underset{x\to a}{=}o\big(g(x)\big)$ si et seulement si $\dfrac{f(x)}{g(x)}\xrightarrow[x\to a]{}0$</div>
+  <div class="opt">$f(x)\underset{x\to a}{=}o\big(g(x)\big)$ si et seulement si $f(x)-g(x)\xrightarrow[x\to a]{}0$</div>
+  <div class="opt" data-ok>$f(x)\underset{x\to a}{\sim}g(x)$ si et seulement si $\dfrac{f(x)}{g(x)}\xrightarrow[x\to a]{}1$</div>
+  <div class="opt">$f(x)\underset{x\to a}{\sim}g(x)$ si et seulement si $f(x)-g(x)\xrightarrow[x\to a]{}0$</div>
+  <div class="sol"><p>$\boxed{f(x)\underset{x\to a}{=}o\big(g(x)\big) \iff \dfrac{f(x)}{g(x)}\xrightarrow[x\to a]{}0}$ ; $\boxed{f(x)\underset{x\to a}{\sim}g(x) \iff \dfrac{f(x)}{g(x)}\xrightarrow[x\to a]{}1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x=o(x^2)$</div>
+  <div class="opt">$x^2=o(x)$</div>
+  <div class="opt" data-ok>$\ln x=o(x)$</div>
+  <div class="opt">$e^x=o(x^{100})$</div>
+  <div class="opt" data-ok>$x^{100}=o(e^x)$</div>
+  <div class="opt">$x+1=o(x)$</div>
+  <div class="sol"><p>$\boxed{x=o(x^2)}$, $\boxed{\ln x=o(x)}$ et $\boxed{x^{100}=o(e^x)}$ (croissances comparées) ; les relations inverses $x^2=o(x)$, $e^x=o(x^{100})$ sont fausses, de même que $x+1=o(x)$ (le quotient tend vers $1$, pas $0$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x^2=o(x)$</div>
+  <div class="opt">$x=o(x^2)$</div>
+  <div class="opt" data-ok>$x^3=o(x^2)$</div>
+  <div class="opt">$x=o(x)$</div>
+  <div class="opt">$1=o(x)$</div>
+  <div class="opt" data-ok>$x=o(1)$</div>
+  <div class="sol"><p>$\boxed{x^2=o(x)}$, $\boxed{x^3=o(x^2)}$ et $\boxed{x=o(1)}$ ; en revanche $x=o(x^2)$ et $1=o(x)$ sont fausses en $0$ (quotients qui explosent), et $x=o(x)$ est faux (quotient $=1$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sin x=O(1)$</div>
+  <div class="opt" data-ok>$x\sin x=O(x)$</div>
+  <div class="opt">$x=O(\sin x)$</div>
+  <div class="opt">$x^2=O(x)$</div>
+  <div class="sol"><p>$\boxed{\sin x=O(1)}$ (bornée) et $\boxed{x\sin x=O(x)}$ (car $|\sin x|\leqslant 1$) ; en revanche $x=O(\sin x)$ est faux ($\sin$ est bornée, pas $x$), et $x^2=O(x)$ est faux.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sin x\sim x$</div>
+  <div class="opt" data-ok>$\ln(1+x)\sim x$</div>
+  <div class="opt">$1-\cos x\sim x$</div>
+  <div class="opt" data-ok>$1-\cos x\sim\dfrac{x^2}2$</div>
+  <div class="opt">$e^x\sim x$</div>
+  <div class="opt">$1-\cos x\sim -\dfrac{x^2}2$</div>
+  <div class="sol"><p>$\boxed{\sin x\sim x}$, $\boxed{\ln(1+x)\sim x}$ et $\boxed{1-\cos x\sim\dfrac{x^2}2}$ ; en revanche $1-\cos x\sim x$ et $1-\cos x\sim-\dfrac{x^2}2$ sont faux (mauvais ordre ou mauvais signe), et $e^x\sim x$ est faux (car $e^x\to1\neq0$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f_1f_2\underset{a}{\sim}g_1g_2$</div>
+  <div class="opt" data-ok>$\dfrac{f_1}{f_2}\underset{a}{\sim}\dfrac{g_1}{g_2}$</div>
+  <div class="opt">$f_1+f_2\underset{a}{\sim}g_1+g_2$</div>
+  <div class="opt">$e^{f_1}\underset{a}{\sim}e^{g_1}$</div>
+  <div class="opt" data-ok>$f_1^{\,3}\underset{a}{\sim}g_1^{\,3}$</div>
+  <div class="opt" data-ok>$\dfrac{1}{f_1}\underset{a}{\sim}\dfrac{1}{g_1}$</div>
+  <div class="sol"><p>Pour $f_1\sim g_1$ et $f_2\sim g_2$ (fonctions strictement positives) : $\boxed{f_1f_2\sim g_1g_2}$, $\boxed{\dfrac{f_1}{f_2}\sim\dfrac{g_1}{g_2}}$, $\boxed{f_1^{\,3}\sim g_1^{\,3}}$ et $\boxed{\dfrac1{f_1}\sim\dfrac1{g_1}}$ (produits, quotients, puissances et inverses se comportent bien) ; en revanche la somme de deux équivalents n'est pas toujours équivalente à la somme (il peut y avoir compensation), et $e^{f_1}\sim e^{g_1}$ est faux en général (il faudrait $f_1-g_1\to0$, pas seulement $f_1\sim g_1$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x^2$</div>
+  <div class="opt">$3x$</div>
+  <div class="opt" data-ok>$\ln x$</div>
+  <div class="opt">$x^2+3x$</div>
+  <div class="sol"><p>En $0^+$, $\ln x\to-\infty$ domine $x^2$ et $3x$ (qui tendent vers $0$) : $\boxed{x^2+3x+\ln x \underset{0^+}{\sim} \ln x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x^2$</div>
+  <div class="opt">$3x$</div>
+  <div class="opt">$\ln x$</div>
+  <div class="opt">$x^3$</div>
+  <div class="sol"><p>En $+\infty$, $x^2$ domine $3x$ et $\ln x$ : $\boxed{x^2+3x+\ln x \underset{+\infty}{\sim} x^2}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$\Bigg (\displaystyle \sum_{k = 0}^n$</span><span class="case" data-ok>$f^{(k)}(0)$</span></div>
+  <div class="row"><span class="case">$\times$</span><span class="case" data-ok>$\frac{1}{k!}\vphantom{f^{(k)}(0)}$</span></div>
+  <div class="row"><span class="case">$\times x^k \Bigg ) + $</span><span class="case">$o(x^{n+1})\vphantom{f^{(k)}(0)}$</span></div>
+  <div class="row"><span class="case" data-ok>{center}</span></div>
+  <div class="sol"><p>$\boxed{f(x)\underset{x\to0}{=}\displaystyle\sum_{k=0}^n \dfrac{f^{(k)}(0)}{k!}x^k+o(x^n)}$. <em>Remarque :</em> dans le fichier source, les six cases de cette grille (les deux choix de chaque colonne) sont toutes marquées <code> caseM</code>, sans qu'aucune ne soit cochée <code> caseB</code> — il semble y avoir un oubli dans le marquage de cette question, à vérifier.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>les coefficients des puissances impaires sont nuls</div>
+  <div class="opt">les coefficients des puissances paires sont nuls</div>
+  <div class="opt">tous les coefficients sont positifs</div>
+  <div class="opt">on ne peut rien dire</div>
+  <div class="sol"><p>Si $f$ est paire, $\boxed{\text{les coefficients des puissances impaires de son DL en } 0 \text{ sont nuls}}$.</p></div>
+</div>
+
+<div class="q" data-type="figure"></div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1+\alpha x+\alpha^2x^2+o(x^2)$</div>
+  <div class="opt">$1+\alpha x+\dfrac{\alpha^2}{2}x^2+o(x^2)$</div>
+  <div class="opt" data-ok>$1+\alpha x+\dfrac{\alpha(\alpha-1)}{2}x^2+o(x^2)$</div>
+  <div class="opt">$1+\alpha x+\alpha(\alpha-1)x^2+o(x^2)$</div>
+  <div class="sol"><p>$\boxed{(1+x)^\alpha \underset{x\to0}{=} 1+\alpha x+\dfrac{\alpha(\alpha-1)}{2}x^2+o(x^2)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1+\dfrac x2+\dfrac{x^2}{8}+o(x^2)$</div>
+  <div class="opt" data-ok>$1+\dfrac x2-\dfrac{x^2}{8}+o(x^2)$</div>
+  <div class="opt">$1+\dfrac x2-\dfrac{x^2}{4}+o(x^2)$</div>
+  <div class="opt">$1-\dfrac x2+\dfrac{3x^2}{8}+o(x^2)$</div>
+  <div class="sol"><p>Avec $\alpha=\dfrac12$ : $\boxed{\sqrt{1+x} \underset{x\to0}{=} 1+\dfrac x2-\dfrac{x^2}{8}+o(x^2)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x+x^2+o(x^3)$</div>
+  <div class="opt">$x+x^2+\dfrac{x^3}{2}+o(x^3)$</div>
+  <div class="opt" data-ok>$x+x^2+\dfrac{x^3}{3}+o(x^3)$</div>
+  <div class="opt">$x+x^2-\dfrac{x^3}{6}+o(x^3)$</div>
+  <div class="sol"><p>Avec $e^x=1+x+\dfrac{x^2}2+\dfrac{x^3}6+o(x^3)$ et $\sin x=x-\dfrac{x^3}6+o(x^3)$, le produit donne $x+x^2+\left(\dfrac12-\dfrac16\right)x^3+o(x^3)$, soit $\boxed{e^x\sin x \underset{x\to0}{=} x+x^2+\dfrac{x^3}{3}+o(x^3)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1-\dfrac{x^2}{2}+\dfrac{x^4}{24}+o(x^4)$</div>
+  <div class="opt">$1+\dfrac{x^2}{2}+\dfrac{x^4}{24}+o(x^4)$</div>
+  <div class="opt" data-ok>$1+\dfrac{x^2}{2}+\dfrac{5x^4}{24}+o(x^4)$</div>
+  <div class="opt">$1+\dfrac{x^2}{2}+\dfrac{x^4}{4}+o(x^4)$</div>
+  <div class="sol"><p>En inversant le DL de $\cos x=1-\dfrac{x^2}2+\dfrac{x^4}{24}+o(x^4)$ : $\boxed{\dfrac{1}{\cos x} \underset{x\to0}{=} 1+\dfrac{x^2}{2}+\dfrac{5x^4}{24}+o(x^4)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\dfrac{x^2}{2}+\dfrac{x^4}{24}+o(x^4)$</div>
+  <div class="opt" data-ok>$-\dfrac{x^2}{2}-\dfrac{x^4}{12}+o(x^4)$</div>
+  <div class="opt">$-\dfrac{x^2}{2}-\dfrac{x^4}{8}+o(x^4)$</div>
+  <div class="opt">$\dfrac{x^2}{2}-\dfrac{x^4}{8}+o(x^4)$</div>
+  <div class="sol"><p>En composant avec $\ln(1+u)=u-\dfrac{u^2}2+o(u^2)$ où $u=-\dfrac{x^2}2+\dfrac{x^4}{24}+o(x^4)$ : $\boxed{\ln(\cos x) \underset{x\to0}{=} -\dfrac{x^2}{2}-\dfrac{x^4}{12}+o(x^4)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$1+x+\dfrac{x^2}{2}+o(x^3)$</div>
+  <div class="opt">$1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}+o(x^3)$</div>
+  <div class="opt">$1+x+\dfrac{x^2}{2}-\dfrac{x^3}{6}+o(x^3)$</div>
+  <div class="opt">$1+x-\dfrac{x^3}{6}+o(x^3)$</div>
+  <div class="sol"><p>Avec $\sin x=x-\dfrac{x^3}6+o(x^3)$ et $e^u=1+u+\dfrac{u^2}2+\dfrac{u^3}6+o(u^3)$ pour $u=\sin x$, les termes en $x^3$ se compensent exactement : $\boxed{e^{\sin x} \underset{x\to0}{=} 1+x+\dfrac{x^2}{2}+o(x^3)}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>$\dfrac{1}{(1-x)^2} = \displaystyle\sum_{n\geqslant 0}(n+1)x^n$, donc le coefficient de $x^4$ vaut $\boxed{5}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1+x+x^2+o(x^2)$</div>
+  <div class="opt">$3+x+2x^2+o(x^2)$</div>
+  <div class="opt" data-ok>$3+x+x^2+o(x^2)$</div>
+  <div class="opt">$2+o(x)$</div>
+  <div class="sol"><p>En primitivant terme à terme (et en ajoutant $f(0)$) : $\boxed{f(x) \underset{x\to0}{=} 3+x+x^2+o(x^2)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt" data-ok>$-\dfrac16$</div>
+  <div class="opt">$0$</div>
+  <div class="opt">$\dfrac16$</div>
+  <div class="opt">$\dfrac13$</div>
+  <div class="sol"><p>$\sin x-x \underset{x\to0}{=} -\dfrac{x^3}{6}+o(x^3)$, donc $\boxed{\displaystyle\lim_{x\to0}\frac{\sin x-x}{x^3} = -\frac16}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$\dfrac12$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$2$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="sol"><p>$e^x-1-x \underset{x\to0}{=} \dfrac{x^2}{2}+o(x^2)$, donc $\boxed{\displaystyle\lim_{x\to0}\frac{e^x-1-x}{x^2} = \frac12}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>$\tan x-x \underset{x\to0}{=}\dfrac{x^3}{3}+o(x^3)$ et $x-\sin x \underset{x\to0}{=}\dfrac{x^3}{6}+o(x^3)$, d'où $\boxed{\displaystyle\lim_{x\to0}\frac{\tan x-x}{x-\sin x} = \frac{1/3}{1/6} = 2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$\dfrac16$</div>
+  <div class="opt">$6$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>$\dfrac{1}{\sin x} \underset{x\to0}{=} \dfrac1x+\dfrac x6+o(x)$, donc $\dfrac1x-\dfrac{1}{\sin x} \underset{x\to0}{=} -\dfrac x6+o(x) \to \boxed{0}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$e^{-2}$</div>
+  <div class="opt" data-ok>$e^{-\frac12}$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$e^{\frac12}$</div>
+  <div class="opt">$e^{2}$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="sol"><p>$x^2\ln\!\left(1+\dfrac1x\right) \underset{x\to+\infty}{=} x-\dfrac12+o(1)$, donc $\left(1+\dfrac1x\right)^{x^2} \underset{x\to+\infty}{\sim} e^{x-1/2}$, et $\boxed{\displaystyle\lim_{x\to+\infty}\left(1+\frac1x\right)^{x^2}e^{-x} = e^{-1/2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$\dfrac{x^2}{2}$</div>
+  <div class="opt">$-\dfrac{x^2}{2}$</div>
+  <div class="opt" data-ok>$\dfrac{x^4}{24}$</div>
+  <div class="opt">$-\dfrac{x^4}{24}$</div>
+  <div class="sol"><p>$\cos x \underset{x\to0}{=} 1-\dfrac{x^2}2+\dfrac{x^4}{24}+o(x^4)$, donc $\boxed{\cos x-1+\dfrac{x^2}{2} \underset{x\to0}{\sim} \dfrac{x^4}{24}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">La droite d'équation $y=x$ est asymptote à la courbe de $f$.</div>
+  <div class="opt" data-ok>La droite d'équation $y=x+\dfrac12$ est asymptote à la courbe de $f$.</div>
+  <div class="opt">La courbe de $f$ est au-dessus de son asymptote.</div>
+  <div class="opt" data-ok>La courbe de $f$ est en dessous de son asymptote.</div>
+  <div class="sol"><p>$\sqrt{x^2+x} = x\sqrt{1+\dfrac1x} \underset{x\to+\infty}{=} x+\dfrac12-\dfrac{1}{8x}+o\!\left(\dfrac1x\right)$ : $\boxed{\text{la droite } y=x+\dfrac12 \text{ est asymptote}}$, et comme le reste $-\dfrac{1}{8x}$ est négatif, $\boxed{\text{la courbe est en dessous de son asymptote}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">au-dessus de sa tangente</div>
+  <div class="opt" data-ok>en dessous de sa tangente</div>
+  <div class="opt">traversée par sa tangente</div>
+  <div class="opt">n'a pas de tangente</div>
+  <div class="sol"><p>La tangente en $0$ est $y=x$, et $\ln(1+x)-x \underset{x\to0}{=} -\dfrac{x^2}{2}+o(x^2) \leqslant 0$ : $\boxed{\text{la courbe est en dessous de sa tangente}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">au-dessus de sa tangente</div>
+  <div class="opt">en dessous de sa tangente</div>
+  <div class="opt" data-ok>traversée par sa tangente</div>
+  <div class="opt">n'a pas de tangente</div>
+  <div class="sol"><p>La tangente en $0$ est $y=x$, et $\sin x-x \underset{x\to0}{=} -\dfrac{x^3}{6}+o(x^3)$ change de signe en $0$ (impaire) : $\boxed{\text{la courbe traverse sa tangente}}$ (point d'inflexion).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto e^x$</div>
+  <div class="opt" data-ok>$x\mapsto \dfrac{e^x}{2}$</div>
+  <div class="opt">$x\mapsto x^2$</div>
+  <div class="opt">$x\mapsto 1$</div>
+  <div class="sol"><p>L'absence de terme en $x$ donne $\boxed{f'(0)=0}$ ; le coefficient de $x^2$ vaut $\dfrac{f''(0)}{2}=-3$, donc $\boxed{f''(0)=-6}$ ; comme $f'(0)=0$ et $f''(0)<0$, $\boxed{f \text{ admet un maximum local en } 0}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f'(0)=0$</div>
+  <div class="opt">$f''(0)=-3$</div>
+  <div class="opt" data-ok>$f''(0)=-6$</div>
+  <div class="opt" data-ok>$f$ admet un maximum local en $0$</div>
+  <div class="sol"><p>En posant $x_n=n\pi+\dfrac\pi2-\varepsilon_n$ avec $\varepsilon_n\to0$, $\tan(x_n)=\cot(\varepsilon_n)\sim\dfrac1{\varepsilon_n}$, et l'équation $\tan(x_n)=x_n\sim n\pi$ donne $\varepsilon_n\sim\dfrac{1}{n\pi}$ : $\boxed{x_n \underset{n\to+\infty}{=} n\pi+\dfrac\pi2-\dfrac{1}{n\pi}+o\!\left(\dfrac1n\right)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n\pi+o(1)$</div>
+  <div class="opt">$n\pi+\dfrac\pi2+\dfrac{1}{n\pi}+o\left(\dfrac1n\right)$</div>
+  <div class="opt" data-ok>$n\pi+\dfrac\pi2-\dfrac{1}{n\pi}+o\left(\dfrac1n\right)$</div>
+  <div class="opt">$n\pi-\dfrac\pi2+\dfrac{1}{n\pi}+o\left(\dfrac1n\right)$</div>
+  <div class="sol"><p>En posant $x=g(y)=y-\delta$ avec $\delta=o(y)$, l'équation $x+\ln x=y$ donne $\ln(y-\delta)=\delta$, soit $\delta\sim\ln y$ : $\boxed{g(y) \underset{y\to+\infty}{=} y-\ln y+o(1)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$y+o(1)$</div>
+  <div class="opt" data-ok>$y-\ln y+o(1)$</div>
+  <div class="opt">$y+\ln y+o(1)$</div>
+  <div class="opt">$e^y+o(1)$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

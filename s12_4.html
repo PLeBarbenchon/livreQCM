@@ -4,5 +4,280 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#dc2626"><div class="topnav" style="--accent:#dc2626"><span class="brand">12.4 · Calcul de dérivées</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a><a class="" href="pdf/BCPSTCh12_Etude_de_fonctions.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Calcul de dérivées</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 12.93 à 12.122 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#dc2626"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"mcq","c":[["\\((uv)'=u'v+uv'\\vphantom{\\left(\\dfrac1v\\right)}\\)",1,"h"],["\\((uv)'=u'v'\\vphantom{\\left(\\dfrac1v\\right)}\\)",0,"h"],["\\(\\left(\\dfrac uv\\right)'=\\dfrac{u'v-uv'}{v^2}\\vphantom{\\left(\\dfrac1v\\right)}\\)",1,"h"],["\\(\\left(\\dfrac uv\\right)'=\\dfrac{u'v+uv'}{v^2}\\vphantom{\\left(\\dfrac1v\\right)}\\)",0,"h"],["\\(\\left(\\dfrac1v\\right)'=-\\dfrac{v'}{v^2}\\vphantom{\\left(\\dfrac1v\\right)}\\)",1,"h"],["\\(\\left(\\dfrac1v\\right)'=\\dfrac{1}{v'}\\vphantom{\\left(\\dfrac1v\\right)}\\)",0,"h"]]},{"t":"mcq","c":[["\\(f'(g(x))\\)",1,"h"],["\\(f(g'(x))\\)",0,"h"],["\\(g'(f(x))\\)",0,"h"],["\\(g(f'(x))\\)",0,"h"],["\\(g'(x)\\)",1,"h"],["\\(f'(x)\\)",0,"h"],["\\(g(x)\\)",0,"h"],["\\(f(x)\\)",0,"h"],["\\(f'(g'(x))\\)",0,"h"],["\\(g'(f'(x))\\)",0,"h"],["\\(f(g(x))\\)",0,"h"],["\\(g(f(x))\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto e^{x^2}\\)",0,"h"],["\\(x\\mapsto e^{2x}\\)",0,"h"],["\\(x\\mapsto 2x\\,e^{x^2}\\)",1,"h"],["\\(x\\mapsto x^2e^{x^2-1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto\\cos(3x)\\)",0,"h"],["\\(x\\mapsto3\\cos(3x)\\)",1,"h"],["\\(x\\mapsto3\\sin(3x)\\)",0,"h"],["\\(x\\mapsto-3\\cos(3x)\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto\\dfrac{1}{|x|}\\)",0,"h"],["\\(x\\mapsto\\dfrac1x\\)",1,"h"],["\\(x\\mapsto-\\dfrac1x\\)",0,"h"],["\\(x\\mapsto\\dfrac{|x|}{x}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto\\dfrac{1}{2\\sqrt{1+x^2}}\\)",0,"h"],["\\(x\\mapsto\\dfrac{x}{\\sqrt{1+x^2}}\\)",1,"h"],["\\(x\\mapsto\\dfrac{2x}{\\sqrt{1+x^2}}\\)",0,"h"],["\\(x\\mapsto2x\\sqrt{1+x^2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto x\\times x^{x-1}\\)",0,"h"],["\\(x\\mapsto x^x\\ln x\\)",0,"h"],["\\(x\\mapsto x^x\\)",0,"h"],["\\(x\\mapsto (1+\\ln x)\\,x^x\\)",1,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto2^x\\)",0,"h"],["\\(x\\mapsto x\\,2^{x-1}\\)",0,"h"],["\\(x\\mapsto 2^x\\ln 2\\)",1,"h"],["\\(x\\mapsto\\dfrac{2^x}{\\ln 2}\\)",0,"h"]]},{"t":"grid","parts":[{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":1}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"mcq","c":[["\\(x\\mapsto\\dfrac{1}{\\cos x}\\)",0,"h"],["\\(x\\mapsto-\\dfrac{1}{\\sin x}\\)",0,"h"],["\\(x\\mapsto\\tan x\\vphantom{-\\dfrac{1}{\\cos}}\\)",0,"h"],["\\(x\\mapsto-\\tan x\\vphantom{-\\dfrac{1}{\\cos}}\\)",1,"h"],["\\(x\\mapsto\\dfrac{1}{\\tan x}\\)",0,"h"],["\\(x\\mapsto-\\dfrac{1}{\\tan x}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto 5(2x+1)^4\\)",0,"h"],["\\(x\\mapsto 10(2x+1)^4\\)",1,"h"],["\\(x\\mapsto 2(2x+1)^5\\)",0,"h"],["\\(x\\mapsto (2x+1)^4\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto \\dfrac1x-1\\)",0,"h"],["\\(x\\mapsto \\ln x\\)",1,"h"],["\\(x\\mapsto \\ln x-1\\)",0,"h"],["\\(x\\mapsto \\ln x+1\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto 2x\\vphantom{\\dfrac{x^2}{x^2}}\\)",0,"h"],["\\(x\\mapsto \\dfrac{x^2-2x-1}{(x-1)^2}\\)",1,"h"],["\\(x\\mapsto \\dfrac{3x^2-2x+1}{(x-1)^2}\\)",0,"h"],["\\(x\\mapsto \\dfrac{x^2-2x-1}{x-1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto 2\\cos x\\)",0,"h"],["\\(x\\mapsto -2\\sin x\\cos x\\)",1,"h"],["\\(x\\mapsto -\\sin(2x)\\)",1,"h"],["\\(x\\mapsto 2\\sin x\\cos x\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto \\dfrac{1}{e^x}\\)",0,"h"],["\\(x\\mapsto -\\dfrac{1}{(1+e^x)^2}\\)",0,"h"],["\\(x\\mapsto -\\dfrac{e^x}{(1+e^x)^2}\\)",1,"h"],["\\(x\\mapsto \\dfrac{e^x}{(1+e^x)^2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto e^{\\sin x}\\)",0,"h"],["\\(x\\mapsto e^{\\cos x}\\)",0,"h"],["\\(x\\mapsto \\cos x\\,e^{\\sin x}\\)",1,"h"],["\\(x\\mapsto \\sin x\\,e^{\\sin x-1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto \\dfrac{1}{x+\\sqrt{x^2+1}}\\)",0,"h"],["\\(x\\mapsto \\dfrac{1}{\\sqrt{x^2+1}}\\)",1,"h"],["\\(x\\mapsto \\dfrac{x}{\\sqrt{x^2+1}}\\)",0,"h"],["\\(x\\mapsto \\sqrt{x^2+1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\sh'=\\ch\\)",1,"h"],["\\(\\sh'=-\\ch\\)",0,"h"],["\\(\\ch'=\\sh\\)",1,"h"],["\\(\\ch'=-\\sh\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto \\dfrac{1}{1+4x^2}\\)",0,"h"],["\\(x\\mapsto \\dfrac{2}{1+4x^2}\\)",1,"h"],["\\(x\\mapsto \\dfrac{1}{1+2x^2}\\)",0,"h"],["\\(x\\mapsto \\dfrac{2}{1+2x^2}\\)",0,"h"],["\\(x\\mapsto \\dfrac{1}{1+x^2}\\)",0,"h"],["\\(x\\mapsto \\dfrac{2}{1+x^2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{1}{u}\\)",0,"h"],["\\(\\dfrac{1}{u'}\\)",0,"h"],["\\(\\dfrac{u'}{u}\\)",1,"h"],["\\(u'\\ln u\\)",0,"h"],["\\(\\ln(u')\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n!}{x^{n+1}}\\)",0,"h"],["\\(\\dfrac{(-1)^nn!}{x^n}\\)",0,"h"],["\\(\\dfrac{(-1)^nn!}{x^{n+1}}\\)",1,"h"],["\\(\\dfrac{(-1)^{n}}{x^{n+1}}\\)",0,"h"]]},{"t":"mcq","c":[["\\((fg)^{(n)}=f^{(n)}g^{(n)}\\)",0,"h"],["\\((fg)^{(n)}=\\displaystyle\\sum_{k=0}^n f^{(k)}g^{(n-k)}\\)",0,"h"],["\\((fg)^{(n)}=\\displaystyle\\sum_{k=0}^n \\binom nk f^{(k)}g^{(n-k)}\\)",1,"h"],["\\((fg)^{(n)}=\\displaystyle\\sum_{k=0}^n \\binom nk f^{(k)}g^{(k)}\\)",0,"h"]]},{"t":"grid","parts":[{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":1}},{"lit":"← dizaine","raw":1},{"br":1},{"check":{"label":"\\(0\\)","ok":1}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"lit":"← unité","raw":1}]},{"t":"mcq","c":[["\\((-1)^n\\sin x\\)",0,"h"],["\\(\\sin\\left(x+\\dfrac{n\\pi}{2}\\right)\\)",1,"h"],["\\(\\sin(x+n\\pi)\\)",0,"h"],["\\(\\cos\\left(x+\\dfrac{n\\pi}{2}\\right)\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto e^{-x}\\)",0,"h"],["\\(x\\mapsto -e^{-x}\\)",0,"h"],["\\(x\\mapsto (-1)^ne^{-x}\\)",1,"h"],["\\(x\\mapsto (-1)^{n+1}e^{-x}\\)",0,"h"]]},{"t":"mcq","c":[["\\(x\\mapsto\\dfrac{(-1)^nn!}{x^{n+1}}\\)",0,"h"],["\\(x\\mapsto\\dfrac{(-1)^n(n-1)!}{x^n}\\)",0,"h"],["\\(x\\mapsto\\dfrac{(n-1)!}{x^n}\\)",0,"h"],["\\(x\\mapsto\\dfrac{(-1)^{n-1}(n-1)!}{x^n}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\varphi'=u'+iv'\\)",1,"h"],["\\(\\varphi'=u'v'\\)",0,"h"],["\\(\\left(e^{\\varphi}\\right)'=\\varphi'e^{\\varphi}\\)",1,"h"],["\\(|\\varphi|'=|\\varphi'|\\)",0,"h"]]},{"t":"mcq","c":[["\\(t\\mapsto e^{(2+i)t}\\)",0,"h"],["\\(t\\mapsto 2e^{(2+i)t}\\)",0,"h"],["\\(t\\mapsto ie^{(2+i)t}\\)",0,"h"],["\\(t\\mapsto(2+i)e^{(2+i)t}\\)",1,"h"]]},{"t":"mcq","c":[["\\(t\\mapsto e^{it}\\)",0,"h"],["\\(t\\mapsto ie^{it}\\)",1,"h"],["\\(t\\mapsto -ie^{it}\\)",0,"h"],["\\(t\\mapsto te^{it}\\)",0,"h"]]},{"t":"mcq","c":[["\\(t\\mapsto\\dfrac{1}{(t+i)^2}\\)",0,"h"],["\\(t\\mapsto-\\dfrac{1}{(t+i)^2}\\)",1,"h"],["\\(t\\mapsto-\\dfrac{i}{(t+i)^2}\\)",0,"h"],["\\(t\\mapsto\\ln(t+i)\\)",0,"h"]]}];window.QUIZ_START=93;window.QUIZ_CHAP=12;window.QUIZ_SOL=["<p>\\(\\boxed{(uv)'=u'v+uv'}\\), \\(\\boxed{\\left(\\dfrac uv\\right)'=\\dfrac{u'v-uv'}{v^2}}\\) et \\(\\boxed{\\left(\\dfrac1v\\right)'=-\\dfrac{v'}{v^2}}\\).</p>","<p>\\(\\boxed{(f\\circ g)'(x) = f'(g(x))\\times g'(x)}\\).</p>","<p>\\(\\boxed{\\left(e^{x^2}\\right)' = 2x\\,e^{x^2}}\\).</p>","<p>\\(\\boxed{\\sin(3x)' = 3\\cos(3x)}\\).</p>","<p>\\(\\boxed{\\left(\\ln|x|\\right)' = \\dfrac1x}\\) sur \\(\\R^*\\).</p>","<p>\\(\\boxed{\\left(\\sqrt{1+x^2}\\right)' = \\dfrac{x}{\\sqrt{1+x^2}}}\\).</p>","<p>Avec \\(x^x=e^{x\\ln x}\\), \\((x^x)' = (\\ln x+1)e^{x\\ln x} = \\boxed{(1+\\ln x)\\,x^x}\\).</p>","<p>Avec \\(2^x=e^{x\\ln2}\\), \\(\\boxed{\\left(2^x\\right)' = 2^x\\ln 2}\\).</p>","<p>\\(\\left(\\ln(\\cos x)\\right)' = \\dfrac{-\\sin x}{\\cos x} = \\boxed{-\\tan x}\\).</p>","<p>\\(f'(x)=3x^2-2\\), donc \\(\\boxed{f'(2) = 3\\times4-2 = 10}\\).</p>","<p>\\(\\left((2x+1)^5\\right)' = 5\\times2\\times(2x+1)^4 = \\boxed{10(2x+1)^4}\\).</p>","<p>\\(\\left(x\\ln x-x\\right)' = \\ln x+1-1 = \\boxed{\\ln x}\\).</p>","<p>\\(\\left(\\dfrac{x^2+1}{x-1}\\right)' = \\dfrac{2x(x-1)-(x^2+1)}{(x-1)^2} = \\boxed{\\dfrac{x^2-2x-1}{(x-1)^2}}\\).</p>","<p>\\(\\left(\\cos^2x\\right)' = 2\\cos x\\times(-\\sin x) = \\boxed{-2\\sin x\\cos x} = \\boxed{-\\sin(2x)}\\).</p>","<p>\\(\\left(\\dfrac{1}{1+e^x}\\right)' = -\\dfrac{e^x}{(1+e^x)^2}\\), d'où \\(\\boxed{-\\dfrac{e^x}{(1+e^x)^2}}\\).</p>","<p>\\(\\boxed{\\left(e^{\\sin x}\\right)' = \\cos x\\,e^{\\sin x}}\\).</p>","<p>\\(\\left(\\ln\\!\\left(x+\\sqrt{x^2+1}\\right)\\right)' = \\dfrac{1+\\dfrac{x}{\\sqrt{x^2+1}}}{x+\\sqrt{x^2+1}} = \\dfrac{\\sqrt{x^2+1}+x}{\\sqrt{x^2+1}\\left(x+\\sqrt{x^2+1}\\right)} = \\boxed{\\dfrac{1}{\\sqrt{x^2+1}}}\\).</p>","<p>\\(\\boxed{\\sh'=\\ch}\\) et \\(\\boxed{\\ch'=\\sh}\\).</p>","<p>\\(\\left(\\arctan(2x)\\right)' = \\dfrac{2}{1+(2x)^2} = \\boxed{\\dfrac{2}{1+4x^2}}\\).</p>","<p>\\(\\boxed{\\left(\\ln\\circ u\\right)' = \\dfrac{u'}{u}}\\).</p>","<p>\\(\\boxed{\\left(\\dfrac1x\\right)^{(n)} = \\dfrac{(-1)^nn!}{x^{n+1}}}\\).</p>","<p>\\(\\boxed{(fg)^{(n)} = \\displaystyle\\sum_{k=0}^n \\binom nk f^{(k)}g^{(n-k)}}\\).</p>","<p>Par la formule de Leibniz, \\(f^{(n)}(x) = \\displaystyle\\sum_{k=0}^n\\binom nk (x^2)^{(k)}(e^x)^{(n-k)}\\). Comme \\((x^2)^{(k)}=0\\) pour \\(k\\geqslant 3\\), seuls les termes \\(k=0,1,2\\) subsistent : \\(f^{(n)}(x) = e^x\\left[x^2+\\dbinom n1 2x+\\dbinom n2 2\\right] = e^x\\left[x^2+2nx+n(n-1)\\right]\\). D'où \\(f^{(n)}(0)=n(n-1)\\), et pour \\(n=10\\) : \\(\\boxed{f^{(10)}(0) = 10\\times9 = 90}\\).</p>","<p>\\(\\boxed{\\sin^{(n)}(x) = \\sin\\!\\left(x+\\dfrac{n\\pi}{2}\\right)}\\).</p>","<p>\\(\\boxed{\\left(e^{-x}\\right)^{(n)} = (-1)^ne^{-x}}\\).</p>","<p>\\(\\boxed{\\ln^{(n)}(x) = \\dfrac{(-1)^{n-1}(n-1)!}{x^n}}\\).</p>","<p>\\(\\boxed{\\varphi'=u'+iv'}\\) et \\(\\boxed{\\left(e^{\\varphi}\\right)' = \\varphi'e^{\\varphi}}\\) (en revanche \\(|\\varphi|'=|\\varphi'|\\) est faux en général : le module n'est pas dérivable comme une fonction holomorphe).</p>","<p>\\(\\boxed{\\left(e^{(2+i)t}\\right)' = (2+i)e^{(2+i)t}}\\).</p>","<p>\\(\\boxed{\\left(e^{it}\\right)' = ie^{it}}\\).</p>","<p>\\(\\left(\\dfrac{1}{t+i}\\right)' = \\boxed{-\\dfrac{1}{(t+i)^2}}\\).</p>"];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">12.4 · Calcul de dérivées</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Calcul de dérivées</h1>
+<div id="quiz" data-chap="12" data-start="93">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (12.1, 12.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="93").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(uv)'=u'v+uv'\vphantom{\left(\dfrac1v\right)}$</div>
+  <div class="opt">$(uv)'=u'v'\vphantom{\left(\dfrac1v\right)}$</div>
+  <div class="opt" data-ok>$\left(\dfrac uv\right)'=\dfrac{u'v-uv'}{v^2}\vphantom{\left(\dfrac1v\right)}$</div>
+  <div class="opt">$\left(\dfrac uv\right)'=\dfrac{u'v+uv'}{v^2}\vphantom{\left(\dfrac1v\right)}$</div>
+  <div class="opt" data-ok>$\left(\dfrac1v\right)'=-\dfrac{v'}{v^2}\vphantom{\left(\dfrac1v\right)}$</div>
+  <div class="opt">$\left(\dfrac1v\right)'=\dfrac{1}{v'}\vphantom{\left(\dfrac1v\right)}$</div>
+  <div class="sol"><p>$\boxed{(uv)'=u'v+uv'}$, $\boxed{\left(\dfrac uv\right)'=\dfrac{u'v-uv'}{v^2}}$ et $\boxed{\left(\dfrac1v\right)'=-\dfrac{v'}{v^2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f'(g(x))$</div>
+  <div class="opt">$f(g'(x))$</div>
+  <div class="opt">$g'(f(x))$</div>
+  <div class="opt">$g(f'(x))$</div>
+  <div class="opt" data-ok>$g'(x)$</div>
+  <div class="opt">$f'(x)$</div>
+  <div class="opt">$g(x)$</div>
+  <div class="opt">$f(x)$</div>
+  <div class="opt">$f'(g'(x))$</div>
+  <div class="opt">$g'(f'(x))$</div>
+  <div class="opt">$f(g(x))$</div>
+  <div class="opt">$g(f(x))$</div>
+  <div class="sol"><p>$\boxed{(f\circ g)'(x) = f'(g(x))\times g'(x)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto e^{x^2}$</div>
+  <div class="opt">$x\mapsto e^{2x}$</div>
+  <div class="opt" data-ok>$x\mapsto 2x\,e^{x^2}$</div>
+  <div class="opt">$x\mapsto x^2e^{x^2-1}$</div>
+  <div class="sol"><p>$\boxed{\left(e^{x^2}\right)' = 2x\,e^{x^2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\cos(3x)$</div>
+  <div class="opt" data-ok>$x\mapsto3\cos(3x)$</div>
+  <div class="opt">$x\mapsto3\sin(3x)$</div>
+  <div class="opt">$x\mapsto-3\cos(3x)$</div>
+  <div class="sol"><p>$\boxed{\sin(3x)' = 3\cos(3x)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\dfrac{1}{|x|}$</div>
+  <div class="opt" data-ok>$x\mapsto\dfrac1x$</div>
+  <div class="opt">$x\mapsto-\dfrac1x$</div>
+  <div class="opt">$x\mapsto\dfrac{|x|}{x}$</div>
+  <div class="sol"><p>$\boxed{\left(\ln|x|\right)' = \dfrac1x}$ sur $\R^*$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\dfrac{1}{2\sqrt{1+x^2}}$</div>
+  <div class="opt" data-ok>$x\mapsto\dfrac{x}{\sqrt{1+x^2}}$</div>
+  <div class="opt">$x\mapsto\dfrac{2x}{\sqrt{1+x^2}}$</div>
+  <div class="opt">$x\mapsto2x\sqrt{1+x^2}$</div>
+  <div class="sol"><p>$\boxed{\left(\sqrt{1+x^2}\right)' = \dfrac{x}{\sqrt{1+x^2}}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto x\times x^{x-1}$</div>
+  <div class="opt">$x\mapsto x^x\ln x$</div>
+  <div class="opt">$x\mapsto x^x$</div>
+  <div class="opt" data-ok>$x\mapsto (1+\ln x)\,x^x$</div>
+  <div class="sol"><p>Avec $x^x=e^{x\ln x}$, $(x^x)' = (\ln x+1)e^{x\ln x} = \boxed{(1+\ln x)\,x^x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto2^x$</div>
+  <div class="opt">$x\mapsto x\,2^{x-1}$</div>
+  <div class="opt" data-ok>$x\mapsto 2^x\ln 2$</div>
+  <div class="opt">$x\mapsto\dfrac{2^x}{\ln 2}$</div>
+  <div class="sol"><p>Avec $2^x=e^{x\ln2}$, $\boxed{\left(2^x\right)' = 2^x\ln 2}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case" data-ok>$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>$\left(\ln(\cos x)\right)' = \dfrac{-\sin x}{\cos x} = \boxed{-\tan x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\dfrac{1}{\cos x}$</div>
+  <div class="opt">$x\mapsto-\dfrac{1}{\sin x}$</div>
+  <div class="opt">$x\mapsto\tan x\vphantom{-\dfrac{1}{\cos}}$</div>
+  <div class="opt" data-ok>$x\mapsto-\tan x\vphantom{-\dfrac{1}{\cos}}$</div>
+  <div class="opt">$x\mapsto\dfrac{1}{\tan x}$</div>
+  <div class="opt">$x\mapsto-\dfrac{1}{\tan x}$</div>
+  <div class="sol"><p>$f'(x)=3x^2-2$, donc $\boxed{f'(2) = 3\times4-2 = 10}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto 5(2x+1)^4$</div>
+  <div class="opt" data-ok>$x\mapsto 10(2x+1)^4$</div>
+  <div class="opt">$x\mapsto 2(2x+1)^5$</div>
+  <div class="opt">$x\mapsto (2x+1)^4$</div>
+  <div class="sol"><p>$\left((2x+1)^5\right)' = 5\times2\times(2x+1)^4 = \boxed{10(2x+1)^4}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto \dfrac1x-1$</div>
+  <div class="opt" data-ok>$x\mapsto \ln x$</div>
+  <div class="opt">$x\mapsto \ln x-1$</div>
+  <div class="opt">$x\mapsto \ln x+1$</div>
+  <div class="sol"><p>$\left(x\ln x-x\right)' = \ln x+1-1 = \boxed{\ln x}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto 2x\vphantom{\dfrac{x^2}{x^2}}$</div>
+  <div class="opt" data-ok>$x\mapsto \dfrac{x^2-2x-1}{(x-1)^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{3x^2-2x+1}{(x-1)^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{x^2-2x-1}{x-1}$</div>
+  <div class="sol"><p>$\left(\dfrac{x^2+1}{x-1}\right)' = \dfrac{2x(x-1)-(x^2+1)}{(x-1)^2} = \boxed{\dfrac{x^2-2x-1}{(x-1)^2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto 2\cos x$</div>
+  <div class="opt" data-ok>$x\mapsto -2\sin x\cos x$</div>
+  <div class="opt" data-ok>$x\mapsto -\sin(2x)$</div>
+  <div class="opt">$x\mapsto 2\sin x\cos x$</div>
+  <div class="sol"><p>$\left(\cos^2x\right)' = 2\cos x\times(-\sin x) = \boxed{-2\sin x\cos x} = \boxed{-\sin(2x)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto \dfrac{1}{e^x}$</div>
+  <div class="opt">$x\mapsto -\dfrac{1}{(1+e^x)^2}$</div>
+  <div class="opt" data-ok>$x\mapsto -\dfrac{e^x}{(1+e^x)^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{e^x}{(1+e^x)^2}$</div>
+  <div class="sol"><p>$\left(\dfrac{1}{1+e^x}\right)' = -\dfrac{e^x}{(1+e^x)^2}$, d'où $\boxed{-\dfrac{e^x}{(1+e^x)^2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto e^{\sin x}$</div>
+  <div class="opt">$x\mapsto e^{\cos x}$</div>
+  <div class="opt" data-ok>$x\mapsto \cos x\,e^{\sin x}$</div>
+  <div class="opt">$x\mapsto \sin x\,e^{\sin x-1}$</div>
+  <div class="sol"><p>$\boxed{\left(e^{\sin x}\right)' = \cos x\,e^{\sin x}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto \dfrac{1}{x+\sqrt{x^2+1}}$</div>
+  <div class="opt" data-ok>$x\mapsto \dfrac{1}{\sqrt{x^2+1}}$</div>
+  <div class="opt">$x\mapsto \dfrac{x}{\sqrt{x^2+1}}$</div>
+  <div class="opt">$x\mapsto \sqrt{x^2+1}$</div>
+  <div class="sol"><p>$\left(\ln\!\left(x+\sqrt{x^2+1}\right)\right)' = \dfrac{1+\dfrac{x}{\sqrt{x^2+1}}}{x+\sqrt{x^2+1}} = \dfrac{\sqrt{x^2+1}+x}{\sqrt{x^2+1}\left(x+\sqrt{x^2+1}\right)} = \boxed{\dfrac{1}{\sqrt{x^2+1}}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sh'=\ch$</div>
+  <div class="opt">$\sh'=-\ch$</div>
+  <div class="opt" data-ok>$\ch'=\sh$</div>
+  <div class="opt">$\ch'=-\sh$</div>
+  <div class="sol"><p>$\boxed{\sh'=\ch}$ et $\boxed{\ch'=\sh}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto \dfrac{1}{1+4x^2}$</div>
+  <div class="opt" data-ok>$x\mapsto \dfrac{2}{1+4x^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{1}{1+2x^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{2}{1+2x^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{1}{1+x^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{2}{1+x^2}$</div>
+  <div class="sol"><p>$\left(\arctan(2x)\right)' = \dfrac{2}{1+(2x)^2} = \boxed{\dfrac{2}{1+4x^2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{1}{u}$</div>
+  <div class="opt">$\dfrac{1}{u'}$</div>
+  <div class="opt" data-ok>$\dfrac{u'}{u}$</div>
+  <div class="opt">$u'\ln u$</div>
+  <div class="opt">$\ln(u')$</div>
+  <div class="sol"><p>$\boxed{\left(\ln\circ u\right)' = \dfrac{u'}{u}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n!}{x^{n+1}}$</div>
+  <div class="opt">$\dfrac{(-1)^nn!}{x^n}$</div>
+  <div class="opt" data-ok>$\dfrac{(-1)^nn!}{x^{n+1}}$</div>
+  <div class="opt">$\dfrac{(-1)^{n}}{x^{n+1}}$</div>
+  <div class="sol"><p>$\boxed{\left(\dfrac1x\right)^{(n)} = \dfrac{(-1)^nn!}{x^{n+1}}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(fg)^{(n)}=f^{(n)}g^{(n)}$</div>
+  <div class="opt">$(fg)^{(n)}=\displaystyle\sum_{k=0}^n f^{(k)}g^{(n-k)}$</div>
+  <div class="opt" data-ok>$(fg)^{(n)}=\displaystyle\sum_{k=0}^n \binom nk f^{(k)}g^{(n-k)}$</div>
+  <div class="opt">$(fg)^{(n)}=\displaystyle\sum_{k=0}^n \binom nk f^{(k)}g^{(k)}$</div>
+  <div class="sol"><p>$\boxed{(fg)^{(n)} = \displaystyle\sum_{k=0}^n \binom nk f^{(k)}g^{(n-k)}}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case" data-ok>$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case" data-ok>$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+  <div class="sol"><p>Par la formule de Leibniz, $f^{(n)}(x) = \displaystyle\sum_{k=0}^n\binom nk (x^2)^{(k)}(e^x)^{(n-k)}$. Comme $(x^2)^{(k)}=0$ pour $k\geqslant 3$, seuls les termes $k=0,1,2$ subsistent : $f^{(n)}(x) = e^x\left[x^2+\dbinom n1 2x+\dbinom n2 2\right] = e^x\left[x^2+2nx+n(n-1)\right]$. D'où $f^{(n)}(0)=n(n-1)$, et pour $n=10$ : $\boxed{f^{(10)}(0) = 10\times9 = 90}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(-1)^n\sin x$</div>
+  <div class="opt" data-ok>$\sin\left(x+\dfrac{n\pi}{2}\right)$</div>
+  <div class="opt">$\sin(x+n\pi)$</div>
+  <div class="opt">$\cos\left(x+\dfrac{n\pi}{2}\right)$</div>
+  <div class="sol"><p>$\boxed{\sin^{(n)}(x) = \sin\!\left(x+\dfrac{n\pi}{2}\right)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto e^{-x}$</div>
+  <div class="opt">$x\mapsto -e^{-x}$</div>
+  <div class="opt" data-ok>$x\mapsto (-1)^ne^{-x}$</div>
+  <div class="opt">$x\mapsto (-1)^{n+1}e^{-x}$</div>
+  <div class="sol"><p>$\boxed{\left(e^{-x}\right)^{(n)} = (-1)^ne^{-x}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x\mapsto\dfrac{(-1)^nn!}{x^{n+1}}$</div>
+  <div class="opt">$x\mapsto\dfrac{(-1)^n(n-1)!}{x^n}$</div>
+  <div class="opt">$x\mapsto\dfrac{(n-1)!}{x^n}$</div>
+  <div class="opt" data-ok>$x\mapsto\dfrac{(-1)^{n-1}(n-1)!}{x^n}$</div>
+  <div class="sol"><p>$\boxed{\ln^{(n)}(x) = \dfrac{(-1)^{n-1}(n-1)!}{x^n}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\varphi'=u'+iv'$</div>
+  <div class="opt">$\varphi'=u'v'$</div>
+  <div class="opt" data-ok>$\left(e^{\varphi}\right)'=\varphi'e^{\varphi}$</div>
+  <div class="opt">$|\varphi|'=|\varphi'|$</div>
+  <div class="sol"><p>$\boxed{\varphi'=u'+iv'}$ et $\boxed{\left(e^{\varphi}\right)' = \varphi'e^{\varphi}}$ (en revanche $|\varphi|'=|\varphi'|$ est faux en général : le module n'est pas dérivable comme une fonction holomorphe).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$t\mapsto e^{(2+i)t}$</div>
+  <div class="opt">$t\mapsto 2e^{(2+i)t}$</div>
+  <div class="opt">$t\mapsto ie^{(2+i)t}$</div>
+  <div class="opt" data-ok>$t\mapsto(2+i)e^{(2+i)t}$</div>
+  <div class="sol"><p>$\boxed{\left(e^{(2+i)t}\right)' = (2+i)e^{(2+i)t}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$t\mapsto e^{it}$</div>
+  <div class="opt" data-ok>$t\mapsto ie^{it}$</div>
+  <div class="opt">$t\mapsto -ie^{it}$</div>
+  <div class="opt">$t\mapsto te^{it}$</div>
+  <div class="sol"><p>$\boxed{\left(e^{it}\right)' = ie^{it}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$t\mapsto\dfrac{1}{(t+i)^2}$</div>
+  <div class="opt" data-ok>$t\mapsto-\dfrac{1}{(t+i)^2}$</div>
+  <div class="opt">$t\mapsto-\dfrac{i}{(t+i)^2}$</div>
+  <div class="opt">$t\mapsto\ln(t+i)$</div>
+  <div class="sol"><p>$\left(\dfrac{1}{t+i}\right)' = \boxed{-\dfrac{1}{(t+i)^2}}$.</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

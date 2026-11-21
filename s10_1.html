@@ -4,5 +4,152 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#ea580c"><div class="topnav" style="--accent:#ea580c"><span class="brand">10.1 · Suites usuelles</span><a href="index.html">Menu</a><a href="ch10.html">Chapitre 10</a><a class="" href="pdf/BCPSTCh10_Suites_series_numeriques.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 10 — Suites et séries numériques</p><h1>Suites usuelles</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 10.1 à 10.18 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#ea580c"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"mcq","c":[["\\((u_n)\\) est arithmétique",0,"h"],["\\((v_n)\\) est arithmétique",1,"h"],["\\((w_n)\\) est géométrique de raison \\(8\\)",0,"h"],["\\((w_n)\\) est géométrique de raison \\(-8\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n = 5 - 3(n-1)\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{10}u_k=-110\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n = 5 \\times (-3)^n\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{10}u_k=-100\\)",0,"h"]]},{"t":"mcq","c":[["\\((u_n)\\) est divergente",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n}u_k \\xrightarrow[n\\to+\\infty]{} 15\\)",0,"h"],["\\((u_n)\\) est décroissante",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n}u_k \\xrightarrow[n\\to+\\infty]{}\\dfrac{27}{5}\\)",1,"h"]]},{"t":"mcq","c":[["\\((u_n)\\) converge \\(\\iff |q| < 1\\)",0,"h"],["\\((u_n)\\) converge \\(\\iff q \\in \\left]-1, 1 \\right]\\)",1,"h"],["\\(q > 1 \\implies u_n\\xrightarrow[n\\to+\\infty]{} +\\infty\\)",0,"h"],["\\(q < -1 \\implies u_n\\xrightarrow[n\\to+\\infty]{} -\\infty\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n=4-\\left(\\dfrac{1}{4}\\right)^n\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n=-1+4^{1-n}\\)",0,"h"],["\\(\\forall n\\in\\N,~ u_n=6-3\\left(\\dfrac{1}{4}\\right)^n\\)",0,"h"],["\\((u_n)\\) est décroissante",0,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n = 2 - 3^n\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n = 2 + 3^n\\)",0,"h"],["\\(u_n \\xrightarrow[n\\to+\\infty]{}-\\infty\\)",1,"h"],["\\((u_n)\\) converge vers \\(2\\)",0,"h"]]},{"t":"mcq","c":[["\\((E) : r^2 + r - 6 = 0\\)",0,"h"],["\\((E) : r^2 - r - 6 = 0\\)",1,"h"],["\\(\\exists(\\lambda,\\mu)\\in\\R^2,~ u_n = \\lambda\\, 2^n + \\mu\\,(-3)^n\\)",0,"h"],["\\(\\exists(\\lambda,\\mu)\\in\\R^2,~ u_n = \\lambda\\, 3^n + \\mu\\,(-2)^n\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n=(1-n)2^n\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n=(1+n)2^n\\)",0,"h"],["\\(\\exists (\\alpha,\\beta)\\in\\R^2,~ u_n=\\alpha 2^n+\\beta(-2)^n\\)",0,"h"],["\\(\\forall n\\in\\N,~ u_n=2^n-n2^{n-1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n=4-3 \\times 2^{-n}\\)",0,"h"],["\\(\\forall n\\in\\N,~ u_n=-3+2^{2-n}\\)",1,"h"],["\\((u_n)\\) diverge vers \\(+\\infty\\)",0,"h"],["\\((u_n)\\) converge vers \\(3\\)",0,"h"]]},{"t":"mcq","c":[["\\((u_n)\\) n'admet pas de limite",1,"h"],["\\(u_n\\xrightarrow[n\\to+\\infty]{}+\\infty\\)",0,"h"],["\\(\\forall n\\in\\N,~ u_{n+2}-u_{n+1}-6u_n = 0\\)",0,"h"],["\\(\\forall n\\in\\N,\\ u_{n+2}+u_{n+1}-6u_n = 0\\)",1,"h"]]},{"t":"mcq","c":[["\\((u_n)\\) est de limite nulle",0,"h"],["\\((u_n)\\) converge \\(\\iff u_1 = 2 u_0\\)",1,"h"],["\\((u_n)\\) est convergente",0,"h"],["\\((u_n)\\) converge \\(\\iff u_1 = u_0\\)",0,"h"]]},{"t":"mcq","c":[["\\((F_n)\\) est géométrique de raison \\(\\phi\\)",0,"h"],["\\(\\forall n\\in\\N,~ F_n = \\dfrac{\\phi^{n}+\\psi^{n}}{\\sqrt{5}}\\)",0,"h"],["\\(\\dfrac{F_{n+1}}{F_n} \\xrightarrow[n\\to+\\infty]{} \\phi\\)",1,"h"],["\\(\\dfrac{F_n}{\\phi^n} \\xrightarrow[n\\to+\\infty]{} 1\\)",0,"h"]]},{"t":"mcq","c":[["\\((u_n)\\) converge vers \\(0\\)",0,"h"],["\\(\\forall n\\in\\N,~ u_n=2\\cos\\left(\\dfrac{n\\pi}{3}\\right)\\)",0,"h"],["\\((u_n)\\) est périodique de période \\(6\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n=\\cos \\dfrac{n\\pi}{3} + \\sin \\dfrac{n\\pi}{3}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ z_{n+1}=\\dfrac{1+i}{2}z_n\\)",1,"h"],["\\((x_n)\\) et \\((y_n)\\) sont périodiques",0,"h"],["\\(\\forall n\\in\\N,~ z_{n+1}=\\dfrac{1-i}{2}z_n\\)",0,"h"],["la suite \\((|z_n|)\\) est constante",0,"h"]]},{"t":"grid","parts":[{"lit":"\\(a =\\)","raw":1},{"check":{"label":"\\(-\\)","ok":1}},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":1}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}}]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n = n+1\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n = \\left(1+\\dfrac{1}{n}\\right)^n\\)",0,"h"],["\\((u_n)\\) est croissante et bornée",0,"h"],["\\((u_n)\\) converge vers \\(e\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n=\\dfrac{n(n+1)}{2}\\)",0,"h"],["\\(\\dfrac{u_n}{n^2} \\xrightarrow[n\\to+\\infty]{} 1\\)",0,"h"],["\\(\\forall n \\in \\N,~ u_n=\\dfrac{n(n-1)}{2}\\)",1,"h"],["\\((u_n)\\) est arithmétique",0,"h"]]},{"t":"mcq","c":[["\\(\\forall n\\in\\N,~ u_n=2\\cdot3^n-2^n\\)",1,"h"],["\\(\\forall n\\in\\N,~ u_n=3^n-2^n\\)",0,"h"],["\\(\\forall n\\in\\N,~ v_n=2^{n+1}-2\\cdot3^n\\)",1,"h"],["\\(\\forall n\\in\\N,~ v_n=2\\cdot3^n-2^{n+1}\\)",0,"h"]]}];window.QUIZ_START=1;window.QUIZ_CHAP=10;window.QUIZ_SOL=[];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">10.1 · Suites usuelles</span><a href="index.html">Menu</a><a href="ch10.html">Chapitre 10</a></div><main><p class="chapno">Chapitre 10 — Suites et séries numériques</p><h1>Suites usuelles</h1>
+<div id="quiz" data-chap="10" data-start="1">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (10.1, 10.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="1").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ est arithmétique</div>
+  <div class="opt" data-ok>$(v_n)$ est arithmétique</div>
+  <div class="opt">$(w_n)$ est géométrique de raison $8$</div>
+  <div class="opt" data-ok>$(w_n)$ est géométrique de raison $-8$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N,~ u_n = 5 - 3(n-1)$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=0}^{10}u_k=-110$</div>
+  <div class="opt">$\forall n\in\N,~ u_n = 5 \times (-3)^n$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{10}u_k=-100$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ est divergente</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n}u_k \xrightarrow[n\to+\infty]{} 15$</div>
+  <div class="opt">$(u_n)$ est décroissante</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=0}^{n}u_k \xrightarrow[n\to+\infty]{}\dfrac{27}{5}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ converge $\iff |q| < 1$</div>
+  <div class="opt" data-ok>$(u_n)$ converge $\iff q \in \left]-1, 1 \right]$</div>
+  <div class="opt">$q > 1 \implies u_n\xrightarrow[n\to+\infty]{} +\infty$</div>
+  <div class="opt">$q < -1 \implies u_n\xrightarrow[n\to+\infty]{} -\infty$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ u_n=4-\left(\dfrac{1}{4}\right)^n$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=-1+4^{1-n}$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=6-3\left(\dfrac{1}{4}\right)^n$</div>
+  <div class="opt">$(u_n)$ est décroissante</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ u_n = 2 - 3^n$</div>
+  <div class="opt">$\forall n\in\N,~ u_n = 2 + 3^n$</div>
+  <div class="opt" data-ok>$u_n \xrightarrow[n\to+\infty]{}-\infty$</div>
+  <div class="opt">$(u_n)$ converge vers $2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(E) : r^2 + r - 6 = 0$</div>
+  <div class="opt" data-ok>$(E) : r^2 - r - 6 = 0$</div>
+  <div class="opt">$\exists(\lambda,\mu)\in\R^2,~ u_n = \lambda\, 2^n + \mu\,(-3)^n$</div>
+  <div class="opt" data-ok>$\exists(\lambda,\mu)\in\R^2,~ u_n = \lambda\, 3^n + \mu\,(-2)^n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ u_n=(1-n)2^n$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=(1+n)2^n$</div>
+  <div class="opt">$\exists (\alpha,\beta)\in\R^2,~ u_n=\alpha 2^n+\beta(-2)^n$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=2^n-n2^{n-1}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N,~ u_n=4-3 \times 2^{-n}$</div>
+  <div class="opt" data-ok>$\forall n\in\N,~ u_n=-3+2^{2-n}$</div>
+  <div class="opt">$(u_n)$ diverge vers $+\infty$</div>
+  <div class="opt">$(u_n)$ converge vers $3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(u_n)$ n'admet pas de limite</div>
+  <div class="opt">$u_n\xrightarrow[n\to+\infty]{}+\infty$</div>
+  <div class="opt">$\forall n\in\N,~ u_{n+2}-u_{n+1}-6u_n = 0$</div>
+  <div class="opt" data-ok>$\forall n\in\N,\ u_{n+2}+u_{n+1}-6u_n = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ est de limite nulle</div>
+  <div class="opt" data-ok>$(u_n)$ converge $\iff u_1 = 2 u_0$</div>
+  <div class="opt">$(u_n)$ est convergente</div>
+  <div class="opt">$(u_n)$ converge $\iff u_1 = u_0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(F_n)$ est géométrique de raison $\phi$</div>
+  <div class="opt">$\forall n\in\N,~ F_n = \dfrac{\phi^{n}+\psi^{n}}{\sqrt{5}}$</div>
+  <div class="opt" data-ok>$\dfrac{F_{n+1}}{F_n} \xrightarrow[n\to+\infty]{} \phi$</div>
+  <div class="opt">$\dfrac{F_n}{\phi^n} \xrightarrow[n\to+\infty]{} 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u_n)$ converge vers $0$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=2\cos\left(\dfrac{n\pi}{3}\right)$</div>
+  <div class="opt" data-ok>$(u_n)$ est périodique de période $6$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=\cos \dfrac{n\pi}{3} + \sin \dfrac{n\pi}{3}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ z_{n+1}=\dfrac{1+i}{2}z_n$</div>
+  <div class="opt">$(x_n)$ et $(y_n)$ sont périodiques</div>
+  <div class="opt">$\forall n\in\N,~ z_{n+1}=\dfrac{1-i}{2}z_n$</div>
+  <div class="opt">la suite $(|z_n|)$ est constante</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">{center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ u_n = n+1$</div>
+  <div class="opt">$\forall n\in\N,~ u_n = \left(1+\dfrac{1}{n}\right)^n$</div>
+  <div class="opt">$(u_n)$ est croissante et bornée</div>
+  <div class="opt">$(u_n)$ converge vers $e$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall n\in\N,~ u_n=\dfrac{n(n+1)}{2}$</div>
+  <div class="opt">$\dfrac{u_n}{n^2} \xrightarrow[n\to+\infty]{} 1$</div>
+  <div class="opt" data-ok>$\forall n \in \N,~ u_n=\dfrac{n(n-1)}{2}$</div>
+  <div class="opt">$(u_n)$ est arithmétique</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ u_n=2\cdot3^n-2^n$</div>
+  <div class="opt">$\forall n\in\N,~ u_n=3^n-2^n$</div>
+  <div class="opt" data-ok>$\forall n\in\N,~ v_n=2^{n+1}-2\cdot3^n$</div>
+  <div class="opt">$\forall n\in\N,~ v_n=2\cdot3^n-2^{n+1}$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

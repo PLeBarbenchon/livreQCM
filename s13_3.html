@@ -1,7 +1,130 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>13.3 Intégration par parties</title>
+<title>13.3 Intégration par parties — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#0284c7"><div class="topnav" style="--accent:#0284c7"><span class="brand">13.3 · Intégration par parties</span><a href="index.html">Menu</a><a href="ch13.html">Chapitre 13</a></div><main><p class="chapno">Chapitre 13 — Intégration</p><h1>Intégration par parties</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch13.html">← Retour au chapitre 13</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">13.3 · Intégration par parties</span><a href="index.html">Menu</a><a href="ch13.html">Chapitre 13</a></div><main><p class="chapno">Chapitre 13 — Intégration</p><h1>Intégration par parties</h1>
+<div id="quiz" data-chap="13" data-start="44">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (13.1, 13.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="44").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\pi$</div>
+  <div class="opt">$0$</div>
+  <div class="opt">$2$</div>
+  <div class="opt" data-ok>$-2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto x\arcsin x + \sqrt{1-x^2}$</div>
+  <div class="opt">$x\mapsto x\arcsin x - \sqrt{1-x^2}$</div>
+  <div class="opt">$x\mapsto \dfrac{x}{\sqrt{1-x^2}}$</div>
+  <div class="opt">$x\mapsto x\arcsin x + \dfrac{1}{\sqrt{1-x^2}}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$I = \dfrac{\pi}{4}$</div>
+  <div class="opt" data-ok>$I = \dfrac{\pi}{2} - 1$</div>
+  <div class="opt">$I = 1$</div>
+  <div class="opt">$I = \dfrac{\pi}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x \mapsto x^2\,e^x - 2x\, e^x$</div>
+  <div class="opt" data-ok>$x \mapsto (x^2 - 2x + 2)\, e^x$</div>
+  <div class="opt">$x \mapsto x^3\, e^x$</div>
+  <div class="opt">$x \mapsto \left( 2x + x^2 \right)\, e^x$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-1$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$e$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{3\pi}{8} - \dfrac{1}{2}$</div>
+  <div class="opt">$\dfrac{\pi}{2} - 1$</div>
+  <div class="opt" data-ok>$\dfrac{\pi-2}{4}$</div>
+  <div class="opt">$\dfrac{\pi}{4} - \ln 2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$I = \dfrac{\pi}{4} + \dfrac{\ln 2}{2}$</div>
+  <div class="opt" data-ok>$I = \dfrac{\pi - \ln 4}{4}$</div>
+  <div class="opt">$I = \dfrac{\pi}{4}$</div>
+  <div class="opt" data-ok>$I = \dfrac{\pi}{4} - \dfrac{\ln 2}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$I = \dfrac{\pi}{4} - 2 \ln 2$</div>
+  <div class="opt" data-ok>$I = \dfrac{\pi}{\sqrt{3}} - \ln 2$</div>
+  <div class="opt">$I = \dfrac{\sqrt{3}\pi}{3} - \dfrac{1}{2} \ln 2$</div>
+  <div class="opt">$I = \dfrac{\pi}{3} - \ln 2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\sin 1 - e\cos 1 + 1$</div>
+  <div class="opt" data-ok>$\dfrac{e\sin 1 - e\cos 1 + 1}{2}$</div>
+  <div class="opt">$\dfrac{e\sin 1 + \cos 1 - 1}{2}$</div>
+  <div class="opt">$1 - e\cos 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$I_n = n! - I_{n-1}$</div>
+  <div class="opt" data-ok>$I_n = e - nI_{n-1}$</div>
+  <div class="opt">$I_n = 1 - (n-1)I_{n-1}$</div>
+  <div class="opt">$I_n = t^n\,e^t - nI_{n-1}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(W_n)_{n\in\N}$ est croissante</div>
+  <div class="opt" data-ok>$\forall n\in\N,~ W_{n+2} = \dfrac{n+1}{n+2} W_n$</div>
+  <div class="opt" data-ok>$(W_n)_{n\in\N}$ est convergente</div>
+  <div class="opt">$\forall n\in\N,~ 0 \leqslant W_n \leqslant 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(J_n)_{n\in\N}$ est décroissante</div>
+  <div class="opt" data-ok>$(J_n)_{n\in\N}$ est bornée</div>
+  <div class="opt" data-ok>$(J_n)_{n\in\N}$ est convergente</div>
+  <div class="opt">$\forall n\in\N,~ 0 \leqslant J_n \leqslant 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(I_n)$ est décroissante</div>
+  <div class="opt">$I_{n+1} = (n+1) I_n - 1$</div>
+  <div class="opt">$n I_n = 1 + I_{n+1}$</div>
+  <div class="opt" data-ok>$I_{n+1} = e-(n+1)I_n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\forall (k,\ell) \in \N^2,~ I_{k,\ell} = \dfrac{k}{\ell+1} I_{k+1,\ell-1}$</div>
+  <div class="opt" data-ok>$\forall (k,\ell) \in \N^2,~ I_{k,\ell} = \dfrac{k!\, \ell!}{(k+\ell+1)!}$</div>
+  <div class="opt" data-ok>$\forall (k,\ell) \in \N^2,~ I_{k,\ell} = \dfrac{\ell}{k+1} I_{k+1,\ell-1}$</div>
+  <div class="opt">$\forall (k,\ell) \in \N^2,~ I_{k,\ell} = \dfrac{k!\, \ell!}{(k+\ell)!}$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

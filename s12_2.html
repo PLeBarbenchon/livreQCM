@@ -1,7 +1,272 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>12.2 Limites</title>
+<title>12.2 Limites — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#dc2626"><div class="topnav" style="--accent:#dc2626"><span class="brand">12.2 · Limites</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a><a class="" href="pdf/BCPSTCh12_Etude_de_fonctions.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Limites</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch12.html">← Retour au chapitre 12</a></main></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">12.2 · Limites</span><a href="index.html">Menu</a><a href="ch12.html">Chapitre 12</a></div><main><p class="chapno">Chapitre 12 — Étude de fonctions</p><h1>Limites</h1>
+<div id="quiz" data-chap="12" data-start="36">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (12.1, 12.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="36").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$\forall\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\varepsilon>0,\vphantom{\frac{1}{2}}$</span><span class="case">$\forall\vphantom{\frac{1}{2}}$</span><span class="case">$\varepsilon>0,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\forall\vphantom{\frac{1}{2}}$</span></div>
+  <div class="row"><span class="case">$\exists\vphantom{\frac{1}{2}}$</span><span class="case">$\eta>0,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\exists\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\eta>0,\vphantom{\frac{1}{2}}$</span><span class="case">$x\in\mathcal D,\ |x-a|$</span><span class="case" data-ok>$\leqslant \vphantom{\frac{1}{2}}$</span><span class="case">$\varepsilon\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\implies\vphantom{\frac{1}{2}}$</span></div>
+  <div class="row"><span class="case">$\geqslant \vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\eta\vphantom{\frac{1}{2}}$</span><span class="case">$|f(x)-\ell|$</span><span class="case" data-ok>$\leqslant \vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\varepsilon\vphantom{\frac{1}{2}}$</span></div>
+  <div class="row"><span class="case">$\geqslant \vphantom{\frac{1}{2}}$</span><span class="case">{center}</span></div>
+  <div class="sol"><p>$\boxed{\forall\varepsilon>0,\ \exists\eta>0,\ \forall x\in\mathcal D,\ |x-a|\leqslant \eta \implies |f(x)-\ell|\leqslant \varepsilon}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$\forall\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$A\in\R,\vphantom{\frac{1}{2}}$</span><span class="case">$\forall\vphantom{\frac{1}{2}}$</span><span class="case">$A\in\R,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\forall\vphantom{\frac{1}{2}}$</span><span class="case">$x\geqslant A,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$f(x)\geqslant A\vphantom{\frac{1}{2}}$</span></div>
+  <div class="row"><span class="case">$\exists\vphantom{\frac{1}{2}}$</span><span class="case">$B\in\R,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\exists\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$B\in\R,\vphantom{\frac{1}{2}}$</span><span class="case">$\exists\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$x\geqslant B,\vphantom{\frac{1}{2}}$</span><span class="case">{center}</span></div>
+  <div class="sol"><p>$\boxed{\forall A\in\R,\ \exists B\in\R,\ \forall x>B,\ f(x)>A}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$\forall\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$A\vphantom{\frac{1}{2}}$</span><span class="case">$>0,\vphantom{\frac{1}{2}}$</span><span class="case">$\forall\vphantom{\frac{1}{2}}$</span><span class="case">$A\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$>0,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\forall\vphantom{\frac{1}{2}}$</span></div>
+  <div class="row"><span class="case">$\exists\vphantom{\frac{1}{2}}$</span><span class="case">$\eta\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\in \R,\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\exists\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\eta\vphantom{\frac{1}{2}}$</span><span class="case">$\in \R,\vphantom{\frac{1}{2}}$</span><span class="case">$x\in\mathcal D,$</span><span class="case" data-ok>$|x-a|\leqslant \eta\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>$\implies\vphantom{\frac{1}{2}}$</span><span class="case">$|f(x)- a| \leqslant \eta\vphantom{\frac{1}{2}}$</span></div>
+  <div class="row"><span class="case">$x\leqslant A\vphantom{\frac{1}{2}}$</span><span class="case">$\text{et}\vphantom{\frac{1}{2}}$</span><span class="case" data-ok>{center}</span></div>
+  <div class="sol"><p>$\boxed{\forall A\in\R,\ \exists\eta>0,\ \forall x\in\mathcal D,\ |x-a|\leqslant \eta \implies f(x)\leqslant A}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">oui, $0$</div>
+  <div class="opt">oui, $+\infty$</div>
+  <div class="opt">oui, $-\infty$</div>
+  <div class="opt" data-ok>non</div>
+  <div class="sol"><p>$\dfrac1x\to+\infty$ à droite et $\to-\infty$ à gauche : $\boxed{\text{elle n'admet pas de limite en } 0}$ (ça dépend du côté par lequel on l'aborde).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt" data-ok>$-1$</div>
+  <div class="opt">$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="sol"><p>Pour $x<0$, $|x|=-x$, donc $\dfrac{|x|}{x}=-1$ : $\boxed{\displaystyle\lim_{x\to0^-}\frac{|x|}{x} = -1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>si $u_n\to a$, alors $f(u_n)\to\ell$</div>
+  <div class="opt">si $f(u_n)\to\ell$, alors $u_n\to a$</div>
+  <div class="opt">si $u_n\to\ell$, alors $f(u_n)\to a$</div>
+  <div class="opt">si $f(u_n)\to a$, alors $u_n\to \ell$</div>
+  <div class="sol"><p>$\boxed{\text{Si } u_n\to a, \text{ alors } f(u_n)\to\ell}$ (c'est la caractérisation séquentielle de la limite).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>trouver deux suites $(u_n)$ et $(v_n)$ de limite nulle telles que $(f(u_n))$ et $(f(v_n))$ convergent vers des limites différentes</div>
+  <div class="opt" data-ok>trouver une suite $(u_n)$ de limite nulle telle que $(f(u_n))$ diverge</div>
+  <div class="opt">trouver une suite $(u_n)$ de limite nulle telle que $(f(u_n))$ converge</div>
+  <div class="opt">montrer que $f$ n'est pas monotone au voisinage de $0$</div>
+  <div class="sol"><p>Il suffit de $\boxed{\text{trouver deux suites } (u_n),(v_n)\to0 \text{ telles que } f(u_n) \text{ et } f(v_n) \text{ convergent vers des limites différentes}}$, ou plus simplement de $\boxed{\text{trouver une suite } (u_n)\to0 \text{ telle que } f(u_n) \text{ diverge}}$ (par contraposée de la caractérisation séquentielle).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$+\infty-\infty$</div>
+  <div class="opt">$+\infty+\infty$</div>
+  <div class="opt" data-ok>$0\times\infty$</div>
+  <div class="opt">$\dfrac{0}{\infty}$</div>
+  <div class="opt" data-ok>$\dfrac{\infty}{\infty}$</div>
+  <div class="opt" data-ok>$\dfrac00$</div>
+  <div class="opt" data-ok>$1^{\infty}$</div>
+  <div class="opt">$\dfrac{1}{0^+}$</div>
+  <div class="sol"><p>Les formes indéterminées classiques sont $\boxed{+\infty-\infty}$, $\boxed{0\times\infty}$, $\boxed{\dfrac{\infty}{\infty}}$, $\boxed{\dfrac00}$ et $\boxed{1^{\infty}}$. En revanche $+\infty+\infty=+\infty$, $\dfrac{0}{\infty}=0$ et $\dfrac{1}{0^+}=+\infty$ ne sont pas indéterminées.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a =$</span><span class="case">$-$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="row"><span class="lab">$b =$</span><span class="case">$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$c = $</span><span class="case">$+\infty$</span><span class="case">{minipage} {center}</span></div>
+  <div class="sol"><p>Le quotient des termes dominants donne $\boxed{\displaystyle\lim_{x\to+\infty}\frac{x^2-3x+1}{2x^2+5} = \frac12}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$\dfrac12$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="sol"><p>$\sqrt{x+1}-\sqrt x = \dfrac{1}{\sqrt{x+1}+\sqrt x} \to \boxed{0}$ quand $x\to+\infty$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>$\dfrac{x^2-4}{x-2} = \dfrac{(x-2)(x+2)}{x-2} = x+2 \to \boxed{4}$ quand $x\to2$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to0}\frac{e^x-1}{x}=1$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to0}\frac{\ln(1+x)}{x}=1$</div>
+  <div class="opt">$\displaystyle\lim_{x\to0}\frac{1-\cos x}{x^2}=1$</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1}$, $\boxed{\displaystyle\lim_{x\to0}\frac{e^x-1}{x}=1}$ et $\boxed{\displaystyle\lim_{x\to0}\frac{\ln(1+x)}{x}=1}$ sont les taux d'accroissement classiques en $0$ ; en revanche $\displaystyle\lim_{x\to0}\frac{1-\cos x}{x^2}=\dfrac12$, pas $1$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x\mapsto\dfrac{\sin x}{x}$</div>
+  <div class="opt">$x\mapsto x\sin x$</div>
+  <div class="opt">$x\mapsto\sin x$</div>
+  <div class="opt" data-ok>$x\mapsto\cos\left(\dfrac1x\right)$</div>
+  <div class="opt" data-ok>$x\mapsto e^{-x}\cos x$</div>
+  <div class="opt">$x\mapsto x\cos^2 x$</div>
+  <div class="sol"><p>$\boxed{\dfrac{\sin x}{x}\to0}$, $\boxed{\cos\!\left(\dfrac1x\right)\to\cos(0)=1}$ et $\boxed{e^{-x}\cos x\to0}$ (encadrement par $\pm e^{-x}$) admettent une limite ; $x\sin x$, $\sin x$ et $x\cos^2x$ oscillent sans converger.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to0^+} x\ln x = 0}$ (croissances comparées).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to0} \frac{\ln(1+x)}{x} = 1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$2$</div>
+  <div class="opt" data-ok>$+\infty$</div>
+  <div class="opt">{-1mm}n'existe pas</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to+\infty} \frac{2^x}{x^{100}} = +\infty}$ (l'exponentielle domine toute puissance).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to0} \frac{\sin x}{x} = 1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>En posant $t=1/x\to0$ : $x\sin\!\left(\dfrac1x\right) = \dfrac{\sin t}{t} \to \boxed{1}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>$\dfrac{\sin(5x)}{x} = 5\cdot\dfrac{\sin(5x)}{5x} \to \boxed{5}$ quand $x\to0$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+  <div class="sol"><p>Quand $x\to+\infty$, $\ln(1+e^{2x}) \sim \ln(e^{2x}) = 2x$, donc $\boxed{\displaystyle\lim_{x\to+\infty}\frac{\ln(1+e^{2x})}{x} = 2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">{-1mm}ça dépend de $\alpha$</div>
+  <div class="sol"><p>Pour tout $\alpha>0$, $\boxed{\displaystyle\lim_{x\to+\infty} \frac{\ln x}{x^\alpha} = 0}$ (croissances comparées, et ceci quel que soit $\alpha>0$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>De $\left\lfloor\dfrac1x\right\rfloor \leqslant \dfrac1x < \left\lfloor\dfrac1x\right\rfloor+1$, on tire $1-x < x\left\lfloor\dfrac1x\right\rfloor \leqslant 1$ : par encadrement, $\boxed{\displaystyle\lim_{x\to0^+}x\left\lfloor\frac1x\right\rfloor = 1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to+\infty}x^3e^{-x}=0$</div>
+  <div class="opt">$\displaystyle\lim_{x\to0^+}x\ln x=-\infty$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to+\infty}\frac{\ln x}{\sqrt x}=0$</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to+\infty}\frac{e^x}{x^{100}}=+\infty$</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to+\infty}x^3e^{-x}=0}$, $\boxed{\displaystyle\lim_{x\to+\infty}\frac{\ln x}{\sqrt x}=0}$ et $\boxed{\displaystyle\lim_{x\to+\infty}\frac{e^x}{x^{100}}=+\infty}$ ; en revanche $\displaystyle\lim_{x\to0^+}x\ln x=0$, pas $-\infty$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">n'existe pas</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to+\infty}\frac{(\ln x)^2}{x} = 0}$ (le carré du logarithme reste dominé par $x$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$e$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">{-1mm}n'existe pas</div>
+  <div class="sol"><p>$x^x=e^{x\ln x}$ et $x\ln x\to0$ en $0^+$ : $\boxed{\displaystyle\lim_{x\to0^+}x^x = 1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$1$</div>
+  <div class="opt">$e$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">{-1mm}n'existe pas</div>
+  <div class="sol"><p>$x^{1/x}=e^{(\ln x)/x}$ et $(\ln x)/x\to0$ en $+\infty$ : $\boxed{\displaystyle\lim_{x\to+\infty}x^{1/x} = 1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-\infty$</div>
+  <div class="opt">$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt" data-ok>$e$</div>
+  <div class="opt">$+\infty$</div>
+  <div class="opt">{-1mm}n'existe pas</div>
+  <div class="sol"><p>$\boxed{\displaystyle\lim_{x\to+\infty}\left(1+\frac1x\right)^x = e}$ (limite classique définissant $e$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ admet une limite en $b^-$, finie ou égale à $+\infty$.</div>
+  <div class="opt">$f$ admet une limite finie en $b^-$.</div>
+  <div class="opt" data-ok>Si $f$ est majorée, $f$ admet en $b^-$ une limite finie égale à $\displaystyle\sup_{]a,b[}f$.</div>
+  <div class="opt">Si $f$ est majorée, $f$ admet en $a^+$ une limite finie.</div>
+  <div class="sol"><p>$\boxed{f \text{ admet une limite en } b^-, \text{ finie ou égale à } +\infty}$ ; et $\boxed{\text{si } f \text{ est majorée}, f \text{ admet en } b^- \text{ une limite finie égale à } \sup_{]a,b[}f}$ (sans l'hypothèse de majoration, la limite en $b^-$ peut être $+\infty$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ admet une limite finie à gauche et une limite finie à droite en $a$.</div>
+  <div class="opt" data-ok>$\displaystyle\lim_{x\to a^-}f(x)\leqslant f(a)\leqslant \lim_{x\to a^+}f(x)$</div>
+  <div class="opt">$\displaystyle\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)$</div>
+  <div class="opt">$f$ est continue en $a$.</div>
+  <div class="sol"><p>Une fonction croissante sur $\R$ $\boxed{\text{admet toujours une limite finie à gauche et à droite en tout point } a}$, et ces limites encadrent $f(a)$ : $\boxed{\displaystyle\lim_{x\to a^-}f(x)\leqslant f(a)\leqslant \lim_{x\to a^+}f(x)}$ (les deux limites peuvent différer : $f$ peut avoir un saut en $a$, donc n'est pas forcément continue).</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

@@ -4,5 +4,177 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#c026d3"><div class="topnav" style="--accent:#c026d3"><span class="brand">8.5 · Géométrie dans le plan complexe</span><a href="index.html">Menu</a><a href="ch8.html">Chapitre 8</a><a class="" href="pdf/BCPSTCh8_Nombres_complexes.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 8 — Nombres complexes</p><h1>Géométrie dans le plan complexe</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 8.76 à 8.93 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#c026d3"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"info"},{"t":"mcq","c":[["la médiatrice du segment \\([AB]\\), avec \\(z_A = -2+i\\) et \\(z_B = -4i\\)",1,"h"],["la médiatrice du segment \\([AB]\\), avec \\(z_A = 2-i\\) et \\(z_B = 4i\\)",0,"h"],["la droite \\((AB)\\), avec \\(z_A = 2-i\\) et \\(z_B = 4i\\)",0,"h"],["le cercle de centre \\(O\\) et de diamètre \\([AB]\\), avec \\(z_A = -2+i\\) et \\(z_B = 4i\\)",0,"h"]]},{"t":"mcq","c":[["\\(z_0 = i\\) et \\(R = 2\\)",0,"h"],["\\(z_0 = \\dfrac{i}{3}\\) et \\(R = 2\\)",0,"h"],["\\(z_0 = i\\) et \\(R = \\sqrt{2}\\)",0,"h"],["\\(z_0 = \\dfrac{i}{3}\\) et \\(R = \\sqrt{2}\\)",0,"h"],["\\(z_0 = i\\) et \\(R = \\dfrac{2}{3}\\)",0,"h"],["\\(z_0 = \\dfrac{i}{3}\\) et \\(R = \\dfrac{2}{3}\\)",1,"h"]]},{"t":"grid","parts":[{"lit":"\\(z_0 =\\)","raw":1},{"check":{"label":"\\(+\\)","ok":1}},{"br":1},{"check":{"label":"\\(-\\)","ok":0}},{"br":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"br":1},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"br":1},{"check":{"label":"\\(+\\)","ok":1}},{"br":1},{"check":{"label":"\\(-\\)","ok":0}},{"br":1},{"lit":"\\(i\\)","raw":1},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"br":1},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"br":1},{"lit":"\\(R =\\)","raw":1},{"check":{"label":"{{}{2pt}","ok":1}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":1}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"br":1},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}}]},{"t":"mcq","c":[["un singleton",0,"h"],["un cercle",1,"h"],["la droite \\(i\\R\\)",0,"h"],["une demi-droite",0,"h"]]},{"t":"mcq","c":[["\\(\\left\\{ \\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2},\\, \\dfrac{1}{2} - i\\dfrac{\\sqrt{3}}{2} \\right\\}\\)",0,"h"],["l'ensemble vide",0,"h"],["\\(\\left\\{ -\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2},\\, -\\dfrac{1}{2} - i\\dfrac{\\sqrt{3}}{2} \\right\\}\\)",1,"h"],["\\(\\left\\{ i, -i \\right\\}\\)",0,"h"]]},{"t":"mcq","c":[["l'ensemble vide",0,"h"],["la droite d'équation \\(3x - 2y = 1\\)",0,"h"],["un cercle passant par l'origine",0,"h"],["la droite d'équation \\(6x - 4y = 1\\)",1,"h"]]},{"t":"mcq","c":[["un point du plan complexe",0,"h"],["un cercle de rayon \\(\\dfrac{\\sqrt{2}}{2}\\)",0,"h"],["la droite d'équation \\(x + y - 1 = 0\\)",1,"h"],["la droite d'équation \\(x - y - 1 = 0\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\Omega\\left(-\\dfrac{1}{2}, -\\dfrac{1}{2}\\right)\\) et \\(R = \\dfrac{\\sqrt{2}}{2}\\)",1,"h"],["\\(\\Omega\\left(\\dfrac{1}{2}, -\\dfrac{1}{2}\\right)\\) et \\(R = \\dfrac{\\sqrt{3}}{2}\\)",0,"h"],["\\(\\Omega\\left(-\\dfrac{1}{2}, -\\dfrac{1}{2}\\right)\\) et \\(R = \\dfrac{1}{2}\\)",0,"h"],["\\(\\Omega\\left(\\dfrac{1}{2}, \\dfrac{1}{2}\\right)\\) et \\(R = \\dfrac{\\sqrt{3}}{2}\\)",0,"h"]]},{"t":"mcq","c":[["un cercle privé d'un point",0,"h"],["un segment de longueur \\(1\\)",0,"h"],["une droite dirigée par \\((-1, 2)\\)",1,"h"],["une droite privée d'un point",0,"h"]]},{"t":"mcq","c":[["une demi-droite passant par \\(O\\)",0,"h"],["un cercle centré en \\(O\\)",0,"h"],["l'ensemble vide",0,"h"],["l'union de deux demi-droites",1,"h"]]},{"t":"mcq","c":[["de centre \\(1 - i\\) et d'angle \\(\\dfrac{\\pi}{2}\\)",0,"h"],["de centre \\(1 - i\\) et d'angle \\(-\\dfrac{\\pi}{2}\\)",0,"h"],["de centre \\(1\\) et d'angle \\(\\dfrac{\\pi}{2}\\)",1,"h"],["de centre \\(1\\) et d'angle \\(-\\dfrac{\\pi}{2}\\)",0,"h"]]},{"t":"mcq","c":[["le cercle centré en \\(O\\) de rayon \\(2\\)",0,"h"],["le cercle centré en \\(O\\) de rayon \\(\\dfrac{1}{2}\\)",1,"h"],["un cercle centré en \\(O\\) privé d'un point",0,"h"],["une droite ne passant pas par \\(O\\)",0,"h"]]},{"t":"mcq","c":[["l'ensemble \\(\\C\\) tout entier",0,"h"],["le cercle centré en \\(\\left( \\dfrac{1}{2},0 \\right)\\) de rayon \\(\\dfrac{1}{2}\\)",0,"h"],["le cercle centré en \\(\\left( \\dfrac{1}{2},0 \\right)\\) de rayon \\(\\dfrac{1}{2}\\) privé de l'origine",1,"h"],["le cercle centré en \\(\\left( 1,0 \\right)\\) de rayon \\(1\\) privé de l'origine",0,"h"]]},{"t":"mcq","c":[["le cercle centré en \\(O\\) de rayon \\(1\\)",0,"h"],["un cercle privé d'un point",1,"h"],["l'axe des imaginaires purs",0,"h"],["la droite d'équation \\(y = -1\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\left\\{-1,1\\right\\}\\)",0,"h"],["\\(\\left\\{ 0, i \\right\\}\\)",0,"h"],["\\(\\left\\{ -i,i \\right\\}\\)",1,"h"],["\\(\\varnothing\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\varphi : \\C \\setminus \\{-1\\} \\to \\C\\) est bijective",0,"h"],["\\(\\forall w\\in\\C\\setminus\\{ 2\\},~ \\varphi^{-1}(w) = \\dfrac{w + i}{2 - w}\\)",1,"h"],["\\(\\varphi(z)=z\\) a une unique solution",0,"h"],["\\(\\forall y\\in\\C\\setminus\\{ -1\\},~ \\varphi^{-1}(y) = \\dfrac{2y + i}{y + 1}\\)",0,"h"]]},{"t":"mcq","c":[["l'extérieur du disque unité",0,"h"],["le demi-plan \\(\\left\\{ z \\in \\C,\\; \\mathrm{Im}(z) \\geqslant 0 \\right\\}\\)",0,"h"],["le disque ouvert de centre \\(O\\) et rayon \\(1\\)",1,"h"],["le disque fermé de centre \\(O\\) et rayon \\(1\\)",0,"h"]]}];window.QUIZ_START=76;window.QUIZ_CHAP=8;window.QUIZ_SOL=[];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">8.5 · Géométrie dans le plan complexe</span><a href="index.html">Menu</a><a href="ch8.html">Chapitre 8</a></div><main><p class="chapno">Chapitre 8 — Nombres complexes</p><h1>Géométrie dans le plan complexe</h1>
+<div id="quiz" data-chap="8" data-start="76">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (8.1, 8.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="76").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case"></span><span class="case">réflexion d'axe $(Oy)$}</span></div>
+  <div class="row"><span class="case"></span><span class="case">rotation de centre $O$ et d'angle $\dfrac{\pi}{2}$}</span></div>
+  <div class="row"><span class="case"></span><span class="case">symétrie de centre $O$}</span></div>
+  <div class="row"><span class="case"></span><span class="case">réflexion d'axe $(Ox)$} {align*}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>la médiatrice du segment $[AB]$, avec $z_A = -2+i$ et $z_B = -4i$</div>
+  <div class="opt">la médiatrice du segment $[AB]$, avec $z_A = 2-i$ et $z_B = 4i$</div>
+  <div class="opt">la droite $(AB)$, avec $z_A = 2-i$ et $z_B = 4i$</div>
+  <div class="opt">le cercle de centre $O$ et de diamètre $[AB]$, avec $z_A = -2+i$ et $z_B = 4i$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$z_0 = i$ et $R = 2$</div>
+  <div class="opt">$z_0 = \dfrac{i}{3}$ et $R = 2$</div>
+  <div class="opt">$z_0 = i$ et $R = \sqrt{2}$</div>
+  <div class="opt">$z_0 = \dfrac{i}{3}$ et $R = \sqrt{2}$</div>
+  <div class="opt">$z_0 = i$ et $R = \dfrac{2}{3}$</div>
+  <div class="opt" data-ok>$z_0 = \dfrac{i}{3}$ et $R = \dfrac{2}{3}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$z_0 =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$+$</span></div>
+    <div class="row"><span class="case">$-$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+    <div class="row"><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$+$</span></div>
+    <div class="row"><span class="case">$-$</span></div>
+  </div>
+  <span class="lab">$i$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+    <div class="row"><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span></div>
+  </div>
+  <span class="lab">$R =$</span>
+  <span class="case" data-ok>$\sqrt{\cdot}$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$1$</span><span class="case" data-ok>$2$</span><span class="case">$3$</span><span class="case">$4$</span></div>
+    <div class="row"><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span></div>
+  </div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">un singleton</div>
+  <div class="opt" data-ok>un cercle</div>
+  <div class="opt">la droite $i\R$</div>
+  <div class="opt">une demi-droite</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{ \dfrac{1}{2} + i\dfrac{\sqrt{3}}{2},\, \dfrac{1}{2} - i\dfrac{\sqrt{3}}{2} \right\}$</div>
+  <div class="opt">l'ensemble vide</div>
+  <div class="opt" data-ok>$\left\{ -\dfrac{1}{2} + i\dfrac{\sqrt{3}}{2},\, -\dfrac{1}{2} - i\dfrac{\sqrt{3}}{2} \right\}$</div>
+  <div class="opt">$\left\{ i, -i \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">l'ensemble vide</div>
+  <div class="opt">la droite d'équation $3x - 2y = 1$</div>
+  <div class="opt">un cercle passant par l'origine</div>
+  <div class="opt" data-ok>la droite d'équation $6x - 4y = 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">un point du plan complexe</div>
+  <div class="opt">un cercle de rayon $\dfrac{\sqrt{2}}{2}$</div>
+  <div class="opt" data-ok>la droite d'équation $x + y - 1 = 0$</div>
+  <div class="opt">la droite d'équation $x - y - 1 = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\Omega\left(-\dfrac{1}{2}, -\dfrac{1}{2}\right)$ et $R = \dfrac{\sqrt{2}}{2}$</div>
+  <div class="opt">$\Omega\left(\dfrac{1}{2}, -\dfrac{1}{2}\right)$ et $R = \dfrac{\sqrt{3}}{2}$</div>
+  <div class="opt">$\Omega\left(-\dfrac{1}{2}, -\dfrac{1}{2}\right)$ et $R = \dfrac{1}{2}$</div>
+  <div class="opt">$\Omega\left(\dfrac{1}{2}, \dfrac{1}{2}\right)$ et $R = \dfrac{\sqrt{3}}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">un cercle privé d'un point</div>
+  <div class="opt">un segment de longueur $1$</div>
+  <div class="opt" data-ok>une droite dirigée par $(-1, 2)$</div>
+  <div class="opt">une droite privée d'un point</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">une demi-droite passant par $O$</div>
+  <div class="opt">un cercle centré en $O$</div>
+  <div class="opt">l'ensemble vide</div>
+  <div class="opt" data-ok>l'union de deux demi-droites</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">de centre $1 - i$ et d'angle $\dfrac{\pi}{2}$</div>
+  <div class="opt">de centre $1 - i$ et d'angle $-\dfrac{\pi}{2}$</div>
+  <div class="opt" data-ok>de centre $1$ et d'angle $\dfrac{\pi}{2}$</div>
+  <div class="opt">de centre $1$ et d'angle $-\dfrac{\pi}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">le cercle centré en $O$ de rayon $2$</div>
+  <div class="opt" data-ok>le cercle centré en $O$ de rayon $\dfrac{1}{2}$</div>
+  <div class="opt">un cercle centré en $O$ privé d'un point</div>
+  <div class="opt">une droite ne passant pas par $O$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">l'ensemble $\C$ tout entier</div>
+  <div class="opt">le cercle centré en $\left( \dfrac{1}{2},0 \right)$ de rayon $\dfrac{1}{2}$</div>
+  <div class="opt" data-ok>le cercle centré en $\left( \dfrac{1}{2},0 \right)$ de rayon $\dfrac{1}{2}$ privé de l'origine</div>
+  <div class="opt">le cercle centré en $\left( 1,0 \right)$ de rayon $1$ privé de l'origine</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">le cercle centré en $O$ de rayon $1$</div>
+  <div class="opt" data-ok>un cercle privé d'un point</div>
+  <div class="opt">l'axe des imaginaires purs</div>
+  <div class="opt">la droite d'équation $y = -1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{-1,1\right\}$</div>
+  <div class="opt">$\left\{ 0, i \right\}$</div>
+  <div class="opt" data-ok>$\left\{ -i,i \right\}$</div>
+  <div class="opt">$\varnothing$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\varphi : \C \setminus \{-1\} \to \C$ est bijective</div>
+  <div class="opt" data-ok>$\forall w\in\C\setminus\{ 2\},~ \varphi^{-1}(w) = \dfrac{w + i}{2 - w}$</div>
+  <div class="opt">$\varphi(z)=z$ a une unique solution</div>
+  <div class="opt">$\forall y\in\C\setminus\{ -1\},~ \varphi^{-1}(y) = \dfrac{2y + i}{y + 1}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">l'extérieur du disque unité</div>
+  <div class="opt">le demi-plan $\left\{ z \in \C,\; \mathrm{Im}(z) \geqslant 0 \right\}$</div>
+  <div class="opt" data-ok>le disque ouvert de centre $O$ et rayon $1$</div>
+  <div class="opt">le disque fermé de centre $O$ et rayon $1$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

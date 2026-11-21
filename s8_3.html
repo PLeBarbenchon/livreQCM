@@ -4,5 +4,238 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#c026d3"><div class="topnav" style="--accent:#c026d3"><span class="brand">8.3 · Équations complexes et racines $n$-ièmes</span><a href="index.html">Menu</a><a href="ch8.html">Chapitre 8</a><a class="" href="pdf/BCPSTCh8_Nombres_complexes.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 8 — Nombres complexes</p><h1>Équations complexes et racines $n$-ièmes</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 8.35 à 8.62 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#c026d3"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"mcq","c":[["\\(\\{1 + i, -1 - i\\}\\)",0,"h"],["\\(\\left \\{\\dfrac{\\sqrt{2}}{2} (1 + i), -\\dfrac{\\sqrt{2}}{2}(1 + i)\\right\\}\\)",1,"h"],["\\(\\{e^{i\\pi/4}\\}\\)",0,"h"],["\\(\\varnothing\\)",0,"h"]]},{"t":"grid","parts":[{"lit":"\\(a =\\)","raw":1},{"check":{"label":"}","ok":0}},{"check":{"label":"}","ok":0}},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"br":1},{"lit":"\\(b =\\)","raw":1},{"check":{"label":"\\(-\\)","ok":0}},{"check":{"label":"}","ok":0}},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":1}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"br":1},{"lit":"\\(c =\\)","raw":1},{"check":{"label":"\\(-\\)","ok":1}},{"check":{"label":"}","ok":0}},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":1}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":0}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}},{"br":1},{"lit":"\\(d =\\)","raw":1},{"check":{"label":"\\(-\\)","ok":1}},{"check":{"label":"}","ok":0}},{"check":{"label":"\\(0\\)","ok":0}},{"check":{"label":"\\(1\\)","ok":0}},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(3\\)","ok":0}},{"check":{"label":"\\(4\\)","ok":1}},{"check":{"label":"\\(5\\)","ok":0}},{"check":{"label":"\\(6\\)","ok":0}},{"check":{"label":"\\(7\\)","ok":0}},{"check":{"label":"\\(8\\)","ok":0}},{"check":{"label":"\\(9\\)","ok":0}}]},{"t":"mcq","c":[["\\(\\varnothing\\)",0,"h"],["\\(\\{ 1 + 2i,\\, 1 - 2i \\}\\)",1,"h"],["\\(\\{ 2 + 4i,\\, 2 - 4i \\}\\)",0,"h"],["\\(\\{ -1 + 2i,\\, -1 - 2i \\}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\{1 + i,\\, -1 + i\\}\\)",0,"h"],["\\(\\{ i \\}\\)",0,"h"],["\\(\\{ 1,\\, 1 - i \\}\\)",0,"h"],["\\(\\{ 1, -1 + i \\}\\)",0,"h"],["\\(\\{1,\\, -1 + 2i\\}\\)",1,"h"],["\\(\\{-1,\\, 1 + 2i\\}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\{4 + 2i,\\, 1 + i\\}\\)",0,"h"],["\\(\\{3 + i,\\, 2 + 2i\\}\\)",0,"h"],["\\(\\{3 + 2i,\\, 2 + i \\}\\)",1,"h"],["\\(\\{3 - 2i,\\, 2 - i\\}\\)",0,"h"],["\\(\\{1 + 2i,\\, 1 - 3i\\}\\)",0,"h"],["\\(\\{-1 + 2i,\\, 2 + i\\}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\{3,\\, 4i\\}\\)",0,"h"],["\\(\\{-1,\\, 1-3i\\}\\)",0,"h"],["\\(\\{4,\\, 3i\\}\\)",1,"h"],["\\(\\{4,\\, -3i\\}\\)",0,"h"],["\\(\\{2,\\, 2+3i\\}\\)",0,"h"],["\\(\\{-4,\\, 1-3i\\}\\)",0,"h"]]},{"t":"mcq","c":[["a pour solutions \\(e^{i \\theta}\\) et \\(- e^{i \\theta}\\)",0,"h"],["a pour solutions \\(e^{i \\theta}\\) et \\(e^{-i \\theta}\\)",1,"h"],["a pour solutions \\(\\cos\\theta\\) et \\(\\sin\\theta\\)",0,"h"],["n'a pas de solution si \\(\\sin \\theta \\neq 0\\)",0,"h"]]},{"t":"mcq","c":[["\\((1 - i,\\, 2i)\\)",0,"h"],["\\((2 + i,\\, -1)\\)",0,"h"],["\\((1 + 2i,\\, -i)\\)",1,"h"],["\\((2 - i,\\, -1 + 2i)\\)",0,"h"]]},{"t":"grid","parts":[{"check":{"label":"\\(-\\)","ok":1}},{"check":{"label":"\\(i\\)","ok":0}},{"check":{"label":"\\(2i\\)","ok":1}},{"check":{"label":"\\(3i\\)","ok":0}},{"check":{"label":"\\(4i\\)","ok":0}},{"check":{"label":"\\(5i\\)","ok":0}},{"check":{"label":"\\(6i\\)","ok":0}},{"check":{"label":"\\(7i\\)","ok":0}},{"check":{"label":"\\(8i\\)","ok":0}},{"check":{"label":"\\(9i\\)","ok":0}}]},{"t":"mcq","c":[["\\(2 - i\\)",0,"h"],["\\(3 + 4i\\)",0,"h"],["\\(4i\\)",0,"h"],["\\(2 + i\\)",1,"h"]]},{"t":"mcq","c":[["\\(0\\)",1,"h"],["\\(1\\)",0,"h"],["\\(-1\\)",0,"h"],["\\(1+i\\)",0,"h"],["\\(i\\)",0,"h"],["\\(-i\\)",0,"h"]]},{"t":"mcq","c":[["\\(j^3 = -1\\)",0,"h"],["\\(1 + j + j^2 = 0\\)",1,"h"],["\\(1 + \\overline{j} = j\\)",0,"h"],["\\(1 + j = j^2\\)",0,"h"],["\\(j^{232} = j\\)",1,"h"],["\\(j^{2027} = 1\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\left\\{ -3i \\right\\}\\)",0,"h"],["\\(\\left\\{ 3i,\\, 3ij,\\, 3ij^2 \\right\\}\\)",0,"h"],["\\(\\left\\{ 3 e^{i\\pi/6},\\, 3 e^{5i\\pi/6},\\, -3i \\right\\}\\)",1,"h"],["\\(\\left\\{ 3 e^{i\\pi/6},\\, 3 e^{5i\\pi/6},\\, 3i \\right\\}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\sqrt{2} (1 + i)\\)",1,"h"],["\\(\\sqrt{2} (1 - i)\\)",0,"h"],["\\(2 (i - 1)\\)",0,"h"],["\\(4 e^{i\\pi/4}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\left\\{ \\sqrt{2},\\, -\\sqrt{2},\\, i\\sqrt{2},\\, -i\\sqrt{2} \\right\\}\\)",0,"h"],["\\(\\left\\{ 1+i,\\, 1-i,\\, -1+i,\\, -1-i \\right\\}\\)",1,"h"],["\\(\\left\\{ 1+i,\\, -1-i \\right\\}\\)",0,"h"],["\\(\\varnothing\\)",0,"h"]]},{"t":"mcq","c":[["leur somme vaut \\(1\\)",0,"h"],["leur somme vaut \\(0\\)",1,"h"],["leur produit vaut \\((-1)^{n-1}\\)",1,"h"],["leur produit vaut \\(1\\)",0,"h"]]},{"t":"mcq","c":[["\\(0\\)",0,"h"],["\\(\\dfrac{n}{1 - \\omega}\\)",0,"h"],["\\(\\dfrac{n}{\\omega - 1}\\)",1,"h"],["\\(\\dfrac{n(n+1)}{2}\\)",0,"h"]]},{"t":"mcq","c":[["une solution",0,"h"],["deux solutions",0,"h"],["trois solutions",0,"h"],["quatre solutions",1,"h"]]},{"t":"mcq","c":[["toutes réelles",0,"h"],["toutes imaginaires pures",1,"h"],["toutes de module \\(1\\)",0,"h"],["toutes d'argument \\(\\dfrac{\\pi}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(A^2 = 1 + \\omega^2 + \\omega^3\\)",0,"h"],["\\(A^2 = \\omega^2 + \\omega^3 + 2\\)",1,"h"],["\\(1 + A + A^2 = 0\\)",0,"h"],["\\(\\operatorname{Re}(\\omega) = \\dfrac{\\sqrt{5}-1}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(0\\) pour tout \\(p \\in \\N\\)",0,"h"],["\\(n\\) pour tout \\(p \\in \\N\\)",0,"h"],["\\(n\\) si \\(n\\) divise \\(p\\)",1,"h"],["\\(1\\) si \\(n\\) divise \\(p\\)",0,"h"]]},{"t":"mcq","c":[["\\(|e^z| = e^{\\mathrm{Re} (z)}\\)",1,"h"],["\\(|e^z| = e^{|z|}\\)",0,"h"],["\\(e^z \\neq 0\\)",1,"h"],["\\(e^z = 1 \\!\\iff\\! z = 0\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\left| e^{iz} \\right| = e^{\\mathrm{Im}(z)}\\)",0,"h"],["\\(\\left| e^{iz} \\right| = 1\\)",0,"h"],["\\(\\left| e^{iz} \\right| = e^{-\\mathrm{Im}(z)}\\)",1,"h"],["\\(e^{z} = e^{z'} \\iff z = z'\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\{0\\}\\)",0,"h"],["\\(\\left\\{ ik\\pi \\mid k \\in \\Z \\right\\}\\)",0,"h"],["\\(\\left\\{ 2k\\pi \\mid k \\in \\Z \\right\\}\\)",0,"h"],["\\(\\left\\{ 2ik\\pi \\mid k \\in \\Z \\right\\}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\left\\{ \\dfrac{1}{2}\\ln 2 - i\\dfrac{\\pi}{4} + 2ik\\pi \\mid k \\in \\Z \\right\\}\\)",1,"h"],["\\(\\left\\{ \\dfrac{1}{2}\\ln 2 + i\\dfrac{\\pi}{4} + 2ik\\pi \\mid k \\in \\Z \\right\\}\\)",0,"h"],["\\(\\left\\{ \\dfrac{1}{2}\\ln 2 - i\\dfrac{\\pi}{4} \\right\\}\\)",0,"h"],["l'ensemble vide",0,"h"]]},{"t":"mcq","c":[["\\(\\{0\\}\\)",0,"h"],["\\(\\left\\{ 2i k \\pi \\mid k \\in \\Z \\right\\}\\)",0,"h"],["\\(\\left\\{ k \\pi (1+i) \\mid k \\in \\Z \\right\\}\\)",0,"h"],["\\(\\left\\{ k \\pi (i-1) \\mid k \\in \\Z \\right\\}\\)",1,"h"]]},{"t":"grid","parts":[{"lit":"\\(\\Bigg \\{\\)","raw":1},{"check":{"label":"\\(+\\)","ok":1}},{"br":1},{"check":{"label":"\\(-\\)","ok":1}},{"br":1},{"check":{"label":"{","ok":1}},{"check":{"label":"\\(0\\vphantom{\\dfrac{\\pi}{2}}\\)","ok":0}},{"check":{"label":"\\(\\dfrac{\\pi}{6}\\)","ok":0}},{"check":{"label":"\\(\\dfrac{\\pi}{4}\\)","ok":0}},{"check":{"label":"\\(\\dfrac{\\pi}{3}\\)","ok":1}},{"br":1},{"lit":"\\(+\\)","raw":1},{"check":{"label":"\\(\\hspace{-0.9mm}ik\\pi\\hspace{0.9mm}\\)","ok":0}},{"br":1},{"check":{"label":"\\(2ik\\pi\\)","ok":1}}]},{"t":"mcq","c":[["\\(\\tan\\left(\\dfrac{\\theta}{2}\\right)\\)",0,"h"],["\\(i\\tan\\left(\\dfrac{\\theta}{2}\\right)\\)",1,"h"],["\\(i\\tan(\\theta)\\)",0,"h"],["\\(\\dfrac{i}{\\tan \\theta}\\)",0,"h"]]}];window.QUIZ_START=35;window.QUIZ_CHAP=8;window.QUIZ_SOL=[];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">8.3 · Équations complexes et racines $n$-ièmes</span><a href="index.html">Menu</a><a href="ch8.html">Chapitre 8</a></div><main><p class="chapno">Chapitre 8 — Nombres complexes</p><h1>Équations complexes et racines $n$-ièmes</h1>
+<div id="quiz" data-chap="8" data-start="35">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (8.1, 8.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="35").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{1 + i, -1 - i\}$</div>
+  <div class="opt" data-ok>$\left \{\dfrac{\sqrt{2}}{2} (1 + i), -\dfrac{\sqrt{2}}{2}(1 + i)\right\}$</div>
+  <div class="opt">$\{e^{i\pi/4}\}$</div>
+  <div class="opt">$\varnothing$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$a =$</span><span class="case">}</span><span class="case">}</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">{6.5mm}{-2mm} $b = $</span><span class="case">$-$</span><span class="case">}</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">{6.5mm}{-2mm} $c = $</span><span class="case" data-ok>$-$</span><span class="case">}</span><span class="case">$0$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">{6.5mm}{-2mm} $d = $</span><span class="case" data-ok>$-$</span><span class="case">}</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case" data-ok>$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\varnothing$</div>
+  <div class="opt" data-ok>$\{ 1 + 2i,\, 1 - 2i \}$</div>
+  <div class="opt">$\{ 2 + 4i,\, 2 - 4i \}$</div>
+  <div class="opt">$\{ -1 + 2i,\, -1 - 2i \}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{1 + i,\, -1 + i\}$</div>
+  <div class="opt">$\{ i \}$</div>
+  <div class="opt">$\{ 1,\, 1 - i \}$</div>
+  <div class="opt">$\{ 1, -1 + i \}$</div>
+  <div class="opt" data-ok>$\{1,\, -1 + 2i\}$</div>
+  <div class="opt">$\{-1,\, 1 + 2i\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{4 + 2i,\, 1 + i\}$</div>
+  <div class="opt">$\{3 + i,\, 2 + 2i\}$</div>
+  <div class="opt" data-ok>$\{3 + 2i,\, 2 + i \}$</div>
+  <div class="opt">$\{3 - 2i,\, 2 - i\}$</div>
+  <div class="opt">$\{1 + 2i,\, 1 - 3i\}$</div>
+  <div class="opt">$\{-1 + 2i,\, 2 + i\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{3,\, 4i\}$</div>
+  <div class="opt">$\{-1,\, 1-3i\}$</div>
+  <div class="opt" data-ok>$\{4,\, 3i\}$</div>
+  <div class="opt">$\{4,\, -3i\}$</div>
+  <div class="opt">$\{2,\, 2+3i\}$</div>
+  <div class="opt">$\{-4,\, 1-3i\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">a pour solutions $e^{i \theta}$ et $- e^{i \theta}$</div>
+  <div class="opt" data-ok>a pour solutions $e^{i \theta}$ et $e^{-i \theta}$</div>
+  <div class="opt">a pour solutions $\cos\theta$ et $\sin\theta$</div>
+  <div class="opt">n'a pas de solution si $\sin \theta \neq 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(1 - i,\, 2i)$</div>
+  <div class="opt">$(2 + i,\, -1)$</div>
+  <div class="opt" data-ok>$(1 + 2i,\, -i)$</div>
+  <div class="opt">$(2 - i,\, -1 + 2i)$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="case" data-ok>$-$</span><span class="case">$i$</span><span class="case" data-ok>$2i$</span><span class="case">$3i$</span><span class="case">$4i$</span><span class="case">$5i$</span><span class="case">$6i$</span><span class="case">$7i$</span><span class="case">$8i$</span><span class="case">{center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$2 - i$</div>
+  <div class="opt">$3 + 4i$</div>
+  <div class="opt">$4i$</div>
+  <div class="opt" data-ok>$2 + i$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$-1$</div>
+  <div class="opt">$1+i$</div>
+  <div class="opt">$i$</div>
+  <div class="opt">$-i$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$j^3 = -1$</div>
+  <div class="opt" data-ok>$1 + j + j^2 = 0$</div>
+  <div class="opt">$1 + \overline{j} = j$</div>
+  <div class="opt">$1 + j = j^2$</div>
+  <div class="opt" data-ok>$j^{232} = j$</div>
+  <div class="opt">$j^{2027} = 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{ -3i \right\}$</div>
+  <div class="opt">$\left\{ 3i,\, 3ij,\, 3ij^2 \right\}$</div>
+  <div class="opt" data-ok>$\left\{ 3 e^{i\pi/6},\, 3 e^{5i\pi/6},\, -3i \right\}$</div>
+  <div class="opt">$\left\{ 3 e^{i\pi/6},\, 3 e^{5i\pi/6},\, 3i \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\sqrt{2} (1 + i)$</div>
+  <div class="opt">$\sqrt{2} (1 - i)$</div>
+  <div class="opt">$2 (i - 1)$</div>
+  <div class="opt">$4 e^{i\pi/4}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{ \sqrt{2},\, -\sqrt{2},\, i\sqrt{2},\, -i\sqrt{2} \right\}$</div>
+  <div class="opt" data-ok>$\left\{ 1+i,\, 1-i,\, -1+i,\, -1-i \right\}$</div>
+  <div class="opt">$\left\{ 1+i,\, -1-i \right\}$</div>
+  <div class="opt">$\varnothing$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">leur somme vaut $1$</div>
+  <div class="opt" data-ok>leur somme vaut $0$</div>
+  <div class="opt" data-ok>leur produit vaut $(-1)^{n-1}$</div>
+  <div class="opt">leur produit vaut $1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$\dfrac{n}{1 - \omega}$</div>
+  <div class="opt" data-ok>$\dfrac{n}{\omega - 1}$</div>
+  <div class="opt">$\dfrac{n(n+1)}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">une solution</div>
+  <div class="opt">deux solutions</div>
+  <div class="opt">trois solutions</div>
+  <div class="opt" data-ok>quatre solutions</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">toutes réelles</div>
+  <div class="opt" data-ok>toutes imaginaires pures</div>
+  <div class="opt">toutes de module $1$</div>
+  <div class="opt">toutes d'argument $\dfrac{\pi}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^2 = 1 + \omega^2 + \omega^3$</div>
+  <div class="opt" data-ok>$A^2 = \omega^2 + \omega^3 + 2$</div>
+  <div class="opt">$1 + A + A^2 = 0$</div>
+  <div class="opt">$\operatorname{Re}(\omega) = \dfrac{\sqrt{5}-1}{2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$ pour tout $p \in \N$</div>
+  <div class="opt">$n$ pour tout $p \in \N$</div>
+  <div class="opt" data-ok>$n$ si $n$ divise $p$</div>
+  <div class="opt">$1$ si $n$ divise $p$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$|e^z| = e^{\mathrm{Re} (z)}$</div>
+  <div class="opt">$|e^z| = e^{|z|}$</div>
+  <div class="opt" data-ok>$e^z \neq 0$</div>
+  <div class="opt">$e^z = 1 \!\iff\! z = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left| e^{iz} \right| = e^{\mathrm{Im}(z)}$</div>
+  <div class="opt">$\left| e^{iz} \right| = 1$</div>
+  <div class="opt" data-ok>$\left| e^{iz} \right| = e^{-\mathrm{Im}(z)}$</div>
+  <div class="opt">$e^{z} = e^{z'} \iff z = z'$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{0\}$</div>
+  <div class="opt">$\left\{ ik\pi \mid k \in \Z \right\}$</div>
+  <div class="opt">$\left\{ 2k\pi \mid k \in \Z \right\}$</div>
+  <div class="opt" data-ok>$\left\{ 2ik\pi \mid k \in \Z \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left\{ \dfrac{1}{2}\ln 2 - i\dfrac{\pi}{4} + 2ik\pi \mid k \in \Z \right\}$</div>
+  <div class="opt">$\left\{ \dfrac{1}{2}\ln 2 + i\dfrac{\pi}{4} + 2ik\pi \mid k \in \Z \right\}$</div>
+  <div class="opt">$\left\{ \dfrac{1}{2}\ln 2 - i\dfrac{\pi}{4} \right\}$</div>
+  <div class="opt">l'ensemble vide</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\{0\}$</div>
+  <div class="opt">$\left\{ 2i k \pi \mid k \in \Z \right\}$</div>
+  <div class="opt">$\left\{ k \pi (1+i) \mid k \in \Z \right\}$</div>
+  <div class="opt" data-ok>$\left\{ k \pi (i-1) \mid k \in \Z \right\}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$\Bigg \{$</span>
+  <span class="case" data-ok>[2pt]</span>
+  <span class="case" data-ok>$-$</span>
+  <span class="case" data-ok>$i$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$0\vphantom{\dfrac{\pi}{2}}$</span><span class="case">$\dfrac{\pi}{6}$</span><span class="case">$\dfrac{\pi}{4}$</span><span class="case" data-ok>$\dfrac{\pi}{3}$</span></div>
+  </div>
+  <span class="lab">$+$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$\hspace{-0.9mm}ik\pi\hspace{0.9mm}$</span></div>
+    <div class="row"><span class="case" data-ok>$2ik\pi$</span></div>
+  </div>
+  <span class="lab">$\mid k \in \Z\Bigg\}$</span>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\tan\left(\dfrac{\theta}{2}\right)$</div>
+  <div class="opt" data-ok>$i\tan\left(\dfrac{\theta}{2}\right)$</div>
+  <div class="opt">$i\tan(\theta)$</div>
+  <div class="opt">$\dfrac{i}{\tan \theta}$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

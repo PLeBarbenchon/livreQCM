@@ -1,7 +1,260 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>5.2 Calcul matriciel</title>
+<title>5.2 Calcul matriciel — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#be123c"><div class="topnav" style="--accent:#be123c"><span class="brand">5.2 · Calcul matriciel</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a><a class="" href="pdf/BCPSTCh5_Algebre_lineaire.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Calcul matriciel</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch5.html">← Retour au chapitre 5</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">5.2 · Calcul matriciel</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Calcul matriciel</h1>
+<div id="quiz" data-chap="5" data-start="20">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (5.1, 5.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="20").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">Pour toutes matrices $A$ et $B$ carrées de même taille, on a $(AB)^\top = A^\top B^\top$</div>
+  <div class="opt" data-ok>Pour toute matrice $A$ carrée, on a $(A^2)^\top = (A^\top)^2$</div>
+  <div class="opt">Si $A$ et $B$ sont inversibles de même taille, alors $A+B$ est inversible</div>
+  <div class="opt">Si $A$ est une matrice carrée telle que $A^3 = 0$, alors $A^2 = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AB = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$</div>
+  <div class="opt">$BA = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$(AB)^2 = \begin{pmatrix} 5 & 3 \\ 3 & 2 \end{pmatrix}$</div>
+  <div class="opt">$(BA)^2 = \begin{pmatrix} 1 & 3 \\ 3 & 4 \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AA^\top\in\mathcal{M}_3(\R)$</div>
+  <div class="opt" data-ok>$BA\in\mathcal{M}_3(\R)$</div>
+  <div class="opt">$AB=BA$</div>
+  <div class="opt">$A+B\in \mathcal{M}_3(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$3A + 2B - C + I_2 = \begin{pmatrix} 4 & 4 \\ 11 & 3 \end{pmatrix}$</div>
+  <div class="opt">$3A + 2B - C + I_2 = \begin{pmatrix} 3 & 4 \\ 11 & 2 \end{pmatrix}$</div>
+  <div class="opt">$2A - 3B + C = \begin{pmatrix} 1 & -1 \\ 0 & -9 \end{pmatrix}$</div>
+  <div class="opt">$2A - 3B + C = \begin{pmatrix} 6 & 0 \\ 2 & 5 \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AB=0 \implies A=0$ ou $B=0$</div>
+  <div class="opt">$(A+B)^2=A^2+2AB+B^2$</div>
+  <div class="opt" data-ok>$(A+B)^2=A^2+AB+BA+B^2$</div>
+  <div class="opt">$(A+B)^3 + A^3 + 3A^2B + 3AB^2 + B^3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$AB = \begin{pmatrix} -6 & 0 & 24 \\ -4 & 0 & 16 \\ 2 & 0 & -8 \end{pmatrix}$</div>
+  <div class="opt">$AB$ est inversible</div>
+  <div class="opt">$BA = \begin{pmatrix} -6 & 0 & 24 \\ -4 & 0 & 16 \\ 2 & 0 & -8 \end{pmatrix}$</div>
+  <div class="opt">$AB=BA$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}^n=\begin{pmatrix} 1 & 2^n-1 \\ 0 & 2^n \end{pmatrix}$</div>
+  <div class="opt">$\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}^n = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$</div>
+  <div class="opt">$\begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}^n = \begin{pmatrix} 1 & 1 \\ 0 & 2^n \end{pmatrix}$</div>
+  <div class="opt">$\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}^n = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$J^2=J$</div>
+  <div class="opt" data-ok>$J^2=nJ$</div>
+  <div class="opt">$J^n=J$</div>
+  <div class="opt">$J$ est inversible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A \in GL_2(\R) \iff ab - cd \neq 0$</div>
+  <div class="opt">$A\in GL_2(\R) \iff a \neq 0$</div>
+  <div class="opt" data-ok>$A\in GL_2(\R) \iff ad - bc \neq 0$</div>
+  <div class="opt">$A \in GL_2(\R) \iff (a,b,c,d)\in \left( \R^*\right)^4$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\begin{pmatrix} 0 & -1 \\ 2 & 0 \end{pmatrix}^{-1} = \begin{pmatrix} 0 & 2 \\ -1 & 0 \end{pmatrix}$</div>
+  <div class="opt">$\begin{pmatrix} 1 & -1 \\ 0 & 0 \end{pmatrix}\in GL_2(\R)$</div>
+  <div class="opt" data-ok>$\begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}^{-1} = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}$</div>
+  <div class="opt">$\begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}^{-1} = \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(A+B)^{-1}=A^{-1}+B^{-1}$</div>
+  <div class="opt" data-ok>$(AB)^{-1}=B^{-1}A^{-1}$</div>
+  <div class="opt">$(AB)^{-1}=A^{-1}B^{-1}$</div>
+  <div class="opt">$A+B$ est inversible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(AB)^\top=A^\top B^\top$</div>
+  <div class="opt" data-ok>$(AB)^\top=B^\top A^\top$</div>
+  <div class="opt" data-ok>$A \text{ inversible} \implies (A^{-1})^\top = (A^\top)^{-1}$</div>
+  <div class="opt">$A A^\top$ est inversible</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall n\in\N,~ R(\theta)^n=R(n\theta)$</div>
+  <div class="opt">$R(\theta)^{-1}=-R(\theta)$</div>
+  <div class="opt" data-ok>$\forall \theta_1,\theta_2 \in \R,~ R(\theta_1) R(\theta_2) = R(\theta_1 + \theta_2)$</div>
+  <div class="opt">$R(\theta)$ n'est pas inversible si $\theta=\pi$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^n = I_3+N^n$</div>
+  <div class="opt" data-ok>$A^n = I_3 + nN + \dfrac{n(n-1)}{2} N^2$</div>
+  <div class="opt">$A^n = I_3 + n N$</div>
+  <div class="opt">$A^n=I_3+nN+\dfrac{n(n+1)}{2}N^2$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$a ~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case" data-ok>$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$~~b~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$-1$</span><span class="case">$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$~~c~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span></div>
+  </div>
+  <span class="lab">$d ~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$-1$</span><span class="case">$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$~~e~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span></div>
+  </div>
+  <span class="lab">$~~f~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case" data-ok>$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$g ~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case">$0$</span><span class="case" data-ok>$1$</span></div>
+  </div>
+  <span class="lab">$~~h~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case" data-ok>$0$</span><span class="case">$1$</span></div>
+  </div>
+  <span class="lab">$~~i~=~$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$-1$</span><span class="case" data-ok>$0$</span><span class="case">$1$</span></div>
+  </div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^n = 2^nI _3 + N^n$</div>
+  <div class="opt">$A^n = 2^n I_3 + n N + \dfrac{n(n-1)}{2} N^2$</div>
+  <div class="opt">$(A^n)_{2,1} = n2^{n}$</div>
+  <div class="opt" data-ok>$A^n = 2^n \left( I_3 + \dfrac{n}{2} N +\dfrac{n(n-1)}{8} N^2 \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$AS$ est symétrique</div>
+  <div class="opt" data-ok>$A^2$ est symétrique</div>
+  <div class="opt">$SA$ est antisymétrique</div>
+  <div class="opt">$S^2$ est antisymétrique</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">les matrices de la forme $\lambda I_3$</div>
+  <div class="opt" data-ok>les matrices diagonales</div>
+  <div class="opt">les matrices triangulaires</div>
+  <div class="opt">$\mathcal{M}_3(\R)$ tout entier</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$A$ est une matrice de la forme $\lambda I_n$</div>
+  <div class="opt">$A$ est inversible</div>
+  <div class="opt">$A$ est triangulaire stricte</div>
+  <div class="opt">une telle matrice $A$ n'existe pas</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$N=0$</div>
+  <div class="opt">$N$ est inversible</div>
+  <div class="opt">$I_n+N$ n'est pas inversible</div>
+  <div class="opt" data-ok>$(I_n-N)^{-1} = I_n + N + N^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^{-1} = A^2 - 5A$</div>
+  <div class="opt" data-ok>$A^{-1} = \begin{pmatrix} 2 & -1 \\ -5 & 3 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$A^2 = 5A - I_2$</div>
+  <div class="opt">$A^{-1} = \begin{pmatrix} -2 & 1 \\ 5 & -3 \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^{-1} = A^2$</div>
+  <div class="opt">$A^3 = I_3$</div>
+  <div class="opt" data-ok>$A^{-1} = -A^2$</div>
+  <div class="opt">$A^6 = -I_3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$A$ est inversible</div>
+  <div class="opt">$A^2 = nA$</div>
+  <div class="opt">$A$ n'est pas inversible</div>
+  <div class="opt" data-ok>$A^2=(n-2)A+(n-1)I_n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(P^{-1} M P)^{-1} = P^{-1} M^{-1} P$</div>
+  <div class="opt">$\forall k\in\N,~ (P^{-1} M P)^k = M^k$</div>
+  <div class="opt">$\forall k\in\N,~ (P^{-1} M P)^k = P^{-k} M^k P^k$</div>
+  <div class="opt" data-ok>$\forall k\in\N,~ (P^{-1} M P)^k = P^{-1} M^k P$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$P^{-1} M P = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}$</div>
+  <div class="opt">$P^{-1} M^n P = \begin{pmatrix} 2^n & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}$</div>
+  <div class="opt">$P^{-1} M P = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & -1 \end{pmatrix}$</div>
+  <div class="opt">$M^n=\begin{pmatrix} 2^n & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & (-1)^n \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$A^{-1} = \dfrac{1}{8} \begin{pmatrix} 3 & -1 \\ 1 & 3 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$A^n = \dfrac{1}{2} \begin{pmatrix} 4^n + 2^n & 4^n - 2^n \\ 4^n - 2^n & 4^n + 2^n\end{pmatrix}$</div>
+  <div class="opt">$A^n = \begin{pmatrix} 3^n & 1 \\ 1 & 3^n \end{pmatrix}$</div>
+  <div class="opt">$A^n = \dfrac{1}{2} \begin{pmatrix} 4^n + 2^n & 4^n + 2^n \\ 4^n - 2^n & 4^n - 2^n \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$X_n = A^n X_0$ avec $A=\begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$</div>
+  <div class="opt">$A$ n'est pas inversible</div>
+  <div class="opt">$X_n = A^n X_0$ avec $A=\begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$(u_n+v_n)$ est géométrique de raison $3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\tr (AB) = \tr (BA)$</div>
+  <div class="opt">$AB-BA=0$</div>
+  <div class="opt">$\tr (AB) = \tr (A)\tr (B)$</div>
+  <div class="opt">$\tr (AB)=0\implies AB=0$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

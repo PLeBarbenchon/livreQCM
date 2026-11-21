@@ -1,7 +1,283 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>15.1 Dérivées partielles</title>
+<title>15.1 Continuité et dérivées partielles — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#db2777"><div class="topnav" style="--accent:#db2777"><span class="brand">15.1 · Dérivées partielles</span><a href="index.html">Menu</a><a href="ch15.html">Chapitre 15</a></div><main><p class="chapno">Chapitre 15 — Fonctions à deux variables</p><h1>Dérivées partielles</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch15.html">← Retour au chapitre 15</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">15.1 · Continuité et dérivées partielles</span><a href="index.html">Menu</a><a href="ch15.html">Chapitre 15</a></div><main><p class="chapno">Chapitre 15 — Fonctions à deux variables</p><h1>Continuité et dérivées partielles</h1>
+<div id="quiz" data-chap="15" data-start="1">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (15.1, 15.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="1").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$\dfrac{\partial f}{\partial x} (1, 2) =$</span><span class="case">$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case" data-ok>$8$</span><span class="case">$\dfrac{\partial f}{\partial y} (1, 2) =$</span><span class="case">$-$</span><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case" data-ok>$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">{center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x} (x,y) = 6xy - 2y^3 + 5$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x,y) = 3x^2 - 6x y^2 + 5$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = 6xy - 6x y^2 + 5$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial y} (x,y) = 3x^2 - 6x y^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = e^{x^2 y}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = 2x\, e^{x^2 y}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial y} (x,y) = x^2\, e^{x^2 y}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x,y) = x^2 y\, e^{x^2 y}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = -\sin y + y\cos x$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x,y) = -\sin y + \sin x$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x}(x,y) = \cos y + y\cos x$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x,y) = x\sin y + \sin x$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial f}{\partial x}(x,y)=\dfrac{1}{x+y}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x} (x, y) = \dfrac{2y}{(x+y)^2}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial y} (x, y) = \dfrac{-2x}{(x+y)^2}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x, y) = \dfrac{2x}{(x+y)^2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x} (x,y) = y \, x^{y-1}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x,y) = y \, x^{y-1}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = \ln(x) \, x^{y}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial y} (x,y) = \ln(x) \, x^{y}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = y \, x^{y}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y} (x,y) = y \, x^{y}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$\dfrac{\partial f}{\partial x}(x,y) =$</span><span class="case" data-ok>$-$</span><span class="case" data-ok>$+$</span><span class="case">$-$</span><span class="case">et $\dfrac{\partial f}{\partial y}(x,y) = $</span><span class="case">$-$</span><span class="case">$+$</span><span class="case">$-$</span><span class="case" data-ok>{center}</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = \dfrac{1}{1+x^2+y^2}$</div>
+  <div class="opt">$\nabla f(1,1)=\left( \dfrac{1}{3}, \dfrac{1}{3} \right)$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x} (x, y) = \dfrac{2x}{1+x^2+y^2}$</div>
+  <div class="opt" data-ok>$\nabla f(1,1) = \left( \dfrac{2}{3}, \dfrac{2}{3} \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = \dfrac{x^2}{x^2 + y^2}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x}(x,y) = \dfrac{-y}{x^2 + y^2}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial y}(x,y)=\dfrac{x}{x^2 + y^2}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial y}(x,y)=\dfrac{1}{x^2 + y^2}$</div>
+  <div class="opt">$\nabla f(x,y) = \dfrac{1}{x^2+y^2} \begin{pmatrix} y \\ x \end{pmatrix}$</div>
+  <div class="opt">$\nabla f(x,y) = \dfrac{1}{x^2+y^2} \begin{pmatrix} x \\ y \end{pmatrix}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial f}{\partial x}(x,y) = 0$ et $\dfrac{\partial f}{\partial y}(x,y) = 1$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x}(x,y) = 1$ et $\dfrac{\partial f}{\partial y}(x,y) = 0$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x}(0,0)$ existe et vaut $0$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial y}(0,0)$ existe et vaut $0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$N$ est de classe $\mathcal{C}^1$ sur $\R^2$</div>
+  <div class="opt">$\dfrac{\partial N}{\partial x}(0,0) = \dfrac{\partial N}{\partial y}(0,0) = 0$</div>
+  <div class="opt" data-ok>$N$ est de classe $\mathcal{C}^1$ sur $\R^2\setminus\{(0,0)\}$</div>
+  <div class="opt">$\dfrac{\partial N}{\partial x}(x,y) = \dfrac{1}{2\sqrt{x^2+y^2}}$ si $x,y\in \R_+^*$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Si $f$ est de classe $\mathcal{C}^1$ sur $\R^2$, alors $f$ est continue sur $\R^2$</div>
+  <div class="opt">Si $f$ est continue en $(a,b)$, alors $f$ admet des dérivées partielles en $(a,b)$</div>
+  <div class="opt">Si $f$ a des dérivées partielles en tout point de $\R^2$, alors $f$ est continue sur $\R^2$</div>
+  <div class="opt">Si $f$ a des dérivées partielles en tout point de $\R^2$, alors $f$ est de classe $\mathcal{C}^1$ sur $\R^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est continue sur $\R^2$</div>
+  <div class="opt">$f$ n'est pas continue en $(0,1)$</div>
+  <div class="opt">$f$ n'est pas de classe $\mathcal{C}^1$ sur $\R^2$</div>
+  <div class="opt">$\forall (x,y) \in \R^* \times \R,\ \dfrac{\partial f}{\partial x}(x,y) = \dfrac{y \cos (xy)}{x}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$f$ est de classe $\mathcal{C}^1$ sur $\R^2$</div>
+  <div class="opt">$f$ est continue sur $\R^2$</div>
+  <div class="opt" data-ok>$f$ admet des dérivées partielles en $(0,0)$</div>
+  <div class="opt" data-ok>$f$ n'est pas continue en $(0,0)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est continue en $(0,0)$</div>
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x} (0,0) = \dfrac{\partial f}{\partial y} (0,0) = 1$</div>
+  <div class="opt">$f$ n'a pas de dérivées partielles en $(0,0)$</div>
+  <div class="opt">$f$ est de classe $\mathcal{C}^1$ sur $\R^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(x,y)\mapsto\dfrac{x^3 + y^3}{x^2+y^2}$</div>
+  <div class="opt">$(x,y)\mapsto\dfrac{x^2-y^2}{x^2+y^2}$</div>
+  <div class="opt">$(x,y)\mapsto\dfrac{x+2y}{x+y}$</div>
+  <div class="opt">$(x,y)\mapsto\dfrac{(x+y)^2}{x^2+y^2}$</div>
+  <div class="opt">$(x,y)\mapsto\dfrac{2xy}{x^2+y^2}$</div>
+  <div class="opt" data-ok>$(x,y)\mapsto\dfrac{\sin(x^2)\sin(y^2)}{\sqrt{x^2+y^2}}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(x,y) \mapsto x^3 y^2 - 4xy + 1$</div>
+  <div class="opt">$(x,y)\mapsto \ln\left( x^2 + y^2 \right)$</div>
+  <div class="opt" data-ok>$(x,y)\mapsto \sqrt{x^2 + y^2 + 1}$</div>
+  <div class="opt">$(x,y)\mapsto |x| + y$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f$ est de classe $\mathcal{C}^1$ sur $U$</div>
+  <div class="opt">$\forall (x,y)\in U,\ \dfrac{\partial f}{\partial y} (x,y)=\dfrac{1}{x-y}$</div>
+  <div class="opt">$\forall (x,y)\in U,\ \dfrac{\partial g}{\partial x} (x,y)=\dfrac{1}{\sqrt{x-y}} $</div>
+  <div class="opt">$\forall (x,y)\in U,\ \dfrac{\partial g}{\partial x}(x,y) = \dfrac{\partial g}{\partial y}(x,y)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\partial G}{\partial x}(x,y) = \dfrac{\partial f}{\partial x}(y,x)$</div>
+  <div class="opt">$h'(x) = 2 \dfrac{\partial f}{\partial x} (x,x)$</div>
+  <div class="opt" data-ok>$g'(x) = \dfrac{\partial f}{\partial x} \big(x,h(x)\big) + h'(x)\,\dfrac{\partial f}{\partial y}\big(x,h(x)\big)$</div>
+  <div class="opt">$g'(x) = \dfrac{\partial f}{\partial x} \big(x,h(x)\big) + \dfrac{\partial f}{\partial y}\big(x,h(x)\big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial g}{\partial r} = \cos\theta\,\dfrac{\partial f}{\partial x} + \sin\theta\,\dfrac{\partial f}{\partial y}$</div>
+  <div class="opt">$\dfrac{\partial g}{\partial \theta} = -\sin\theta\,\dfrac{\partial f}{\partial x} + \cos\theta\,\dfrac{\partial f}{\partial y}$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x} = \cos\theta\,\dfrac{\partial g}{\partial r} - r\sin\theta\,\dfrac{\partial g}{\partial \theta}$</div>
+  <div class="opt" data-ok>$\dfrac{\partial g}{\partial \theta} = -r\sin\theta\,\dfrac{\partial f}{\partial x} + r\cos\theta\,\dfrac{\partial f}{\partial y}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial f}{\partial x} (x,y) = y \, g'(xy)$</div>
+  <div class="opt">$\dfrac{\partial f}{\partial x} (x,y) = x\, g'(xy)$</div>
+  <div class="opt" data-ok>$x \dfrac{\partial f}{\partial x} - y \dfrac{\partial f}{\partial y} = 0$</div>
+  <div class="opt">$x \dfrac{\partial f}{\partial x} + y\dfrac{\partial f}{\partial y} = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$g'(t) = \dfrac{\partial f}{\partial x}(t,t^2)+2t\,\dfrac{\partial f}{\partial y}(t,t^2)$</div>
+  <div class="opt">$g'(t) = 2t^3 + t^2$</div>
+  <div class="opt">$g'(t)=\dfrac{\partial f}{\partial x}(t,t^2)+\dfrac{\partial f}{\partial y}(t,t^2)$</div>
+  <div class="opt" data-ok>$g'(t) = 4t^3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial F}{\partial u}(u,v) = \dfrac{\partial f}{\partial x} + \dfrac{\partial f}{\partial y}$</div>
+  <div class="opt">$\dfrac{\partial F}{\partial u}(u,v) = \dfrac{\partial f}{\partial x}$</div>
+  <div class="opt">$\dfrac{\partial F}{\partial v}(u,v) = \dfrac{\partial f}{\partial y}-\dfrac{\partial f}{\partial x}$</div>
+  <div class="opt">$\dfrac{\partial F}{\partial v}(u,v) = -\dfrac{\partial f}{\partial y}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="row"><span class="lab">$g'(0) =$</span><span class="case">{}{4.2pt}</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case">$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← dizaine</span></div>
+  <div class="row"><span class="case">$0$</span><span class="case">$1$</span><span class="case">$2$</span><span class="case">$3$</span><span class="case">$4$</span><span class="case" data-ok>$5$</span><span class="case">$6$</span><span class="case">$7$</span><span class="case">$8$</span><span class="case">$9$</span><span class="lab">← unité</span></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f (1 + h, 2 + k) \underset{h,k \to 0}{=} 2 + 4h + k + o \big( \| (h,k) \|\big)$</div>
+  <div class="opt">$f(1 + h, 2 + k) \underset{h,k \to 0}{=} 2 + 2h + k + o \big( \| (h,k) \| \big)$</div>
+  <div class="opt" data-ok>$\forall (x,y) \in \R^2,\ \nabla f (x,y) = (2xy, x^2)$</div>
+  <div class="opt">$\forall (x,y) \in \R^2,\ \nabla f (x,y) = (2x, x^2)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$f(1 + h, -1 + k) \underset{h,k \to 0}{=} e^{-3} (1 + 3h + 3k) + o \big( \| (h,k) \| \big)$</div>
+  <div class="opt">$f(1 + h, -1 + k) \underset{h,k \to 0}{=} e^{-3} (1 + 3h + k) + o \big( \| (h,k) \| \big)$</div>
+  <div class="opt">$f(-1 + h, \ln 2 + k) \underset{h,k \to 0}{=} -8 + 24h + 24k + o \big( \| (h,k) \| \big)$</div>
+  <div class="opt" data-ok>$f(-1 + h, \ln 2 + k) \underset{h,k \to 0}{=} -8 + 24h - 24k + o \big( \| (h,k) \| \big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{P} : z = 2(x - 1) + 4(y - 2)$</div>
+  <div class="opt" data-ok>$\mathcal{P} : z = 2x + 4y - 5$</div>
+  <div class="opt">$\mathcal{P} : z = 2x + 4y$</div>
+  <div class="opt">$(2,3,2) \in \mathcal{P}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$x - y - z = 1$</div>
+  <div class="opt">$2x + y - z = 0$</div>
+  <div class="opt">$x + y + z = 1$</div>
+  <div class="opt">$x + 2y + z = 0$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x = 1$</div>
+  <div class="opt">$y = 0$</div>
+  <div class="opt">$x - 2y = 1$</div>
+  <div class="opt">$2x - y = 2$</div>
+  <div class="opt" data-ok>$x + 2y = 1$</div>
+  <div class="opt">$2x + y = 2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial^2 f}{\partial x^2}(x,y) = -y^4 \cos(xy^2)$</div>
+  <div class="opt">$\dfrac{\partial^2 f}{\partial x \partial y}(x,y) = -2x y^3 \cos(xy^2) + e^y$</div>
+  <div class="opt">$\dfrac{\partial^2 f}{\partial x \partial y}(x,y) = - 2 y^3 \cos(xy^2) + xe^y$</div>
+  <div class="opt">$\dfrac{\partial^2 f}{\partial y^2}(x,y) = -4x^2 y^2 \cos(x y^2) + xe^y$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$g'(t) = \dfrac{\partial f}{\partial x} + \dfrac{\partial f}{\partial y}$</div>
+  <div class="opt" data-ok>$g'(t) = e^t \dfrac{\partial f}{\partial x} + \dfrac{1}{t} \dfrac{\partial f}{\partial y}$</div>
+  <div class="opt">$g''(t) = e^{2t} \dfrac{\partial^2 f}{\partial x^2}+\dfrac{2e^t}{t}\dfrac{\partial^2 f}{\partial x\partial y}+\dfrac1{t^2}\dfrac{\partial^2 f}{\partial y^2}$</div>
+  <div class="opt">$g''(t)=e^{t}\dfrac{\partial^2 f}{\partial x^2} - \dfrac1{t^2}\dfrac{\partial^2 f}{\partial y^2}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\partial^2 f}{\partial x^2}(x,y)=y^2\dfrac{\partial^2 g}{\partial x^2}(xy, e^y)$</div>
+  <div class="opt">$\dfrac{\partial^2 f}{\partial x^2}(x,y)=y^2\dfrac{\partial^2 g}{\partial x^2}(xy, e^y)+y\dfrac{\partial g}{\partial x}(xy, e^y)$</div>
+  <div class="opt" data-ok>$\dfrac{\partial^2 f}{\partial y\partial x}(x,y)=\dfrac{\partial g}{\partial x}(xy, e^y)+xy\dfrac{\partial^2 g}{\partial x^2}(xy, e^y)+ye^y\dfrac{\partial^2 g}{\partial x\partial y}(xy, e^y)$</div>
+  <div class="opt">$\dfrac{\partial^2 f}{\partial y^2}(x,y)=x^2\dfrac{\partial^2 g}{\partial x^2}(xy, e^y)+2xe^y\dfrac{\partial^2 g}{\partial x\partial y}(xy, e^y)+e^{2y}\dfrac{\partial^2 g}{\partial y^2}(xy, e^y)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\forall y\in\R,\ \dfrac{\partial f}{\partial x} (0,y) = y$</div>
+  <div class="opt">$f$ n'est pas de classe $\mathcal{C}^1$ sur $\R^2$</div>
+  <div class="opt">$\dfrac{\partial}{\partial y}\left(\dfrac{\partial f}{\partial x}\right)(0,0) = \dfrac{\partial}{\partial x}\left(\dfrac{\partial f}{\partial y}\right)(0,0)$</div>
+  <div class="opt" data-ok>$f$ n'est pas de classe $\mathcal{C}^2$ sur $\R^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(x,y) \mapsto \dfrac{y}{x-y}$</div>
+  <div class="opt">$(x,y) \mapsto \dfrac{xy}{x-y}$</div>
+  <div class="opt">$(x,y) \mapsto \dfrac{x}{y-x}$</div>
+  <div class="opt">$(x,y) \mapsto \dfrac{x+y}{x-y}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(x,y) \mapsto x + \dfrac{x^2 y^2}{2} + \dfrac{x^4 y}{4} + C$ avec $C\in\R$</div>
+  <div class="opt" data-ok>$(x,y)\mapsto x + \dfrac{x^2 y^2}{2} + \dfrac{x^4 y}{4} + \varphi(y)$ avec $\varphi\in\mathcal{C}^1(\R)$</div>
+  <div class="opt">$(x,y)\mapsto x + \dfrac{x^2 y^2}{2} + \dfrac{x^4 y}{4} + \varphi(x)$, avec $\varphi\in\mathcal{C}^1(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(x,y)\mapsto \dfrac{x^2 y^3}{6} + y\, a(y) + b(x)$</div>
+  <div class="opt" data-ok>$(x,y)\mapsto \dfrac{x^2 y^3}{6} + y\, a(x) + b(x)$</div>
+  <div class="opt">$(x,y)\mapsto \dfrac{x^2 y^3}{3} + x\, a(x) + b(y)$</div>
+  <div class="opt">$(x,y)\mapsto \dfrac{x^2 y^3}{3} + x\, a(y) + b(y)$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

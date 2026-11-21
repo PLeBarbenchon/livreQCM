@@ -4,5 +4,140 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#0891b2"><div class="topnav" style="--accent:#0891b2"><span class="brand">2.2 · Raisonnement</span><a href="index.html">Menu</a><a href="ch2.html">Chapitre 2</a><a class="" href="pdf/BCPSTCh2_Raisonnement_logique_ensembles.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 2 — Raisonnement, logique et ensembles</p><h1>Raisonnement</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 2.29 à 2.42 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#0891b2"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"mcq","c":[["\\(\\non{P}\\) et \\(Q\\)",0,"h"],["\\(P\\) et \\(\\non{Q}\\)",1,"h"],["\\(\\non{P}\\) et \\(\\non{Q}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\mathbb{N}\\) fini",0,"h"],["\\(\\mathbb{N}\\) non borné",0,"h"],["qu'il en existe un",1,"h"],["que tout entier admet un successeur",0,"h"]]},{"t":"mcq","c":[["\\(Q \\Rightarrow P\\)",0,"h"],["\\(\\non{Q} \\Rightarrow P\\)",0,"h"],["\\(\\non{P} \\Rightarrow Q\\)",0,"h"],["\\(\\non{Q} \\Rightarrow \\non{P}\\)",1,"h"]]},{"t":"mcq","c":[["montrer \\(P(0)\\)",0,"h"],["montrer \\(P(n)\\) pour tout \\(n\\)",0,"h"],["montrer \\(P(n+1)\\) pour un entier \\(n\\)",0,"h"],["montrer \\(P(n) \\Rightarrow P(n+1)\\) pour tout \\(n\\)",1,"h"]]},{"t":"mcq","c":[["montrer \\(P(0)\\)",0,"h"],["montrer \\(P(n_0)\\)",1,"h"],["montrer \\(P(1)\\)",0,"h"],["montrer \\(P(n)\\) si \\(n < n_0\\)",0,"h"]]},{"t":"mcq","c":[["\\(P(n)\\) est vraie",0,"h"],["\\(P(k)\\) est vraie pour tout \\(k \\leqslant n\\)",1,"h"],["\\(P(n)\\) et \\(P(n-1)\\) sont vraies",0,"h"],["\\(P(n+1)\\) est vraie",0,"h"]]},{"t":"mcq","c":[["Oui, un entier est pair ou impair",1,"h"],["Non, il manque le cas \\(n\\in 4\\N\\)",0,"h"],["Non, il faut aussi traiter le cas \\(n = 0\\)",0,"h"],["Non, il faut aussi traiter le cas \\(n < 0\\)",0,"h"]]},{"t":"mcq","c":[["\\(n\\) positif ou \\(n\\) négatif",0,"h"],["\\(n \\equiv 0\\) ou \\(2 \\pmod{3}\\)",0,"h"],["\\(n \\equiv 0,\\ 1\\) ou \\(2 \\pmod{3}\\)",1,"h"],["\\(n \\equiv 0\\) ou \\(1 \\pmod{3}\\)",0,"h"]]},{"t":"mcq","c":[["\\(a > 0\\) et \\(a \\leqslant 0\\)",0,"h"],["\\(a + b \\geqslant 0\\) et \\(a + b < 0\\)",0,"h"],["\\(a \\geqslant b\\) et \\(a < b\\)",1,"h"],["\\(|a| \\geqslant |b|\\) et \\(|a| < |b|\\)",0,"h"]]},{"t":"mcq","c":[["prouve l'existence de la solution",0,"h"],["vérifie des solutions potentielles",0,"h"],["détermine des conditions nécessaires",1,"h"],["démontre l'unicité de la solution",0,"h"]]},{"t":"mcq","c":[["est facultative",0,"h"],["suppose l'existence de la solution",0,"h"],["détermine des conditions nécessaires",0,"h"],["vérifie des solutions potentielles",1,"h"]]},{"t":"mcq","c":[["\\(x_1\\), \\(x_2\\) et \\(x_3\\) sont solutions",0,"h"],["Il y a une erreur dans la synthèse",0,"h"],["\\(x_1\\) est l'unique solution au problème",1,"h"],["Il faut recommencer l'analyse",0,"h"]]},{"t":"mcq","c":[["\\(\\mathscr{S} = \\varnothing\\)",0,"h"],["\\(\\mathscr{S} = \\{1\\}\\)",0,"h"],["\\(\\mathscr{S} = \\{4\\}\\)",1,"h"],["\\(\\mathscr{S} = \\{1,4\\}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\mathscr{S} = \\varnothing\\)",0,"h"],["\\(\\mathscr{S} = \\{0\\}\\)",0,"h"],["\\(\\mathscr{S} = \\{2\\}\\)",0,"h"],["\\(\\mathscr{S} = \\{0,2\\}\\)",1,"h"]]}];window.QUIZ_START=29;window.QUIZ_CHAP=2;window.QUIZ_SOL=["<p>On suppose \\(\\boxed{\\non{P} \\text{ vraie, et on aboutit à une contradiction}}\\) ; on en conclut que \\(\\non P\\) est fausse, donc que \\(P\\) est vraie.</p>","<p>La négation de \\(P\\Rightarrow Q\\) est « \\(P\\) et \\(\\non Q\\) » : on suppose donc \\(\\boxed{P \\text{ et } \\non{Q}}\\) et on cherche une contradiction.</p>","<p>On suppose la négation de l'énoncé : \\(\\boxed{\\text{il existe un entier } N \\text{ plus grand que tous les autres}}\\). Alors \\(N+1\\) est un entier strictement plus grand que \\(N\\), ce qui est contradictoire.</p>","<p>On démontre \\(\\boxed{\\non{Q} \\Rightarrow \\non{P}}\\), qui est équivalente à \\(P\\Rightarrow Q\\). (La réponse A est la réciproque, qui n'est pas équivalente.)</p>","<p>La négation de « \\(x=0\\) ou \\(y=0\\) » est « \\(x\\neq0\\) et \\(y\\neq0\\) » : il faut montrer \\(\\boxed{\\text{si } x\\neq0 \\text{ et } y\\neq0, \\text{ alors } xy\\neq0}\\).</p>","<p>L'hérédité consiste à montrer \\(\\boxed{\\forall n,\\ P(n)\\Rightarrow P(n+1)}\\) : on suppose \\(P(n)\\) vraie pour un \\(n\\) fixé, et on en déduit \\(P(n+1)\\).</p>","<p>On \\(\\boxed{\\text{vérifie } P(n_0)}\\), puis l'hérédité pour tout \\(n\\geqslant n_0\\) permet de conclure que \\(P(n)\\) est vraie pour tout \\(n\\geqslant n_0\\).</p>","<p>En récurrence forte, on suppose \\(\\boxed{P(k) \\text{ vraie pour tout } k\\leqslant n}\\) (à partir du rang initial), et on en déduit \\(P(n+1)\\).</p>","<p>Les cas doivent être \\(\\boxed{\\text{exhaustifs}}\\) : leur réunion doit couvrir toutes les situations. Ils n'ont pas besoin d'être disjoints, même si c'est souvent le cas.</p>","<p>\\(\\boxed{\\text{Oui}}\\) : tout entier (positif, négatif ou nul) est pair ou impair ; les deux cas sont donc exhaustifs. Le cas \\(n=0\\) est inclus dans le cas pair.</p>","<p>On distingue \\(\\boxed{n \\text{ pair et } n \\text{ impair}}\\). Si \\(n\\) est pair, \\(n(n+1)\\) est pair ; si \\(n\\) est impair, \\(n+1\\) est pair, donc \\(n(n+1)\\) est pair.</p>","<p>On distingue les trois restes possibles dans la division par \\(3\\) : \\(\\boxed{n\\equiv0,\\ 1 \\text{ ou } 2 \\pmod 3}\\). Dans chaque cas, l'un des trois facteurs \\(n\\), \\(n+1\\), \\(n+2\\) est divisible par \\(3\\). La réponse D oublie un cas.</p>","<p>La valeur absolue \\(|a-b|\\) dépend du signe de \\(a-b\\) : on distingue \\(\\boxed{a\\geqslant b \\text{ et } a<b}\\). Si \\(a\\geqslant b\\), \\(\\dfrac{a+b+(a-b)}{2} = a = \\max(a,b)\\) ; si \\(a<b\\), \\(\\dfrac{a+b+(b-a)}{2} = b = \\max(a,b)\\).</p>","<p>L'analyse \\(\\boxed{\\text{suppose qu'une solution existe}}\\)et \\(\\boxed{\\text{en déduit des conditions nécessaires}}\\), ce qui restreint les candidats possibles.</p>"];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">2.2 · Raisonnement</span><a href="index.html">Menu</a><a href="ch2.html">Chapitre 2</a></div><main><p class="chapno">Chapitre 2 — Raisonnement, logique et ensembles</p><h1>Raisonnement</h1>
+<div id="quiz" data-chap="2" data-start="29">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (2.1, 2.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="29").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\non{P}$ et $Q$</div>
+  <div class="opt" data-ok>$P$ et $\non{Q}$</div>
+  <div class="opt">$\non{P}$ et $\non{Q}$</div>
+  <div class="sol"><p>On suppose $\boxed{\non{P} \text{ vraie, et on aboutit à une contradiction}}$ ; on en conclut que $\non P$ est fausse, donc que $P$ est vraie.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathbb{N}$ fini</div>
+  <div class="opt">$\mathbb{N}$ non borné</div>
+  <div class="opt" data-ok>qu'il en existe un</div>
+  <div class="opt">que tout entier admet un successeur</div>
+  <div class="sol"><p>La négation de $P\Rightarrow Q$ est « $P$ et $\non Q$ » : on suppose donc $\boxed{P \text{ et } \non{Q}}$ et on cherche une contradiction.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$Q \Rightarrow P$</div>
+  <div class="opt">$\non{Q} \Rightarrow P$</div>
+  <div class="opt">$\non{P} \Rightarrow Q$</div>
+  <div class="opt" data-ok>$\non{Q} \Rightarrow \non{P}$</div>
+  <div class="sol"><p>On suppose la négation de l'énoncé : $\boxed{\text{il existe un entier } N \text{ plus grand que tous les autres}}$. Alors $N+1$ est un entier strictement plus grand que $N$, ce qui est contradictoire.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">montrer $P(0)$</div>
+  <div class="opt">montrer $P(n)$ pour tout $n$</div>
+  <div class="opt">montrer $P(n+1)$ pour un entier $n$</div>
+  <div class="opt" data-ok>montrer $P(n) \Rightarrow P(n+1)$ pour tout $n$</div>
+  <div class="sol"><p>On démontre $\boxed{\non{Q} \Rightarrow \non{P}}$, qui est équivalente à $P\Rightarrow Q$. (La réponse A est la réciproque, qui n'est pas équivalente.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">montrer $P(0)$</div>
+  <div class="opt" data-ok>montrer $P(n_0)$</div>
+  <div class="opt">montrer $P(1)$</div>
+  <div class="opt">montrer $P(n)$ si $n < n_0$</div>
+  <div class="sol"><p>La négation de « $x=0$ ou $y=0$ » est « $x\neq0$ et $y\neq0$ » : il faut montrer $\boxed{\text{si } x\neq0 \text{ et } y\neq0, \text{ alors } xy\neq0}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$P(n)$ est vraie</div>
+  <div class="opt" data-ok>$P(k)$ est vraie pour tout $k \leqslant n$</div>
+  <div class="opt">$P(n)$ et $P(n-1)$ sont vraies</div>
+  <div class="opt">$P(n+1)$ est vraie</div>
+  <div class="sol"><p>L'hérédité consiste à montrer $\boxed{\forall n,\ P(n)\Rightarrow P(n+1)}$ : on suppose $P(n)$ vraie pour un $n$ fixé, et on en déduit $P(n+1)$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>Oui, un entier est pair ou impair</div>
+  <div class="opt">Non, il manque le cas $n\in 4\N$</div>
+  <div class="opt">Non, il faut aussi traiter le cas $n = 0$</div>
+  <div class="opt">Non, il faut aussi traiter le cas $n < 0$</div>
+  <div class="sol"><p>On $\boxed{\text{vérifie } P(n_0)}$, puis l'hérédité pour tout $n\geqslant n_0$ permet de conclure que $P(n)$ est vraie pour tout $n\geqslant n_0$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n$ positif ou $n$ négatif</div>
+  <div class="opt">$n \equiv 0$ ou $2 \pmod{3}$</div>
+  <div class="opt" data-ok>$n \equiv 0,\ 1$ ou $2 \pmod{3}$</div>
+  <div class="opt">$n \equiv 0$ ou $1 \pmod{3}$</div>
+  <div class="sol"><p>En récurrence forte, on suppose $\boxed{P(k) \text{ vraie pour tout } k\leqslant n}$ (à partir du rang initial), et on en déduit $P(n+1)$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$a > 0$ et $a \leqslant 0$</div>
+  <div class="opt">$a + b \geqslant 0$ et $a + b < 0$</div>
+  <div class="opt" data-ok>$a \geqslant b$ et $a < b$</div>
+  <div class="opt">$|a| \geqslant |b|$ et $|a| < |b|$</div>
+  <div class="sol"><p>Les cas doivent être $\boxed{\text{exhaustifs}}$ : leur réunion doit couvrir toutes les situations. Ils n'ont pas besoin d'être disjoints, même si c'est souvent le cas.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">prouve l'existence de la solution</div>
+  <div class="opt">vérifie des solutions potentielles</div>
+  <div class="opt" data-ok>détermine des conditions nécessaires</div>
+  <div class="opt">démontre l'unicité de la solution</div>
+  <div class="sol"><p>$\boxed{\text{Oui}}$ : tout entier (positif, négatif ou nul) est pair ou impair ; les deux cas sont donc exhaustifs. Le cas $n=0$ est inclus dans le cas pair.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">est facultative</div>
+  <div class="opt">suppose l'existence de la solution</div>
+  <div class="opt">détermine des conditions nécessaires</div>
+  <div class="opt" data-ok>vérifie des solutions potentielles</div>
+  <div class="sol"><p>On distingue $\boxed{n \text{ pair et } n \text{ impair}}$. Si $n$ est pair, $n(n+1)$ est pair ; si $n$ est impair, $n+1$ est pair, donc $n(n+1)$ est pair.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$x_1$, $x_2$ et $x_3$ sont solutions</div>
+  <div class="opt">Il y a une erreur dans la synthèse</div>
+  <div class="opt" data-ok>$x_1$ est l'unique solution au problème</div>
+  <div class="opt">Il faut recommencer l'analyse</div>
+  <div class="sol"><p>On distingue les trois restes possibles dans la division par $3$ : $\boxed{n\equiv0,\ 1 \text{ ou } 2 \pmod 3}$. Dans chaque cas, l'un des trois facteurs $n$, $n+1$, $n+2$ est divisible par $3$. La réponse D oublie un cas.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathscr{S} = \varnothing$</div>
+  <div class="opt">$\mathscr{S} = \{1\}$</div>
+  <div class="opt" data-ok>$\mathscr{S} = \{4\}$</div>
+  <div class="opt">$\mathscr{S} = \{1,4\}$</div>
+  <div class="sol"><p>La valeur absolue $|a-b|$ dépend du signe de $a-b$ : on distingue $\boxed{a\geqslant b \text{ et } a<b}$. Si $a\geqslant b$, $\dfrac{a+b+(a-b)}{2} = a = \max(a,b)$ ; si $a<b$, $\dfrac{a+b+(b-a)}{2} = b = \max(a,b)$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathscr{S} = \varnothing$</div>
+  <div class="opt">$\mathscr{S} = \{0\}$</div>
+  <div class="opt">$\mathscr{S} = \{2\}$</div>
+  <div class="opt" data-ok>$\mathscr{S} = \{0,2\}$</div>
+  <div class="sol"><p>L'analyse $\boxed{\text{suppose qu'une solution existe}}$et $\boxed{\text{en déduit des conditions nécessaires}}$, ce qui restreint les candidats possibles.</p></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

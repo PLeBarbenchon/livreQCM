@@ -1,7 +1,256 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>5.4 Espaces vectoriels</title>
+<title>5.4 Espaces vectoriels — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#be123c"><div class="topnav" style="--accent:#be123c"><span class="brand">5.4 · Espaces vectoriels</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a><a class="" href="pdf/BCPSTCh5_Algebre_lineaire.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Espaces vectoriels</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch5.html">← Retour au chapitre 5</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">5.4 · Espaces vectoriels</span><a href="index.html">Menu</a><a href="ch5.html">Chapitre 5</a></div><main><p class="chapno">Chapitre 5 — Algèbre linéaire</p><h1>Espaces vectoriels</h1>
+<div id="quiz" data-chap="5" data-start="66">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (5.1, 5.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="66").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{(x,y,z)\in\R^3\mid xz=0\right\}$</div>
+  <div class="opt" data-ok>$\left\{(x,y,z)\in\R^3\mid 3z-2x=y\right\}$</div>
+  <div class="opt" data-ok>$\left\{(x,y,z)\in\R^3\mid x=y=z\right\}$</div>
+  <div class="opt">$\left\{(x,y,z)\in\R^3\mid x+y+z=1\right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left\{(x,y,z,t)\in\R^4\mid t=0\right\}$</div>
+  <div class="opt" data-ok>$\left\{(x,y,z,t)\in\R^4\mid 3z-2x=y\right\}$</div>
+  <div class="opt">$\left\{(x,y,z,t)\in\R^4\mid x+y+z-t=1\right\}$</div>
+  <div class="opt">$\left\{(x,y,z,t)\in\R^4\mid x+2y+z+t\leqslant 0\right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{f\in \mathcal{F}(\R,\R)\mid f(1)f(2)=0\right\}$</div>
+  <div class="opt" data-ok>$\left\{f\in \mathcal{F}(\R,\R)\mid f(1)=0\right\}$</div>
+  <div class="opt">$\left\{f\in \mathcal{F}(\R,\R)\mid f \text{ est majorée}\right\}$</div>
+  <div class="opt">$\left\{f\in \mathcal{F}(\R,\R)\mid f(0)\geqslant 0\right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{(u_n)\in \R^{\N}\mid \sin(u_0) = 0\right\}$</div>
+  <div class="opt">$\left\{(u_n)\in \R^{\N}\mid (u_n) \text{ est monotone}\right\}$</div>
+  <div class="opt" data-ok>$\left\{(u_n)\in \R^{\N}\mid \forall n\in\N,\ u_{n+2}=u_n\right\}$</div>
+  <div class="opt">$\left\{(u_n)\in \R^{\N}\mid (u_n) \text{ converge vers } 3\right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\left\{P\in\R[X] \mid P(X+1) = 2P(X)\right\}$</div>
+  <div class="opt">$\left\{P\in\R[X] \mid \deg P = 3 \right\}$</div>
+  <div class="opt">$\left\{P\in\R[X] \mid P(2) = -1\right\}$</div>
+  <div class="opt" data-ok>$\left\{P\in\R[X] \mid P(-1)^2 + P(1)^2 = 0 \right\}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$F=\mathrm{Vect}\big((1,1,0),(0,0,1)\big)$</div>
+  <div class="opt">$F=\{(0,0,0)\}$</div>
+  <div class="opt" data-ok>$F=\mathrm{Vect}\big((1,1,0)\big)$</div>
+  <div class="opt">$F$ n'est pas un espace vectoriel</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\mathrm{Vect}(u,v)=\mathrm{Vect}(w,x)$</div>
+  <div class="opt">$(1,1,0)\in\mathrm{Vect}(u,v)$</div>
+  <div class="opt">$\mathrm{Vect}(u,v)$ est le plan d'équation $2x-y=z$</div>
+  <div class="opt" data-ok>$\mathrm{Vect}(x,y)$ est le plan d'équation $x-3y=z$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\big((1,2,1),\, (-3,1,1),\, (2,-3,-2)\big)$</div>
+  <div class="opt" data-ok>$\big((-1,0,1),\, (2,1,0),\, (1,0,4)\big)$</div>
+  <div class="opt">$\big((3,4,3),\, (1,2,-1),\, (1,0,5)\big)$</div>
+  <div class="opt">$\big((1,3,2),\, (0,2,4),\, (1,2,0)\big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathrm{Vect}(u,v,w)$ est une droite de $\R^3$</div>
+  <div class="opt">$(u,v,w)$ est une base de $\R^3$</div>
+  <div class="opt" data-ok>$\mathrm{Vect}(u,v,w)$ est un plan de $\R^3$</div>
+  <div class="opt">$(u,v,w)$ est génératrice de $\R^3$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left(x\mapsto 1,\ x\mapsto\cos^2 x, \ x\mapsto \sin^2 x\right)$</div>
+  <div class="opt" data-ok>$(\cos, \ \sin, \ x\mapsto x^2)$</div>
+  <div class="opt">$\big(\sin, \ x\mapsto\sin(x+1), \ x\mapsto\sin(x+2)\big)$</div>
+  <div class="opt" data-ok>$\left(x\mapsto e^{x}, \ x\mapsto e^{2x},\ x\mapsto e^{3x}\right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\big( 1, X-1, (X-1)^2\big)$</div>
+  <div class="opt">$\big(4, X+1, X^3 + X, X^3 + 2X - 3\big)$</div>
+  <div class="opt">$\big(2+X-X^2, 1-X, X^2-4X+1\big)$</div>
+  <div class="opt" data-ok>$\big( X^2 + X, X^2 - X + 1, X^2 + 1\big)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{F}$ est libre</div>
+  <div class="opt">$(1,1,1) = e_1 - e_2 - 2e_4$</div>
+  <div class="opt" data-ok>$\mathcal{F}$ est génératrice de $\R^3$</div>
+  <div class="opt">$(1,1,1)\not\in \mathrm{Vect}(\mathcal{F})$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{F}$ est libre</div>
+  <div class="opt" data-ok>$\mathcal{F}_a$ est libre $\iff a\neq\dfrac{1}{11}$</div>
+  <div class="opt">$\mathcal{F}_a$ est génératrice de $\R^3$</div>
+  <div class="opt">$a = \dfrac{1}{11}\implies \rg (\mathcal{F}) = 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Si $\mathcal{F}$ compte $5$ vecteurs, alors $\mathcal{F}$ est génératrice</div>
+  <div class="opt" data-ok>Si $\mathcal{F}$ est libre et compte $4$ vecteurs, alors $\mathcal{F}$ est une base de $E$</div>
+  <div class="opt">Si $\mathcal{F}$ compte $4$ vecteurs, alors $\mathcal{F}$ est une base de $E$</div>
+  <div class="opt">Si $\mathcal{F}$ est génératrice, elle compte au moins $5$ vecteurs</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$F$ est de dimension $3$</div>
+  <div class="opt">$F$ est de dimension $2$</div>
+  <div class="opt">$F = \mathrm{Vect}(J - I_2)$ où $J = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$</div>
+  <div class="opt" data-ok>$F \oplus \mathrm{Vect}(I_2) = \mathcal{M}_2(\R)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(B_1,B_2,B_3,B_4)$ est liée</div>
+  <div class="opt" data-ok>$I_4 = \dfrac{1}{2}\left( B_2 + B_3 \right)$</div>
+  <div class="opt" data-ok>$(B_1,B_2,B_3,B_4)$ est libre</div>
+  <div class="opt">$I_4 = \dfrac{1}{4}\left( B_1 + B_2 + B_3 + B_4 \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{F}$ est liée</div>
+  <div class="opt" data-ok>$\mathcal{F}$ est une base de $\C_2[X]$</div>
+  <div class="opt">$X^2$ a pour coordonnées $\left(0,1,1\right)$ dans $\mathcal{F}$</div>
+  <div class="opt">$1$ a pour coordonnées $\left(0,-1,1\right)$ dans $\mathcal{F}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathcal{F}$ est génératrice de $\R_2[X]$</div>
+  <div class="opt">$\mathrm{Vect}(\mathcal{F}) = \R_1[X] \oplus \mathrm{Vect}(X^2)$</div>
+  <div class="opt" data-ok>$\mathcal{F} \cup \left( X, X^3\right)$ est une base de $\R_3[X]$</div>
+  <div class="opt">$\mathcal{F} \cup \left( X^2, X^3\right)$ est une base de $\R_3[X]$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\left\{P\in\R_4[X] \mid P(1) = 0 \right\}$ est de dimension $3$</div>
+  <div class="opt">$\left\{ (x,y,z)\in\R^3 \mid x = 2y = 3z \right\}$ est un plan vectoriel</div>
+  <div class="opt" data-ok>$\left\{(x,y,z,t)\in\R^4\mid x+y=y+z=z+t=t+x=0\right\}$ est une droite vectorielle</div>
+  <div class="opt">$\left\{ f\in\mathcal{C}^2(\R,\R) \mid f'' + 4f = 0 \right\}$ est de dimension $1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(P_0, \dots, P_n)$ est une base de $\R_n[X]$</div>
+  <div class="opt">$\deg P_k = k+1$</div>
+  <div class="opt">la famille $(P_0, \dots, P_n)$ n'est pas libre</div>
+  <div class="opt" data-ok>la famille $(P_0, \dots, P_n)$ n'est pas génératrice de $\R[X]$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$F\cap G = G$</div>
+  <div class="opt" data-ok>$F\oplus G = \R^3$</div>
+  <div class="opt">$\dim(F\cap G) = 1$</div>
+  <div class="opt">$\dim(F+G) = 2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$F+G=\R^3$</div>
+  <div class="opt">$F\oplus G=\R^3$</div>
+  <div class="opt">$F\cap G=\{0\}$</div>
+  <div class="opt" data-ok>$\mathrm{dim}(F\cap G) = 1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$F\cap G$ est vide</div>
+  <div class="opt" data-ok>$F+G=\mathcal{M}_n(\R)$</div>
+  <div class="opt">$F\oplus G = \mathcal{M}_n(\R)$</div>
+  <div class="opt">$\dim F + \dim G = n^2$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\mathscr{C}_0\cap\mathscr{D}$ est une droite</div>
+  <div class="opt">$\mathscr{C}_0 \oplus \mathscr{D}=\R^{\N}$</div>
+  <div class="opt" data-ok>$\mathscr{C} = \mathscr{C}_0 \oplus \mathscr{D}$</div>
+  <div class="opt">$\mathscr{C}$ n'est pas un espace vectoriel</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$E$ n'est pas de dimension finie</div>
+  <div class="opt">$\dim E = p+1$</div>
+  <div class="opt" data-ok>$E$ est un sous-espace vectoriel de $\R^{\N}$</div>
+  <div class="opt">$u \in E \mapsto (u_0,u_1,\dots,u_{p}) \in \R^{p+1}$ est un isomorphisme</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dim E = 2$</div>
+  <div class="opt" data-ok>$f\in E \mapsto \big( f(-1),f(0),f(1) \big)$ est un isomorphisme</div>
+  <div class="opt">$E$ est de dimension infinie</div>
+  <div class="opt" data-ok>$\big(x\mapsto 1, x\mapsto x, x\mapsto |x| \big)$ est une base de $E$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(u,v,w)$ est une base de $\R^3$</div>
+  <div class="opt">$m = -1 \implies \rg (u,v,w) = 1$</div>
+  <div class="opt" data-ok>$\det(u,v,w) = (m-2)(m+1)$</div>
+  <div class="opt">$(u,v,w)$ est libre pour tout $m\neq -1$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\rg (f_1, f_2, f_3, f_4) = 3$</div>
+  <div class="opt">$\rg (f_1, f_2, f_3, f_4) = 4$</div>
+  <div class="opt">la famille $(f_1, f_2, f_3, f_4)$ est libre</div>
+  <div class="opt" data-ok>$f_1 = f_3 + f_4$ et $f_2 = f_3 - f_4$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$F\cap G=\{0_E\} \implies \dim F + \dim G = n$</div>
+  <div class="opt" data-ok>$\dim F + \dim G>n \implies F\cap G\neq \{0_E\}$</div>
+  <div class="opt">$\dim F + \dim G = n \implies E = F\oplus G$</div>
+  <div class="opt">$F+G=E \implies \dim F + \dim G = n$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">Pour tout $a \in E,$ la famille $(e_1 + a, \dots, e_p + a)$ est libre</div>
+  <div class="opt">Pour tout $ a\in E,$ on a l'égalité $\mathrm{Vect}(e_1 + a, \dots, e_p + a) = F$</div>
+  <div class="opt" data-ok>Pour tout $ a \not\in F,$ la famille $(e_1 + a, \dots, e_p + a)$ est libre</div>
+  <div class="opt">Si $ a\in F,$ alors la famille $(e_1 + a, \dots, e_p + a)$ est liée</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$H_1$ et $H_2$ sont supplémentaires</div>
+  <div class="opt">$\dim(H_1\cap H_2) = n-2$</div>
+  <div class="opt" data-ok>$H_1\neq H_2 \implies \dim(H_1\cap H_2) = n-2$</div>
+  <div class="opt">$H_1\cup H_2$ est un espace vectoriel</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$H_1\neq H_2 \implies H_1\cap H_2 = \{ 0\}$</div>
+  <div class="opt">$H_1\cap H_2 \neq \{ 0\} \implies H_1 = H_2$</div>
+  <div class="opt">$H_1 \oplus H_2 = E$</div>
+  <div class="opt" data-ok>$H_1$ et $H_2$ ont un supplémentaire commun</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

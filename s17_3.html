@@ -1,7 +1,114 @@
 <!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>17.3 Dictionnaires</title>
+<title>17.3 Dictionnaires — QCM</title>
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#475569"><div class="topnav" style="--accent:#475569"><span class="brand">17.3 · Dictionnaires</span><a href="index.html">Menu</a><a href="ch17.html">Chapitre 17</a><a class="" href="pdf/BCPSTCh17_Informatique.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 17 — Informatique</p><h1>Dictionnaires</h1><div class="placeholder"><div class="pic">📝</div><div class="ph-title">QCM en préparation</div><div>Les questions de cette section apparaîtront ici, dans le même format auto-corrigé que les autres.</div></div><a class="backlink" href="ch17.html">← Retour au chapitre 17</a></main></body></html>
+</head><body><div class="topnav"><span class="brand">17.3 · Dictionnaires</span><a href="index.html">Menu</a><a href="ch17.html">Chapitre 17</a></div><main><p class="chapno">Chapitre 17 — Informatique</p><h1>Dictionnaires</h1>
+<div id="quiz" data-chap="17" data-start="59">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (17.1, 17.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="59").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>1</code></div>
+  <div class="opt" data-ok><code>2</code></div>
+  <div class="opt"><code>"b"</code></div>
+  <div class="opt"><code>3</code></div>
+  <div class="opt"><code>"b":2</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>{"x": 10}</code></div>
+  <div class="opt"><code>{"y": 20}</code></div>
+  <div class="opt"><code>{"x": 10, 20}</code></div>
+  <div class="opt"><code>{"x": 20}</code></div>
+  <div class="opt" data-ok><code>{"x": 10, "y": 20}</code></div>
+  <div class="opt"><code>{"y": 10, 20}</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>d.has("z")</code></div>
+  <div class="opt" data-ok><code>"z" in d</code></div>
+  <div class="opt"><code>d.item("z")</code></div>
+  <div class="opt"><code>d.values("z")</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>[1, 2, 3]</code></div>
+  <div class="opt" data-ok><code>["a", "b", "c"]</code></div>
+  <div class="opt"><code>[("a",1),("b",2),("c",3)]</code></div>
+  <div class="opt"><code>{"a", "b", "c"}</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>0</code></div>
+  <div class="opt"><code>5</code></div>
+  <div class="opt"><code>6</code></div>
+  <div class="opt"><code>8</code></div>
+  <div class="opt" data-ok><code>11</code></div>
+  <div class="opt"><code>12</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok><code>{1: "c", 2: "b"}</code></div>
+  <div class="opt"><code>{1: "a", 2: "b"}</code></div>
+  <div class="opt"><code>{1: "a", 2: "b", 1: "c"}</code></div>
+  <div class="opt"><code>{1: ["a", "c"], 2: ["b"]}</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>[("a",1),("b",4),("c",2)]</code></div>
+  <div class="opt" data-ok><code>[("b", 4), ("c", 2)]</code></div>
+  <div class="opt"><code>["b", "c"]</code></div>
+  <div class="opt"><code>[4, 2]</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>{"chat": 2,"chien": 2}</code></div>
+  <div class="opt" data-ok><code>{"chat": 3,"chien": 2}</code></div>
+  <div class="opt"><code>{"chat": 1,"chien": 1}</code></div>
+  <div class="opt"><code>{"chat": 3}</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>{1, 4, 9, 16}</code></div>
+  <div class="opt" data-ok><code>{1:1, 2:4, 3:9, 4:16}</code></div>
+  <div class="opt"><code>{1:1, 2:4, 3:9, 4:16, 5:25}</code></div>
+  <div class="opt"><code>{0:0, 1:1, 2:4, 3:9, 4:16}</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>d[3.14] = 0</code></div>
+  <div class="opt"><code>d["abc"] = 0</code></div>
+  <div class="opt"><code>d[(1, 2)] = 0</code></div>
+  <div class="opt" data-ok><code>d[[1, 2]] = 0</code></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt"><code>None</code></div>
+  <div class="opt"><code>0</code></div>
+  <div class="opt"><code>False</code></div>
+  <div class="opt" data-ok><code>KeyError</code></div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

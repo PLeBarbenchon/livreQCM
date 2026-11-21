@@ -1,4 +1,17 @@
-:root{ --accent:#4f46e5; }
+/* =====================================================================
+   COULEURS DU SITE — LE SEUL ENDROIT À MODIFIER POUR CHANGER LES TEINTES.
+   Deux couleurs en alternance (chapitres impairs / chapitres pairs).
+   Change un code hexadécimal ci-dessous et tout le site suit.
+   ===================================================================== */
+:root{
+  --c-impair: #0f6c9a;          /* chapitres 1, 3, 5, …  (et couleur par défaut) */
+  --c-pair:   #4ca3d6;          /* chapitres 2, 4, 6, … */
+
+  --accent: var(--c-impair);    /* dérivé — ne pas toucher */
+}
+body.pair{ --accent: var(--c-pair); }   /* page d'un chapitre pair */
+.menu-card{ --c: var(--c-impair); }      /* carte d'un chapitre/section impair */
+.menu-card.pair{ --c: var(--c-pair); }   /* carte d'un chapitre/section pair */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
@@ -76,9 +89,15 @@ label.ans input:focus-visible + .opt-box{outline:2px solid var(--accent);outline
 .sol-box p:last-child{margin-bottom:0}
 
 /* --- grilles chiffres / puissances --- */
-.grid{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:4px 0}
+.grid{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:4px 0}
 .grid .lit{font-size:1.05rem}
 .gridbreak{flex-basis:100%;height:0}
+/* une ligne pleine largeur (grilles a=/b=, dizaine/unité) */
+.gline{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;gap:7px 10px}
+/* cadre pointillé gris façon \cadrepointille : pavé de cases aligné en colonnes */
+.gcadre{display:inline-grid;gap:4px 14px;align-items:center;justify-items:start;
+  border:1.2px dashed #9a9aa6;border-radius:8px;padding:8px 11px;background:#fbfbfd}
+.gpad{display:inline-block;width:0;height:0}
 .digslot{display:inline-flex;align-items:center;gap:6px;vertical-align:middle}
 .slotlabel{font-size:.8rem;color:#777}
 .cells{display:inline-flex;flex-wrap:wrap;gap:3px}
@@ -209,3 +228,77 @@ label.ans input:focus-visible + .opt-box{outline:2px solid var(--accent);outline
 }
 .ans.ok .opt-body code,.ans.bad .opt-body code{background:rgba(255,255,255,.6)}
 .tag.pdf{background:#fee2e2;color:#b91c1c}
+
+/* questions écrites à la main : masquées jusqu'à ce que quiz.js les rende */
+#quiz > .q{display:none}
+
+/* ============================================================
+   DROITE GRADUÉE (questions data-type="axe")
+   Flèche horizontale + cellules cochables : intervalles (larges)
+   et points gradués (petits, avec un trait). On coche l'ensemble
+   solution. Notée comme une grille (cases). Couleurs vert/rouge
+   identiques au reste du site.
+   ============================================================ */
+/* --- la droite (l'axe + le bloc « avec a= / b= » à sa droite) --- */
+.axiswrap{display:flex; align-items:center; gap:26px; flex-wrap:wrap}
+.axisq{position:relative; display:flex; align-items:flex-end; gap:5px;
+  margin:.5rem 0 .2rem; padding:0 4px 16px; overflow-x:auto; flex:1 1 320px; min-width:280px}
+/* la flèche : un trait fin qui passe au centre des cases (visible dans les jours) */
+.axisq::before{content:""; position:absolute; left:2px; right:16px;
+  bottom:33px; height:1.8px; background:#1b1b1b; z-index:0}
+.axisq::after{content:""; position:absolute; right:3px; bottom:28px;
+  border-left:11px solid #1b1b1b; border-top:5.5px solid transparent;
+  border-bottom:5.5px solid transparent; z-index:0}
+.aitem, .aend{display:flex; flex-direction:column; align-items:center;
+  justify-content:flex-end; position:relative}
+.atop{height:1.8em; line-height:1.8em; font-size:1.02rem; white-space:nowrap}
+.aitem{cursor:pointer; z-index:1}
+.aitem input{position:absolute; opacity:0; width:0; height:0; pointer-events:none}
+.abox{height:34px; border:1.7px solid #1b1b1b; border-radius:7px; background:#fff;
+  box-sizing:border-box; position:relative; z-index:1; transition:background .08s}
+.aitem:hover .abox{border-color:var(--accent)}
+.aint{flex:1 1 58px; min-width:46px}
+.abox-int{width:100%}
+.apt{flex:0 0 auto}
+.abox-pt{width:34px}
+/* le point gradué : croix (axe horizontal + trait vertical) dans la case */
+.abox-pt::before{content:""; position:absolute; left:6px; right:6px; top:50%;
+  height:1.8px; background:#1b1b1b; transform:translateY(-50%)}
+.abox-pt .atick{position:absolute; left:50%; top:50%; width:1.8px; height:20px;
+  background:#1b1b1b; transform:translate(-50%,-50%)}
+/* extrémités ±∞ : label remonté au-dessus de la flèche (comme a, b),
+   la place sous le label (hauteur d'une case) laisse passer la flèche */
+.aend{flex:0 0 auto; min-width:36px; padding-bottom:34px}
+/* état coché (avant correction) */
+.aitem input:checked + .abox{background:var(--accent); border-color:var(--accent)}
+.aitem input:checked + .abox-pt::before,
+.aitem input:checked + .abox-pt .atick{background:#fff}
+/* correction : vert si bon, rouge si à tort, pointillé vert si oublié.
+   !important pour l'emporter sur la couleur « coché » (accent). */
+.aitem.ok .abox{background:#2e9c46 !important; border-color:#2e9c46 !important}
+.aitem.bad .abox{background:#c0392b !important; border-color:#c0392b !important}
+.aitem.miss .abox{background:#fff !important; border-color:#2e9c46 !important;
+  outline:2px dashed #2e9c46; outline-offset:1px}
+.aitem.ok .abox-pt::before,.aitem.ok .abox-pt .atick,
+.aitem.bad .abox-pt::before,.aitem.bad .abox-pt .atick{background:#fff}
+/* le « avec » et la grille des valeurs, à droite de l'axe */
+.avec{display:flex; align-items:center; gap:14px; flex:0 0 auto}
+.avec-lbl{font-size:1.05rem}
+
+/* ============================================================
+   GRILLE « TROUVE LA VALEUR » (data-type="valeur", ou bloc
+   <div class="trouve"> dans une question « axe »).
+   Lignes « a = [signe] | [chiffres] » ; on coche le signe (si
+   négatif) et UN chiffre. Le signe est une case comme les chiffres.
+   ============================================================ */
+.valqs{display:flex; flex-direction:column; gap:9px; padding:2px 0}
+.vrow{display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+.vlab{min-width:2.3em; font-size:1.05rem}
+.digits{display:inline-flex; gap:6px; flex-wrap:wrap}
+.digits .cell, .signcell{width:31px; height:31px; font-size:1rem; border-radius:7px}
+/* la case du signe « − » : cochable (case), remplie quand sélectionnée */
+.signcell:has(input:checked){background:var(--accent); color:#fff; border-color:var(--accent)}
+/* la correction doit l'emporter sur le remplissage « coché » du signe */
+.signcell.ok{background:#2e9c46 !important; color:#fff; border-color:#2e9c46 !important}
+.signcell.bad{background:#c0392b !important; color:#fff; border-color:#c0392b !important}
+.vbar{width:1.8px; height:30px; background:#333; margin:0 4px; flex:0 0 auto}

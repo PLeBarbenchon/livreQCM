@@ -7,22 +7,112 @@
    ============================================================ */
 var MSG = {
   correct:   '✓ Correct',
-  incorrect: '✗ Incorrect — la bonne réponse est indiquée en vert.',
-  skip:      'Non répondue — ne compte pas dans le score.',
-  noAnswer:  'Aucune question traitée.',
+  incorrect: '✗ Incorrect',
+  skip:      'Non répondue',
+  noAnswer:  '',
   score:     function(s, t){ return 'Score : ' + s + ' / ' + t; },
-  solShow:   '💡 Voir la solution',
-  solHide:   '💡 Masquer la solution',
-  info:      '✎ Question à figure ou grille — à traiter sur le polycopié (non notée ici).'
+  solShow:   'Voir la solution',
+  solHide:   'Masquer la solution',
+  info:      'À traiter sur le polycopié.'
 };
 
-var DATA  = window.QUIZ_DATA  || [];
-var START = window.QUIZ_START || 1;
-var CHAP  = window.QUIZ_CHAP  || null;   // n° de chapitre -> pastilles "chap.numéro" (ex. 1.4)
-var SOL   = window.QUIZ_SOL   || [];     // solutions HTML (une par question), dépliables
+/* Les questions sont écrites À LA MAIN en HTML dans la page (voir le mode
+   d'emploi). Ce moteur les lit depuis le DOM, puis les rend interactives.
+   DATA/SOL sont reconstruits à partir du HTML par readAuthored(). */
+var DATA=[], SOL=[], START=1, CHAP=null;
 var quiz  = document.getElementById('quiz');
 function qLabel(n){ return CHAP ? (CHAP + '.' + n) : String(n); }
 let reg = [];
+
+// lit une ligne « a = (signe) chiffres » -> structure
+function parseValueRow(r){
+  var row={lab:(r.getAttribute('data-lab')||'').trim(), sign:null, digits:[], digOk:null};
+  [].forEach.call(r.children, function(el){
+    if(!el.classList) return;
+    if(el.classList.contains('sign')) row.sign={ok:el.hasAttribute('data-ok')?1:0};
+    else if(el.classList.contains('dig')){
+      var v=(el.textContent||'').trim(); row.digits.push(v);
+      if(el.hasAttribute('data-ok')) row.digOk=v;
+    }
+  });
+  return row;
+}
+
+// lit les questions écrites à la main dans #quiz
+function readAuthored(){
+  if(!quiz) return;
+  CHAP  = quiz.dataset.chap ? parseInt(quiz.dataset.chap,10) : null;
+  START = quiz.dataset.start ? parseInt(quiz.dataset.start,10) : 1;
+  DATA=[]; SOL=[];
+  [].forEach.call(quiz.children, function(qel){
+    if(!qel.classList || !qel.classList.contains('q')) return;
+    var type = qel.dataset.type || 'qcm';
+    var solEl = qel.querySelector('.sol');
+    SOL.push(solEl ? solEl.innerHTML.trim() : null);
+    if(type==='qcm'){
+      var c=[];
+      [].forEach.call(qel.children, function(o){
+        if(o.classList && o.classList.contains('opt')) c.push([o.innerHTML.trim(), o.hasAttribute('data-ok')?1:0, 'h']);
+      });
+      DATA.push({t:'mcq', c:c});
+    } else if(type==='grille'){
+      function cellsFrom(rowEl){
+        var cells=[];
+        [].forEach.call(rowEl.children, function(el){
+          if(!el.classList) return;
+          if(el.classList.contains('lab')) cells.push({lit:el.innerHTML.trim()});
+          else if(el.classList.contains('case')) cells.push({check:{label:el.innerHTML.trim(), ok:el.hasAttribute('data-ok')?1:0}});
+        });
+        return cells;
+      }
+      var nodes=[];
+      [].forEach.call(qel.children, function(ch){
+        if(!ch.classList) return;
+        if(ch.classList.contains('cadre')){
+          var rows=[]; [].forEach.call(ch.children, function(r){ if(r.classList && r.classList.contains('row')) rows.push(cellsFrom(r)); });
+          nodes.push({cadre:rows});
+        } else if(ch.classList.contains('row')){ nodes.push({line:cellsFrom(ch)}); }
+        else if(ch.classList.contains('lab')){ nodes.push({lit:ch.innerHTML.trim()}); }
+        else if(ch.classList.contains('case')){ nodes.push({check:{label:ch.innerHTML.trim(), ok:ch.hasAttribute('data-ok')?1:0}}); }
+      });
+      DATA.push({t:'grid', nodes:nodes});
+    } else if(type==='cercle'){
+      var pts=[];
+      [].forEach.call(qel.children, function(p){
+        if(p.classList && p.classList.contains('pt'))
+          pts.push({x:parseFloat(p.dataset.x), y:parseFloat(p.dataset.y), l:p.textContent.trim(), ok:p.hasAttribute('data-ok')?1:0});
+      });
+      DATA.push({t:'circle', pts:pts});
+    } else if(type==='axe'){
+      // droite graduée : cellules <span class="int"> (intervalle) et
+      // <span class="pt"> (point gradué). data-ok = à cocher. Un bloc
+      // facultatif <div class="trouve"> ajoute la grille « a= / b= » à droite.
+      var acells=[], find=[];
+      [].forEach.call(qel.children, function(el){
+        if(!el.classList) return;
+        if(el.classList.contains('int'))
+          acells.push({kind:'int', ok:el.hasAttribute('data-ok')?1:0});
+        else if(el.classList.contains('pt'))
+          acells.push({kind:'pt', ok:el.hasAttribute('data-ok')?1:0,
+                       lab:(el.getAttribute('data-lab')||el.innerHTML||'').trim()});
+        else if(el.classList.contains('trouve'))
+          [].forEach.call(el.children, function(r){
+            if(r.classList && r.classList.contains('row')) find.push(parseValueRow(r));
+          });
+      });
+      DATA.push({t:'axis', cells:acells, find:find,
+                 left:(qel.getAttribute('data-left')||'$-\\infty$'),
+                 right:(qel.getAttribute('data-right')||'$+\\infty$')});
+    } else if(type==='valeur'){
+      // « trouve la valeur » : lignes a = (signe) | chiffres (on en coche un).
+      var vrows=[];
+      [].forEach.call(qel.children, function(r){
+        if(r.classList && r.classList.contains('row')) vrows.push(parseValueRow(r));
+      });
+      DATA.push({t:'values', rows:vrows});
+    } else { DATA.push({t:'info'}); }
+  });
+}
 
 /* --- Sauvegarde des réponses dans le navigateur de l'élève (localStorage).
    Persiste sur le MÊME appareil + navigateur ; effacé si l'élève nettoie
@@ -84,25 +174,76 @@ function renderMcq(q,n){
   });
   return h+'</div>';
 }
+function gCell(c){   // une cellule de grille -> HTML (étiquette ou case à cocher)
+  if(c.lit!==undefined) return '<span class="lit">'+c.lit+'</span>';
+  return '<label class="signbox gridcheck" data-slot="check" data-ok="'+(c.check.ok?1:0)+'"><input type="checkbox"><span class="clab2">'+c.check.label+'</span></label>';
+}
 function renderGrid(q,n){
-  let h='<div class="grid">'; let slot=0;
-  q.parts.forEach(p=>{
-    if(p.br){ h+='<div class="gridbreak"></div>'; return; }
-    if(p.lit!==undefined){ h+='<span class="lit">'+(p.raw?p.lit:M(p.lit))+'</span>'; return; }
-    if(p.check!==undefined){ slot++; h+='<label class="signbox gridcheck" data-slot="check" data-ok="'+(p.check.ok?1:0)+'"><input type="checkbox"><span class="clab2">'+p.check.label+'</span></label>'; return; }
-    if(p.sign!==undefined){ slot++; h+='<label class="signbox" data-slot="sign" data-ok="'+(p.sign?1:0)+'"><input type="checkbox">'+M('-')+'</label>'; return; }
-    if(p.sqrt){ slot++; h+='<label class="signbox" data-slot="sqrt" data-ok="1"><input type="checkbox">'+M('\\sqrt{\\phantom{x}}')+'</label>'; return; }
-    if(p.digit){ slot++; const nm='q'+n+'s'+slot; let cells='';
-      p.digit.ds.forEach(d=>{ cells+='<label class="cell"><input type="radio" name="'+nm+'" value="'+d+'">'+d+'</label>'; });
-      h+='<span class="digslot" data-slot="digit" data-ok="'+p.digit.ok+'">'+(p.digit.label?'<span class="slotlabel">'+p.digit.label+'</span>':'')+'<span class="cells">'+cells+'</span></span>';
-    }
+  let h='<div class="grid">';
+  q.nodes.forEach(nd=>{
+    if(nd.cadre){   // cadre pointillé gris : pavé de cases aligné en colonnes
+      let cols=1; nd.cadre.forEach(r=>{ if(r.length>cols) cols=r.length; });
+      h+='<div class="gcadre" style="grid-template-columns:repeat('+cols+',auto)">';
+      nd.cadre.forEach(row=>{ row.forEach(c=>{ h+=gCell(c); }); for(let p=row.length;p<cols;p++) h+='<span class="gpad"></span>'; });
+      h+='</div>';
+    } else if(nd.line){   // une ligne pleine largeur
+      h+='<div class="gline">'; nd.line.forEach(c=>{ h+=gCell(c); }); h+='</div>';
+    } else { h+=gCell(nd); }   // étiquette / case inline
   });
   return h+'</div>';
 }
-function lbl(t){ // LaTeX court -> unicode lisible
-  return t.replace(/\\tfrac\{([^{}]*)\}\{([^{}]*)\}/g,'$1/$2')
+function lbl(t){ // LaTeX court -> unicode lisible (pour le cercle, rendu en SVG)
+  return t.replace(/^\$|\$$/g,'')
+          .replace(/\\tfrac\{([^{}]*)\}\{([^{}]*)\}/g,'$1/$2')
+          .replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g,'$1/$2')
           .replace(/\\pi/g,'π').replace(/\\,/g,'').replace(/[{}]/g,'')
           .replace(/-/g,'−').trim();
+}
+var _vgrp=0;
+// lignes « a = [signe] | [chiffres] ». Signe = case (slot check, façon
+// chiffre), chiffres = un seul à choisir (slot digit). Noté comme une grille.
+function valueRowsHtml(rows,n){
+  var h='';
+  rows.forEach(function(row){
+    var gid='vg'+n+'_'+(_vgrp++);
+    h+='<div class="vrow">';
+    if(row.lab) h+='<span class="vlab">'+row.lab+'</span>';
+    if(row.sign){
+      h+='<label class="cell signcell" data-slot="check" data-ok="'+(row.sign.ok?1:0)+'">'
+        +'<input type="checkbox"><span>−</span></label>'
+        +'<span class="vbar"></span>';
+    }
+    h+='<span class="digits" data-slot="digit" data-ok="'+(row.digOk==null?'':row.digOk)+'">';
+    row.digits.forEach(function(v){
+      h+='<label class="cell"><input type="radio" name="'+gid+'" value="'+v+'"><span>'+v+'</span></label>';
+    });
+    h+='</span></div>';
+  });
+  return h;
+}
+function renderValues(q,n){ return '<div class="valqs">'+valueRowsHtml(q.rows,n)+'</div>'; }
+function renderAxis(q,n){
+  // droite graduée : flèche horizontale + cellules cochables.
+  // Chaque cellule porte data-slot="check" -> notée comme une case de grille.
+  let h='<div class="axisq"><span class="aend aend-l"><span class="atop">'+q.left+'</span></span>';
+  q.cells.forEach(function(c){
+    if(c.kind==='int'){
+      h+='<label class="aitem aint" data-slot="check" data-ok="'+(c.ok?1:0)+'">'
+        +'<span class="atop"></span><input type="checkbox"><span class="abox abox-int"></span></label>';
+    } else {
+      h+='<label class="aitem apt" data-slot="check" data-ok="'+(c.ok?1:0)+'">'
+        +'<span class="atop">'+c.lab+'</span><input type="checkbox">'
+        +'<span class="abox abox-pt"><i class="atick"></i></span></label>';
+    }
+  });
+  h+='<span class="aend aend-r"><span class="atop">'+q.right+'</span></span></div>';
+  // bloc « trouve la valeur » facultatif, à droite de l'axe
+  if(q.find && q.find.length){
+    return '<div class="axiswrap">'+h
+      +'<div class="avec"><span class="avec-lbl">avec</span>'
+      +'<div class="valqs">'+valueRowsHtml(q.find,n)+'</div></div></div>';
+  }
+  return h;
 }
 function renderCircle(q,n){
   const R=112, C=150, off=22;
@@ -130,6 +271,8 @@ function build(){
     let body='';
     if(q.t==='mcq') body=renderMcq(q,n);
     else if(q.t==='grid') body=renderGrid(q,n);
+    else if(q.t==='axis') body=renderAxis(q,n);
+    else if(q.t==='values') body=renderValues(q,n);
     else if(q.t==='circle') body=renderCircle(q,n);
     else if(q.t==='info') body='<div class="q-info">'+MSG.info+'</div>';
     if(q.t==='info') box.classList.add('q-figure');
@@ -141,8 +284,11 @@ function build(){
       box.appendChild(tg); box.appendChild(sb);
     }
     quiz.appendChild(box);
-    reg.push({t:q.t, box});
+    // axe et « valeur » sont notés comme une grille (slots data-slot)
+    reg.push({t:((q.t==='axis'||q.t==='values')?'grid':q.t), box});
   });
+  var rg=document.getElementById('qrange');   // plage de numéros (mise à jour auto)
+  if(rg && DATA.length){ var a=qLabel(START), b=qLabel(START+DATA.length-1); rg.textContent = a===b ? a : (a+' à '+b); }
   const st = applyState();   // restaure les réponses enregistrées
   updateSol();               // affiche l'icône solution des questions déjà répondues
   if(st && st.verified){ verifier(); }   // ré-affiche la correction (vert/rouge + score)
@@ -276,5 +422,6 @@ function typeset(){
   if(window.MathJax&&MathJax.typesetPromise){ MathJax.typesetClear&&MathJax.typesetClear(); MathJax.typesetPromise([quiz]).then(layoutAnswers); }
   else layoutAnswers();
 }
+readAuthored();   // lit les questions écrites à la main dans le HTML
 attachListeners();
 build();

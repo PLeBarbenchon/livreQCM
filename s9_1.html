@@ -4,5 +4,377 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#0d9488"><div class="topnav" style="--accent:#0d9488"><span class="brand">9.1 · Sommes finies $\Sigma$</span><a href="index.html">Menu</a><a href="ch9.html">Chapitre 9</a><a class="" href="pdf/BCPSTCh9_Sommes_produits_finis.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 9 — Sommes et produits finis</p><h1>Sommes finies $\Sigma$</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 9.1 à 9.40 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#0d9488"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"mcq","c":[["\\(n-3\\)",0,"h"],["\\(n-2\\)",0,"h"],["\\(n-1\\)",1,"h"],["\\(n\\)",0,"h"],["\\(n+1\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{k=0}^{0} a_k = 0\\)",0,"h"],["\\(\\displaystyle\\sum_{k = 0}^n 2 = 2n+2\\)",1,"h"],["\\(\\displaystyle\\sum_{k = 0}^n n = k n\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} a_k = a_0 + a_n\\)",0,"h"],["\\(\\displaystyle\\sum_{k = 0}^n 2 = 2n\\)",0,"h"],["\\(\\displaystyle\\sum_{k = 0}^n n = n(n+1)\\)",1,"h"]]},{"t":"mcq","c":[["\\(k\\) uniquement",0,"h"],["\\(n\\) uniquement",1,"h"],["\\(k\\) et \\(n\\)",0,"h"]]},{"t":"grid","parts":[{"lit":"\\(\\displaystyle\\sum_{k=0}^{p} a_k\\)","raw":1},{"lit":"\\(\\, + \\,\\)","raw":1},{"check":{"label":"\\(\\displaystyle\\sum_{k=p}^{n} a_k\\)","ok":0}},{"check":{"label":"\\(\\displaystyle\\sum_{k=p+1}^{n} a_k\\)","ok":1}},{"check":{"label":"\\(\\displaystyle\\sum_{k=p+1}^{n-1} a_k\\)","ok":0}},{"check":{"label":"\\(\\displaystyle\\sum_{k=p-1}^{n} a_k\\)","ok":0}}]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{k=1}^{n} (2k+1)\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} (2k+1)\\)",1,"h"],["\\(\\displaystyle\\sum_{k=1}^{n} (2k-1)\\)",0,"h"],["\\(\\displaystyle\\sum_{k=1}^{n+1} (2k-1)\\)",1,"h"],["\\(\\displaystyle\\sum_{k=0}^{2n+1} (2k+1)\\)",0,"h"],["\\(\\displaystyle\\sum_{k=1}^{2n+1} (2k-1)\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{p=0}^{n} a_{2p} + \\sum_{p=0}^{n} a_{2p+1}\\)",0,"h"],["\\(\\displaystyle\\sum_{p=0}^{n-1} a_{2p} + \\sum_{p=0}^{n} a_{2p+1}\\)",0,"h"],["\\(\\displaystyle\\sum_{p=0}^{n-1} a_{2p} + \\sum_{p=0}^{n-1} a_{2p+1}\\)",0,"h"],["\\(\\displaystyle\\sum_{p=0}^{n} a_{2p} + \\sum_{p=0}^{n-1} a_{2p+1}\\)",1,"h"],["\\(\\displaystyle\\sum_{p=0}^{n} a_{2p} + \\sum_{p=1}^{n} a_{2p-1}\\)",1,"h"],["\\(\\displaystyle\\sum_{p=0}^{n} a_{2p} + \\sum_{p=1}^{n} a_{2p+1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{k=0}^{n} a_k b_k = \\left(\\sum_{k=0}^{n} a_k\\right)\\left(\\sum_{k=0}^{n} b_k\\right)\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} (a_k + 1) = 1 + \\sum_{k=0}^{n} a_k\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} (\\lambda a_k + b_k) = \\lambda\\sum_{k=0}^{n} a_k + \\sum_{k=0}^{n} b_k\\)",1,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} a_k^2 = \\left(\\sum_{k=0}^{n} a_k\\right)^2\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} (a_k + 1) = n + 1 + \\sum_{k=0}^{n} a_k\\)",1,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} e^{a_k} = \\exp \\left( \\sum_{k=0}^{n} a_k\\right)\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n(n+1)}{2}\\)",0,"h"],["\\(n\\)",0,"h"],["\\(n^2\\)",1,"h"],["\\(n(n+1)\\)",0,"h"]]},{"t":"mcq","c":[["\\(-2n-1\\)",0,"h"],["\\(-1\\)",0,"h"],["\\(0\\)",1,"h"],["\\(1\\)",0,"h"],["\\(2n+1\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n(n-1)}{2}\\)",0,"h"],["\\(\\dfrac{n(n+1)}{2}\\)",1,"h"],["\\(\\dfrac{n^2+1}{2}\\)",0,"h"],["\\(\\dfrac{(n+1)(n+2)}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{3n(n+1)}{2}\\)",1,"h"],["\\(\\dfrac{n(3n+1)}{2}\\)",0,"h"],["\\(n(2n+1)\\)",0,"h"],["\\(\\dfrac{3n(n-1)}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n^2(n+1)}{6}\\)",0,"h"],["\\(\\dfrac{n^2(n+1)^2}{4}\\)",0,"h"],["\\(\\dfrac{n(n+2)^2}{6}\\)",0,"h"],["\\(\\dfrac{n(n+1)(2n+1)}{6}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{(n+1)(n+2)(n+3)}{12}\\)",0,"h"],["\\(\\dfrac{n(n+1)(n+2)}{3}\\)",1,"h"],["\\(\\dfrac{n(n+1)}{2}\\times\\dfrac{(n+1)(n+2)}{2}\\)",0,"h"],["\\(\\dfrac{n(n+1)(2n+1)}{3}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n(u_0+u_n)}{2}\\)",0,"h"],["\\(\\dfrac{(n+1)(u_0+u_n)}{2}\\)",1,"h"],["\\((n+1)(u_0+u_n)\\)",0,"h"],["\\(\\dfrac{(n+1)(u_0+u_{n+1})}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{3n(n+1)}{2} + 2\\)",0,"h"],["\\(\\dfrac{3n(n+1)}{2} + 2n\\)",0,"h"],["\\(\\dfrac{(n+1)(3n+4)}{2}\\)",1,"h"],["\\(\\dfrac{(n+1)(3n+2)}{2}\\)",0,"h"],["\\(\\dfrac{3(n+1)(n+2)}{2} - 2\\)",0,"h"],["\\(\\dfrac{3(n+1)(n-1)}{2} + 7\\)",0,"h"]]},{"t":"mcq","c":[["\\(n^2+1\\)",0,"h"],["\\(n^2-1\\)",1,"h"],["\\(n(n-1)\\)",0,"h"],["\\(n(n+1)-1\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{1-x^{n-p+1}}{1-x}\\)",0,"h"],["\\(x^p\\,\\dfrac{1-x^{n-p}}{1-x}\\)",0,"h"],["\\(\\dfrac{x^p - x^{n+1}}{1-x}\\)",1,"h"],["\\(\\dfrac{x^p - x^{n}}{1-x}\\)",0,"h"]]},{"t":"mcq","c":[["\\(2^{n-1}-1\\)",0,"h"],["\\(2^{n-1}+1\\)",0,"h"],["\\(2^{n}-1\\)",0,"h"],["\\(2^{n}-2\\)",0,"h"],["\\(2^{n+1}-1\\)",0,"h"],["\\(2^{n+1}-2\\)",1,"h"],["\\(2^{n+1}\\)",0,"h"],["\\(2(2^{n}-1)\\)",1,"h"]]},{"t":"mcq","c":[["\\(2-\\dfrac{1}{2^{n}}\\)",1,"h"],["\\(2-\\dfrac{1}{2^{n+1}}\\)",0,"h"],["\\(1-\\dfrac{1}{2^{n}}\\)",0,"h"],["\\(\\dfrac{2^{n+1}-1}{2^{n}}\\)",1,"h"]]},{"t":"mcq","c":[["\\(n(n+1)+\\dfrac{3^{n+1}-1}{2}\\)",1,"h"],["\\(\\dfrac{n(n+1)}{2}+\\dfrac{3^{n}-1}{2}\\)",0,"h"],["\\(n(n+1)+\\dfrac{3^{n+1}-3}{2}\\)",0,"h"],["\\((n+1)^2+\\dfrac{3^{n+1}}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\((a - b) \\displaystyle \\sum_{k=0}^{n-1} a^k b^{n-1-k}\\)",1,"h"],["\\((a - b) \\displaystyle \\sum_{k=0}^{n} a^k b^{n-k}\\)",0,"h"],["\\((a - b) \\displaystyle \\sum_{k=0}^{n-1} a^k b^{n-k}\\)",0,"h"],["\\((a - b) \\displaystyle \\sum_{k=1}^{n} a^{n-k} b^{k-1}\\)",1,"h"]]},{"t":"grid","parts":[{"check":{"label":"\\(a_n\\)","ok":0}},{"check":{"label":"\\(a_{n+1}\\)","ok":1}},{"br":1},{"check":{"label":"\\(a_m\\)","ok":0}},{"check":{"label":"\\(a_{m+1}\\)","ok":0}},{"br":1},{"check":{"label":"\\(+\\)","ok":0}},{"br":1},{"check":{"label":"\\(-\\)","ok":1}},{"br":1},{"check":{"label":"\\(a_n\\)","ok":0}},{"check":{"label":"\\(a_{n+1}\\)","ok":0}},{"br":1},{"check":{"label":"\\(a_m\\)","ok":1}},{"check":{"label":"\\(a_{m+1}\\)","ok":0}}]},{"t":"mcq","c":[["\\(1 - \\dfrac{1}{n}\\)",0,"h"],["\\(\\dfrac{1}{n}-\\dfrac{1}{2}\\)",0,"h"],["\\(\\dfrac{1}{2} - \\dfrac{1}{n}\\)",0,"h"],["\\(1 - \\dfrac{1}{n+1}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n-1}{n}\\)",0,"h"],["\\(\\dfrac{1}{n+1}\\)",0,"h"],["\\(\\dfrac{n}{n+1}\\)",1,"h"],["\\(\\dfrac{n+1}{n}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\ln(n) - 1\\)",0,"h"],["\\(\\ln(n+1)\\)",1,"h"],["\\(\\ln(n+1)-1\\)",0,"h"],["\\(\\ln(n+1) - \\ln(n)\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\sqrt{n} - 1\\)",0,"h"],["\\(\\sqrt{n+1} - 1\\)",1,"h"],["\\(\\sqrt{n+1} + 1\\)",0,"h"],["\\(1 - \\dfrac{1}{\\sqrt{n+1}}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{k=2}^{n \\vphantom{1}} a_k = \\displaystyle\\sum_{j=0}^{n} a_{j+2}\\)",0,"h"],["\\(\\displaystyle\\sum_{k=2}^{n} a_k = \\displaystyle\\sum_{j=0}^{n-2} a_{j+2}\\)",1,"h"],["\\(\\displaystyle\\sum_{k=1}^{n} a_{k-1} = \\displaystyle\\sum_{j=0}^{n-1} a_{j}\\)",1,"h"],["\\(\\displaystyle\\sum_{k=1}^{n} a_{k-1} = \\displaystyle\\sum_{j=2}^{n+1} a_{j}\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n \\vphantom{1}} a_k = \\displaystyle\\sum_{j=1}^{n} a_{n-j}\\)",0,"h"],["\\(\\displaystyle\\sum_{k=0}^{n} a_k = \\displaystyle\\sum_{j=1}^{n+1} a_{j+1}\\)",0,"h"]]},{"t":"mcq","c":[["\\(n(n+1)\\)",0,"h"],["\\(\\dfrac{n(n+1)}{2}\\)",1,"h"],["\\(\\dfrac{n(n-1)}{2}\\)",0,"h"],["\\(n^2-\\dfrac{n(n+1)}{2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n (2n-1) (4n+1)}{3}\\)",0,"h"],["\\(\\dfrac{n (4n^2-1)}{3}\\)",1,"h"],["\\(\\dfrac{n (2n-1) (4n-1)}{3}\\)",0,"h"],["\\((n-1)^2 (2n-1)\\)",0,"h"]]},{"t":"mcq","c":[["\\(-n\\)",0,"h"],["\\(0\\)",0,"h"],["\\(n\\)",1,"h"],["\\(2n\\)",0,"h"],["\\(n(2n+1)\\)",0,"h"]]},{"t":"mcq","c":[["\\(-n(2n+1)\\)",0,"h"],["\\(n(2n-1)\\)",0,"h"],["\\(n(2n+1)\\)",1,"h"],["\\(2n^2\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{k=1}^{n \\vphantom{2}} \\frac{1}{2k}\\)",0,"h"],["\\(\\displaystyle\\sum_{k=n+1}^{2n} \\frac{1}{k}\\)",1,"h"],["\\(\\displaystyle\\sum_{k=n}^{2n} \\frac{1}{k}\\)",0,"h"],["\\(\\displaystyle\\sum_{k=1}^{n \\vphantom{2}} \\frac{1}{n+k}\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{1-x^{n+1}}{(1-x)^2}\\)",0,"h"],["\\(\\dfrac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}\\)",1,"h"],["\\(\\dfrac{1-(n+1)x^n+nx^{n+1}}{1-x}\\)",0,"h"],["\\(\\dfrac{1-nx^{n-1}+(n-1)x^{n}}{(1-x)^2}\\)",0,"h"]]},{"t":"mcq","c":[["\\(n-1\\)",0,"h"],["\\(2(n+1)\\)",0,"h"],["\\(\\dfrac{n(n+1)}{2}\\)",0,"h"],["\\(n(n-1)\\)",0,"h"],["\\(n^2\\)",1,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n(n-1)}{2}\\)",1,"h"],["\\(\\dfrac{n(n+1)}{2}\\)",0,"h"],["\\(n(n-1)\\)",0,"h"],["\\(n(n+1)\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n^2(n+1)}{2}\\)",0,"h"],["\\(\\left(\\dfrac{n(n+1)}{2}\\right)^2\\)",1,"h"],["\\(\\dfrac{n(n+1)^2}{2}\\)",0,"h"],["\\(\\dfrac{n(n+1)(2n+1)}{6}\\) {-1.5cm}",0,"h"]]},{"t":"mcq","c":[["\\(\\displaystyle\\sum_{j=1}^{n }\\sum_{i=j}^{n} \\alpha_{i,j}\\)",0,"h"],["\\(\\displaystyle\\sum_{j=1}^{n}\\sum_{i=1}^{j} \\alpha_{i,j}\\)",1,"h"],["\\(\\displaystyle\\sum_{j=i}^{n }\\sum_{i=1}^{n} \\alpha_{i,j}\\)",0,"h"],["\\(\\displaystyle\\sum_{j=1}^{n }\\sum_{i=1}^{n} \\alpha_{i,j}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n(n+1)(n+2)}{6}\\)",0,"h"],["\\(\\left(\\dfrac{n(n+1)}{2}\\right)^2\\)",0,"h"],["\\(\\dfrac{n^2(n+1)}{2}\\)",0,"h"],["\\(\\dfrac{n(n+1)^2}{2}\\)",0,"h"],["\\(\\dfrac{n(n+1)(2n+1)}{6}\\)",1,"h"],["\\(\\dfrac{2n^3 + 3n^2 + 1}{6}\\)",0,"h"]]},{"t":"mcq","c":[["\\(2^{n+1} - 1\\)",0,"h"],["\\(2^{n+2} - 2\\)",0,"h"],["\\(2^{n+2} - n - 3\\)",1,"h"],["\\((n+1) \\left( 2^{n+1} - 1 \\right)\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{n(n+1)(3n+1)}{2}\\)",0,"h"],["\\(\\dfrac{n(n+1)(n+2)}{6}\\)",0,"h"],["\\(\\dfrac{n(n+1)(4n-1)}{6}\\)",1,"h"],["\\(\\left(\\dfrac{n(n+1)}{2}\\right)^2\\)",0,"h"]]}];window.QUIZ_START=1;window.QUIZ_CHAP=9;window.QUIZ_SOL=["<p>De \\(k=3\\) à \\(k=n+1\\), il y a \\((n+1)-3+1\\) termes (règle : « dernier \\(-\\) premier \\(+1\\) »), soit \\(\\boxed{n-1}\\).</p>","<p>La somme \\(\\displaystyle\\sum_{k=0}^{n} 2\\) comporte \\(n+1\\) termes tous égaux à \\(2\\), donc vaut \\(\\boxed{2n+2}\\) (et non \\(2n\\)). De même, \\(n\\) ne dépend pas de l'indice \\(k\\) : \\(\\displaystyle\\sum_{k=0}^{n} n = (n+1)\\,n = \\boxed{n(n+1)}\\) ; l'écriture « \\(kn\\) » n'a pas de sens car \\(k\\) est une variable muette. Enfin \\(\\displaystyle\\sum_{k=0}^{0} a_k = a_0\\) (un seul terme), et \\(\\displaystyle\\sum_{k=0}^{n} a_k\\) contient tous les termes de \\(a_0\\) à \\(a_n\\), pas seulement le premier et le dernier.</p>","<p>L'indice \\(k\\) est une variable muette (on pourrait le remplacer par \\(i\\) ou \\(j\\)) : la somme ne dépend que de sa borne, donc \\(\\boxed{\\text{de } n \\text{ uniquement}}\\).</p>","<p>On découpe les indices \\(0,\\dots,n\\) en \\(0,\\dots,p\\) puis \\(p+1,\\dots,n\\), sans oublier ni répéter d'indice : \\(\\displaystyle\\sum_{k=0}^{n} a_k = \\sum_{k=0}^{p} a_k + \\boxed{\\sum_{k=p+1}^{n} a_k}\\). (A compte \\(a_p\\) deux fois, C oublie \\(a_n\\), D compte \\(a_{p-1}\\) et \\(a_p\\) deux fois.)</p>","<p>Les nombres impairs de \\(1\\) à \\(2n+1\\) s'écrivent \\(2k+1\\) avec \\(k\\) allant de \\(0\\) à \\(n\\), d'où \\(\\boxed{\\displaystyle\\sum_{k=0}^{n} (2k+1)}\\). Avec l'écriture \\(2k-1\\), il faut faire aller \\(k\\) de \\(1\\) à \\(n+1\\), d'où \\(\\boxed{\\displaystyle\\sum_{k=1}^{n+1} (2k-1)}\\).</p>","<p>Parmi les indices \\(0,\\dots,2n\\), les pairs sont \\(2p\\) avec \\(0\\leqslant p\\leqslant n\\) et les impairs \\(2p+1\\) avec \\(0\\leqslant p\\leqslant n-1\\) (le plus grand est \\(2n-1\\)) : \\(\\displaystyle\\sum_{k=0}^{2n} a_k = \\boxed{\\sum_{p=0}^{n} a_{2p} + \\sum_{p=0}^{n-1} a_{2p+1}}\\). En écrivant les impairs \\(2p-1\\), l'indice \\(p\\) va de \\(1\\) à \\(n\\) : \\(\\boxed{\\displaystyle\\sum_{p=0}^{n} a_{2p} + \\sum_{p=1}^{n} a_{2p-1}}\\).</p>","<p>La somme est linéaire : \\(\\displaystyle\\sum_{k=0}^{n} (\\lambda a_k + b_k) = \\boxed{\\lambda\\sum_{k=0}^{n} a_k + \\sum_{k=0}^{n} b_k}\\). En particulier, \\(\\displaystyle\\sum_{k=0}^{n} (a_k+1) = \\sum_{k=0}^{n} a_k + \\sum_{k=0}^{n} 1 = \\boxed{n+1+\\sum_{k=0}^{n} a_k}\\) (et non \\(+1\\) : il y a \\(n+1\\) termes). En revanche, la somme n'est compatible ni avec le produit, ni avec le carré, ni avec l'exponentielle. Contre-exemple : \\(n=1\\) et \\(a_0=a_1=b_0=b_1=1\\) ; \\(\\displaystyle\\sum a_kb_k = 2 \\neq 4 = \\Big(\\sum a_k\\Big)\\Big(\\sum b_k\\Big)\\), \\(\\displaystyle\\sum a_k^2 = 2 \\neq 4 = \\Big(\\sum a_k\\Big)^2\\) et \\(\\displaystyle\\sum e^{a_k} = 2e \\neq e^2\\).</p>","<p>Il y a \\(2n+2\\) termes, que l'on regroupe par paires \\((1-1)\\) : \\(\\displaystyle\\sum_{k=0}^{2n+1} (-1)^k = \\underbrace{(1-1)+(1-1)+\\dots+(1-1)}_{n+1 \\text{ paires}} = \\boxed{0}\\). (On peut aussi utiliser la somme géométrique : \\(\\dfrac{1-(-1)^{2n+2}}{1-(-1)} = 0\\).)</p>","<p>Formule de Gauss : \\(\\displaystyle\\sum_{k=0}^{n} k = \\sum_{k=1}^{n} k = \\boxed{\\dfrac{n(n+1)}{2}}\\) (le terme \\(k=0\\) est nul).</p>","<p>C'est une somme arithmétique de \\(2n-n+1 = n+1\\) termes, de premier terme \\(n\\) et de dernier terme \\(2n\\) : \\(\\displaystyle\\sum_{k=n}^{2n} k = \\dfrac{(n+1)(n+2n)}{2} = \\boxed{\\dfrac{3n(n+1)}{2}}\\). (Vérification pour \\(n=2\\) : \\(2+3+4 = 9 = \\frac{3\\times2\\times3}{2}\\).)</p>","<p>Formule à connaître : \\(\\displaystyle\\sum_{k=0}^{n} k^2 = \\boxed{\\dfrac{n(n+1)(2n+1)}{6}}\\). (Vérification pour \\(n=2\\) : \\(0+1+4 = 5 = \\frac{2\\times3\\times5}{6}\\).)</p>","<p>Par linéarité, \\(\\displaystyle\\sum_{k=0}^{n} k(k+1) = \\sum_{k=0}^{n} k^2 + \\sum_{k=0}^{n} k = \\dfrac{n(n+1)(2n+1)}{6} + \\dfrac{n(n+1)}{2} = \\dfrac{n(n+1)(2n+4)}{6} = \\boxed{\\dfrac{n(n+1)(n+2)}{3}}\\). (Attention : la somme d'un produit n'est pas le produit des sommes.)</p>","<p>La somme de termes consécutifs d'une suite arithmétique vaut « nombre de termes \\(\\times\\) (premier \\(+\\) dernier) \\(/ 2\\) ». Ici il y a \\(n+1\\) termes : \\(\\displaystyle\\sum_{k=0}^{n} u_k = \\boxed{\\dfrac{(n+1)(u_0+u_n)}{2}}\\).</p>","<p>Par linéarité, \\(\\displaystyle\\sum_{k=0}^{n} (3k+2) = 3\\,\\dfrac{n(n+1)}{2} + 2(n+1) = \\boxed{\\dfrac{(n+1)(3n+4)}{2}}\\). (Le terme constant \\(2\\) est sommé \\(n+1\\) fois, d'où \\(2(n+1)\\) et non \\(2\\) ou \\(2n\\).)</p>","<p>\\(\\displaystyle\\sum_{k=0}^{n} (2k-1) = 2\\,\\dfrac{n(n+1)}{2} - (n+1) = (n+1)(n-1) = \\boxed{n^2-1}\\). (Attention au terme \\(k=0\\), qui vaut \\(-1\\).)</p>","<p>On factorise par \\(x^p\\) : \\(\\displaystyle\\sum_{k=p}^{n} x^k = x^p\\sum_{j=0}^{n-p} x^j = x^p\\,\\dfrac{1-x^{n-p+1}}{1-x} = \\boxed{\\dfrac{x^p-x^{n+1}}{1-x}}\\). Moyen mnémotechnique : « premier terme moins le terme qui suit le dernier, sur \\(1\\) moins la raison ».</p>","<p>\\(\\displaystyle\\sum_{k=1}^{n} 2^k = \\dfrac{2-2^{n+1}}{1-2} = \\boxed{2^{n+1}-2} = \\boxed{2(2^n-1)}\\). (Vérification pour \\(n=1\\) : la somme vaut \\(2\\).)</p>","<p>Somme géométrique de raison \\(\\frac12\\) : \\(\\displaystyle\\sum_{k=0}^{n} \\dfrac{1}{2^k} = \\dfrac{1-\\left(\\frac12\\right)^{n+1}}{1-\\frac12} = 2\\left(1-\\dfrac{1}{2^{n+1}}\\right) = \\boxed{2-\\dfrac{1}{2^n}} = \\boxed{\\dfrac{2^{n+1}-1}{2^n}}\\).</p>","<p>Factorisation classique : \\(\\boxed{a^n-b^n = (a-b)\\displaystyle\\sum_{k=0}^{n-1} a^k b^{n-1-k}}\\) (on la vérifie en développant : la somme est télescopique). Le changement d'indice \\(k'=n-k\\) donne l'autre écriture \\(\\boxed{(a-b)\\displaystyle\\sum_{k=1}^{n} a^{n-k} b^{k-1}}\\). Dans chaque terme, la somme des exposants doit valoir \\(n-1\\) : cela élimine B et C.</p>","<p>Les termes intermédiaires se simplifient deux à deux : \\((a_{m+1}-a_m)+(a_{m+2}-a_{m+1})+\\dots+(a_{n+1}-a_n)\\). Il reste le dernier terme positif et le premier terme négatif : \\(\\displaystyle\\sum_{k=m}^{n} (a_{k+1}-a_k) = \\boxed{a_{n+1}-a_m}\\) (cases \\(a_{n+1}\\), \\(-\\) et \\(a_m\\)).</p>","<p>Somme télescopique : \\(\\displaystyle\\sum_{k=1}^{n} \\left(\\dfrac1k-\\dfrac{1}{k+1}\\right) = \\dfrac11-\\dfrac{1}{n+1} = \\boxed{1-\\dfrac{1}{n+1}}\\).</p>","<p>On décompose \\(\\dfrac{1}{k(k+1)} = \\dfrac1k-\\dfrac{1}{k+1}\\), puis on télescope : \\(\\displaystyle\\sum_{k=1}^{n} \\dfrac{1}{k(k+1)} = 1-\\dfrac{1}{n+1} = \\boxed{\\dfrac{n}{n+1}}\\).</p>","<p>\\(\\ln\\left(1+\\dfrac1k\\right) = \\ln(k+1)-\\ln k\\), donc par télescopage \\(\\displaystyle\\sum_{k=1}^{n} \\ln\\left(1+\\dfrac1k\\right) = \\ln(n+1)-\\ln 1 = \\boxed{\\ln(n+1)}\\).</p>","<p>On multiplie par la quantité conjuguée : \\(\\dfrac{1}{\\sqrt k+\\sqrt{k+1}} = \\dfrac{\\sqrt{k+1}-\\sqrt k}{(k+1)-k} = \\sqrt{k+1}-\\sqrt k\\). Par télescopage, \\(\\displaystyle\\sum_{k=1}^{n} \\dfrac{1}{\\sqrt k+\\sqrt{k+1}} = \\boxed{\\sqrt{n+1}-1}\\).</p>","<p>Avec \\(j=k-2\\) : quand \\(k\\) va de \\(2\\) à \\(n\\), \\(j\\) va de \\(0\\) à \\(n-2\\), d'où \\(\\boxed{\\displaystyle\\sum_{k=2}^{n} a_k = \\sum_{j=0}^{n-2} a_{j+2}}\\) (A oublie de décaler la borne du haut). Avec \\(j=k-1\\) : \\(\\boxed{\\displaystyle\\sum_{k=1}^{n} a_{k-1} = \\sum_{j=0}^{n-1} a_j}\\). Les deux dernières propositions sont fausses : \\(\\displaystyle\\sum_{j=1}^{n} a_{n-j}\\) va de \\(a_{n-1}\\) à \\(a_0\\) et oublie \\(a_n\\), et \\(\\displaystyle\\sum_{j=1}^{n+1} a_{j+1}\\) va de \\(a_2\\) à \\(a_{n+2}\\).</p>","<p>Avec \\(j=n-k\\) (qui va de \\(n\\) à \\(0\\)) : \\(\\displaystyle\\sum_{k=0}^{n} (n-k) = \\sum_{j=0}^{n} j = \\boxed{\\dfrac{n(n+1)}{2}}\\).</p>","<p>On développe : \\(\\displaystyle\\sum_{k=1}^{n} (2k-1)^2 = 4\\sum_{k=1}^{n} k^2 - 4\\sum_{k=1}^{n} k + n = \\dfrac{2n(n+1)(2n+1)}{3} - 2n(n+1) + n = \\boxed{\\dfrac{n(4n^2-1)}{3}}\\). (Vérification pour \\(n=2\\) : \\(1+9 = 10 = \\frac{2\\times15}{3}\\).)</p>","<p>On regroupe les termes deux par deux : \\((-1+2)+(-3+4)+\\dots+\\big(-(2n-1)+2n\\big)\\), soit \\(n\\) paires valant chacune \\(1\\), d'où \\(\\boxed{n}\\).</p>","<p>On regroupe par paires : \\((2m)^2-(2m-1)^2 = 4m-1\\) pour \\(m\\) de \\(1\\) à \\(n\\), donc \\(\\displaystyle\\sum_{k=1}^{2n} (-1)^k k^2 = \\sum_{m=1}^{n} (4m-1) = 2n(n+1)-n = \\boxed{n(2n+1)}\\).</p>","<p>On retranche deux fois les termes d'indice pair : \\(\\displaystyle\\sum_{k=1}^{2n} \\dfrac{(-1)^{k+1}}{k} = \\sum_{k=1}^{2n} \\dfrac1k - 2\\sum_{k=1}^{n} \\dfrac{1}{2k} = \\sum_{k=1}^{2n} \\dfrac1k - \\sum_{k=1}^{n} \\dfrac1k = \\boxed{\\sum_{k=n+1}^{2n} \\dfrac1k}\\). Le changement d'indice \\(k=n+j\\) donne l'autre écriture \\(\\boxed{\\displaystyle\\sum_{j=1}^{n} \\dfrac{1}{n+j}}\\).</p>","<p>C'est la dérivée de \\(x\\mapsto\\displaystyle\\sum_{k=0}^{n} x^k = \\dfrac{1-x^{n+1}}{1-x}\\). En dérivant le quotient : \\(\\displaystyle\\sum_{k=1}^{n} kx^{k-1} = \\dfrac{-(n+1)x^n(1-x)+(1-x^{n+1})}{(1-x)^2} = \\boxed{\\dfrac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}}\\).</p>","<p>On compte les couples \\((i,j)\\in\\{1,\\dots,n\\}^2\\) : il y en a \\(\\boxed{n^2}\\).</p>","<p>On compte les couples \\((i,j)\\) avec \\(1\\leqslant i<j\\leqslant n\\) : pour \\(j\\) fixé, il y a \\(j-1\\) valeurs de \\(i\\), donc \\(\\displaystyle\\sum_{j=1}^{n} (j-1) = \\boxed{\\dfrac{n(n-1)}{2}}\\).</p>","<p>Les indices sont indépendants, donc la somme se factorise : \\(\\displaystyle\\sum_{1\\leqslant i,j\\leqslant n} ij = \\left(\\sum_{i=1}^{n} i\\right)\\left(\\sum_{j=1}^{n} j\\right) = \\boxed{\\left(\\dfrac{n(n+1)}{2}\\right)^2}\\).</p>","<p>La somme porte sur les couples tels que \\(1\\leqslant i\\leqslant j\\leqslant n\\). Si l'on fixe d'abord \\(j\\in\\{1,\\dots,n\\}\\), alors \\(i\\) va de \\(1\\) à \\(j\\) : \\(\\displaystyle\\sum_{i=1}^{n}\\sum_{j=i}^{n} \\alpha_{i,j} = \\boxed{\\sum_{j=1}^{n}\\sum_{i=1}^{j} \\alpha_{i,j}}\\). (La réponse C n'a pas de sens : la borne de la somme extérieure dépend de l'indice de la somme intérieure.)</p>","<p>On somme d'abord sur \\(i\\) : pour \\(j\\) fixé, il y a \\(j\\) valeurs de \\(i\\), donc \\(\\displaystyle\\sum_{1\\leqslant i\\leqslant j\\leqslant n} j = \\sum_{j=1}^{n} j\\times j = \\boxed{\\dfrac{n(n+1)(2n+1)}{6}}\\).</p>","<p>On somme d'abord sur \\(i\\) : \\(\\displaystyle\\sum_{i=0}^{j} 2^i = 2^{j+1}-1\\). Puis \\(\\displaystyle\\sum_{j=0}^{n} (2^{j+1}-1) = (2^{n+2}-2)-(n+1) = \\boxed{2^{n+2}-n-3}\\). (Vérification pour \\(n=0\\) : la somme vaut \\(1\\).)</p>","<p>Pour \\(k\\) fixé, le nombre de couples \\((i,j)\\) tels que \\(\\max(i,j)=k\\) est \\(k^2-(k-1)^2 = 2k-1\\). Donc \\(\\displaystyle\\sum_{1\\leqslant i,j\\leqslant n} \\max(i,j) = \\sum_{k=1}^{n} k(2k-1) = \\dfrac{n(n+1)(2n+1)}{3} - \\dfrac{n(n+1)}{2} = \\boxed{\\dfrac{n(n+1)(4n-1)}{6}}\\). (Vérification pour \\(n=2\\) : \\(1+2+2+2 = 7 = \\frac{2\\times3\\times7}{6}\\).)</p>"];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body><div class="topnav"><span class="brand">9.1 · Sommes finies $\Sigma$</span><a href="index.html">Menu</a><a href="ch9.html">Chapitre 9</a></div><main><p class="chapno">Chapitre 9 — Sommes et produits finis</p><h1>Sommes finies $\Sigma$</h1>
+<div id="quiz" data-chap="9" data-start="1">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (9.1, 9.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="1").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n-3$</div>
+  <div class="opt">$n-2$</div>
+  <div class="opt" data-ok>$n-1$</div>
+  <div class="opt">$n$</div>
+  <div class="opt">$n+1$</div>
+  <div class="sol"><p>De $k=3$ à $k=n+1$, il y a $(n+1)-3+1$ termes (règle : « dernier $-$ premier $+1$ »), soit $\boxed{n-1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{k=0}^{0} a_k = 0$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k = 0}^n 2 = 2n+2$</div>
+  <div class="opt">$\displaystyle\sum_{k = 0}^n n = k n$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n} a_k = a_0 + a_n$</div>
+  <div class="opt">$\displaystyle\sum_{k = 0}^n 2 = 2n$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k = 0}^n n = n(n+1)$</div>
+  <div class="sol"><p>La somme $\displaystyle\sum_{k=0}^{n} 2$ comporte $n+1$ termes tous égaux à $2$, donc vaut $\boxed{2n+2}$ (et non $2n$). De même, $n$ ne dépend pas de l'indice $k$ : $\displaystyle\sum_{k=0}^{n} n = (n+1)\,n = \boxed{n(n+1)}$ ; l'écriture « $kn$ » n'a pas de sens car $k$ est une variable muette. Enfin $\displaystyle\sum_{k=0}^{0} a_k = a_0$ (un seul terme), et $\displaystyle\sum_{k=0}^{n} a_k$ contient tous les termes de $a_0$ à $a_n$, pas seulement le premier et le dernier.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$k$ uniquement</div>
+  <div class="opt" data-ok>$n$ uniquement</div>
+  <div class="opt">$k$ et $n$</div>
+  <div class="sol"><p>L'indice $k$ est une variable muette (on pourrait le remplacer par $i$ ou $j$) : la somme ne dépend que de sa borne, donc $\boxed{\text{de } n \text{ uniquement}}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$\displaystyle\sum_{k=0}^{p} a_k$</span>
+  <span class="lab">$\, + \,$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$\displaystyle\sum_{k=p}^{n} a_k$</span><span class="case" data-ok>$\displaystyle\sum_{k=p+1}^{n} a_k$</span><span class="case">$\displaystyle\sum_{k=p+1}^{n-1} a_k$</span><span class="case">$\displaystyle\sum_{k=p-1}^{n} a_k$</span></div>
+  </div>
+  <div class="sol"><p>On découpe les indices $0,\dots,n$ en $0,\dots,p$ puis $p+1,\dots,n$, sans oublier ni répéter d'indice : $\displaystyle\sum_{k=0}^{n} a_k = \sum_{k=0}^{p} a_k + \boxed{\sum_{k=p+1}^{n} a_k}$. (A compte $a_p$ deux fois, C oublie $a_n$, D compte $a_{p-1}$ et $a_p$ deux fois.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{k=1}^{n} (2k+1)$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=0}^{n} (2k+1)$</div>
+  <div class="opt">$\displaystyle\sum_{k=1}^{n} (2k-1)$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=1}^{n+1} (2k-1)$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{2n+1} (2k+1)$</div>
+  <div class="opt">$\displaystyle\sum_{k=1}^{2n+1} (2k-1)$</div>
+  <div class="sol"><p>Les nombres impairs de $1$ à $2n+1$ s'écrivent $2k+1$ avec $k$ allant de $0$ à $n$, d'où $\boxed{\displaystyle\sum_{k=0}^{n} (2k+1)}$. Avec l'écriture $2k-1$, il faut faire aller $k$ de $1$ à $n+1$, d'où $\boxed{\displaystyle\sum_{k=1}^{n+1} (2k-1)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{p=0}^{n} a_{2p} + \sum_{p=0}^{n} a_{2p+1}$</div>
+  <div class="opt">$\displaystyle\sum_{p=0}^{n-1} a_{2p} + \sum_{p=0}^{n} a_{2p+1}$</div>
+  <div class="opt">$\displaystyle\sum_{p=0}^{n-1} a_{2p} + \sum_{p=0}^{n-1} a_{2p+1}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{p=0}^{n} a_{2p} + \sum_{p=0}^{n-1} a_{2p+1}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{p=0}^{n} a_{2p} + \sum_{p=1}^{n} a_{2p-1}$</div>
+  <div class="opt">$\displaystyle\sum_{p=0}^{n} a_{2p} + \sum_{p=1}^{n} a_{2p+1}$</div>
+  <div class="sol"><p>Parmi les indices $0,\dots,2n$, les pairs sont $2p$ avec $0\leqslant p\leqslant n$ et les impairs $2p+1$ avec $0\leqslant p\leqslant n-1$ (le plus grand est $2n-1$) : $\displaystyle\sum_{k=0}^{2n} a_k = \boxed{\sum_{p=0}^{n} a_{2p} + \sum_{p=0}^{n-1} a_{2p+1}}$. En écrivant les impairs $2p-1$, l'indice $p$ va de $1$ à $n$ : $\boxed{\displaystyle\sum_{p=0}^{n} a_{2p} + \sum_{p=1}^{n} a_{2p-1}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{k=0}^{n} a_k b_k = \left(\sum_{k=0}^{n} a_k\right)\left(\sum_{k=0}^{n} b_k\right)$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n} (a_k + 1) = 1 + \sum_{k=0}^{n} a_k$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=0}^{n} (\lambda a_k + b_k) = \lambda\sum_{k=0}^{n} a_k + \sum_{k=0}^{n} b_k$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n} a_k^2 = \left(\sum_{k=0}^{n} a_k\right)^2$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=0}^{n} (a_k + 1) = n + 1 + \sum_{k=0}^{n} a_k$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n} e^{a_k} = \exp \left( \sum_{k=0}^{n} a_k\right)$</div>
+  <div class="sol"><p>La somme est linéaire : $\displaystyle\sum_{k=0}^{n} (\lambda a_k + b_k) = \boxed{\lambda\sum_{k=0}^{n} a_k + \sum_{k=0}^{n} b_k}$. En particulier, $\displaystyle\sum_{k=0}^{n} (a_k+1) = \sum_{k=0}^{n} a_k + \sum_{k=0}^{n} 1 = \boxed{n+1+\sum_{k=0}^{n} a_k}$ (et non $+1$ : il y a $n+1$ termes). En revanche, la somme n'est compatible ni avec le produit, ni avec le carré, ni avec l'exponentielle. Contre-exemple : $n=1$ et $a_0=a_1=b_0=b_1=1$ ; $\displaystyle\sum a_kb_k = 2 \neq 4 = \Big(\sum a_k\Big)\Big(\sum b_k\Big)$, $\displaystyle\sum a_k^2 = 2 \neq 4 = \Big(\sum a_k\Big)^2$ et $\displaystyle\sum e^{a_k} = 2e \neq e^2$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n(n+1)}{2}$</div>
+  <div class="opt">$n$</div>
+  <div class="opt" data-ok>$n^2$</div>
+  <div class="opt">$n(n+1)$</div>
+  <div class="sol"><p>Il y a $2n+2$ termes, que l'on regroupe par paires $(1-1)$ : $\displaystyle\sum_{k=0}^{2n+1} (-1)^k = \underbrace{(1-1)+(1-1)+\dots+(1-1)}_{n+1 \text{ paires}} = \boxed{0}$. (On peut aussi utiliser la somme géométrique : $\dfrac{1-(-1)^{2n+2}}{1-(-1)} = 0$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-2n-1$</div>
+  <div class="opt">$-1$</div>
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$2n+1$</div>
+  <div class="sol"><p>Formule de Gauss : $\displaystyle\sum_{k=0}^{n} k = \sum_{k=1}^{n} k = \boxed{\dfrac{n(n+1)}{2}}$ (le terme $k=0$ est nul).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n(n-1)}{2}$</div>
+  <div class="opt" data-ok>$\dfrac{n(n+1)}{2}$</div>
+  <div class="opt">$\dfrac{n^2+1}{2}$</div>
+  <div class="opt">$\dfrac{(n+1)(n+2)}{2}$</div>
+  <div class="sol"><p>C'est une somme arithmétique de $2n-n+1 = n+1$ termes, de premier terme $n$ et de dernier terme $2n$ : $\displaystyle\sum_{k=n}^{2n} k = \dfrac{(n+1)(n+2n)}{2} = \boxed{\dfrac{3n(n+1)}{2}}$. (Vérification pour $n=2$ : $2+3+4 = 9 = \frac{3\times2\times3}{2}$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{3n(n+1)}{2}$</div>
+  <div class="opt">$\dfrac{n(3n+1)}{2}$</div>
+  <div class="opt">$n(2n+1)$</div>
+  <div class="opt">$\dfrac{3n(n-1)}{2}$</div>
+  <div class="sol"><p>Formule à connaître : $\displaystyle\sum_{k=0}^{n} k^2 = \boxed{\dfrac{n(n+1)(2n+1)}{6}}$. (Vérification pour $n=2$ : $0+1+4 = 5 = \frac{2\times3\times5}{6}$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n^2(n+1)}{6}$</div>
+  <div class="opt">$\dfrac{n^2(n+1)^2}{4}$</div>
+  <div class="opt">$\dfrac{n(n+2)^2}{6}$</div>
+  <div class="opt" data-ok>$\dfrac{n(n+1)(2n+1)}{6}$</div>
+  <div class="sol"><p>Par linéarité, $\displaystyle\sum_{k=0}^{n} k(k+1) = \sum_{k=0}^{n} k^2 + \sum_{k=0}^{n} k = \dfrac{n(n+1)(2n+1)}{6} + \dfrac{n(n+1)}{2} = \dfrac{n(n+1)(2n+4)}{6} = \boxed{\dfrac{n(n+1)(n+2)}{3}}$. (Attention : la somme d'un produit n'est pas le produit des sommes.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{(n+1)(n+2)(n+3)}{12}$</div>
+  <div class="opt" data-ok>$\dfrac{n(n+1)(n+2)}{3}$</div>
+  <div class="opt">$\dfrac{n(n+1)}{2}\times\dfrac{(n+1)(n+2)}{2}$</div>
+  <div class="opt">$\dfrac{n(n+1)(2n+1)}{3}$</div>
+  <div class="sol"><p>La somme de termes consécutifs d'une suite arithmétique vaut « nombre de termes $\times$ (premier $+$ dernier) $/ 2$ ». Ici il y a $n+1$ termes : $\displaystyle\sum_{k=0}^{n} u_k = \boxed{\dfrac{(n+1)(u_0+u_n)}{2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n(u_0+u_n)}{2}$</div>
+  <div class="opt" data-ok>$\dfrac{(n+1)(u_0+u_n)}{2}$</div>
+  <div class="opt">$(n+1)(u_0+u_n)$</div>
+  <div class="opt">$\dfrac{(n+1)(u_0+u_{n+1})}{2}$</div>
+  <div class="sol"><p>Par linéarité, $\displaystyle\sum_{k=0}^{n} (3k+2) = 3\,\dfrac{n(n+1)}{2} + 2(n+1) = \boxed{\dfrac{(n+1)(3n+4)}{2}}$. (Le terme constant $2$ est sommé $n+1$ fois, d'où $2(n+1)$ et non $2$ ou $2n$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{3n(n+1)}{2} + 2$</div>
+  <div class="opt">$\dfrac{3n(n+1)}{2} + 2n$</div>
+  <div class="opt" data-ok>$\dfrac{(n+1)(3n+4)}{2}$</div>
+  <div class="opt">$\dfrac{(n+1)(3n+2)}{2}$</div>
+  <div class="opt">$\dfrac{3(n+1)(n+2)}{2} - 2$</div>
+  <div class="opt">$\dfrac{3(n+1)(n-1)}{2} + 7$</div>
+  <div class="sol"><p>$\displaystyle\sum_{k=0}^{n} (2k-1) = 2\,\dfrac{n(n+1)}{2} - (n+1) = (n+1)(n-1) = \boxed{n^2-1}$. (Attention au terme $k=0$, qui vaut $-1$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n^2+1$</div>
+  <div class="opt" data-ok>$n^2-1$</div>
+  <div class="opt">$n(n-1)$</div>
+  <div class="opt">$n(n+1)-1$</div>
+  <div class="sol"><p>On factorise par $x^p$ : $\displaystyle\sum_{k=p}^{n} x^k = x^p\sum_{j=0}^{n-p} x^j = x^p\,\dfrac{1-x^{n-p+1}}{1-x} = \boxed{\dfrac{x^p-x^{n+1}}{1-x}}$. Moyen mnémotechnique : « premier terme moins le terme qui suit le dernier, sur $1$ moins la raison ».</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{1-x^{n-p+1}}{1-x}$</div>
+  <div class="opt">$x^p\,\dfrac{1-x^{n-p}}{1-x}$</div>
+  <div class="opt" data-ok>$\dfrac{x^p - x^{n+1}}{1-x}$</div>
+  <div class="opt">$\dfrac{x^p - x^{n}}{1-x}$</div>
+  <div class="sol"><p>$\displaystyle\sum_{k=1}^{n} 2^k = \dfrac{2-2^{n+1}}{1-2} = \boxed{2^{n+1}-2} = \boxed{2(2^n-1)}$. (Vérification pour $n=1$ : la somme vaut $2$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$2^{n-1}-1$</div>
+  <div class="opt">$2^{n-1}+1$</div>
+  <div class="opt">$2^{n}-1$</div>
+  <div class="opt">$2^{n}-2$</div>
+  <div class="opt">$2^{n+1}-1$</div>
+  <div class="opt" data-ok>$2^{n+1}-2$</div>
+  <div class="opt">$2^{n+1}$</div>
+  <div class="opt" data-ok>$2(2^{n}-1)$</div>
+  <div class="sol"><p>Somme géométrique de raison $\frac12$ : $\displaystyle\sum_{k=0}^{n} \dfrac{1}{2^k} = \dfrac{1-\left(\frac12\right)^{n+1}}{1-\frac12} = 2\left(1-\dfrac{1}{2^{n+1}}\right) = \boxed{2-\dfrac{1}{2^n}} = \boxed{\dfrac{2^{n+1}-1}{2^n}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$2-\dfrac{1}{2^{n}}$</div>
+  <div class="opt">$2-\dfrac{1}{2^{n+1}}$</div>
+  <div class="opt">$1-\dfrac{1}{2^{n}}$</div>
+  <div class="opt" data-ok>$\dfrac{2^{n+1}-1}{2^{n}}$</div>
+  <div class="sol"><p>Factorisation classique : $\boxed{a^n-b^n = (a-b)\displaystyle\sum_{k=0}^{n-1} a^k b^{n-1-k}}$ (on la vérifie en développant : la somme est télescopique). Le changement d'indice $k'=n-k$ donne l'autre écriture $\boxed{(a-b)\displaystyle\sum_{k=1}^{n} a^{n-k} b^{k-1}}$. Dans chaque terme, la somme des exposants doit valoir $n-1$ : cela élimine B et C.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$n(n+1)+\dfrac{3^{n+1}-1}{2}$</div>
+  <div class="opt">$\dfrac{n(n+1)}{2}+\dfrac{3^{n}-1}{2}$</div>
+  <div class="opt">$n(n+1)+\dfrac{3^{n+1}-3}{2}$</div>
+  <div class="opt">$(n+1)^2+\dfrac{3^{n+1}}{2}$</div>
+  <div class="sol"><p>Les termes intermédiaires se simplifient deux à deux : $(a_{m+1}-a_m)+(a_{m+2}-a_{m+1})+\dots+(a_{n+1}-a_n)$. Il reste le dernier terme positif et le premier terme négatif : $\displaystyle\sum_{k=m}^{n} (a_{k+1}-a_k) = \boxed{a_{n+1}-a_m}$ (cases $a_{n+1}$, $-$ et $a_m$).</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$(a - b) \displaystyle \sum_{k=0}^{n-1} a^k b^{n-1-k}$</div>
+  <div class="opt">$(a - b) \displaystyle \sum_{k=0}^{n} a^k b^{n-k}$</div>
+  <div class="opt">$(a - b) \displaystyle \sum_{k=0}^{n-1} a^k b^{n-k}$</div>
+  <div class="opt" data-ok>$(a - b) \displaystyle \sum_{k=1}^{n} a^{n-k} b^{k-1}$</div>
+  <div class="sol"><p>Somme télescopique : $\displaystyle\sum_{k=1}^{n} \left(\dfrac1k-\dfrac{1}{k+1}\right) = \dfrac11-\dfrac{1}{n+1} = \boxed{1-\dfrac{1}{n+1}}$.</p></div>
+</div>
+
+<div class="q" data-type="grille">
+  <div class="cadre">
+    <div class="row"><span class="case">$a_n$</span><span class="case" data-ok>$a_{n+1}$</span></div>
+    <div class="row"><span class="case">$a_m$</span><span class="case">$a_{m+1}$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$+$</span></div>
+    <div class="row"><span class="case" data-ok>$-$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$a_n$</span><span class="case">$a_{n+1}$</span></div>
+    <div class="row"><span class="case" data-ok>$a_m$</span><span class="case">$a_{m+1}$</span></div>
+  </div>
+  <div class="sol"><p>On décompose $\dfrac{1}{k(k+1)} = \dfrac1k-\dfrac{1}{k+1}$, puis on télescope : $\displaystyle\sum_{k=1}^{n} \dfrac{1}{k(k+1)} = 1-\dfrac{1}{n+1} = \boxed{\dfrac{n}{n+1}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$1 - \dfrac{1}{n}$</div>
+  <div class="opt">$\dfrac{1}{n}-\dfrac{1}{2}$</div>
+  <div class="opt">$\dfrac{1}{2} - \dfrac{1}{n}$</div>
+  <div class="opt" data-ok>$1 - \dfrac{1}{n+1}$</div>
+  <div class="sol"><p>$\ln\left(1+\dfrac1k\right) = \ln(k+1)-\ln k$, donc par télescopage $\displaystyle\sum_{k=1}^{n} \ln\left(1+\dfrac1k\right) = \ln(n+1)-\ln 1 = \boxed{\ln(n+1)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n-1}{n}$</div>
+  <div class="opt">$\dfrac{1}{n+1}$</div>
+  <div class="opt" data-ok>$\dfrac{n}{n+1}$</div>
+  <div class="opt">$\dfrac{n+1}{n}$</div>
+  <div class="sol"><p>On multiplie par la quantité conjuguée : $\dfrac{1}{\sqrt k+\sqrt{k+1}} = \dfrac{\sqrt{k+1}-\sqrt k}{(k+1)-k} = \sqrt{k+1}-\sqrt k$. Par télescopage, $\displaystyle\sum_{k=1}^{n} \dfrac{1}{\sqrt k+\sqrt{k+1}} = \boxed{\sqrt{n+1}-1}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\ln(n) - 1$</div>
+  <div class="opt" data-ok>$\ln(n+1)$</div>
+  <div class="opt">$\ln(n+1)-1$</div>
+  <div class="opt">$\ln(n+1) - \ln(n)$</div>
+  <div class="sol"><p>Avec $j=k-2$ : quand $k$ va de $2$ à $n$, $j$ va de $0$ à $n-2$, d'où $\boxed{\displaystyle\sum_{k=2}^{n} a_k = \sum_{j=0}^{n-2} a_{j+2}}$ (A oublie de décaler la borne du haut). Avec $j=k-1$ : $\boxed{\displaystyle\sum_{k=1}^{n} a_{k-1} = \sum_{j=0}^{n-1} a_j}$. Les deux dernières propositions sont fausses : $\displaystyle\sum_{j=1}^{n} a_{n-j}$ va de $a_{n-1}$ à $a_0$ et oublie $a_n$, et $\displaystyle\sum_{j=1}^{n+1} a_{j+1}$ va de $a_2$ à $a_{n+2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\sqrt{n} - 1$</div>
+  <div class="opt" data-ok>$\sqrt{n+1} - 1$</div>
+  <div class="opt">$\sqrt{n+1} + 1$</div>
+  <div class="opt">$1 - \dfrac{1}{\sqrt{n+1}}$</div>
+  <div class="sol"><p>Avec $j=n-k$ (qui va de $n$ à $0$) : $\displaystyle\sum_{k=0}^{n} (n-k) = \sum_{j=0}^{n} j = \boxed{\dfrac{n(n+1)}{2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{k=2}^{n \vphantom{1}} a_k = \displaystyle\sum_{j=0}^{n} a_{j+2}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=2}^{n} a_k = \displaystyle\sum_{j=0}^{n-2} a_{j+2}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=1}^{n} a_{k-1} = \displaystyle\sum_{j=0}^{n-1} a_{j}$</div>
+  <div class="opt">$\displaystyle\sum_{k=1}^{n} a_{k-1} = \displaystyle\sum_{j=2}^{n+1} a_{j}$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n \vphantom{1}} a_k = \displaystyle\sum_{j=1}^{n} a_{n-j}$</div>
+  <div class="opt">$\displaystyle\sum_{k=0}^{n} a_k = \displaystyle\sum_{j=1}^{n+1} a_{j+1}$</div>
+  <div class="sol"><p>On développe : $\displaystyle\sum_{k=1}^{n} (2k-1)^2 = 4\sum_{k=1}^{n} k^2 - 4\sum_{k=1}^{n} k + n = \dfrac{2n(n+1)(2n+1)}{3} - 2n(n+1) + n = \boxed{\dfrac{n(4n^2-1)}{3}}$. (Vérification pour $n=2$ : $1+9 = 10 = \frac{2\times15}{3}$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n(n+1)$</div>
+  <div class="opt" data-ok>$\dfrac{n(n+1)}{2}$</div>
+  <div class="opt">$\dfrac{n(n-1)}{2}$</div>
+  <div class="opt">$n^2-\dfrac{n(n+1)}{2}$</div>
+  <div class="sol"><p>On regroupe les termes deux par deux : $(-1+2)+(-3+4)+\dots+\big(-(2n-1)+2n\big)$, soit $n$ paires valant chacune $1$, d'où $\boxed{n}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n (2n-1) (4n+1)}{3}$</div>
+  <div class="opt" data-ok>$\dfrac{n (4n^2-1)}{3}$</div>
+  <div class="opt">$\dfrac{n (2n-1) (4n-1)}{3}$</div>
+  <div class="opt">$(n-1)^2 (2n-1)$</div>
+  <div class="sol"><p>On regroupe par paires : $(2m)^2-(2m-1)^2 = 4m-1$ pour $m$ de $1$ à $n$, donc $\displaystyle\sum_{k=1}^{2n} (-1)^k k^2 = \sum_{m=1}^{n} (4m-1) = 2n(n+1)-n = \boxed{n(2n+1)}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-n$</div>
+  <div class="opt">$0$</div>
+  <div class="opt" data-ok>$n$</div>
+  <div class="opt">$2n$</div>
+  <div class="opt">$n(2n+1)$</div>
+  <div class="sol"><p>On retranche deux fois les termes d'indice pair : $\displaystyle\sum_{k=1}^{2n} \dfrac{(-1)^{k+1}}{k} = \sum_{k=1}^{2n} \dfrac1k - 2\sum_{k=1}^{n} \dfrac{1}{2k} = \sum_{k=1}^{2n} \dfrac1k - \sum_{k=1}^{n} \dfrac1k = \boxed{\sum_{k=n+1}^{2n} \dfrac1k}$. Le changement d'indice $k=n+j$ donne l'autre écriture $\boxed{\displaystyle\sum_{j=1}^{n} \dfrac{1}{n+j}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$-n(2n+1)$</div>
+  <div class="opt">$n(2n-1)$</div>
+  <div class="opt" data-ok>$n(2n+1)$</div>
+  <div class="opt">$2n^2$</div>
+  <div class="sol"><p>C'est la dérivée de $x\mapsto\displaystyle\sum_{k=0}^{n} x^k = \dfrac{1-x^{n+1}}{1-x}$. En dérivant le quotient : $\displaystyle\sum_{k=1}^{n} kx^{k-1} = \dfrac{-(n+1)x^n(1-x)+(1-x^{n+1})}{(1-x)^2} = \boxed{\dfrac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{k=1}^{n \vphantom{2}} \frac{1}{2k}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=n+1}^{2n} \frac{1}{k}$</div>
+  <div class="opt">$\displaystyle\sum_{k=n}^{2n} \frac{1}{k}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{k=1}^{n \vphantom{2}} \frac{1}{n+k}$</div>
+  <div class="sol"><p>On compte les couples $(i,j)\in\{1,\dots,n\}^2$ : il y en a $\boxed{n^2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{1-x^{n+1}}{(1-x)^2}$</div>
+  <div class="opt" data-ok>$\dfrac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}$</div>
+  <div class="opt">$\dfrac{1-(n+1)x^n+nx^{n+1}}{1-x}$</div>
+  <div class="opt">$\dfrac{1-nx^{n-1}+(n-1)x^{n}}{(1-x)^2}$</div>
+  <div class="sol"><p>On compte les couples $(i,j)$ avec $1\leqslant i<j\leqslant n$ : pour $j$ fixé, il y a $j-1$ valeurs de $i$, donc $\displaystyle\sum_{j=1}^{n} (j-1) = \boxed{\dfrac{n(n-1)}{2}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$n-1$</div>
+  <div class="opt">$2(n+1)$</div>
+  <div class="opt">$\dfrac{n(n+1)}{2}$</div>
+  <div class="opt">$n(n-1)$</div>
+  <div class="opt" data-ok>$n^2$</div>
+  <div class="sol"><p>Les indices sont indépendants, donc la somme se factorise : $\displaystyle\sum_{1\leqslant i,j\leqslant n} ij = \left(\sum_{i=1}^{n} i\right)\left(\sum_{j=1}^{n} j\right) = \boxed{\left(\dfrac{n(n+1)}{2}\right)^2}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{n(n-1)}{2}$</div>
+  <div class="opt">$\dfrac{n(n+1)}{2}$</div>
+  <div class="opt">$n(n-1)$</div>
+  <div class="opt">$n(n+1)$</div>
+  <div class="sol"><p>La somme porte sur les couples tels que $1\leqslant i\leqslant j\leqslant n$. Si l'on fixe d'abord $j\in\{1,\dots,n\}$, alors $i$ va de $1$ à $j$ : $\displaystyle\sum_{i=1}^{n}\sum_{j=i}^{n} \alpha_{i,j} = \boxed{\sum_{j=1}^{n}\sum_{i=1}^{j} \alpha_{i,j}}$. (La réponse C n'a pas de sens : la borne de la somme extérieure dépend de l'indice de la somme intérieure.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n^2(n+1)}{2}$</div>
+  <div class="opt" data-ok>$\left(\dfrac{n(n+1)}{2}\right)^2$</div>
+  <div class="opt">$\dfrac{n(n+1)^2}{2}$</div>
+  <div class="opt">$\dfrac{n(n+1)(2n+1)}{6}$ {-1.5cm}</div>
+  <div class="sol"><p>On somme d'abord sur $i$ : pour $j$ fixé, il y a $j$ valeurs de $i$, donc $\displaystyle\sum_{1\leqslant i\leqslant j\leqslant n} j = \sum_{j=1}^{n} j\times j = \boxed{\dfrac{n(n+1)(2n+1)}{6}}$.</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\displaystyle\sum_{j=1}^{n }\sum_{i=j}^{n} \alpha_{i,j}$</div>
+  <div class="opt" data-ok>$\displaystyle\sum_{j=1}^{n}\sum_{i=1}^{j} \alpha_{i,j}$</div>
+  <div class="opt">$\displaystyle\sum_{j=i}^{n }\sum_{i=1}^{n} \alpha_{i,j}$</div>
+  <div class="opt">$\displaystyle\sum_{j=1}^{n }\sum_{i=1}^{n} \alpha_{i,j}$</div>
+  <div class="sol"><p>On somme d'abord sur $i$ : $\displaystyle\sum_{i=0}^{j} 2^i = 2^{j+1}-1$. Puis $\displaystyle\sum_{j=0}^{n} (2^{j+1}-1) = (2^{n+2}-2)-(n+1) = \boxed{2^{n+2}-n-3}$. (Vérification pour $n=0$ : la somme vaut $1$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n(n+1)(n+2)}{6}$</div>
+  <div class="opt">$\left(\dfrac{n(n+1)}{2}\right)^2$</div>
+  <div class="opt">$\dfrac{n^2(n+1)}{2}$</div>
+  <div class="opt">$\dfrac{n(n+1)^2}{2}$</div>
+  <div class="opt" data-ok>$\dfrac{n(n+1)(2n+1)}{6}$</div>
+  <div class="opt">$\dfrac{2n^3 + 3n^2 + 1}{6}$</div>
+  <div class="sol"><p>Pour $k$ fixé, le nombre de couples $(i,j)$ tels que $\max(i,j)=k$ est $k^2-(k-1)^2 = 2k-1$. Donc $\displaystyle\sum_{1\leqslant i,j\leqslant n} \max(i,j) = \sum_{k=1}^{n} k(2k-1) = \dfrac{n(n+1)(2n+1)}{3} - \dfrac{n(n+1)}{2} = \boxed{\dfrac{n(n+1)(4n-1)}{6}}$. (Vérification pour $n=2$ : $1+2+2+2 = 7 = \frac{2\times3\times7}{6}$.)</p></div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$2^{n+1} - 1$</div>
+  <div class="opt">$2^{n+2} - 2$</div>
+  <div class="opt" data-ok>$2^{n+2} - n - 3$</div>
+  <div class="opt">$(n+1) \left( 2^{n+1} - 1 \right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{n(n+1)(3n+1)}{2}$</div>
+  <div class="opt">$\dfrac{n(n+1)(n+2)}{6}$</div>
+  <div class="opt" data-ok>$\dfrac{n(n+1)(4n-1)}{6}$</div>
+  <div class="opt">$\left(\dfrac{n(n+1)}{2}\right)^2$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>

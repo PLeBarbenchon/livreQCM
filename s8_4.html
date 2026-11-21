@@ -4,5 +4,222 @@
 <link rel="stylesheet" href="assets/styles.css">
 <script src="assets/mathjax-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-</head><body style="--accent:#c026d3"><div class="topnav" style="--accent:#c026d3"><span class="brand">8.4 · Applications à la trigonométrie</span><a href="index.html">Menu</a><a href="ch8.html">Chapitre 8</a><a class="" href="pdf/BCPSTCh8_Nombres_complexes.pdf" target="_blank" rel="noopener">Énoncés (PDF)</a></div><main><p class="chapno">Chapitre 8 — Nombres complexes</p><h1>Applications à la trigonométrie</h1><p class="subtitle">Coche tes réponses pour les questions que tu traites, puis clique sur « Vérifier ». Les énoncés sont sur ton polycopié (bouton « Énoncés (PDF) » ci-dessus) ; ici, seules les réponses. Ton score porte sur les questions traitées. Tes réponses sont enregistrées sur cet appareil : tu peux fermer la page et reprendre plus tard.</p><div id="quiz"></div><p class="foot-note">Questions 8.63 à 8.75 · réponses seules, à compléter avec le polycopié.</p></main><div class="footer-buttons" style="--accent:#c026d3"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script>window.QUIZ_DATA=[{"t":"grid","parts":[{"lit":"\\(\\cos\\theta =\\)","raw":1},{"check":{"label":"\\(e^{i\\theta} + e^{-i\\theta}\\)","ok":1}},{"check":{"label":"\\(e^{i\\theta} - e^{-i\\theta}\\)","ok":0}},{"br":1},{"lit":"\\(/\\)","raw":1},{"check":{"label":"\\(2\\)","ok":1}},{"check":{"label":"\\(2i\\)","ok":0}},{"br":1},{"lit":"\\(\\sin\\theta =\\)","raw":1},{"check":{"label":"\\(e^{i\\theta} + e^{-i\\theta}\\)","ok":0}},{"check":{"label":"\\(e^{i\\theta} - e^{-i\\theta}\\)","ok":1}},{"br":1},{"lit":"\\(/\\)","raw":1},{"check":{"label":"\\(2\\)","ok":0}},{"check":{"label":"\\(2i\\)","ok":1}}]},{"t":"mcq","c":[["\\(\\cos^n\\theta + i\\sin^n\\theta\\)",0,"h"],["\\(\\cos(n\\theta) + i\\sin(n\\theta)\\)",1,"h"],["\\(n\\cos\\theta + in\\sin\\theta\\)",0,"h"],["\\(\\cos(\\theta^n) + i\\sin(\\theta^n)\\)",0,"h"]]},{"t":"mcq","c":[["\\(e^{ip} + e^{iq} = 2 \\cos \\left( \\dfrac{p-q}{2} \\right) e^{i \\frac{p+q}{2}}\\)",1,"h"],["\\(e^{ip} + e^{iq} = 2 \\cos \\left( \\dfrac{p+q}{2} \\right) e^{i \\frac{p-q}{2}}\\)",0,"h"],["\\(e^{ip} - e^{iq} = 2 \\sin \\left( \\dfrac{p-q}{2} \\right) e^{i \\frac{p+q}{2}}\\)",0,"h"],["\\(e^{ip} - e^{iq} = e^{i (p-q)}\\)",0,"h"]]},{"t":"mcq","c":[["\\(r = 2\\cos\\theta\\) et \\(\\varphi = \\theta\\)",0,"h"],["\\(r = 2 \\cos \\left( \\dfrac{\\theta}{2} \\right)\\) et \\(\\varphi = \\dfrac{\\theta}{2}\\)",0,"h"],["\\(r = 2 \\sin \\theta\\) et \\(\\varphi = \\theta\\)",0,"h"],["\\(r = 2 \\sin \\left( \\dfrac{\\theta}{2} \\right)\\) et \\(\\varphi = \\dfrac{\\theta - \\pi}{2}\\)",1,"h"]]},{"t":"grid","parts":[{"lit":"\\(\\cos(3\\theta) =\\)","raw":1},{"check":{"label":"\\(3\\)","ok":0}},{"br":1},{"check":{"label":"\\(4\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\cos \\theta\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\cos^3 \\theta\\)","ok":1}},{"br":1},{"check":{"label":"\\(+\\)","ok":0}},{"br":1},{"check":{"label":"\\(-\\)","ok":1}},{"br":1},{"check":{"label":"\\(3\\)","ok":1}},{"br":1},{"check":{"label":"\\(4\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\cos \\theta\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\cos^3 \\theta\\)","ok":0}},{"br":1},{"lit":"\\(\\sin(3\\theta) =\\)","raw":1},{"check":{"label":"\\(\\sin \\theta\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\cos \\theta\\)","ok":0}},{"br":1},{"lit":"\\(\\Bigg (\\)","raw":1},{"check":{"label":"\\(\\hspace{-1mm}1\\hspace{1mm}\\)","ok":1}},{"br":1},{"check":{"label":"\\(-1\\)","ok":0}},{"br":1},{"check":{"label":"\\(+\\)","ok":1}},{"br":1},{"check":{"label":"\\(-\\)","ok":0}},{"br":1},{"check":{"label":"\\(1\\)","ok":0}},{"br":1},{"check":{"label":"\\(2\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\sin(2\\theta)\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\cos(2\\theta)\\)","ok":1}}]},{"t":"grid","parts":[{"lit":"\\(\\cos^3 \\theta =\\)","raw":1},{"check":{"label":"","ok":0}},{"check":{"label":"} \\(\\Bigg (\\) {","ok":1}},{"check":{"label":"\\(3\\)","ok":1}},{"br":1},{"check":{"label":"\\(4\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\cos \\theta\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\cos(3\\theta)\\)","ok":0}},{"br":1},{"check":{"label":"\\(+\\)","ok":1}},{"br":1},{"check":{"label":"\\(-\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\cos \\theta\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\cos(3\\theta)\\)","ok":1}},{"br":1},{"lit":"\\(\\Bigg)\\)","raw":1},{"lit":"\\(\\sin^3 \\theta =\\)","raw":1},{"check":{"label":"","ok":0}},{"check":{"label":"} \\(\\Bigg (\\) {","ok":1}},{"check":{"label":"\\(3\\)","ok":1}},{"br":1},{"check":{"label":"\\(4\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\sin \\theta\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\sin(3\\theta)\\)","ok":0}},{"br":1},{"check":{"label":"\\(+\\)","ok":0}},{"br":1},{"check":{"label":"\\(-\\)","ok":1}},{"br":1},{"check":{"label":"\\(\\sin \\theta\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\sin(3\\theta)\\)","ok":1}}]},{"t":"mcq","c":[["\\(0\\)",1,"h"],["\\(1\\)",0,"h"],["\\(3\\cos x\\)",0,"h"],["\\(\\cos(3x)\\)",0,"h"]]},{"t":"mcq","c":[["imaginaire pur",0,"h"],["de module \\(1\\)",0,"h"],["un nombre réel",1,"h"],["égal à \\(e^{i(p+q)/2}\\)",0,"h"]]},{"t":"grid","parts":[{"lit":"\\(r =\\)","raw":1},{"check":{"label":"\\(\\cos \\theta\\)","ok":0}},{"br":1},{"check":{"label":"\\(\\sin \\theta\\)","ok":0}},{"br":1},{"check":{"label":"","ok":1}},{"check":{"label":"} et \\(\\varphi = \\) {","ok":0}},{"check":{"label":"\\(\\hspace{-1mm}\\theta\\hspace{1mm}\\)","ok":1}},{"br":1},{"check":{"label":"\\(-\\theta\\)","ok":0}}]},{"t":"mcq","c":[["\\((1 + \\cos\\theta)^n\\)",0,"h"],["\\(2^n \\cos^n\\left(\\dfrac{\\theta}{2}\\right) \\cos\\left(\\dfrac{n\\theta}{2}\\right)\\)",1,"h"],["\\((1 + \\sin\\theta)^n\\)",0,"h"],["\\(2^n \\cos^n\\left(\\dfrac{\\theta}{2}\\right) \\sin\\left(\\dfrac{n\\theta}{2}\\right)\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{\\cos\\big( (n+1)\\theta \\big)}{\\cos^{n+1}\\theta}\\)",0,"h"],["\\(\\dfrac{\\sin\\big( (n+1)\\theta \\big)}{\\sin\\theta\\,\\cos^n\\theta}\\)",1,"h"],["\\(\\dfrac{\\sin \\big( n\\theta \\big)}{\\sin\\theta\\,\\cos^n\\theta}\\)",0,"h"],["\\(\\dfrac{\\sin\\big( (n+1)\\theta \\big)}{\\sin\\theta\\,\\cos^{n+1}\\theta}\\)",0,"h"]]},{"t":"mcq","c":[["\\(\\dfrac{\\sin \\frac{n\\theta}{2}}{\\sin \\frac{\\theta}{2}}\\, e^{i(n-1) \\frac{\\theta}{2}}\\)",1,"h"],["\\(\\dfrac{\\sin \\frac{n\\theta}{2}}{\\sin \\frac{\\theta}{2}}\\, e^{in \\frac{\\theta}{2}}\\)",0,"h"],["\\(\\dfrac{1 + e^{in\\theta}}{1 + e^{i\\theta}}\\)",0,"h"],["\\(\\dfrac{\\cos \\frac{n\\theta}{2}}{\\cos \\frac{\\theta}{2}}\\, e^{i(n-1) \\frac{\\theta}{2}}\\)",0,"h"]]},{"t":"mcq","c":[["\\(0\\)",0,"h"],["\\(\\dfrac{n-1}{2}\\)",0,"h"],["\\(\\dfrac{n}{2}\\)",1,"h"],["\\(n\\)",0,"h"]]}];window.QUIZ_START=63;window.QUIZ_CHAP=8;window.QUIZ_SOL=[];</script>
-<script src="assets/quiz.js"></script></body></html>
+</head><body class="pair"><div class="topnav"><span class="brand">8.4 · Applications à la trigonométrie</span><a href="index.html">Menu</a><a href="ch8.html">Chapitre 8</a></div><main><p class="chapno">Chapitre 8 — Nombres complexes</p><h1>Applications à la trigonométrie</h1>
+<div id="quiz" data-chap="8" data-start="63">
+<!-- =====================================================================
+  QUESTIONS DE CETTE SECTION — à modifier librement à la main (voir GUIDE_EDITION.md).
+  Une question = un bloc <div class="q" data-type="...">. Les maths s'écrivent entre $ … $.
+
+  • QCM :      <div class="q" data-type="qcm">
+                 <div class="opt" data-ok>bonne réponse</div>
+                 <div class="opt">mauvaise réponse</div>
+                 <div class="sol">solution (facultatif)</div>
+               </div>
+               -> "data-ok" marque une bonne réponse (plusieurs possibles). Les lettres A,B,C… sont automatiques.
+
+  • Grille :   <div class="q" data-type="grille">
+                 <div class="row"><span class="lab">$a =$</span><span class="case" data-ok>$1$</span><span class="case">$2$</span></div>
+               </div>
+               -> "data-ok" = case à cocher. <div class="row"> = une ligne.
+               -> <div class="cadre">…lignes…</div> = un cadre pointillé gris (cases alignées en colonnes).
+               -> voir GUIDE_EDITION.md pour les cadres et les grilles inline.
+
+  • Figure :   <div class="q" data-type="figure"></div>   (question à traiter sur le polycopié)
+
+  Les numéros (8.1, 8.2, …) se calculent tout seuls selon l'ordre ci-dessous (data-start="63").
+  Ajouter / supprimer / réordonner des <div class="q"> suffit ; le reste (style, correction) est géré par assets/quiz.js.
+===================================================================== -->
+
+<div class="q" data-type="grille">
+  <span class="lab">$\cos\theta =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$e^{i\theta} + e^{-i\theta}$</span><span class="case">$e^{i\theta} - e^{-i\theta}$</span></div>
+  </div>
+  <span class="lab">$/$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$2$</span><span class="case">$2i$</span></div>
+  </div>
+  <span class="lab">$\sin\theta =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$e^{i\theta} + e^{-i\theta}$</span><span class="case" data-ok>$e^{i\theta} - e^{-i\theta}$</span></div>
+  </div>
+  <span class="lab">$/$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$2$</span><span class="case" data-ok>$2i$</span></div>
+  </div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\cos^n\theta + i\sin^n\theta$</div>
+  <div class="opt" data-ok>$\cos(n\theta) + i\sin(n\theta)$</div>
+  <div class="opt">$n\cos\theta + in\sin\theta$</div>
+  <div class="opt">$\cos(\theta^n) + i\sin(\theta^n)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$e^{ip} + e^{iq} = 2 \cos \left( \dfrac{p-q}{2} \right) e^{i \frac{p+q}{2}}$</div>
+  <div class="opt">$e^{ip} + e^{iq} = 2 \cos \left( \dfrac{p+q}{2} \right) e^{i \frac{p-q}{2}}$</div>
+  <div class="opt">$e^{ip} - e^{iq} = 2 \sin \left( \dfrac{p-q}{2} \right) e^{i \frac{p+q}{2}}$</div>
+  <div class="opt">$e^{ip} - e^{iq} = e^{i (p-q)}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$r = 2\cos\theta$ et $\varphi = \theta$</div>
+  <div class="opt">$r = 2 \cos \left( \dfrac{\theta}{2} \right)$ et $\varphi = \dfrac{\theta}{2}$</div>
+  <div class="opt">$r = 2 \sin \theta$ et $\varphi = \theta$</div>
+  <div class="opt" data-ok>$r = 2 \sin \left( \dfrac{\theta}{2} \right)$ et $\varphi = \dfrac{\theta - \pi}{2}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$\cos(3\theta) =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$3$</span></div>
+    <div class="row"><span class="case" data-ok>$4$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$\cos \theta$</span></div>
+    <div class="row"><span class="case" data-ok>$\cos^3 \theta$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$+$</span></div>
+    <div class="row"><span class="case" data-ok>$-$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$3$</span></div>
+    <div class="row"><span class="case">$4$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\cos \theta$</span></div>
+    <div class="row"><span class="case">$\cos^3 \theta$</span></div>
+  </div>
+  <span class="lab">$\sin(3\theta) =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\sin \theta$</span></div>
+    <div class="row"><span class="case">$\cos \theta$</span></div>
+  </div>
+  <span class="lab">$\Bigg ($</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\hspace{-1mm}1\hspace{1mm}$</span></div>
+    <div class="row"><span class="case">$-1$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$+$</span></div>
+    <div class="row"><span class="case">$-$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$1$</span></div>
+    <div class="row"><span class="case" data-ok>$2$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$\sin(2\theta)$</span></div>
+    <div class="row"><span class="case" data-ok>$\cos(2\theta)$</span></div>
+  </div>
+  <span class="lab">$\Bigg)$</span>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$\cos^3 \theta =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$\dfrac{1}{2}$</span><span class="case" data-ok>$\dfrac{1}{4}$</span></div>
+  </div>
+  <span class="lab">$\Bigg ($</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$3$</span></div>
+    <div class="row"><span class="case">$4$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\cos \theta$</span></div>
+    <div class="row"><span class="case">$\cos(3\theta)$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$+$</span></div>
+    <div class="row"><span class="case">$-$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$\cos \theta$</span></div>
+    <div class="row"><span class="case" data-ok>$\cos(3\theta)$</span></div>
+  </div>
+  <span class="lab">$\Bigg)$</span>
+  <span class="lab">$\sin^3 \theta =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$\dfrac{1}{2}$</span><span class="case" data-ok>$\dfrac{1}{4}$</span></div>
+  </div>
+  <span class="lab">$\Bigg ($</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$3$</span></div>
+    <div class="row"><span class="case">$4$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\sin \theta$</span></div>
+    <div class="row"><span class="case">$\sin(3\theta)$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$+$</span></div>
+    <div class="row"><span class="case" data-ok>$-$</span></div>
+  </div>
+  <div class="cadre">
+    <div class="row"><span class="case">$\sin \theta$</span></div>
+    <div class="row"><span class="case" data-ok>$\sin(3\theta)$</span></div>
+  </div>
+  <span class="lab">$\Bigg)$</span>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$0$</div>
+  <div class="opt">$1$</div>
+  <div class="opt">$3\cos x$</div>
+  <div class="opt">$\cos(3x)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">imaginaire pur</div>
+  <div class="opt">de module $1$</div>
+  <div class="opt" data-ok>un nombre réel</div>
+  <div class="opt">égal à $e^{i(p+q)/2}$</div>
+</div>
+
+<div class="q" data-type="grille">
+  <span class="lab">$r =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case">$\cos \theta$</span></div>
+    <div class="row"><span class="case">$\sin \theta$</span><span class="case" data-ok>$\dfrac{1}{\cos \theta}$</span><span class="case">$\dfrac{1}{\sin \theta}$</span></div>
+  </div>
+  <span class="lab">$\varphi =$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$\hspace{-1mm}\theta\hspace{1mm}$</span></div>
+    <div class="row"><span class="case">$-\theta$</span></div>
+  </div>
+  <span class="lab">$+$</span>
+  <div class="cadre">
+    <div class="row"><span class="case" data-ok>$0\vphantom{\dfrac{x}{2}}$</span><span class="case">$\pi\vphantom{\dfrac{x}{2}}$</span><span class="case">$-\pi\vphantom{\dfrac{x}{2}}$</span><span class="case">$\dfrac{\pi}{2}\vphantom{0}$</span><span class="case">$-\dfrac{\pi}{2}\vphantom{0}$</span></div>
+  </div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$(1 + \cos\theta)^n$</div>
+  <div class="opt" data-ok>$2^n \cos^n\left(\dfrac{\theta}{2}\right) \cos\left(\dfrac{n\theta}{2}\right)$</div>
+  <div class="opt">$(1 + \sin\theta)^n$</div>
+  <div class="opt">$2^n \cos^n\left(\dfrac{\theta}{2}\right) \sin\left(\dfrac{n\theta}{2}\right)$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$\dfrac{\cos\big( (n+1)\theta \big)}{\cos^{n+1}\theta}$</div>
+  <div class="opt" data-ok>$\dfrac{\sin\big( (n+1)\theta \big)}{\sin\theta\,\cos^n\theta}$</div>
+  <div class="opt">$\dfrac{\sin \big( n\theta \big)}{\sin\theta\,\cos^n\theta}$</div>
+  <div class="opt">$\dfrac{\sin\big( (n+1)\theta \big)}{\sin\theta\,\cos^{n+1}\theta}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt" data-ok>$\dfrac{\sin \frac{n\theta}{2}}{\sin \frac{\theta}{2}}\, e^{i(n-1) \frac{\theta}{2}}$</div>
+  <div class="opt">$\dfrac{\sin \frac{n\theta}{2}}{\sin \frac{\theta}{2}}\, e^{in \frac{\theta}{2}}$</div>
+  <div class="opt">$\dfrac{1 + e^{in\theta}}{1 + e^{i\theta}}$</div>
+  <div class="opt">$\dfrac{\cos \frac{n\theta}{2}}{\cos \frac{\theta}{2}}\, e^{i(n-1) \frac{\theta}{2}}$</div>
+</div>
+
+<div class="q" data-type="qcm">
+  <div class="opt">$0$</div>
+  <div class="opt">$\dfrac{n-1}{2}$</div>
+  <div class="opt" data-ok>$\dfrac{n}{2}$</div>
+  <div class="opt">$n$</div>
+</div>
+</div></main><div class="footer-buttons"><div class="left"><button class="verif" onclick="verifier()">Vérifier</button><button class="reset" onclick="recommencer()">Recommencer</button></div><div class="score-right" id="resultat">&nbsp;</div></div><script src="assets/quiz.js"></script></body></html>
